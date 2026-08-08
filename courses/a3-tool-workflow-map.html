@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leader session 3 · The tool and workflow map - learn ai design with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-design-with-phoebe</a> / Leader session 3 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Design with Phoebe · Leader track · Session 3 of 6</div>
+    <h1>The tool and <span class="accent">workflow map</span></h1>
+    <p class="sub">Every vendor demo shows you a screen appearing out of a sentence. None of them tell you the thing you actually need to decide a purchase: what artifact lands on your side at the end, and whether your pipeline can accept it. Tonight we map five prompt-to-UI tools onto a real design pipeline, then read the gates that decide whether adoption is even possible in your org: seats, credits, training defaults, indemnity scope. Every number on this page comes from vendor documentation, with the contradictions named rather than smoothed over.</p>
+    <div class="chip-row">
+      <span class="chip level">🟡 Leader track</span>
+      <span class="chip audience">Design · brand · creative leads</span>
+      <span class="chip audience">Buy, adopt or ignore</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-16 · What each tool actually outputs</span>
+      <span class="a3" style="flex:5">16-34 · Seats, credits, training defaults</span>
+      <span class="a4" style="flex:3">34-45 · Rights, indemnity, decision frame</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ PART 1: THE ARTIFACT QUESTION ============ -->
+  <section class="section" id="artifact">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · the only question that matters</span>
+      <h2>What artifact does it produce, and where does that artifact land? <span class="tag concept">12 min live</span></h2>
+    </div>
+    <p class="lede">Tool evaluations go wrong because leaders compare demos. Demos are all impressive and all interchangeable. The question that separates a purchase from a toy is boring and answerable: <strong>at the end of the session, what exists, and can the next person in your pipeline pick it up?</strong> A hosted URL is not a handoff. A pile of React is not a design system. A beautiful page you cannot export is a destination, not a stage. Here is the same five tools, described by output rather than by promise, from their own documentation.</p>
+
+    <table class="clean">
+      <thead>
+        <tr><th>Tool</th><th>What it actually produces</th><th>Where that lands</th><th>The honest limit</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>v0</strong> (Vercel)</td>
+          <td>Production Next.js / React / TypeScript / Tailwind / shadcn code, one-click deploy, optional Supabase, Neon or Upstash backend, REST API</td>
+          <td>Dev handoff and production. Once GitHub is connected, <strong>the repo becomes the source of truth</strong></td>
+          <td>The moment code is the source of truth, design files are documentation. Decide that deliberately</td>
+        </tr>
+        <tr>
+          <td><strong>Lovable</strong></td>
+          <td>A full-stack app with a hosted URL, exportable as a zip or via Git sync. New apps from 2026-05-13 use TanStack Start with SSR; older ones React plus Vite</td>
+          <td>Production for small and internal apps. <strong>Genuinely exportable</strong>, which is rarer than it sounds</td>
+          <td>Priced by credits, with unlimited workspace members. Exportable does not mean maintainable by your team</td>
+        </tr>
+        <tr>
+          <td><strong>Framer AI</strong></td>
+          <td>Editable native Framer pages and components, published as a Framer site</td>
+          <td>Marketing and CMS site. <strong>A destination, not a handoff</strong></td>
+          <td><strong>No documented code export.</strong> Plans are per-site with a workspace-shared credit pool</td>
+        </tr>
+        <tr>
+          <td><strong>Claude Artifacts</strong></td>
+          <td>A single self-contained React, HTML or SVG page. No backend. Outside data only through MCP connectors</td>
+          <td>Concept prototype, interactive spec, stakeholder demo</td>
+          <td>Nothing ships from here. That is the point, and it is a legitimate reason to use it</td>
+        </tr>
+        <tr>
+          <td><strong>Figma Make</strong></td>
+          <td>A working prototype plus a downloadable code zip, a one-way GitHub push, a <code>*.figma.site</code> publish, and paste-back into Figma as layers</td>
+          <td>In-Figma prototyping, with two bridges out</td>
+          <td><strong>Both bridges are lossy.</strong> GitHub push is one-way: edit in GitHub and those changes are overwritten on the next push. Pasted-back layers are not automatically tied to your design system</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Five prompt-to-UI tools mapped onto a design pipeline of explore, draft UI, design system, handoff and ship, showing which stages each tool covers and where it dead-ends.">
+        <style>
+          .twH { font: 700 12px Inter, sans-serif; fill: #FFFFFF; }
+          .twL { font: 700 12px Inter, sans-serif; fill: #2A1A28; }
+          .twS { font: 400 10.5px Inter, sans-serif; fill: #7A6A78; }
+          .twC { font: 600 11px Inter, sans-serif; fill: #FFFFFF; }
+          .twD { font: 600 11px Inter, sans-serif; fill: #2A1A28; }
+          .twW { font: 600 11px Inter, sans-serif; fill: #7A6A78; }
+          .twF { font: 600 11px Inter, sans-serif; fill: #991B1B; }
+          .twK { font: 600 11px Inter, sans-serif; fill: #2A1A28; }
+          .twN { font: 600 13px Inter, sans-serif; fill: #1E2A00; }
+        </style>
+
+        <rect x="30" y="24" width="150" height="30" rx="7" fill="#2A1A28"/>
+        <text class="twH" x="42" y="43">TOOL / OUTPUT</text>
+        <rect x="190" y="24" width="126" height="30" rx="7" fill="#6B2D5C"/>
+        <text class="twH" x="202" y="43">Explore</text>
+        <rect x="324" y="24" width="126" height="30" rx="7" fill="#6B2D5C"/>
+        <text class="twH" x="336" y="43">Draft UI</text>
+        <rect x="458" y="24" width="126" height="30" rx="7" fill="#6B2D5C"/>
+        <text class="twH" x="470" y="43">Design system</text>
+        <rect x="592" y="24" width="126" height="30" rx="7" fill="#6B2D5C"/>
+        <text class="twH" x="604" y="43">Handoff</text>
+        <rect x="726" y="24" width="126" height="30" rx="7" fill="#6B2D5C"/>
+        <text class="twH" x="738" y="43">Ship / host</text>
+
+        <rect x="30" y="60" width="150" height="40" rx="7" fill="#F9EFF6" stroke="#D6C9D4"/>
+        <text class="twL" x="42" y="77">v0 (Vercel)</text>
+        <text class="twS" x="42" y="92">React / Next.js code</text>
+        <rect x="190" y="60" width="126" height="40" rx="7" fill="#D8A8C8"/>
+        <text class="twD" x="202" y="84">supported</text>
+        <rect x="324" y="60" width="126" height="40" rx="7" fill="#4A1F44"/>
+        <text class="twC" x="336" y="84">core output</text>
+        <rect x="458" y="60" width="126" height="40" rx="7" fill="#D8A8C8"/>
+        <text class="twD" x="470" y="84">v0 skills</text>
+        <rect x="592" y="60" width="126" height="40" rx="7" fill="#4A1F44"/>
+        <text class="twC" x="604" y="84">repo is truth</text>
+        <rect x="726" y="60" width="126" height="40" rx="7" fill="#4A1F44"/>
+        <text class="twC" x="738" y="84">deploys</text>
+
+        <rect x="30" y="106" width="150" height="40" rx="7" fill="#F9EFF6" stroke="#D6C9D4"/>
+        <text class="twL" x="42" y="123">Lovable</text>
+        <text class="twS" x="42" y="138">full-stack app</text>
+        <rect x="190" y="106" width="126" height="40" rx="7" fill="#D8A8C8"/>
+        <text class="twD" x="202" y="130">supported</text>
+        <rect x="324" y="106" width="126" height="40" rx="7" fill="#4A1F44"/>
+        <text class="twC" x="336" y="130">core output</text>
+        <rect x="458" y="106" width="126" height="40" rx="7" fill="#FFFFFF" stroke="#D6C9D4"/>
+        <text class="twW" x="470" y="130">no system model</text>
+        <rect x="592" y="106" width="126" height="40" rx="7" fill="#4A1F44"/>
+        <text class="twC" x="604" y="130">zip or Git sync</text>
+        <rect x="726" y="106" width="126" height="40" rx="7" fill="#4A1F44"/>
+        <text class="twC" x="738" y="130">hosted URL</text>
+
+        <rect x="30" y="152" width="150" height="40" rx="7" fill="#F9EFF6" stroke="#D6C9D4"/>
+        <text class="twL" x="42" y="169">Framer AI</text>
+        <text class="twS" x="42" y="184">native Framer pages</text>
+        <rect x="190" y="152" width="126" height="40" rx="7" fill="#D8A8C8"/>
+        <text class="twD" x="202" y="176">supported</text>
+        <rect x="324" y="152" width="126" height="40" rx="7" fill="#4A1F44"/>
+        <text class="twC" x="336" y="176">core output</text>
+        <rect x="458" y="152" width="126" height="40" rx="7" fill="#FFFFFF" stroke="#D6C9D4"/>
+        <text class="twW" x="470" y="176">Framer only</text>
+        <rect x="592" y="152" width="126" height="40" rx="7" fill="#FEF2F2" stroke="#FCA5A5"/>
+        <text class="twF" x="604" y="176">no code export</text>
+        <rect x="726" y="152" width="126" height="40" rx="7" fill="#4A1F44"/>
+        <text class="twC" x="738" y="176">Framer site</text>
+
+        <rect x="30" y="198" width="150" height="40" rx="7" fill="#F9EFF6" stroke="#D6C9D4"/>
+        <text class="twL" x="42" y="215">Claude Artifacts</text>
+        <text class="twS" x="42" y="230">self-contained page</text>
+        <rect x="190" y="198" width="126" height="40" rx="7" fill="#4A1F44"/>
+        <text class="twC" x="202" y="222">core output</text>
+        <rect x="324" y="198" width="126" height="40" rx="7" fill="#4A1F44"/>
+        <text class="twC" x="336" y="222">core output</text>
+        <rect x="458" y="198" width="126" height="40" rx="7" fill="#FFFFFF" stroke="#D6C9D4"/>
+        <text class="twW" x="470" y="222">none</text>
+        <rect x="592" y="198" width="126" height="40" rx="7" fill="#D8A8C8"/>
+        <text class="twD" x="604" y="222">spec, not code</text>
+        <rect x="726" y="198" width="126" height="40" rx="7" fill="#FEF2F2" stroke="#FCA5A5"/>
+        <text class="twF" x="738" y="222">no backend</text>
+
+        <rect x="30" y="244" width="150" height="40" rx="7" fill="#F9EFF6" stroke="#D6C9D4"/>
+        <text class="twL" x="42" y="261">Figma Make</text>
+        <text class="twS" x="42" y="276">prototype + code zip</text>
+        <rect x="190" y="244" width="126" height="40" rx="7" fill="#4A1F44"/>
+        <text class="twC" x="202" y="268">core output</text>
+        <rect x="324" y="244" width="126" height="40" rx="7" fill="#4A1F44"/>
+        <text class="twC" x="336" y="268">core output</text>
+        <rect x="458" y="244" width="126" height="40" rx="7" fill="#FEF2F2" stroke="#FCA5A5"/>
+        <text class="twF" x="470" y="268">not your system</text>
+        <rect x="592" y="244" width="126" height="40" rx="7" fill="#D8A8C8"/>
+        <text class="twD" x="604" y="268">one-way, lossy</text>
+        <rect x="726" y="244" width="126" height="40" rx="7" fill="#D8A8C8"/>
+        <text class="twD" x="738" y="268">figma.site</text>
+
+        <rect x="30" y="300" width="13" height="13" rx="3" fill="#4A1F44"/>
+        <text class="twK" x="49" y="311">core output</text>
+        <rect x="140" y="300" width="13" height="13" rx="3" fill="#D8A8C8"/>
+        <text class="twK" x="159" y="311">supported</text>
+        <rect x="238" y="300" width="13" height="13" rx="3" fill="#FFFFFF" stroke="#D6C9D4"/>
+        <text class="twK" x="257" y="311">thin or absent</text>
+        <rect x="368" y="300" width="13" height="13" rx="3" fill="#FEF2F2" stroke="#FCA5A5"/>
+        <text class="twK" x="387" y="311">dead end</text>
+
+        <rect x="30" y="326" width="14" height="14" rx="3" fill="#4D6B00"/>
+        <text class="twN" x="54" y="338">Ask what artifact it produces and where that lands. No exit from the tool's own canvas is a destination.</text>
+        <rect x="30" y="346" width="14" height="14" rx="3" fill="#4D6B00"/>
+        <text class="twN" x="54" y="358">A red cell is not a bad tool. It is a tool for exploring, and it should be priced and staffed as one.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - five tools mapped onto the pipeline, by output rather than by promise</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The four sentences to say in a vendor call<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Skip the demo. Ask these, and write the answers down, because you will need them again at renewal:</p>
+        <ul>
+          <li><strong>"Show me the export."</strong> Not the preview. The zip, the repo, the file. If there is no documented export, you are buying a destination and should staff it as a channel, not as a stage.</li>
+          <li><strong>"Which direction does the sync run?"</strong> Figma Make's GitHub push is one-way by documentation: edits made in GitHub do not come back and are overwritten on the next push. That single sentence decides who owns the code.</li>
+          <li><strong>"Does the output arrive tied to our design system?"</strong> Figma's own docs say pasted-back Make layers are not automatically tied to your design system. v0 handles this differently, through a stored "skill" adapter that names where your components, props and tokens live.</li>
+          <li><strong>"What does one real task cost in your metering unit?"</strong> Not the plan price. The per-task cost, at your team's volume. Part 2 is entirely about this.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Free-tier gates that quietly decide your pilot<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Pilots fail on gates, not on capability. From the vendors' own documentation:</p>
+        <ul>
+          <li><strong>v0</strong> Free is 7 messages per day, and Figma import needs a paid plan. A seven-message ceiling is not a pilot, it is a taste test.</li>
+          <li><strong>Lovable</strong> prices by credits but allows unlimited workspace members, which inverts the usual seat maths: you can invite the whole team and still be constrained by throughput.</li>
+          <li><strong>Framer</strong> plans are per-site with a workspace-shared credit pool. Two sites, two plans, one pool of generation.</li>
+          <li><strong>Figma Make</strong> code editing needs a Full seat on a paid plan. Starter plans do not include Figma AI at all.</li>
+        </ul>
+        <p>Write the gate next to each tool on your shortlist before you write the price. Half the shortlist usually disqualifies itself.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: THE GATES ============ -->
+  <section class="section" id="gates">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · whether adoption is even possible</span>
+      <h2>Seats, credits and training defaults <span class="tag concept">16 min live</span></h2>
+    </div>
+    <p class="lede">Capability is not the constraint any more. <strong>Metering is.</strong> Every major vendor has moved to a credit model, and credits are per seat, per month, mostly without rollover and mostly not shareable. That turns a design decision into a capacity-planning decision, and it is the part of the purchase most design leaders discover after signing. Below are the gates as documented, per vendor, with the numbers that actually bind.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Figma - seats first, then credits<span class="mini">6 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p><strong>The seat gate.</strong> Figma AI features generally require a <strong>Full seat on a paid plan</strong>. View, Collab and Dev seats can try them in Draft files. <strong>Starter plans do not include Figma AI.</strong> If your extended team sits on Starter or on View seats, the rollout you are imagining does not exist yet.</p>
+        <p><strong>The credit gate.</strong> AI credits are the real constraint. They renew monthly, do not roll over, and are not shareable.</p>
+        <table class="clean">
+          <thead><tr><th>Plan</th><th>Credits per Full seat / month</th><th>Note</th></tr></thead>
+          <tbody>
+            <tr><td>Starter</td><td>500</td><td>With a 150 per day cap. Starter does not include Figma AI</td></tr>
+            <tr><td>Professional</td><td>3,000</td><td>Content training defaults on</td></tr>
+            <tr><td>Organization</td><td>3,500</td><td>Content training off and not toggleable</td></tr>
+            <tr><td>Enterprise</td><td>4,250</td><td>Content training off and not toggleable</td></tr>
+            <tr><td>Dev / Collab / View</td><td>500</td><td>Same on all plans</td></tr>
+          </tbody>
+        </table>
+        <p><strong>What things cost.</strong> Zero-credit features: <strong>AI search</strong> and <strong>Rename layers</strong>. Sample documented costs: remove background 1 to 5, vectorize 2 to 5, boost resolution 5 to 10, Make image 2 to 16, Add interactions 20, and <strong>Figma Make at 30 to 100 or more per task</strong>. Pay-as-you-go is <strong>$0.03 per credit</strong> with a spend cap. Features in beta consume 0 credits, which is the cheapest window you will get and also the least stable one.</p>
+        <p><strong>Do the arithmetic out loud.</strong> A Professional Full seat gets 3,000 credits. At 100 credits per Figma Make task, that is roughly 30 Make tasks a month for that person, before a single image edit. Say that number in the meeting where someone proposes "everyone prototypes in Make now".</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Figma - the current feature names, so you stop buying last year's roadmap<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Names change faster than procurement cycles, and asking for a retired feature makes you easy to sell to. As of the verification date:</p>
+        <ul>
+          <li><strong>First Draft</strong> is the current name. It is <strong>not</strong> "Make Design". "AI text suggestions" is retired.</li>
+          <li><strong>Figma agent</strong> (beta from 2026-05-20) is becoming the entry point for First Draft functionality. Config 2026 additions in open beta: custom skills, web search, file attachments, verified partner MCP connectors.</li>
+          <li><strong>Figma Make</strong> reached GA on 2026-07-24, with publishing still in beta.</li>
+          <li><strong>Figma Motion, custom shader effects, generative plugins and Weave tools</strong> are in open beta. Code layers are in closed beta.</li>
+          <li>Other current features: Rename layers, Replace content, Add interactions, rewrite / translate / shorten, Adjust tone, Make image, Edit image with prompt, Remove background, Expand image, Isolate or erase object, Vectorize image, Boost resolution, AI search.</li>
+          <li>Figma Make's model picker names Gemini, Claude and GPT models. The default is deliberately unnamed and documented as something that "may change over time" - worth knowing if you have a model-approval process.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Adobe, Canva, Midjourney - the gates that bind<span class="mini">5 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p><strong>Adobe.</strong> <strong>Firefly Image Model 5</strong> is generally available, with native 4MP generation, and it powers Prompt to Edit. Firefly Audio and Speech models are in public beta; Firefly Custom Models went public beta in March 2026 and are private by default; Firefly Boards has been GA worldwide since 2025-09-24. Firefly now hosts <strong>30 or more partner models</strong> (Google, Runway, Kling, OpenAI, Black Forest Labs, ElevenLabs, Topaz, Moonvalley) alongside Adobe's own. In the apps: Photoshop has Generative Fill, Generative Expand, Remove Tool, Harmonize and Reference Image for Generative Fill, all GA at 2K output, with a model picker that includes partner models; Illustrator has Generative Recolor, Generative Shape Fill and Text to Pattern / Generate Patterns. <strong>Generative credits</strong> renew monthly and most standard features cost 1 credit per generation, while premium features cost far more - and <strong>partner-model output is billed as premium</strong>. That last sentence is both a cost fact and a rights fact, which is why it comes back in Part 3.</p>
+        <p><strong>Canva.</strong> The naming has moved from "Magic" to <strong>Canva AI</strong>. Still-current Magic names: Magic Media, Magic Write, Magic Grab, Magic Video, Magic Edit, Magic Design, Magic Resize. <strong>"Magic Switch" is no longer a help-centre feature</strong> - its functions are documented as Magic Resize, Translate and Transform into Doc, so if your enablement deck says Magic Switch, it is out of date. Free versus paid is now <strong>one shared credit pool across three quality tiers</strong> (Standard, Premium, Ultra) rather than per-feature counts: Free gets 200 Standard or 20 Premium and <strong>no Ultra</strong>; Pro and Teams 2,000 / 200 / 20; Business and Enterprise 4,000 / 400 / 40. Credits are per member and never pooled. Magic Resize is metered and not available on Free. <strong>Canva Teams is closed to new sign-ups</strong>, so the ladder you are actually buying is Free, Pro, Business, Enterprise.</p>
+        <p><strong>Midjourney.</strong> <strong>V8.2 is the current default</strong> (since 2026-07-24). Plans meter fast GPU hours: Basic $10 (3.3 fast GPU hours, roughly 200 minutes, no Relax), Standard $30 (15 hours plus unlimited Relax), Pro $60 (30 hours, Stealth), Mega $120 (60 hours, Stealth). Fast time does not roll over. Commercial terms are the same across tiers <strong>except</strong> that companies grossing over <strong>$1M USD per year</strong> must be on Pro or Mega. If your company is over that line, the $10 plan is not a cheap pilot, it is a licence breach.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Design-system automation has a harder gate than any of these<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>If your plan is "AI generates screens from our tokens", one documented limit decides your architecture: <strong>the Figma variables REST API is Enterprise-only</strong> - you need a Full seat in an Enterprise org. Below Enterprise, the only token route is selection-scoped <code>get_variable_defs</code> through the Figma MCP server (remote <code>https://mcp.figma.com/mcp</code>, or desktop <code>http://127.0.0.1:3845/mcp</code>). That is a per-selection read, not a systems integration.</p>
+        <p>One more date for the calendar: <strong>Figma Code Connect framework-specific parsers lose updates and support from 2026-08-17</strong>, after which template files are the only maintained path. Code Connect itself needs a Dev or Full seat on Organization or Enterprise. Designer session b6 works through all of this at the practitioner level; you need it here only to size the programme honestly.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: READ IT IN THEIR WORDS ============ -->
+  <section class="section" id="rights">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · three things to read before adopting</span>
+      <h2>Commercial safety, indemnity and the training default <span class="tag concept">11 min live</span></h2>
+    </div>
+    <p class="lede">There are exactly three passages you must read in a vendor's own words before you let a tool touch client work. Not a summary, not the sales sheet: the vendor's documentation, on the day you sign. Each one has a carve-out that matters more than the headline.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>1 · The commercial-safety claim, and what it excludes<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Adobe's own framing for the first Firefly model is that it was trained on Adobe Stock images, openly licensed content and public-domain content where copyright has expired, and that it is <strong>"designed to generate images safe for commercial use"</strong>. Read that carefully. "Designed to be" is a <strong>design goal, not a warranty</strong>. It describes the training-data intent, and intent is not the same as an indemnity you can point a client at.</p>
+        <p>The carve-out is the part that gets skipped. For the <strong>30 or more partner models</strong> now hosted inside Firefly, Adobe states it <strong>cannot verify commercial safety</strong> and points you to the partner's terms. So the same window, the same subscription, the same button - and two completely different rights positions depending on which model is selected in the picker. Combine that with the billing fact from Part 2 (partner-model output is billed as premium) and you get a usefully blunt rule of thumb: <strong>if it cost extra, check whose terms apply.</strong></p>
+        <p>What to do with this: name the models your team is allowed to select, in writing, and make the model picker a governed choice rather than a convenience.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>2 · The shape of an indemnification<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Indemnification is <strong>purchased, not automatic</strong>. In Adobe's framing, enterprise customers "may purchase an entitlement that comes with contractual IP indemnification for select Firefly outputs" - and that entitlement is <strong>scoped by published lists of eligible features, surfaces and export events</strong>. Three scoping dimensions, any one of which can put your asset outside the cover:</p>
+        <ul>
+          <li><strong>Feature</strong> - which generative feature produced it.</li>
+          <li><strong>Surface</strong> - which app or product it was produced in.</li>
+          <li><strong>Export event</strong> - how it left the tool.</li>
+        </ul>
+        <p>Add the two standing exclusions this session has already established: <strong>partner-model output</strong> and <strong>beta features</strong>. Beta is doubly seductive because betas consume 0 Figma credits and often carry the newest capability, so the cheapest and shiniest path is frequently the least covered one.</p>
+        <p>An honest gap, stated as a gap: the exact conditions of Adobe's enterprise indemnity could not be verified during preparation, because the enterprise legal FAQ document was unreachable. Do not let anyone, including this page, tell you the precise terms. Get them from your contract.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>3 · The training default nobody was asked about<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Figma has two toggles: <strong>Content training</strong> and <strong>AI features</strong>. The default for content training is <strong>on for Starter and Professional teams</strong>, and <strong>off and not toggleable for Organization and Enterprise</strong>. The policy took effect on 2024-08-15. Education and Government accounts are excluded.</p>
+        <p>Read that as an org-design fact rather than a privacy fact. It means <strong>the small teams least likely to have a policy are the ones opted in by default</strong> - the contractor's Professional team, the agency's Starter file, the side project where your unreleased brand work lives. Your Enterprise org is protected; your supply chain may not be.</p>
+        <p>Canva's position is different in shape: its documentation says "you own your Output, except for any Output that modifies or incorporates Licensed Content", warns that outputs may not be unique, and recommends independent advice before commercial use. Training use is governed by Privacy Settings. Three different vendors, three different defaults, one shared consequence: <strong>the default is the policy, until someone changes it.</strong></p>
+      </div>
+    </details>
+
+    <div class="callout tip">
+      <strong>Two honesty notes to carry into the meeting</strong>
+      Official vendor pages sometimes contradict each other. Figma's own pages disagree on whether the agent beta is Enterprise-only or available to Full seats on Pro, Organization and Enterprise, and there is no point pretending one of them is authoritative. Separately, a live "unlimited generations" promotion can distort Adobe credit arithmetic badly enough that any number you teach today may be meaningless next month. Verify both against today's page and against your own contract, and say "verified on this date" whenever you quote a number.
+    </div>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 348" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A buy, adopt or ignore decision frame with four gates: shippable artifact, design-system respect, indemnified output, and survivable metering, each with the verdict when the answer is no.">
+        <style>
+          .bdT { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .bdS { font: 400 11px Inter, sans-serif; fill: #FFFFFF; opacity: .92; }
+          .bdV { font: 700 12px Inter, sans-serif; fill: #2A1A28; }
+          .bdX { font: 400 11px Inter, sans-serif; fill: #7A6A78; }
+          .bdW { font: 700 13px Inter, sans-serif; fill: #1E2A00; }
+          .bdN { font: 600 13px Inter, sans-serif; fill: #1E2A00; }
+          .bdWire { stroke: #9B4B87; stroke-width: 2.5; fill: none; marker-end: url(#bdHd); }
+        </style>
+        <defs>
+          <marker id="bdHd" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L9,4.5 L0,9 z" fill="#9B4B87"/>
+          </marker>
+        </defs>
+
+        <rect x="30" y="24" width="175" height="74" rx="9" fill="#4A1F44"/>
+        <text class="bdT" x="44" y="46">1 · SHIPPABLE?</text>
+        <text class="bdS" x="44" y="66">an artifact lands in</text>
+        <text class="bdS" x="44" y="84">your pipeline</text>
+
+        <rect x="245" y="24" width="175" height="74" rx="9" fill="#6B2D5C"/>
+        <text class="bdT" x="259" y="46">2 · SYSTEM SAFE?</text>
+        <text class="bdS" x="259" y="66">respects the tokens</text>
+        <text class="bdS" x="259" y="84">and components you own</text>
+
+        <rect x="460" y="24" width="175" height="74" rx="9" fill="#9B4B87"/>
+        <text class="bdT" x="474" y="46">3 · RIGHTS COVERED?</text>
+        <text class="bdS" x="474" y="66">indemnity names this</text>
+        <text class="bdS" x="474" y="84">feature and surface</text>
+
+        <rect x="675" y="24" width="175" height="74" rx="9" fill="#6B2D5C"/>
+        <text class="bdT" x="689" y="46">4 · METER SURVIVES?</text>
+        <text class="bdS" x="689" y="66">credits per seat at</text>
+        <text class="bdS" x="689" y="84">your real volume</text>
+
+        <path class="bdWire" d="M117,98 L117,142"/>
+        <path class="bdWire" d="M332,98 L332,142"/>
+        <path class="bdWire" d="M547,98 L547,142"/>
+        <path class="bdWire" d="M762,98 L762,142"/>
+
+        <rect x="30" y="148" width="175" height="66" rx="9" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="bdV" x="44" y="170">IF NO → prototype</text>
+        <text class="bdX" x="44" y="190">keep it out of the</text>
+        <text class="bdX" x="44" y="206">delivery path</text>
+
+        <rect x="245" y="148" width="175" height="66" rx="9" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="bdV" x="259" y="170">IF NO → adopt narrow</text>
+        <text class="bdX" x="259" y="190">one team, one use</text>
+        <text class="bdX" x="259" y="206">case, one owner</text>
+
+        <rect x="460" y="148" width="175" height="66" rx="9" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1.5"/>
+        <text class="bdV" x="474" y="170">IF NO → internal only</text>
+        <text class="bdX" x="474" y="190">no client delivery</text>
+        <text class="bdX" x="474" y="206">until it is covered</text>
+
+        <rect x="675" y="148" width="175" height="66" rx="9" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="bdV" x="689" y="170">IF NO → pilot only</text>
+        <text class="bdX" x="689" y="190">meter it for a month</text>
+        <text class="bdX" x="689" y="206">before you scale</text>
+
+        <rect x="30" y="234" width="820" height="40" rx="9" fill="#4D6B00"/>
+        <text class="bdT" x="46" y="259">ALL FOUR YES → buy it, name an owner, and re-verify every gate at renewal</text>
+
+        <rect x="30" y="292" width="14" height="14" rx="3" fill="#4D6B00"/>
+        <text class="bdN" x="54" y="304">Ignore is a real verdict. Most tools fail gate 1 for your pipeline and are still worth a prototype seat.</text>
+        <rect x="30" y="316" width="14" height="14" rx="3" fill="#4D6B00"/>
+        <text class="bdN" x="54" y="328">Run the gates in order. Rights and metering are cheap to check and the most expensive to discover late.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the buy, adopt or ignore frame, run in order</figcaption>
+    </figure>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>Run the frame on Cadence's own marketing site.</strong> Gate 1: Framer AI produces a published Framer site and no documented code export, which is fine, because a marketing site is a destination and always was. Gate 2: it does not touch the product design system, so the risk is brand drift rather than system drift. Gate 3: imagery is where the rights question lives, not layout. Gate 4: per-site plans with a workspace-shared credit pool means two sites share one pool. Verdict: adopt for the site, ignore for the product. That is a five-minute decision once you ask about artifacts instead of features.</p>
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 40-50 min total</span></h2>
+    </div>
+    <ul>
+      <li>Take the three tools your team already uses and fill in one row each of the Part 1 table from the vendor's own documentation: real artifact, where it lands, honest limit. Note the date you verified it.</li>
+      <li>Do the credit arithmetic for one person on your actual plan. Credits per seat, divided by the cost of the task they do most. Write the monthly task count as a single number and take it to your next budget conversation.</li>
+      <li>Check one training default. Find the content-training toggle on every Figma team your work touches, including contractors and agencies, and record which ones default to on.</li>
+      <li>Pick one tool currently used on client work and answer gate 3 in writing: which feature, which surface, which export event, and is partner-model output involved. If you cannot answer, that is your finding.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">Every tool fact on this page was taken from official vendor documentation and carries a verification date, because features, credits and beta status in this space change monthly. Where sources contradict each other or a primary document was unreachable, the page says so instead of guessing. This session covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Prompt-to-UI outputs - v0, Lovable, Framer AI, Claude Artifacts, Figma Make</span><span class="note">Part 1 · practitioner depth in designer sessions b4 and b9</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Figma seat and credit gates, current feature names, content-training defaults</span><span class="note">Part 2 · token automation limits in b6</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Adobe Firefly Image Model 5, partner models, generative credit behaviour</span><span class="note">Part 2 and 3 · imagery craft in b7</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Canva AI naming and shared credit pool · Midjourney V8.2 and GPU-hour plans</span><span class="note">Part 2 · reference parameters and their limits in b2</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Commercial-safety framing, indemnity scope, C2PA and provenance</span><span class="note">Shape taught here · full treatment in leader session a4</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · Your team needs a generated draft to reach an engineer as maintainable code. Which tool's documented output does <em>not</em> support that?</p>
+      <button class="qopt" type="button">A · v0 - production Next.js and React code, with the repo as source of truth once GitHub is connected</button>
+      <button class="qopt" type="button">B · Lovable - a full-stack app that exports as a zip or syncs via Git</button>
+      <button class="qopt" type="button">C · Framer AI - editable native Framer pages and a published site, with no documented code export</button>
+      <p class="qwhy">Framer AI produces a destination, not a handoff. That is a legitimate choice for a marketing site and a dead end for a product pipeline. Figma Make sits in between: there is a code zip and a GitHub push, but the push is one-way and pasted-back layers are not automatically tied to your design system.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">2 · A designer generates a hero image inside Firefly using one of the hosted partner models. What is the rights position?</p>
+      <button class="qopt" type="button">A · Same as Adobe's own models, because it was produced inside Firefly</button>
+      <button class="qopt" type="button">B · Adobe states it cannot verify commercial safety for partner models and points to the partner's terms</button>
+      <button class="qopt" type="button">C · Covered automatically, since every Adobe enterprise plan includes IP indemnification</button>
+      <p class="qwhy">The commercial-safety framing applies to Adobe's own model, and even there it is a design goal rather than a warranty. Partner-model output is explicitly outside it, and indemnification is a purchased entitlement scoped to eligible features, surfaces and export events, with partner-model and beta output excluded.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · Your team is on Figma Professional, Full seats. Why is "everyone prototypes in Make now" a capacity decision rather than a licence decision?</p>
+      <button class="qopt" type="button">A · Credits bind before licences do - 3,000 per seat per month against 30 to 100+ credits per Make task</button>
+      <button class="qopt" type="button">B · Professional plans exclude Figma AI entirely</button>
+      <button class="qopt" type="button">C · Make tasks are free, so only seat count matters</button>
+      <p class="qwhy">Starter is the plan that excludes Figma AI. On Professional the seat is fine and the meter is the problem: 3,000 credits divided by a task costing 30 to 100 or more is roughly 30 to 100 Make tasks a month per person, before any image work. Credits do not roll over and are not shareable, so unused capacity on one seat cannot rescue another.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Leader session 3 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>The one question</b><span>What artifact does it produce, and where does that artifact land in your pipeline? Compare outputs, never demos.</span></div>
+      <div class="cheat-item"><b>Destination vs handoff</b><span>Framer AI has no documented code export. Claude Artifacts has no backend. Both are useful. Neither is a delivery stage.</span></div>
+      <div class="cheat-item"><b>Lossy bridges</b><span>Figma Make's GitHub push is one-way and overwrites; pasted-back layers are not tied to your design system.</span></div>
+      <div class="cheat-item"><b>Seats gate, credits bind</b><span>Figma AI needs a Full seat on a paid plan; Starter has no Figma AI. Full-seat credits: 500 / 3,000 / 3,500 / 4,250.</span></div>
+      <div class="cheat-item"><b>Cost per task</b><span>Figma Make 30 to 100+ credits. AI search and Rename layers are 0. Betas are 0. Pay-as-you-go $0.03 per credit.</span></div>
+      <div class="cheat-item"><b>Current names</b><span>First Draft, not "Make Design". Figma agent beta is becoming the entry point. Canva AI, not Magic; Magic Switch is gone. Midjourney default V8.2.</span></div>
+      <div class="cheat-item"><b>Three passages to read</b><span>Commercial-safety claim (a design goal, partner models excluded) · indemnity scope (feature, surface, export event) · training default (on for Starter and Professional).</span></div>
+      <div class="cheat-item"><b>The frame</b><span>Shippable? System safe? Rights covered? Meter survivable? All four yes means buy. Ignore is a real verdict, and re-verify at renewal.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Leader session 3 of 6 · learn-ai-design-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="a2-taste-is-the-moat.html">← Previous: Taste is the moat</a> &nbsp;·&nbsp; <a href="a4-ip-provenance-risk.html">Next: IP, provenance and brand risk →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=2"></script>
+</body>
+</html>

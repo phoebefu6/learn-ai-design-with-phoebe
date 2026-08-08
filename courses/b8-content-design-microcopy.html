@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Designer session 8 · Content design and microcopy - learn ai design with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-design-with-phoebe</a> / Designer session 8 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Design with Phoebe · Designer track · Session 8 of 10</div>
+    <h1>Content design and <span class="accent">microcopy</span></h1>
+    <p class="sub">Every screen you have drawn in this track is mostly words. The button is a word. The empty state is a paragraph. The thing that decides whether a user trusts a machine-written summary is one line of copy sitting next to it. Tonight you write Cadence's words as design work, not as a fill-in pass at the end - and you write the hardest words in the product, the ones that admit a machine made this. Then you check the result in the lab, because the place teams hide disclosure copy is the exact place the contrast check fails.</p>
+    <div class="chip-row">
+      <span class="chip level">🟠 Designer track</span>
+      <span class="chip audience">Product · brand · design-adjacent builders</span>
+      <span class="chip audience">Words as design</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-2 · Where copy carries the design</span>
+      <span class="a2" style="flex:4">2-16 · The four places + AI disclosure</span>
+      <span class="a3" style="flex:5">16-42 · Build-along: write Cadence's words</span>
+      <span class="a4" style="flex:1">42-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ PART 1: WORDS ARE INTERFACE ============ -->
+  <section class="section" id="words-are-interface">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · the material, not the finish</span>
+      <h2>Words are interface <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">Copy is not applied to a design. Copy <strong>is</strong> a large part of the design, and it is the part users read first, slowest and most literally. There are four places where the words carry the whole screen and a beautiful layout cannot rescue them. <strong>Labels</strong>: a button should say what happens next for the user, not what the system does internally. <strong>Empty states</strong>: what this is, why it is empty, and the one action that fills it. <strong>Errors</strong>: what happened, what it means for me, what to do now, and never a sentence that blames the user. <strong>Confirmations</strong>: what changed, and how to undo it. Get those four right and an ordinary layout feels considered. Get them wrong and no amount of spacing rhythm saves you.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 372" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The same Cadence screen with weak copy on the left and strong copy on the right, annotated with the four places copy carries the design: labels, empty states, errors and confirmations.">
+        <style>
+          .cwT { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .cwI { font: 700 12.5px Inter, sans-serif; fill: #2A1A28; }
+          .cwX { font: 400 11.5px Inter, sans-serif; fill: #7A6A78; }
+          .cwN { font: 600 13px Inter, sans-serif; fill: #1E2A00; }
+        </style>
+        <rect x="30" y="24" width="390" height="30" rx="7" fill="#4A1F44"/>
+        <text class="cwT" x="46" y="44">SAME LAYOUT, WEAK COPY</text>
+        <rect x="460" y="24" width="390" height="30" rx="7" fill="#4D6B00"/>
+        <text class="cwT" x="476" y="44">SAME LAYOUT, STRONG COPY</text>
+
+        <rect x="30" y="72" width="390" height="52" rx="8" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="cwI" x="44" y="92">1 · LABEL - "Submit"</text>
+        <text class="cwX" x="44" y="110">names the system's action, not the user's</text>
+        <rect x="460" y="72" width="390" height="52" rx="8" fill="#F4F8DE" stroke="#4D6B00" stroke-width="1.5"/>
+        <text class="cwI" x="474" y="92">1 · LABEL - "Share summary"</text>
+        <text class="cwX" x="474" y="110">names what happens next for the user</text>
+
+        <rect x="30" y="134" width="390" height="52" rx="8" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="cwI" x="44" y="154">2 · EMPTY - "No data"</text>
+        <text class="cwX" x="44" y="172">no explanation, no way out of the screen</text>
+        <rect x="460" y="134" width="390" height="52" rx="8" fill="#F4F8DE" stroke="#4D6B00" stroke-width="1.5"/>
+        <text class="cwI" x="474" y="154">2 · EMPTY - "No summaries yet"</text>
+        <text class="cwX" x="474" y="172">what it is, why empty, one clear action</text>
+
+        <rect x="30" y="196" width="390" height="52" rx="8" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="cwI" x="44" y="216">3 · ERROR - "Invalid input"</text>
+        <text class="cwX" x="44" y="234">blames the user, offers no next step</text>
+        <rect x="460" y="196" width="390" height="52" rx="8" fill="#F4F8DE" stroke="#4D6B00" stroke-width="1.5"/>
+        <text class="cwI" x="474" y="216">3 · ERROR - "We could not send it"</text>
+        <text class="cwX" x="474" y="234">what happened, what it means, what to do</text>
+
+        <rect x="30" y="258" width="390" height="52" rx="8" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="cwI" x="44" y="278">4 · CONFIRM - "Success!"</text>
+        <text class="cwX" x="44" y="296">what changed? sent to whom? can I undo?</text>
+        <rect x="460" y="258" width="390" height="52" rx="8" fill="#F4F8DE" stroke="#4D6B00" stroke-width="1.5"/>
+        <text class="cwI" x="474" y="278">4 · CONFIRM - "Sent to 3 people"</text>
+        <text class="cwX" x="474" y="296">names the change and offers Undo</text>
+
+        <rect x="30" y="328" width="14" height="14" rx="3" fill="#4D6B00"/>
+        <text class="cwN" x="54" y="340">Nothing moved between the two columns except the words. That is the whole argument.</text>
+        <rect x="30" y="350" width="14" height="14" rx="3" fill="#4D6B00"/>
+        <text class="cwN" x="54" y="362">AI writes the right-hand column fast. It cannot tell you which sentence is true of your product.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the four places where copy is the design, weak against strong</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>What AI is genuinely good and genuinely bad at here<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>This is the clearest split in the whole track, and it is worth stating plainly before you open a model.</p>
+        <ul>
+          <li><strong>Genuinely good: variants.</strong> Ask for fifteen ways to phrase an empty state at forty characters and you get fifteen usable starting points in seconds. Volume on wording is exactly the cheap step from b1.</li>
+          <li><strong>Genuinely good: consistency sweeps.</strong> Paste twelve of your existing strings and ask which ones break your own conventions - tense, capitalisation, person, whether buttons are verbs. It catches drift a human reviewer skims past.</li>
+          <li><strong>Genuinely bad: knowing which variant is true.</strong> "Your summary is ready in seconds" is a product claim. Only you know whether Cadence takes seconds, whether it always succeeds, and whether a human ever reviews it. A model will write the confident version because confident copy is the most likely copy.</li>
+          <li><strong>Genuinely bad: knowing what the user is feeling.</strong> The same error string reads as helpful at first use and insulting at the third failure. State of mind is context the model does not have unless you hand it over.</li>
+        </ul>
+        <p>So the working pattern is the loop from b1, applied to sentences: you supply product truth and constraints, the model supplies range, you choose. Never the other way round.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The copy prompt that produces options instead of rewrites<span class="mini">4 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The usual complaint about AI microcopy is that you ask for three options and get one sentence three times. That is a brief problem, not a model problem. A vague ask has only one likely answer, so all three answers converge on it.</p>
+        <div class="prompt-box bad">
+          <span class="label">Vague ask - produces three rewrites of the same line</span>
+          <p>"Write friendly microcopy for this screen."</p>
+        </div>
+        <div class="prompt-box good">
+          <span class="label">Constrained ask - produces three genuinely different lines</span>
+          <p>"Cadence is a meeting-notes app. This is the empty state of the Shared summaries list. Product truth: summaries are generated from the meeting transcript after the meeting ends, they are always editable, and nothing is shared until the user presses Share. Voice: plain, calm, second person, no exclamation marks, sentence case. Budget: heading 32 characters max, body 90 max, one button label 18 max. User state of mind: first week, unsure whether this app did anything useful yet. Forbidden words: seamless, effortless, magic, powered, simply, just. Give me three options that differ in APPROACH, not wording - one that explains the mechanism, one that names the benefit, one that gives a single instruction. Label each approach and state what it assumes about the user."</p>
+        </div>
+        <p>Six things changed: product truth, voice constraints, a character budget per slot, the user's state of mind, a forbidden-words list, and an explicit demand for different approaches rather than different phrasing. The last one does most of the work. Asking a model to vary the strategy forces it off the single most likely sentence, and the labels let you argue about the approach in review instead of the adjectives.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: AI DISCLOSURE COPY ============ -->
+  <section class="section" id="disclosure">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · the hardest words in this product</span>
+      <h2>Disclosure copy that builds trust <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">Cadence has one structural problem: it puts machine-written summaries in front of humans who were not in the room. Every trust decision in the product runs through a few short strings. Five rules hold up: <strong>say what was generated and from what</strong>, so the user knows the boundary of the claim. <strong>Put the uncertainty where the user acts</strong>, not in a footer nobody scrolls to. <strong>Make correction the obvious path</strong> rather than a buried edit, because a summary the user can fix in one tap is a summary they will trust. <strong>Never imply human review that did not happen</strong> - "verified" and "checked" are words you have to earn. And avoid the two failure modes at either end: bragging, where "AI-powered" is pasted on as a feature badge, and burying, where the disclosure is written in legalese at 11px grey-on-grey.</p>
+
+    <table class="clean">
+      <thead>
+        <tr><th>Disclosure moment in Cadence</th><th>What the user is actually asking</th><th>The copy job</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>A generated summary</strong>, first view</td>
+          <td>Who wrote this, and from what?</td>
+          <td>One line above the body naming the source and the mechanism: generated from the transcript of this meeting, editable. No badge, no adjectives.</td>
+        </tr>
+        <tr>
+          <td><strong>A low-confidence transcript segment</strong></td>
+          <td>Is this bit reliable?</td>
+          <td>Mark the segment itself, not the page. Say the audio was unclear here, and put an open-the-recording action next to the doubt so checking is one tap.</td>
+        </tr>
+        <tr>
+          <td><strong>An unclear speaker attribution</strong></td>
+          <td>Did that person really say that?</td>
+          <td>Never guess in a confident voice. Show the uncertainty inline, name the two candidates if you have them, and make reassigning the speaker the primary action.</td>
+        </tr>
+        <tr>
+          <td><strong>A shared summary</strong>, seen by a recipient who was not there</td>
+          <td>Can I act on this?</td>
+          <td>The disclosure has to travel with the artifact. The recipient never saw it generated, so the shared view needs its own line naming the source, the meeting, and who shared it.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Rewriting one disclosure line four ways<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Same moment, the top of a generated Cadence summary. Watch what each version promises.</p>
+        <div class="prompt-box bad">
+          <span class="label">Bragging, and it implies review that never happened</span>
+          <p>"✨ AI-powered summary - intelligently verified for accuracy."</p>
+        </div>
+        <div class="prompt-box good">
+          <span class="label">Names the source, the mechanism and the correction path</span>
+          <p>"Summary generated from this meeting's transcript. It can miss things - edit any line."</p>
+        </div>
+        <p>Two more versions worth having in your pocket. The <strong>buried</strong> one: a 10px grey line at the bottom of the page reading "Content on this page may be generated by automated systems in accordance with our terms". Technically present, functionally absent, and as you will see in the lab it is usually a contrast failure too. The <strong>overcorrected</strong> one: a modal on every open that makes the user acknowledge the summary might be wrong, which trains them to dismiss warnings and buys you nothing.</p>
+        <p>The good version fits in one line, is placed where the user reads before acting, and ends with the action that fixes the problem it just admitted. That last clause is the part teams leave out.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Where uncertainty has to live<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The rule is not "disclose somewhere". It is <strong>disclose at the point of action</strong>. A user who is about to press Share is making a decision, and that is the only moment the caveat can change anything. The same words in a settings page, a footer, a help article or an onboarding screen three days ago have no effect on that decision.</p>
+        <ul>
+          <li><strong>At the segment</strong> for a doubt about one line - inline, next to the words in question.</li>
+          <li><strong>At the top of the artifact</strong> for a doubt about the whole thing - above the body, before the reader forms a belief.</li>
+          <li><strong>At the button</strong> for a doubt that matters to a decision - in or beside the Share confirmation, where the user is committing.</li>
+          <li><strong>Travelling with the artifact</strong> for anything that leaves your product, because the recipient inherits the claim without the context.</li>
+        </ul>
+        <p>And one honesty test before you ship a line: read it aloud and ask what it promises. If a reasonable person would conclude a human checked this, and no human did, the line is a defect regardless of how warm it sounds.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: PAIRING COPY WITH VISUALS ============ -->
+  <section class="section" id="copy-and-layout">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · the working order</span>
+      <h2>Pairing copy with visuals <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">If you lay out first and write later, the words have to fit the boxes, and that is how a screen ends up saying "Submit" - it was the only verb that fit. Reverse it. Write the real labels first, then lay out around them, then break them on purpose. Four habits carry most of the value.</p>
+
+    <div class="legend">
+      <span class="pill solid">Write the words first</span>
+      <span class="pill light">Then lay out around them</span>
+      <span class="pill peach">▶ Then stress the strings</span>
+      <span class="pill inkpill">Then re-read the order</span>
+    </div>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Four habits that keep copy and layout honest<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Write the labels before the layout.</strong> Real strings, not lorem and not placeholders. Then the layout is designed to fit words that exist, rather than words being trimmed to fit a layout that already shipped to Figma.</li>
+          <li><strong>Design for the longest plausible string and the shortest.</strong> Both ends break things. A 4-character meeting title leaves a card looking broken and empty; a 90-character one wraps to three lines and pushes your primary action below the fold. Draw both, not the comfortable middle.</li>
+          <li><strong>Localise-proof it.</strong> Avoid baked-in word order - a sentence assembled from fragments like "Shared" + name + "with" + count will be wrong in most languages. Avoid text inside images, which cannot be translated, cannot be selected, cannot be read by a screen reader and cannot reflow. Leave room: many languages run substantially longer than English, so a label that exactly fills its button in English will not fit.</li>
+          <li><strong>Check that reading order matches visual order.</strong> The order a screen reader announces things is the DOM order, not the visual arrangement. A disclosure line that sits visually above the summary but comes after it in markup is disclosed to sighted users and hidden from everyone else.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Copy length is a hierarchy decision<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>This is the connection back to b5 that most content-design guidance skips. A two-line title is not a longer version of a one-line title - it is a different composition. It occupies more of the first read, it pushes everything below it down, it changes the ratio between the title and the next element in your type scale, and it can quietly create a second loudest thing on the screen.</p>
+        <ul>
+          <li><strong>Length competes.</strong> Three lines of body copy set at 16px can out-shout a 25px heading purely by area. "One loudest thing" is about perceived weight, and weight includes how much space something takes.</li>
+          <li><strong>Length breaks the scale's promise.</strong> A 1.25 ratio gives you a clean step from 20px to 25px. That step is invisible when the smaller item is a paragraph and the larger one is two words.</li>
+          <li><strong>Length breaks the spacing rhythm.</strong> An extra wrapped line adds one line-height, not one spacing step, so a stack that sat neatly on the 8px grid stops doing so at the longest string.</li>
+        </ul>
+        <p>So when you cut a heading from twelve words to five, you are not being terse for its own sake - you are making a hierarchy and rhythm decision that the lab can measure. Run the b5 checks on your longest-string version, not your prettiest one.</p>
+      </div>
+    </details>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 316" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The copy-first layout loop: write the labels, lay out around them, stress the strings at both extremes, then re-read the order, and return to the labels.">
+        <style>
+          .clT { font: 700 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .clS { font: 400 11px Inter, sans-serif; fill: #FFFFFF; opacity: .92; }
+          .clI { font: 700 12.5px Inter, sans-serif; fill: #2A1A28; }
+          .clX { font: 400 11.5px Inter, sans-serif; fill: #7A6A78; }
+          .clN { font: 600 13px Inter, sans-serif; fill: #1E2A00; }
+          .clWire { stroke: #6B2D5C; stroke-width: 2.5; fill: none; marker-end: url(#clHd); }
+        </style>
+        <defs>
+          <marker id="clHd" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L9,4.5 L0,9 z" fill="#6B2D5C"/>
+          </marker>
+        </defs>
+
+        <rect x="30" y="54" width="175" height="56" rx="8" fill="#4A1F44"/>
+        <text class="clT" x="44" y="76">1 · WRITE LABELS</text>
+        <text class="clS" x="44" y="95">real words, not lorem</text>
+
+        <rect x="245" y="54" width="175" height="56" rx="8" fill="#6B2D5C"/>
+        <text class="clT" x="259" y="76">2 · LAY OUT</text>
+        <text class="clS" x="259" y="95">fit the real words</text>
+
+        <rect x="460" y="54" width="175" height="56" rx="8" fill="#9B4B87"/>
+        <text class="clT" x="474" y="76">3 · STRESS STRINGS</text>
+        <text class="clS" x="474" y="95">longest and shortest</text>
+
+        <rect x="675" y="54" width="175" height="56" rx="8" fill="#2A1A28"/>
+        <text class="clT" x="689" y="76">4 · RE-READ ORDER</text>
+        <text class="clS" x="689" y="95">reading = visual</text>
+
+        <path class="clWire" d="M205,82 L240,82"/>
+        <path class="clWire" d="M420,82 L455,82"/>
+        <path class="clWire" d="M635,82 L670,82"/>
+        <path class="clWire" d="M762,110 C762,160 260,150 130,178"/>
+
+        <rect x="245" y="192" width="280" height="56" rx="10" fill="#F9EFF6" stroke="#9B4B87" stroke-width="2"/>
+        <text class="clI" x="263" y="214">LENGTH IS A HIERARCHY CALL</text>
+        <text class="clX" x="263" y="233">two-line titles change the first read</text>
+
+        <rect x="565" y="192" width="285" height="56" rx="10" fill="#F4F8DE" stroke="#4D6B00" stroke-width="2"/>
+        <text class="clI" x="583" y="214">RUN THE b5 CHECKS HERE</text>
+        <text class="clX" x="583" y="233">on the longest string, not the prettiest</text>
+
+        <rect x="30" y="272" width="14" height="14" rx="3" fill="#4D6B00"/>
+        <text class="clN" x="54" y="284">The loop closes on the labels. If the layout cannot hold the words, change the words or the layout.</text>
+        <rect x="30" y="294" width="14" height="14" rx="3" fill="#4D6B00"/>
+        <text class="clN" x="54" y="306">Never solve a string problem by shrinking the type. That is a contrast bug waiting to be filed.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the copy-first layout loop, and where it hands back to the b5 checks</figcaption>
+    </figure>
+  </section>
+
+  <!-- ============ DEMO ============ -->
+  <section class="section" id="demo">
+    <div class="section-kicker">
+      <span class="klabel">Build-along</span>
+      <h2>Write Cadence's words, then check them <span class="tag demo">★ 20 min · everyone runs it</span></h2>
+    </div>
+    <p class="lede">Three strings, written live, then measured. You will write Cadence's <strong>empty state</strong>, its <strong>low-confidence banner</strong>, and its <strong>share-confirmation</strong> copy - and then run the lab with hierarchy, type scale, spacing and contrast on, which is <strong>86 out of 100</strong> on the track's ladder. Read the remaining contrast row carefully. The low-contrast metadata line is exactly where disclosure copy usually gets hidden, which makes it a copy decision failing an accessibility check rather than a colour mistake.</p>
+
+    <div class="steps">
+      <div class="step"><p><strong>Empty state.</strong> Three slots: heading under 32 characters, body under 90, one button label under 18. Say what this list is, why it is empty, and the single action. No exclamation marks.</p></div>
+      <div class="step"><p><strong>Low-confidence banner.</strong> Attach it to the segment, not the page. Name what was unclear, and put the check-the-recording action inside the banner so correction is one tap away.</p></div>
+      <div class="step"><p><strong>Share confirmation.</strong> Two jobs in one line: name what changed and to whom, and carry the disclosure that the recipient never saw generated. Then offer Undo.</p></div>
+      <div class="step"><p><strong>Stress the strings.</strong> Retype each one at its longest plausible length and its shortest. Note which layout decision breaks first - it is usually the button, and usually because the label grew.</p></div>
+      <div class="step"><p><strong>Now measure.</strong> Turn on hierarchy, type scale, spacing and contrast in the lab below. Find the metadata line in the contrast rows and ask yourself where your disclosure copy would have gone.</p></div>
+    </div>
+
+    <div class="dlbox" data-mode="lab" data-levers="hierarchy,typescale,spacing,contrast"></div>
+
+    <div class="callout tip">
+      <strong>What is real here, honestly</strong>
+      The starting draft is scripted - the same composite of unbriefed generator output you met in b1. Every score is measured live in your browser: contrast ratios computed with the WCAG relative-luminance formula, spacing and font sizes read from getComputedStyle, hue families counted by converting each rendered colour to HSL. Four levers on is 86, and the rows that still fail are the ones worth reading tonight: the quiet grey metadata line is the exact slot where a team hides the sentence "generated from the transcript", so a copy placement decision shows up as an accessibility defect.
+    </div>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The pattern to watch for in your own product:</strong> a disclosure line that passes legal review and fails a contrast check. It happens because the sentence is treated as a compliance artifact rather than as content, so it gets the smallest size and the palest grey on the screen - visually saying "ignore this" while the words say "this was machine-written". Both halves of that are copy decisions. Put the line at 16px in body colour above the summary and the tension disappears.</p>
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 30-40 min total</span></h2>
+    </div>
+    <ul>
+      <li>Take one screen in a product you work on and audit only the four places: labels, empty state, error, confirmation. Write the current string and a replacement for each, with a character budget you actually respected.</li>
+      <li>Write the constrained copy prompt from Part 1 for one of those slots - product truth, voice, budget, state of mind, forbidden words, three different approaches. Keep the model's three options and mark which assumption each one makes about the user.</li>
+      <li>Find one disclosure line in any product you use that either brags or buries. Rewrite it to name the source, place the uncertainty where the user acts, and end on the correction path.</li>
+      <li>Retype your longest and shortest plausible strings into the layout and screenshot both. Bring the version that broke to b9 - the spec you write there has to name string extremes as a state.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">This session teaches words as design material and the disclosure problem that comes with putting machine-written text in front of people. Platform content guidelines are referenced and linked rather than reproduced - they change, and the reasoning below outlives the wording. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Words as interface - labels, empty states, errors, confirmations</span><span class="note">Part 1 · the four places, weak against strong</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">AI-disclosure copy - source, placement, correction path, the two failure modes</span><span class="note">Part 2 · the four Cadence disclosure moments</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">WCAG 2.2 SC 1.4.3 applied to disclosure copy</span><span class="note">Demo · the grey metadata line is a copy decision failing a contrast check</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Platform content and voice guidelines (Apple, Google, Microsoft writing guidance)</span><span class="note">Referenced as sources to read · not reproduced here</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Localisation and reading-order consequences of copy decisions</span><span class="note">Part 3 · reading order and focus behaviour are spec'd properly in b9</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · Cadence needs to disclose that a summary was machine-written. Where does that line belong?</p>
+      <button class="qopt" type="button">A · In the footer and the terms of service, so it is legally on record</button>
+      <button class="qopt" type="button">B · In an onboarding screen, so the user is told once and not nagged again</button>
+      <button class="qopt" type="button">C · At the point of action - above the summary, and again in the share confirmation</button>
+      <p class="qwhy">Uncertainty only changes behaviour where a decision is being made. A footer is present but functionally absent, and an onboarding screen was three days ago. The line has to sit above the body before the reader forms a belief, and travel with the artifact when it is shared to someone who never saw it generated.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">2 · What is the four-part pattern for error copy?</p>
+      <button class="qopt" type="button">A · Apologise, explain the technical cause, give a reference code, link to support</button>
+      <button class="qopt" type="button">B · What happened, what it means for me, what to do now, and no blame on the user</button>
+      <button class="qopt" type="button">C · Keep it short and friendly so the failure feels less severe</button>
+      <p class="qwhy">An error is a moment where the user needs a next step, not a diagnosis. "Invalid input" fails on all four counts. Technical causes and reference codes belong in a detail the user can expand, not in the first line, and "friendly" without a next step is just a cheerful dead end.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · Why design against the longest and shortest plausible strings rather than a typical one?</p>
+      <button class="qopt" type="button">A · Both extremes break the layout, and length changes hierarchy and spacing rhythm too</button>
+      <button class="qopt" type="button">B · Because translation always makes text longer by a fixed percentage you can plan for</button>
+      <button class="qopt" type="button">C · Because shorter copy is always better, so the shortest version is the target</button>
+      <p class="qwhy">A very short title leaves a card looking broken; a very long one wraps, pushes the primary action down, adds a line-height rather than a spacing step, and can create a second loudest thing by sheer area. Expansion varies by language and by string, so there is no single safe multiplier - draw both ends and check the b5 measurements on the long one.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Designer session 8 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>The four places</b><span>Labels, empty states, errors, confirmations. Copy carries the whole screen in all four, and layout cannot rescue it.</span></div>
+      <div class="cheat-item"><b>Label test</b><span>Say what happens next for the user, not what the system does. "Share summary", never "Submit".</span></div>
+      <div class="cheat-item"><b>Error pattern</b><span>What happened · what it means for me · what to do now · never blame the user. Cause and codes go in a detail, not line one.</span></div>
+      <div class="cheat-item"><b>Confirmation pattern</b><span>Name what changed and to whom, then offer Undo. "Success!" answers nothing.</span></div>
+      <div class="cheat-item"><b>Disclosure rules</b><span>Say what was generated and from what · uncertainty at the point of action · correction is the obvious path · never imply review that did not happen.</span></div>
+      <div class="cheat-item"><b>Two failure modes</b><span>Bragging ("AI-powered, verified") and burying (10px grey legalese). Both are copy defects, and burying usually fails contrast too.</span></div>
+      <div class="cheat-item"><b>Copy prompt</b><span>Product truth · voice · character budget · user's state of mind · forbidden words · three different APPROACHES, not three rewrites.</span></div>
+      <div class="cheat-item"><b>Copy-first loop</b><span>Write labels → lay out → stress the strings → re-read the order. Length is a hierarchy call, so run the b5 checks on the longest version.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Designer session 8 of 10 · learn-ai-design-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b7-illustration-and-imagery.html">← Previous: Illustration and imagery</a> &nbsp;·&nbsp; <a href="b9-handoff-to-code.html">Next: Handoff to code →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/design-live.js?v=1"></script>
+<script src="../assets/app.js?v=2"></script>
+</body>
+</html>

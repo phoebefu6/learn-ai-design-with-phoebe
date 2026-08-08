@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leader session 6 · Rollout and measuring quality - learn ai design with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-design-with-phoebe</a> / Leader session 6 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Design with Phoebe · Leader track · Session 6 of 6</div>
+    <h1>Rollout and <span class="accent">measuring quality</span></h1>
+    <p class="sub">This is the last leader session, so it has to answer the question the first five raised: what do you actually do on Monday. The honest risk of an AI design rollout is not that it fails loudly. It is that it succeeds on the wrong number. Asset count and cycle time will improve whether or not your work gets better, which means a rollout measured on volume quietly buys you more mediocre work, faster. Tonight you pick the metric before the tools, put a twelve-month plan behind it, write the guardrails down once, and name the three habits to stop.</p>
+    <div class="chip-row">
+      <span class="chip level">🟠 Leader track</span>
+      <span class="chip audience">Design · brand · creative leads</span>
+      <span class="chip audience">Strategy session</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Where the track landed</span>
+      <span class="a2" style="flex:4">3-16 · Pick the metric first</span>
+      <span class="a3" style="flex:5">16-40 · Twelve months + guardrails</span>
+      <span class="a4" style="flex:1">40-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Where the leader track landed</h2>
+    </div>
+    <p class="lede">Five sessions of argument, one conclusion: <strong>generation got cheap, and judgement got expensive.</strong> a1 mapped where cost actually collapses and where it does not. a2 split taste into the half a machine can check and the half only you can defend. a3 priced the toolchain honestly, seats and credits included. a4 drew the line around IP, provenance and brand risk. a5 dealt with the part nobody enjoys: juniors, craft and the ladder. Tonight is the operating layer. You leave with a metric set, a four-quarter plan, a one-page guardrail document, and a stop list. Everything on this page is meant to survive being read aloud to a finance partner.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">Bring your current dashboard to this one</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      Four metrics you can defend, a twelve-month sequence that puts the standard before the tools, a guardrail page you can sign, and three things to stop doing on Monday. Plus the sentence that ends most rollout arguments: we are not measuring how much we made, we are measuring how much of it passed.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: PICK THE METRIC ============ -->
+  <section class="section" id="pick-the-metric">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · the decision that shapes everything after it</span>
+      <h2>Pick the metric before you pick the tools <span class="tag concept">10 min live</span></h2>
+    </div>
+    <p class="lede">Asset count and cycle time go up on their own. That is not a win, it is gravity: the moment a generator lands in a team, the number of files produced per week rises and the time from brief to first draft falls, with no change whatsoever in whether the work is any good. If those are your rollout metrics, the rollout will report success while the shelf fills with plausible, forgettable screens. So pick the metric first, in public, before the first licence is bought, and pick metrics that <strong>only move when quality moves</strong>: conformance, rework, coverage and distinctiveness.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Two illustrative rollout dashboards side by side: a volume-led one showing asset count, cycle time, seats and reviews, and a quality-led one showing conformance, rework, coverage and distinctiveness, with what each set of numbers quietly rewards.">
+        <style>
+          .rqT { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .rqI { font: 700 12.5px Inter, sans-serif; fill: #2A1A28; }
+          .rqX { font: 400 11.5px Inter, sans-serif; fill: #7A6A78; }
+          .rqR { font: 700 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .rqN { font: 600 13px Inter, sans-serif; fill: #1E2A00; }
+        </style>
+
+        <rect x="30" y="24" width="390" height="30" rx="7" fill="#4A1F44"/>
+        <text class="rqT" x="46" y="44">VOLUME-LED DASHBOARD (example)</text>
+        <rect x="460" y="24" width="390" height="30" rx="7" fill="#4D6B00"/>
+        <text class="rqT" x="476" y="44">QUALITY-LED DASHBOARD (example)</text>
+
+        <rect x="30" y="70" width="390" height="46" rx="8" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="rqI" x="46" y="90">Assets produced 412</text>
+        <text class="rqX" x="46" y="107">rises the month the tools arrive</text>
+        <rect x="30" y="126" width="390" height="46" rx="8" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="rqI" x="46" y="146">Cycle time 6.2 days to 2.1</text>
+        <text class="rqX" x="46" y="163">faster is not better, only faster</text>
+        <rect x="30" y="182" width="390" height="46" rx="8" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="rqI" x="46" y="202">Seats activated 38 of 40</text>
+        <text class="rqX" x="46" y="219">activation is not adoption</text>
+        <rect x="30" y="238" width="390" height="46" rx="8" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="rqI" x="46" y="258">Creative reviews held 24</text>
+        <text class="rqX" x="46" y="275">counts meetings, not decisions</text>
+
+        <rect x="460" y="70" width="390" height="46" rx="8" fill="#F4F8DE" stroke="#4D6B00" stroke-width="1.5"/>
+        <text class="rqI" x="476" y="90">Conformance 71% first time</text>
+        <text class="rqX" x="476" y="107">screens clearing the five checks</text>
+        <rect x="460" y="126" width="390" height="46" rx="8" fill="#F4F8DE" stroke="#4D6B00" stroke-width="1.5"/>
+        <text class="rqI" x="476" y="146">Rework 2.4 rounds per screen</text>
+        <text class="rqX" x="476" y="163">what the standard prevented</text>
+        <rect x="460" y="182" width="390" height="46" rx="8" fill="#F4F8DE" stroke="#4D6B00" stroke-width="1.5"/>
+        <text class="rqI" x="476" y="202">Coverage 6 of 9 states</text>
+        <text class="rqX" x="476" y="219">empty, error, loading, offline too</text>
+        <rect x="460" y="238" width="390" height="46" rx="8" fill="#F4F8DE" stroke="#4D6B00" stroke-width="1.5"/>
+        <text class="rqI" x="476" y="258">Distinctiveness 3.1 of 5</text>
+        <text class="rqX" x="476" y="275">blind human score, median of three</text>
+
+        <rect x="30" y="296" width="390" height="32" rx="7" fill="#2A1A28"/>
+        <text class="rqR" x="46" y="317">Quietly rewards volume, speed, activity</text>
+        <rect x="460" y="296" width="390" height="32" rx="7" fill="#6B2D5C"/>
+        <text class="rqR" x="476" y="317">Quietly rewards craft, restraint, coverage</text>
+
+        <rect x="30" y="348" width="14" height="14" rx="3" fill="#4D6B00"/>
+        <text class="rqN" x="54" y="360">Numbers shown are illustrative, not benchmarks. Set your own baseline in Q1 and compare only to it.</text>
+        <rect x="30" y="372" width="14" height="14" rx="3" fill="#4D6B00"/>
+        <text class="rqN" x="54" y="384">A team optimises the number on the wall. Put the wrong number up and you will get exactly it.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the same rollout, measured two ways, rewarding two different behaviours</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The four metrics worth a dashboard<span class="mini">5 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Four numbers, and each one only moves when the work gets better:</p>
+        <ul>
+          <li><strong>Conformance</strong> - the share of screens that pass all five measurable checks the first time they hit review. The five checks are contrast, spacing rhythm, type scale, hierarchy and colour restraint, and two of them are formal standards you can cite: WCAG 2.2 SC 1.4.3 for text contrast at 4.5:1 normal and 3:1 large, and SC 1.4.11 for 3:1 on control boundaries and meaningful graphics.</li>
+          <li><strong>Rework</strong> - review rounds per shipped screen. This is the number a generator makes worse if direction is thin, because volume without a brief produces more things to reject. Falling rework is the clearest evidence a standard is working.</li>
+          <li><strong>Coverage</strong> - states designed per feature, not just the happy path. Count empty, loading, error, offline, permission-denied, long-content and the AI-uncertainty state. Generated work forgets these almost every time, and they are where real users live.</li>
+          <li><strong>Distinctiveness</strong> - can a stranger tell your work from a competitor's. This one is a judgement call, scored by humans, and pretending otherwise would be dishonest. The next card is how to score it repeatably anyway.</li>
+        </ul>
+        <p>Keep asset count and cycle time on the dashboard if you like, but move them into a section labelled "context, not targets". They are useful for capacity planning and useless as evidence of quality.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Scoring distinctiveness without starting a taste war<span class="mini">4 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>A judgement metric earns its place on a dashboard only if the method is fixed. Write the protocol down, run it the same way every quarter, and it becomes comparable even though it is subjective:</p>
+        <ul>
+          <li><strong>Blind the set.</strong> Take five of your screens or assets and five from a fixed competitor set chosen at the start of the year. Strip logos, product names and any wordmark.</li>
+          <li><strong>Ask one question.</strong> "Which of these came from the same company?" Grouping accuracy is your real signal. If reviewers cannot group your own work together, you do not have a visual point of view yet.</li>
+          <li><strong>Then score 1 to 5</strong> on "this could only have come from one company". Three reviewers minimum, at least one from outside the design team, and take the median rather than the mean so one strong opinion cannot move the quarter.</li>
+          <li><strong>Keep the sheet.</strong> Same competitor set, same question wording, same reviewer mix. The absolute number matters far less than the direction over four quarters.</li>
+        </ul>
+        <p>State the caveat in the report itself: this is a scored human judgement, not a measurement. That sentence is what stops a finance partner treating 3.1 as though it were revenue.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Why volume metrics rise on their own<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Three mechanisms, all of them mechanical rather than sinister. First, generation genuinely collapses the cost of a first draft, so drafts multiply whether or not anyone briefed them. Second, credit systems reward usage: when a tool bills by credits and the budget is already spent, the incentive is to use it, not to use it well. Third, review capacity does not scale with output, so a rising asset count arrives at a review queue of the same size and the queue starts approving faster.</p>
+        <p>The failure mode is easy to describe and hard to see from a dashboard: throughput up, conformance flat, rework up, distinctiveness down. That is a rollout getting worse while every headline number improves. Conformance and rework are the two numbers that catch it early.</p>
+      </div>
+    </details>
+
+    <table class="clean">
+      <thead>
+        <tr><th>Metric</th><th>How to measure it</th><th>What it rewards</th><th>How it can be gamed</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Conformance</strong></td><td>Share of screens passing all five checks on first review. Two checks cite WCAG 2.2 SC 1.4.3 and SC 1.4.11 by number.</td><td>Getting it right before the meeting, not during it</td><td>Reviewers relax the checks. Fix by keeping the checks in tokens and lint, not in memory.</td></tr>
+        <tr><td><strong>Rework</strong></td><td>Review rounds per shipped screen, counted from the ticket</td><td>Better briefs and earlier critique</td><td>Rounds get merged or renamed. Fix by counting rounds from the tool's history, not a self-report.</td></tr>
+        <tr><td><strong>Coverage</strong></td><td>States designed per feature against a written list of the states you require</td><td>Designing for real users, not the demo path</td><td>Empty states shipped as placeholders. Fix by requiring real copy in every state.</td></tr>
+        <tr><td><strong>Distinctiveness</strong></td><td>Blind grouping plus a 1-5 score, three reviewers, median, fixed competitor set</td><td>Having a point of view worth recognising</td><td>Reviewers who know the work. Fix by blinding the set and rotating one reviewer in from outside.</td></tr>
+        <tr><td>Asset count / cycle time</td><td>Whatever your tools already report</td><td>Nothing you want. Both rise on their own.</td><td>No gaming needed, which is the point. Report as context, never as a target.</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The cheapest possible demonstration that a scored baseline changes a conversation</strong> is the designer track's critique lab. A finished Cadence screen measures 100 out of 100. Turn on the single most common instinct in a design review, "add colour", and it drops 19 points: a fourth hue family, two off-grid paddings, and a yellow highlight with yellow text on it. Nobody argues with that in the room. It takes about ninety seconds, it costs nothing, and it converts a taste debate into a number both sides can see. That is the whole case for a scored baseline, in one click.</p>
+    </div>
+  </section>
+
+  <!-- ============ PART 2: THE 12-MONTH PLAN ============ -->
+  <section class="section" id="twelve-months">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · sequence matters more than speed</span>
+      <h2>Twelve months, in four quarters <span class="tag concept">14 min live</span></h2>
+    </div>
+    <p class="lede">Most rollouts start with a tool pilot because a tool pilot is easy to fund. That order is backwards: a pilot with no standard produces a pile of output nobody can judge, and then the pilot is scored on how much people liked it. Put the standard first. Then pilot tools against it, then make the standard enforceable by systems rather than by attention, then change the ladder and re-measure. Each quarter below has what ships and what could go wrong, because the failure modes are more useful than the plan.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Q1 · Set the standard and the review ritual<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p><strong>Ships:</strong> a one-page written standard with the five measurable checks, each cited where it is a standard rather than a convention. Contrast is WCAG 2.2 SC 1.4.3, non-text contrast is SC 1.4.11, enhanced contrast is SC 1.4.6, text spacing is SC 1.4.12, minimum target size is SC 2.5.8 at 24 by 24 CSS pixels with exceptions. Type scale, spacing unit and "one loudest thing" are conventions, and the page must say so. Also ships: the review ritual, meaning a fixed thirty-minute slot where screens are scored on the five checks before anyone discusses feeling, plus the Q1 baseline for all four metrics.</p>
+        <p><strong>What could go wrong:</strong> the standard becomes a twelve-page document nobody reads. Cap it at one page. Second risk: you write it alone, and then it is your standard rather than the team's. Draft it with two designers and one engineer in the room so the enforcement in Q3 is not a surprise.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Q2 · Tool pilots with a stated success test and metered budgets<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p><strong>Ships:</strong> at most two tool pilots, each with a success test written before the pilot starts and phrased in the Q1 metrics, for example "conformance on first review rises from the Q1 baseline on the same class of screen". Also ships: a metered budget per pilot. Credits are the real constraint in this space rather than seats, so state the monthly credit ceiling, who can spend it, and what happens when it runs out. Figma's credits do not roll over and are not shareable, and Figma Make alone is documented at 30 to 100 or more credits per task, so a small pilot can exhaust a plan quickly. Canva now meters a shared credit pool across quality tiers per member rather than counting features. Check today's numbers before you sign anything: this is the part of the market that changes monthly.</p>
+        <p><strong>What could go wrong:</strong> the pilot gets judged on enthusiasm. Write the success test first and archive it, so the review reads the test rather than the room. Second risk: four tools instead of two, because every team wants its own. That is the purchase pattern the stop list exists to break.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Q3 · Systems work, so the standard stops depending on attention<span class="mini">4 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p><strong>Ships:</strong> the five checks moved out of human memory and into tokens, components and automated checks. Practically that means a token set, a component library that makes the compliant thing the easy thing, and a contrast and spacing check that runs without a designer present. Two constraints to plan around honestly. The W3C Design Tokens Community Group format's stable version is 2025.10, published as a Final Community Group Report on 2025-10-28, and it is explicitly not a W3C Standard, so treat it as a useful interchange format rather than a guarantee. And the Figma variables REST API requires a Full seat in an Enterprise organisation, which means below Enterprise your only documented token route is selection-scoped access through the Figma MCP server's <code>get_variable_defs</code>. If token automation is in your plan, that single line decides your budget.</p>
+        <p><strong>What could go wrong:</strong> a beautiful token file that no product surface consumes. Tie the quarter's success to a shipped screen built from tokens, not to the file existing. Second risk: Code Connect's framework-specific parsers lose updates and support from 2026-08-17, with template files as the only maintained path, so verify which path your team is on before you build on it.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Q4 · Ladder, hiring, and re-measure<span class="mini">4 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p><strong>Ships:</strong> the ladder change a5 argued for, written into the actual levels document. Critique quality, direction quality and systems contribution become named expectations rather than folklore, and the junior role is redefined around briefing and critique rather than production volume alone. Hiring changes with it: portfolio review asks how a candidate got there and what they rejected, not only what the final frame looks like. Then re-measure all four metrics on the same class of screen you baselined in Q1, and publish the comparison whether or not it flatters the rollout.</p>
+        <p><strong>What could go wrong:</strong> the re-measure quietly uses easier screens, and the year reports a win it did not earn. Freeze the screen class in Q1 and write it down. Second risk: the ladder changes on paper while promotion decisions carry on as before. Pick the first two promotions under the new wording and review them against it in public.</p>
+      </div>
+    </details>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A four-quarter roadmap: Q1 set the standard, Q2 pilot tools, Q3 systems work, Q4 ladder and re-measure, with an arrow from Q4 back to Q1 showing re-measurement closing the loop.">
+        <style>
+          .rmT { font: 700 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .rmS { font: 400 11px Inter, sans-serif; fill: #FFFFFF; opacity: .92; }
+          .rmI { font: 700 11.5px Inter, sans-serif; fill: #2A1A28; }
+          .rmX { font: 400 10.5px Inter, sans-serif; fill: #7A6A78; }
+          .rmL { font: 700 12px Inter, sans-serif; fill: #1E2A00; }
+          .rmN { font: 600 13px Inter, sans-serif; fill: #1E2A00; }
+          .rmWire { stroke: #6B2D5C; stroke-width: 2.5; fill: none; marker-end: url(#rmHd); }
+          .rmLoop { stroke: #4D6B00; stroke-width: 2.5; fill: none; stroke-dasharray: 6 4; marker-end: url(#rmHd2); }
+        </style>
+        <defs>
+          <marker id="rmHd" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L9,4.5 L0,9 z" fill="#6B2D5C"/>
+          </marker>
+          <marker id="rmHd2" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L9,4.5 L0,9 z" fill="#4D6B00"/>
+          </marker>
+        </defs>
+
+        <rect x="30" y="26" width="820" height="26" rx="6" fill="#4A1F44"/>
+        <text class="rmT" x="46" y="44">THE STANDARD COMES FIRST, THE RE-MEASURE CLOSES THE LOOP</text>
+
+        <rect x="30" y="70" width="184" height="58" rx="8" fill="#4A1F44"/>
+        <text class="rmT" x="44" y="92">Q1 · THE STANDARD</text>
+        <text class="rmS" x="44" y="110">five checks, one ritual</text>
+
+        <rect x="242" y="70" width="184" height="58" rx="8" fill="#6B2D5C"/>
+        <text class="rmT" x="256" y="92">Q2 · TOOL PILOTS</text>
+        <text class="rmS" x="256" y="110">success test, metered</text>
+
+        <rect x="454" y="70" width="184" height="58" rx="8" fill="#9B4B87"/>
+        <text class="rmT" x="468" y="92">Q3 · SYSTEMS WORK</text>
+        <text class="rmS" x="468" y="110">tokens and components</text>
+
+        <rect x="666" y="70" width="184" height="58" rx="8" fill="#2A1A28"/>
+        <text class="rmT" x="680" y="92">Q4 · LADDER</text>
+        <text class="rmS" x="680" y="110">then re-measure</text>
+
+        <path class="rmWire" d="M214,99 L238,99"/>
+        <path class="rmWire" d="M426,99 L450,99"/>
+        <path class="rmWire" d="M638,99 L662,99"/>
+
+        <rect x="30" y="146" width="184" height="52" rx="8" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="rmI" x="44" y="167">Ships</text>
+        <text class="rmX" x="44" y="184">one written page</text>
+        <rect x="242" y="146" width="184" height="52" rx="8" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="rmI" x="256" y="167">Ships</text>
+        <text class="rmX" x="256" y="184">two pilots, capped</text>
+        <rect x="454" y="146" width="184" height="52" rx="8" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="rmI" x="468" y="167">Ships</text>
+        <text class="rmX" x="468" y="184">tokens in a screen</text>
+        <rect x="666" y="146" width="184" height="52" rx="8" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="rmI" x="680" y="167">Ships</text>
+        <text class="rmX" x="680" y="184">new levels, scores</text>
+
+        <path class="rmLoop" d="M758,198 C758,244 200,236 122,206"/>
+        <rect x="300" y="222" width="280" height="30" rx="7" fill="#F4F8DE" stroke="#4D6B00" stroke-width="1.5"/>
+        <text class="rmL" x="316" y="242">Same screens, same four metrics</text>
+
+        <rect x="30" y="278" width="14" height="14" rx="3" fill="#4D6B00"/>
+        <text class="rmN" x="54" y="290">A pilot before a standard produces output nobody can judge, then scores it on enthusiasm.</text>
+        <rect x="30" y="302" width="14" height="14" rx="3" fill="#4D6B00"/>
+        <text class="rmN" x="54" y="314">Freeze the screen class in Q1. An easier sample in Q4 is how a rollout fakes a win.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - four quarters, with the standard first and the re-measure closing the loop</figcaption>
+    </figure>
+  </section>
+
+  <!-- ============ PART 3: GUARDRAILS ============ -->
+  <section class="section" id="guardrails">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · write it once, sign it, review it twice a year</span>
+      <h2>The guardrails, and the stop list <span class="tag concept">11 min live</span></h2>
+    </div>
+    <p class="lede">Guardrails written after an incident are apologies. Guardrails written before one are cheap. Four things belong on the page, and it should be one page: what may never be generated without review, how provenance is handled, what your tenant's training setting is, and what the organisation is going to stop doing. The last one is the hardest to write and the most valuable, because a rollout that only adds behaviour never changes anything.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>What may never be generated without human review<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Three categories, and keep the list this short so people remember it:</p>
+        <ul>
+          <li><strong>Anything carrying a brand mark.</strong> Reference parameters buy family resemblance, not brand compliance. Midjourney's own documentation says style references do not copy objects or people, only the overall style, and that references are used as inspiration rather than copied exactly. A generated logo lockup is a defect by construction.</li>
+          <li><strong>Anything customer-facing at scale.</strong> One person's plausible screen is a draft. Ten thousand impressions of it is a brand position you did not choose.</li>
+          <li><strong>Anything asserting a fact.</strong> Numbers, claims, comparisons, capabilities, availability. A generator produces the most likely sentence, and the most likely sentence is not a verified one.</li>
+        </ul>
+        <p>Everything outside those three is fair game with normal review. That is deliberate: a guardrail list long enough to cover every case gets ignored in week three.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The provenance rule<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>One rule, stated once: <strong>every generated asset that ships carries a record of how it was made.</strong> Model and version, the prompt or brief, any reference images and their licence, the tool, the date, and the human who accepted it. Keep it with the asset rather than in someone's notes, because the moment you need it is the moment that person is on leave.</p>
+        <p>On the standards side, C2PA is at spec version 2.4, and its Conformance Program launched mid-2025 with a Trust List whose interim list froze on 2026-01-01 with no new entries being added. Adobe applies Content Credentials automatically where 100% of the pixels are Firefly-generated and across the Firefly web app and APIs, and elsewhere it is opt-in, which in Photoshop lives under Window then Content Credentials. Teach the limit as clearly as the capability: Content Credentials prove a signed history of how an asset was made and edited. They do not prove an unsigned asset is fake, and they do not prove a signed asset is truthful.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Your tenant's training-data setting<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Somebody in your organisation should be able to answer "is our unreleased design work training a model" without opening a browser. Today, that person usually cannot. The defaults are not neutral.</p>
+        <ul>
+          <li><strong>Figma</strong> has two toggles, content training and AI features. Content training defaults <strong>on</strong> for Starter and Professional teams, and is <strong>off and not toggleable</strong> on Organization and Enterprise. The policy took effect 2024-08-15, and Education and Government accounts are excluded.</li>
+          <li><strong>Canva</strong> governs training use through Privacy Settings, and its rights language is worth reading before a commercial launch: you own your Output except for output that modifies or incorporates Licensed Content, outputs may not be unique, and Canva recommends independent advice before commercial use.</li>
+          <li><strong>Midjourney</strong> plan tiers matter for commercial terms in one specific way: terms are the same across tiers except that companies grossing over 1 million USD per year must be on Pro or Mega. Stealth mode, meaning your generations are not public, is Pro and Mega only.</li>
+          <li><strong>Adobe</strong> frames commercial safety as a design goal rather than a warranty, and for the 30-plus partner models now hosted in Firefly it states it cannot verify commercial safety and points to the partner's terms. Indemnification is an enterprise entitlement that may be purchased, scoped by published lists of eligible features and surfaces, not a default. We could not reach Adobe's enterprise legal FAQ to verify the exact conditions, so treat that scope as something your counsel confirms in writing.</li>
+        </ul>
+        <p>Write your answer for each tool on the guardrail page, with the date you checked. All of this changes, and a dated answer is honest in a way an undated one is not.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>What to STOP doing<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Three habits, and stopping them costs nothing:</p>
+        <ul>
+          <li><strong>Stop running volume-based creative reviews.</strong> A review that opens with forty options is a review that will pick the most familiar one. Bring three directions with the reasoning, not forty with none.</li>
+          <li><strong>Stop having taste debates without a scored baseline.</strong> Score the five checks first, in ninety seconds. Whatever survives that is a real disagreement about the judgement half, and worth your time.</li>
+          <li><strong>Stop buying a tool per team without a metering budget.</strong> Credits do not roll over, are not shareable, and vary by seat and plan. Four unmanaged pilots is how a design budget disappears without producing a single defensible number.</li>
+        </ul>
+        <p>Add a fourth if you have the appetite: stop accepting "it just needs polish" as review feedback. Name the measurable failure or name the judgement failure, but name one.</p>
+      </div>
+    </details>
+
+    <div class="callout tip">
+      <strong>Keep it to one page, and date it</strong>
+      Guardrails, provenance rule, training settings and the stop list should fit on a single page that a new hire reads in five minutes. Put a review date on it and put your name on it. The version that gets followed is the one somebody owns, and everything on it about credits, betas and vendor terms needs re-checking at least twice a year because this market moves monthly.
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - before the next quarter starts <span class="tag exercise">◐ 60-90 min total</span></h2>
+    </div>
+    <ul>
+      <li>Open your current design or creative dashboard and sort every number into "moves only when quality moves" and "rises on its own". Anything in the second column gets relabelled as context, not target, this week.</li>
+      <li>Write the Q1 baseline for all four metrics on the same class of screen you will re-measure in Q4, and write down which class of screen that is. Freeze it in the document, not in your head.</li>
+      <li>Draft the one-page guardrail document: the three never-generate-without-review categories, the provenance rule, your tenant's training setting per tool with the date you checked it, and the stop list. Take it to one designer and one engineer before it goes anywhere near a leadership deck.</li>
+      <li>Run the distinctiveness protocol once, properly. Five of yours, five from a competitor set, logos stripped, three reviewers, one from outside design. The first score will be uncomfortable and that is the point of having a baseline.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">This session builds the operating layer on top of the standards and vendor behaviour the earlier leader sessions verified. Where a primary source could not be reached, the page says so rather than guessing. Anything about credits, betas or vendor terms needs a re-check at delivery time. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">WCAG 2.2 - SC 1.4.3, 1.4.11, 1.4.6, 1.4.12 and 2.5.8, cited by number in the Q1 standard</span><span class="note">Part 1 + Q1 · the designer track drills them in b5</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Tool metering as the real constraint - Figma AI credits with no rollover, Canva's shared credit pool</span><span class="note">Q2 · numbers verified 2026-08-08, re-check before signing</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Training-data defaults - Figma content training on for Starter and Professional, off and locked on Org and Enterprise, effective 2024-08-15</span><span class="note">Part 3 · Canva governs training via Privacy Settings</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">C2PA 2.4, the Conformance Program and the interim Trust List frozen on 2026-01-01</span><span class="note">Part 3 · what it proves and what it does not</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Design tokens as an enforcement layer - DTCG format 2025.10, a Final Community Group Report and explicitly not a W3C Standard</span><span class="note">Q3 · full treatment in b6, including the Enterprise-only variables API</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · Your rollout dashboard shows asset count up 3x and cycle time down 60%. What have you learned about quality?</p>
+      <button class="qopt" type="button">A · The rollout is working, since both numbers moved in the right direction</button>
+      <button class="qopt" type="button">B · Nothing yet, but cycle time is a reasonable proxy for craft</button>
+      <button class="qopt" type="button">C · Nothing at all - both rise on their own once tools land, so you need conformance and rework</button>
+      <p class="qwhy">Volume and speed are gravity, not evidence. Conformance, rework, coverage and distinctiveness only move when the work gets better, which is the whole reason to pick the metric before the tools.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">2 · Why does the standard go in Q1 rather than after the tool pilots?</p>
+      <button class="qopt" type="button">A · Without a stated standard the pilot output cannot be judged, so the pilot gets scored on enthusiasm</button>
+      <button class="qopt" type="button">B · Because standards take three months to write</button>
+      <button class="qopt" type="button">C · Because vendors require an accessibility policy before selling seats</button>
+      <p class="qwhy">A pilot needs a test it can fail. Write the standard and the baseline first, then every pilot has a stated success test in the same four metrics, and the review reads the test rather than the room.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">3 · Distinctiveness is a human judgement. How do you keep it on a dashboard honestly?</p>
+      <button class="qopt" type="button">A · Convert it to a percentage so it looks comparable to the other three</button>
+      <button class="qopt" type="button">B · Fix the protocol - blind set, fixed competitors, three reviewers, median - and label it a scored judgement</button>
+      <button class="qopt" type="button">C · Drop it, since anything subjective does not belong in a metric set</button>
+      <p class="qwhy">A judgement metric earns its place when the method is frozen and the label is honest. Same question wording, same competitor set, one reviewer from outside design, median rather than mean, and the report says clearly that this is a scored human judgement rather than a measurement.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Leader session 6 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Metric before tools</b><span>Pick and publish the metric set before the first licence. A rollout measured on volume buys more mediocre work, faster.</span></div>
+      <div class="cheat-item"><b>The four metrics</b><span>Conformance · rework · coverage · distinctiveness. Asset count and cycle time are context, never targets.</span></div>
+      <div class="cheat-item"><b>Distinctiveness protocol</b><span>Blind set of five yours and five theirs, logos stripped, three reviewers with one from outside, median of 1-5. Label it a judgement.</span></div>
+      <div class="cheat-item"><b>Four quarters</b><span>Q1 standard and ritual · Q2 metered pilots with a stated test · Q3 tokens and components · Q4 ladder plus re-measure.</span></div>
+      <div class="cheat-item"><b>Cite the standards</b><span>WCAG 2.2 SC 1.4.3, 1.4.11, 1.4.6, 1.4.12, 2.5.8. Type scale, spacing unit and one loudest thing are conventions - say so.</span></div>
+      <div class="cheat-item"><b>Never generate unreviewed</b><span>Anything with a brand mark · anything customer-facing at scale · anything asserting a fact. Keep the list this short.</span></div>
+      <div class="cheat-item"><b>Provenance and training</b><span>Model, version, prompt, references and licences travel with the asset. Know your tenant's training setting, with the date you checked.</span></div>
+      <div class="cheat-item"><b>The stop list</b><span>Stop volume-based reviews · stop taste debates without a scored baseline · stop buying a tool per team without a metering budget.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Leader session 6 of 6 · learn-ai-design-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="a5-craft-and-careers.html">← Previous: Craft, juniors and career ladders</a> &nbsp;·&nbsp; <a href="../index.html">Designer track: start at b1 →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=2"></script>
+</body>
+</html>

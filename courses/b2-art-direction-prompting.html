@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Designer session 2 · Art-direction prompting - learn ai design with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-design-with-phoebe</a> / Designer session 2 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Design with Phoebe · Designer track · Session 2 of 10</div>
+    <h1>Art-direction <span class="accent">prompting</span></h1>
+    <p class="sub">If you only take one skill out of this track, take this one. A brief made of adjectives cannot be wrong, so it cannot help you. A brief made of constraints can be checked, argued with, and measured - and it is the difference between a generator that gives you the statistical average of the internet and one that gives you your own work faster. Tonight: the six slots every constraint brief needs, what reference parameters can and cannot actually do according to the vendors' own documentation, and the habit that separates art direction from expensive fiddling - when the output is wrong, change the constraint, not the pixels.</p>
+    <div class="chip-row">
+      <span class="chip level">🟢 Designer track</span>
+      <span class="chip audience">Product · brand · design-adjacent builders</span>
+      <span class="chip audience">The core skill</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Your b1 pair</span>
+      <span class="a2" style="flex:4">3-17 · The six slots</span>
+      <span class="a3" style="flex:3">17-28 · Reference discipline</span>
+      <span class="a4" style="flex:4">28-45 · Brief your way up the ladder</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Open with the pair you brought</h2>
+    </div>
+    <p class="lede">b1 ended with homework: generate the same screen twice, once from an adjective brief and once from a constraint brief, and keep both. Put them side by side now. In almost every case the adjective version is prettier at first glance and the constraint version is the one you could actually take into a review, because every claim in it is checkable. That gap is the whole session. Tonight we make the constraint brief a repeatable structure with six slots, then get honest about the one thing designers most want from these tools and cannot have: a reference image that guarantees brand compliance.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">▶ Live critique lab - brief your way up the ladder</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      A six-slot brief template you can reuse on any screen, a truthful mental model of what style, character and omni references actually transfer, and one habit worth more than any tool in the course: when the output is wrong, go back and change the constraint.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: THE SIX SLOTS ============ -->
+  <section class="section" id="six-slots">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · the structure</span>
+      <h2>Anatomy of a constraint brief <span class="tag concept">14 min live</span></h2>
+    </div>
+    <p class="lede">Six slots. Fill all six and the output is directable; skip one and the model fills it with the most likely thing, which is another way of saying the most generic thing. The test for each slot is the same: <strong>could a stranger check whether the output obeyed you?</strong> If the answer is no, that slot is still an adjective wearing a constraint's clothes. Four of the six map straight onto checks the critique lab measures, and two of them sit in the judgement half where no lab can help you. Both kinds belong in the brief.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The six slots of a constraint brief - job, primary action, structure, colour, references, exclusions - each shown above the critique-lab check that later measures it.">
+        <style>
+          .bsT { font: 700 12px Inter, sans-serif; fill: #FFFFFF; }
+          .bsS { font: 400 10.5px Inter, sans-serif; fill: #FFFFFF; opacity: .93; }
+          .bsH { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .bsI { font: 700 10.5px Inter, sans-serif; fill: #1E2A00; }
+          .bsX { font: 400 10.5px Inter, sans-serif; fill: #7A6A78; }
+          .bsL { font: 700 12px Inter, sans-serif; fill: #2A1A28; }
+          .bsN { font: 600 13px Inter, sans-serif; fill: #1E2A00; }
+          .bsWire { stroke: #9B4B87; stroke-width: 2; fill: none; marker-end: url(#bsHd); }
+        </style>
+        <defs>
+          <marker id="bsHd" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+            <path d="M0,0 L8,4 L0,8 z" fill="#9B4B87"/>
+          </marker>
+        </defs>
+
+        <rect x="30" y="22" width="820" height="28" rx="6" fill="#4A1F44"/>
+        <text class="bsH" x="46" y="41">THE SIX SLOTS, AND THE CHECK EACH ONE IS LATER MEASURED BY</text>
+
+        <rect x="30" y="66" width="125" height="62" rx="8" fill="#4A1F44"/>
+        <text class="bsT" x="42" y="87">1 · JOB</text>
+        <text class="bsS" x="42" y="104">what decision</text>
+        <text class="bsS" x="42" y="118">does it serve?</text>
+
+        <rect x="169" y="66" width="125" height="62" rx="8" fill="#6B2D5C"/>
+        <text class="bsT" x="181" y="87">2 · ACTION</text>
+        <text class="bsS" x="181" y="104">exactly one</text>
+        <text class="bsS" x="181" y="118">primary action</text>
+
+        <rect x="308" y="66" width="125" height="62" rx="8" fill="#6B2D5C"/>
+        <text class="bsT" x="320" y="87">3 · STRUCTURE</text>
+        <text class="bsS" x="320" y="104">scale, base size</text>
+        <text class="bsS" x="320" y="118">unit, grid</text>
+
+        <rect x="447" y="66" width="125" height="62" rx="8" fill="#6B2D5C"/>
+        <text class="bsT" x="459" y="87">4 · COLOUR</text>
+        <text class="bsS" x="459" y="104">one accent plus</text>
+        <text class="bsS" x="459" y="118">neutrals, floor</text>
+
+        <rect x="586" y="66" width="125" height="62" rx="8" fill="#9B4B87"/>
+        <text class="bsT" x="598" y="87">5 · REFERENCES</text>
+        <text class="bsS" x="598" y="104">each with a</text>
+        <text class="bsS" x="598" y="118">stated reason</text>
+
+        <rect x="725" y="66" width="125" height="62" rx="8" fill="#4A1F44"/>
+        <text class="bsT" x="737" y="87">6 · EXCLUSIONS</text>
+        <text class="bsS" x="737" y="104">what must NOT</text>
+        <text class="bsS" x="737" y="118">appear</text>
+
+        <path class="bsWire" d="M92,130 L92,148"/>
+        <path class="bsWire" d="M231,130 L231,148"/>
+        <path class="bsWire" d="M370,130 L370,148"/>
+        <path class="bsWire" d="M509,130 L509,148"/>
+        <path class="bsWire" d="M648,130 L648,148"/>
+        <path class="bsWire" d="M787,130 L787,148"/>
+
+        <rect x="30" y="152" width="125" height="50" rx="8" fill="#FFFFFF" stroke="#D6C9D4" stroke-width="1.5"/>
+        <text class="bsL" x="42" y="172">judgement</text>
+        <text class="bsX" x="42" y="189">not scored</text>
+
+        <rect x="169" y="152" width="125" height="50" rx="8" fill="#F4F8DE" stroke="#4D6B00" stroke-width="1.5"/>
+        <text class="bsI" x="181" y="172">hierarchy 20%</text>
+        <text class="bsX" x="181" y="189">one loudest wins</text>
+
+        <rect x="308" y="152" width="125" height="50" rx="8" fill="#F4F8DE" stroke="#4D6B00" stroke-width="1.5"/>
+        <text class="bsI" x="320" y="172">type scale 20%</text>
+        <text class="bsX" x="320" y="189">spacing 20%</text>
+
+        <rect x="447" y="152" width="125" height="50" rx="8" fill="#F4F8DE" stroke="#4D6B00" stroke-width="1.5"/>
+        <text class="bsI" x="459" y="172">contrast 25%</text>
+        <text class="bsX" x="459" y="189">restraint 15%</text>
+
+        <rect x="586" y="152" width="125" height="50" rx="8" fill="#FFFFFF" stroke="#D6C9D4" stroke-width="1.5"/>
+        <text class="bsL" x="598" y="172">judgement</text>
+        <text class="bsX" x="598" y="189">not scored</text>
+
+        <rect x="725" y="152" width="125" height="50" rx="8" fill="#F4F8DE" stroke="#4D6B00" stroke-width="1.5"/>
+        <text class="bsI" x="737" y="172">restraint 15%</text>
+        <text class="bsX" x="737" y="189">and hierarchy</text>
+
+        <rect x="30" y="220" width="820" height="30" rx="7" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="bsL" x="46" y="240">Slots 1 and 5 are yours alone. Slots 2, 3, 4 and 6 the lab can score for you.</text>
+
+        <rect x="30" y="268" width="14" height="14" rx="3" fill="#4D6B00"/>
+        <text class="bsN" x="54" y="280">Test each slot the same way: could a stranger check whether the output obeyed it?</text>
+        <rect x="30" y="292" width="14" height="14" rx="3" fill="#4D6B00"/>
+        <text class="bsN" x="54" y="304">A missing slot is not neutral. The model fills it with the most likely, most generic answer.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - six slots, and which of them the critique lab can later measure</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Slot 1 · Job - what decision does this screen serve<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Not "a summary screen". A screen exists so somebody can make a decision or complete a task. For Cadence's shared summary the job is: <em>the person who missed the meeting decides whether they need to read the full transcript, and whether anything is theirs to do.</em> Write it as a sentence with a subject and a verb.</p>
+        <p><strong>One-line test:</strong> does the sentence name a person and a decision? "Show the meeting summary" fails. "Let a non-attendee decide in fifteen seconds whether anything here is theirs" passes, because you can hold a generated screen up against it and disagree with evidence.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Slot 2 · One primary action<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Exactly one. For the shared summary it is <strong>Share summary</strong>. Everything else - copy, edit, export, view transcript, regenerate - is secondary and must be visually quieter. Two primary actions is the single most common structural failure in generated UI, because the model has seen a million screens where every button looks important.</p>
+        <p><strong>One-line test:</strong> can you point at the loudest element and name it before the screen finishes loading? If two candidates tie, hierarchy is broken and the lab will say so.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Slot 3 · Structure - scale, base size, unit, grid<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Four numbers, and they are arithmetic rather than taste. State the type scale as a ratio and a base, for example a 1.25 ratio from a 16px body, which gives the lab's ladder of 12 / 14 / 16 / 20 / 25 / 31 / 39. State the spacing unit, for example 8px, and say that every gap and padding is a multiple of it. State the grid: column count and gutter. Say all of this in the brief and the generator has no room to invent six unrelated font sizes.</p>
+        <p>Be honest with your team that the ratio and the unit are <strong>conventions, not standards</strong>. Nothing requires 1.25 or 8. What matters is that one ratio generates all your sizes, so the set stays small and related, and that one unit generates all your spacing, so the rhythm is visible.</p>
+        <p><strong>One-line test:</strong> could someone recompute every size and gap in the output from your brief alone? If not, add the missing number.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Slot 4 · Colour - one accent, neutrals, and a contrast floor<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>One accent hue with a hex value, a neutral ramp, and a stated floor: all text passes WCAG 2.2 SC 1.4.3 at 4.5:1 for normal text and 3:1 for large, where large means 18pt or 24px, or 14pt and 18.66px when bold. Add SC 1.4.11 if the screen has controls: 3:1 on the visual boundaries of components and meaningful graphics, which is why a pale grey button outline is a defect rather than a style choice.</p>
+        <p>The floor is the part people forget, and it is the part you can enforce without a taste conversation. It is also the reason "add colour" is so expensive later: a second and third accent arrive without a contrast budget and the failures follow them in.</p>
+        <p><strong>One-line test:</strong> is there a number in this slot? A hue name is a mood. A hex plus a ratio is a constraint.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Slot 5 · References, each with a stated reason<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>A reference without a reason is a mood board with ambitions. Say what you are borrowing and, more importantly, what you are not. "This one for the density of the metadata row, not the colour." "This one for the restraint in the header, not the illustration style." Three references with reasons beat twelve without, because a generator averages what you give it, and twelve unlabelled references average into the same generic middle you were trying to escape.</p>
+        <p><strong>One-line test:</strong> for each reference, can you finish the sentence "for the ___, not the ___"? If not, drop it. Part 2 covers what the reference parameters can actually transfer, which is less than most people assume.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Slot 6 · Exclusions - what must NOT appear<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The slot nobody writes and everybody needs. Generated output has a recognisable signature, and exclusions are how you refuse it up front. For Cadence's shared summary: no gradient background, no centred hero layout, no decorative iconography that does not encode meaning, no stock photography of people in meetings, no more than one accent hue, no drop shadows deeper than the elevation token, no faux browser chrome, no lorem text in any state.</p>
+        <p>Exclusions do two useful things. They cut the average out of the output, and they turn a vague review comment into a brief violation you can point at without discussing taste.</p>
+        <p><strong>One-line test:</strong> would a reviewer be able to say "that is on the exclusions list" and be immediately right? If the item is arguable, make it specific or drop it.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: REFERENCE DISCIPLINE ============ -->
+  <section class="section" id="reference-discipline">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · what references can and cannot do</span>
+      <h2>Reference discipline, and the promise nobody makes <span class="tag concept">11 min live</span></h2>
+    </div>
+    <p class="lede">Every designer asks the same question in week one: can I feed it our brand and get brand-compliant output. The honest answer is in the vendors' own documentation, and it is no. Reference parameters buy <strong>family resemblance</strong>. They do not buy compliance. Midjourney's docs put it plainly: references are used as inspiration and not to copy exactly. Reading those limits properly is what stops you burning a week and a credit budget on a promise that was never made.</p>
+
+    <table class="clean">
+      <thead>
+        <tr><th>Parameter</th><th>What it actually does</th><th>Range and version</th><th>The documented limit</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>--sref</code> with <code>--sw</code></td><td>Style reference. Transfers the overall style of the referenced image or code</td><td><code>--sw</code> 0-1000, default 100. <code>--sv</code> selects the style-reference model</td><td>The docs are explicit that it "doesn't copy objects or people, just the overall style"</td></tr>
+        <tr><td><code>--cref</code> with <code>--cw</code></td><td>Character reference, for keeping a character consistent</td><td><code>--cw</code> 0-100. <strong>V6 only</strong></td><td>Not available on current versions - if your team is on V7 or later this is not a route</td></tr>
+        <tr><td><code>--oref</code> with <code>--ow</code></td><td>Omni Reference, V7 and later. Takes exactly ONE image</td><td><code>--ow</code> 1-1000, and the guidance is to stay below 400</td><td>Costs 2x GPU time, so it eats a metered budget twice as fast</td></tr>
+        <tr><td><code>--p</code> personalization</td><td>Applies a profile learned from your own ratings</td><td>Profiles must be unlocked by rating images first</td><td>Moodboard profiles cannot be combined with <code>--sv</code> or <code>--sw</code></td></tr>
+        <tr><td>Style codes</td><td>Reproducible styles drawn from Midjourney's own library</td><td>Used in place of a <code>--sref</code> image</td><td>You <strong>cannot</strong> create a style code from an uploaded image, so your brand cannot become one</td></tr>
+      </tbody>
+    </table>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Why "make it look exactly like our brand" cannot be answered here<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Put the four documented limits in a row and the conclusion writes itself. A style reference moves style and not objects, which rules out logos, wordmarks and product furniture. Character reference is a V6-only feature, so consistency of a specific figure is not a current-version route. Omni Reference takes a single image and doubles GPU cost, which makes it a precision instrument rather than a bulk one. And style codes come from Midjourney's library, which means the one thing you actually want - a code that encodes your brand from your own files - does not exist.</p>
+        <p>So the honest framing for a designer: <strong>reference parameters get you into the right family. Compliance comes from somewhere else.</strong> Somewhere else is two things, both later in this track. b6 puts your decisions into tokens and components, where the compliant option is the easy option and a machine can enforce it. b5 turns the five checks into a review script, which is how anything generated gets held to the standard before it ships. Direction gets you close; systems and critique get you correct.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>How to write a reference brief that survives this<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Given the limits, use references for what they are good at and put the rest in words and numbers:</p>
+        <ul>
+          <li><strong>References carry mood, texture, density and light.</strong> Let them. Say which of those you want from each image.</li>
+          <li><strong>Words and numbers carry structure and colour.</strong> Your type ratio, base size, spacing unit, accent hex and contrast floor belong in the prompt as values, not in an image the model will average.</li>
+          <li><strong>Anything with a brand mark on it stays out of the generated layer entirely.</strong> Composite logos in afterwards. This is also a guardrail the leader track writes down in a6.</li>
+          <li><strong>Watch the weights.</strong> A high <code>--sw</code> pushes style hard and can flatten the structure you specified. Start at the default and move one variable at a time so you can attribute the change.</li>
+          <li><strong>Log what you used.</strong> Model, version, parameters, reference images and their licences. b7 makes the provenance case in full, but the habit starts the first time you generate anything you might ship.</li>
+        </ul>
+        <p>All of the above was verified from official documentation on 2026-08-08. This part of the market changes monthly, so check the current parameter pages before you teach a number to anyone else.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: THE ITERATION LOOP ============ -->
+  <section class="section" id="iteration-loop">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · the habit that costs nothing and changes everything</span>
+      <h2>Direct, do not polish <span class="tag concept">8 min live</span></h2>
+    </div>
+    <p class="lede">When the output is wrong, there are two moves. You can nudge the pixels - resize, recolour, move things until it stops annoying you. Or you can name the constraint you failed to write, add it, and regenerate. The first move feels like progress and is the most expensive habit in design, because you are paying craft time to improve a wrong idea. The second is cheap, repeatable, and leaves you with a better brief for next time. Here it is on Cadence's shared-summary screen, three rounds.</p>
+
+    <div class="prompt-box bad">
+      <span class="label">Round 1 · adjective brief</span>
+      <p>"Design a clean, modern shared-summary screen for Cadence, our AI meeting-notes app. Make it feel premium, trustworthy and a bit friendly."</p>
+    </div>
+    <div class="prompt-box bad">
+      <span class="label">What comes back, and why</span>
+      <p>A centred hero, a gradient band, a large heading in a default-feeling typeface, six font sizes with no relationship between them, three accent colours because nothing decided, and a pleasant illustration of a laptop. Nothing in it is wrong, because nothing in it was specified. On the lab's five checks this class of draft scores <strong>17 out of 100</strong>.</p>
+    </div>
+
+    <div class="prompt-box good">
+      <span class="label">Round 2 · add the job, the primary action and hierarchy</span>
+      <p>"Shared-summary screen for Cadence. Job: a person who missed the meeting decides in fifteen seconds whether anything here is theirs to do. Exactly one primary action: Share summary. Copy, edit, export and view transcript are secondary and must be visibly quieter. The meeting title is the loudest element on the screen; the AI-generated label must be visible but must not compete with it. Left-aligned, no centred hero."</p>
+    </div>
+    <div class="prompt-box good">
+      <span class="label">Round 3 · add structure, colour and the floor</span>
+      <p>"Keep round 2. Type on a 1.25 scale from a 16px body, so sizes come only from 12 / 14 / 16 / 20 / 25 / 31 / 39. Every gap and padding is a multiple of 8px. One accent hue, plum #6B2D5C, plus a neutral ramp; no second or third accent. All text meets WCAG 2.2 SC 1.4.3, 4.5:1 normal and 3:1 large; control boundaries meet SC 1.4.11 at 3:1. Exclusions: no gradient, no decorative icons, no stock photography, no lorem text in any state."</p>
+    </div>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The follow-up that decides whether you are art-directing<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Round 3 comes back close but not right. The share button is still competing with the title. Here are the two possible next messages, and only one of them is design work.</p>
+        <div class="prompt-box bad">
+          <span class="label">Fix the pixels</span>
+          <p>"Make the button a bit smaller and move it down. Maybe lighten the colour slightly. Also nudge the title up and add some spacing above it, and let's try the button in a softer shade."</p>
+        </div>
+        <div class="prompt-box good">
+          <span class="label">Fix the constraint</span>
+          <p>"The brief said the meeting title is the loudest element. It is not - the primary button currently reads first. Add to the brief: the title is at least 1.5x the size of any button label and carries the highest contrast on the screen; the primary button sits below the summary body, never above it. Regenerate from the updated brief."</p>
+        </div>
+        <p>The first message produces a slightly less annoying version of a screen with a hierarchy problem, and teaches you nothing you can reuse. The second fixes the class of error, improves the brief permanently, and can be checked by someone who was not in the room. Same effort, entirely different asset.</p>
+      </div>
+    </details>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The direct-do-not-polish loop: brief, generate, critique, re-brief and regenerate, with nudging the pixels marked as the expensive dead end.">
+        <style>
+          .dpT { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .dpS { font: 400 11px Inter, sans-serif; fill: #FFFFFF; opacity: .92; }
+          .dpI { font: 700 13px Inter, sans-serif; fill: #2A1A28; }
+          .dpX { font: 400 11.5px Inter, sans-serif; fill: #7A6A78; }
+          .dpF { font: 700 13px Inter, sans-serif; fill: #991B1B; }
+          .dpFX { font: 400 11.5px Inter, sans-serif; fill: #991B1B; }
+          .dpN { font: 600 13px Inter, sans-serif; fill: #1E2A00; }
+          .dpWire { stroke: #6B2D5C; stroke-width: 2.5; fill: none; marker-end: url(#dpHd); }
+          .dpBad { stroke: #FCA5A5; stroke-width: 2.5; fill: none; marker-end: url(#dpHdR); }
+        </style>
+        <defs>
+          <marker id="dpHd" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L9,4.5 L0,9 z" fill="#6B2D5C"/>
+          </marker>
+          <marker id="dpHdR" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L9,4.5 L0,9 z" fill="#FCA5A5"/>
+          </marker>
+        </defs>
+
+        <rect x="30" y="60" width="150" height="54" rx="8" fill="#4A1F44"/>
+        <text class="dpT" x="44" y="82">1 · BRIEF</text>
+        <text class="dpS" x="44" y="100">all six slots</text>
+
+        <rect x="215" y="60" width="150" height="54" rx="8" fill="#6B2D5C"/>
+        <text class="dpT" x="229" y="82">2 · GENERATE</text>
+        <text class="dpS" x="229" y="100">options, not one</text>
+
+        <rect x="400" y="60" width="150" height="54" rx="8" fill="#9B4B87"/>
+        <text class="dpT" x="414" y="82">3 · CRITIQUE</text>
+        <text class="dpS" x="414" y="100">score five checks</text>
+
+        <rect x="585" y="60" width="150" height="54" rx="8" fill="#4A1F44"/>
+        <text class="dpT" x="599" y="82">4 · RE-BRIEF</text>
+        <text class="dpS" x="599" y="100">change a constraint</text>
+
+        <path class="dpWire" d="M180,87 L210,87"/>
+        <path class="dpWire" d="M365,87 L395,87"/>
+        <path class="dpWire" d="M550,87 L580,87"/>
+        <path class="dpWire" d="M660,114 C660,158 340,150 292,118"/>
+
+        <rect x="30" y="196" width="245" height="54" rx="10" fill="#F4F8DE" stroke="#4D6B00" stroke-width="2"/>
+        <text class="dpI" x="48" y="218">THE LOOP THAT WORKS</text>
+        <text class="dpX" x="48" y="236">re-brief, then regenerate</text>
+
+        <rect x="400" y="196" width="335" height="54" rx="10" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="2"/>
+        <text class="dpF" x="418" y="218">DEAD END · NUDGE THE PIXELS</text>
+        <text class="dpFX" x="418" y="236">polishing a wrong idea, at craft prices</text>
+
+        <path class="dpBad" d="M475,114 L475,192"/>
+
+        <rect x="30" y="278" width="14" height="14" rx="3" fill="#4D6B00"/>
+        <text class="dpN" x="54" y="290">Round 4 improves the brief permanently. A pixel nudge improves exactly one file, once.</text>
+        <rect x="30" y="302" width="14" height="14" rx="3" fill="#4D6B00"/>
+        <text class="dpN" x="54" y="314">If you cannot name the constraint that failed, you are not ready to regenerate yet.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the loop, and the branch that quietly consumes a week</figcaption>
+    </figure>
+  </section>
+
+  <!-- ============ DEMO ============ -->
+  <section class="section" id="demo">
+    <div class="section-kicker">
+      <span class="klabel">Build-along</span>
+      <h2>Brief your way up the ladder <span class="tag demo">★ 15 min · everyone runs it</span></h2>
+    </div>
+    <p class="lede">Same lab as b1, different job. Last session you toggled levers and watched the score. Tonight you work backwards: for every rung you climb, <strong>write the brief clause that would have produced it</strong> without any toggling at all. The canon numbers are <strong>17 → 32 → 46 → 66 → 86 → 100</strong>, and each step is one clause you failed to write in round 1. By the end you should have a six-slot brief on paper that, if you had sent it first, would have skipped the whole climb.</p>
+
+    <div class="steps">
+      <div class="step"><p>Start with every lever off: <strong>17</strong>. Read the five failure rows and write, in one sentence each, the missing brief clause. That sheet is your slot inventory.</p></div>
+      <div class="step"><p>Turn on <strong>Hierarchy</strong> only: <strong>32</strong>. Your clause is slot 2. Write it with a number in it, for example "the title is at least 1.5x any button label and carries the highest contrast".</p></div>
+      <div class="step"><p>Add <strong>Type scale</strong> then <strong>Spacing</strong>: <strong>46</strong> then <strong>66</strong>. Both clauses are slot 3, and both are arithmetic. Name the ratio, the base size and the unit rather than describing a feeling.</p></div>
+      <div class="step"><p>Add <strong>Contrast</strong>: <strong>86</strong>. This is slot 4's floor, and it is the one clause you can cite by standard number - WCAG 2.2 SC 1.4.3, with SC 1.4.11 for control boundaries.</p></div>
+      <div class="step"><p>Add <strong>One accent</strong>: <strong>100</strong>. Slot 4 again, plus slot 6. Then press <strong>Add colour</strong> and watch the finished screen lose <strong>19 points</strong> - that is what a missing exclusions list costs.</p></div>
+    </div>
+
+    <div class="dlbox" data-mode="lab" data-levers=""></div>
+
+    <div class="callout tip">
+      <strong>What is scripted and what is measured</strong>
+      Be clear about this when you show it to anyone: the starting draft is scripted, a composite of what unbriefed generators actually hand you. Every score after that is measured live in your browser - contrast ratios computed with the WCAG relative-luminance formula, spacing and font sizes read from getComputedStyle, hue families counted by converting each rendered colour to HSL. The numbers are not decoration, and they are not a claim about your tool. They are a claim about this screen, right now, in this browser.
+    </div>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>Keep the brief, not the render.</strong> The most valuable artifact from a week of generating is almost never a file. It is the six-slot brief that finally produced usable work, because that brief transfers to the next screen, the next feature and the next person who joins the team. Renders expire; direction compounds. By b10 that brief is the front page of your handoff.</p>
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 40-50 min total</span></h2>
+    </div>
+    <ul>
+      <li>Take a real brief you have actually sent and rewrite it into the six slots. Mark any slot where you cannot pass the one-line test, and fix that slot before you send anything.</li>
+      <li>Run the same screen from both briefs, the original and the six-slot version, in whatever tool you use. Keep the pair. b3 opens with it, and by b5 you will score both.</li>
+      <li>Write the exclusions list for Cadence's shared summary. Aim for eight specific items a reviewer could point at without arguing, and keep it - it becomes part of your capstone in b10.</li>
+      <li>Do one full round where you are forbidden from touching the output. You may only change the brief and regenerate. It will be uncomfortable for about ten minutes and then it will be how you work.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">Every parameter, range and limit on this page was taken from official documentation on 2026-08-08. Version numbers, credit costs and beta status in this space change monthly, so re-check the vendor's own page before you teach a number to your team. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">The constraint brief - six slots, and the one-line checkability test for each</span><span class="note">Part 1 · slots 2, 3, 4 and 6 map onto the lab's five checks</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Midjourney reference mechanics - <code>--sref</code> with <code>--sw</code> 0-1000 default 100, <code>--cref</code> with <code>--cw</code> 0-100 V6 only, <code>--oref</code> V7+ single image with <code>--ow</code> 1-1000 at 2x GPU time</span><span class="note">Part 2 · full table, with the documented limits beside each</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Documented reference limits - style reference does not copy objects or people, style codes cannot be made from an uploaded image, references are inspiration and not exact copies</span><span class="note">Part 2 · the honest answer to "match our brand exactly"</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">WCAG 2.2 SC 1.4.3 and SC 1.4.11 as the contrast floor inside slot 4</span><span class="note">Part 1 + the lab · all five criteria by number in b5</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Personalization and moodboards - <code>--p</code> profiles unlocked by rating, moodboards not combinable with <code>--sv</code> or <code>--sw</code></span><span class="note">Named here · imagery workflow in full in b7</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · According to Midjourney's own documentation, what does <code>--sref</code> do and not do?</p>
+      <button class="qopt" type="button">A · It copies the referenced image's objects, characters and layout, which is why it is used for brand work</button>
+      <button class="qopt" type="button">B · It transfers the overall style only - the docs say it does not copy objects or people</button>
+      <button class="qopt" type="button">C · It creates a reusable style code from your uploaded brand files</button>
+      <p class="qwhy">Style references move style, not content. The docs state it "doesn't copy objects or people, just the overall style", and separately that you cannot create a style code from an uploaded image. Family resemblance yes, brand compliance no - that comes from tokens in b6 and your review in b5.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · Your brief names the job, the primary action, the type scale, the spacing unit and one accent. Which slot is still missing?</p>
+      <button class="qopt" type="button">A · Nothing - that is a complete constraint brief</button>
+      <button class="qopt" type="button">B · A tone-of-voice adjective, so the output has some personality</button>
+      <button class="qopt" type="button">C · Exclusions, and the reason for each reference - what must not appear, and what you are borrowing</button>
+      <p class="qwhy">Six slots: job, one primary action, structure, colour, references with stated reasons, and exclusions. Exclusions is the slot nobody writes, and it is how you refuse the generic signature up front instead of arguing about it in review.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · Round 3 comes back with the share button competing with the meeting title. What is the art-direction move?</p>
+      <button class="qopt" type="button">A · Add the missing constraint - title at least 1.5x any button label, highest contrast on screen - and regenerate</button>
+      <button class="qopt" type="button">B · Shrink the button and lighten its colour until it stops competing</button>
+      <button class="qopt" type="button">C · Accept it, since hierarchy is a matter of taste and the reviewer may disagree anyway</button>
+      <p class="qwhy">Fixing the pixels improves one file once and teaches you nothing reusable. Fixing the constraint repairs the whole class of error, improves the brief permanently, and can be checked by someone who was not in the room. Direct, do not polish.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Designer session 2 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>The six slots</b><span>Job · one primary action · structure · colour · references with reasons · exclusions. Fill all six or the model fills the gap with the average.</span></div>
+      <div class="cheat-item"><b>The slot test</b><span>Could a stranger check whether the output obeyed this slot? If not, it is still an adjective.</span></div>
+      <div class="cheat-item"><b>Structure means numbers</b><span>Type ratio and base size, spacing unit, grid. The ratio and the unit are conventions, not standards - say so out loud.</span></div>
+      <div class="cheat-item"><b>Colour means a floor</b><span>One accent hex plus neutrals, and WCAG 2.2 SC 1.4.3 at 4.5:1 normal and 3:1 large, with SC 1.4.11 at 3:1 for control boundaries.</span></div>
+      <div class="cheat-item"><b>Reference reality</b><span><code>--sref</code> + <code>--sw</code> 0-1000 style only · <code>--cref</code> + <code>--cw</code> 0-100 is V6 only · <code>--oref</code> V7+ one image, <code>--ow</code> 1-1000 under 400, 2x GPU time.</span></div>
+      <div class="cheat-item"><b>The limit to quote</b><span>Style reference does not copy objects or people. No style code from your own upload. References are inspiration, not exact copies.</span></div>
+      <div class="cheat-item"><b>Direct, do not polish</b><span>Wrong output means a missing constraint. Name it, add it, regenerate. Nudging pixels improves one file once.</span></div>
+      <div class="cheat-item"><b>Ladder as brief clauses</b><span>17 → 32 → 46 → 66 → 86 → 100, one clause per rung. Then "add colour" costs 19 points, which is the price of no exclusions list.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Designer session 2 of 10 · learn-ai-design-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b1-designers-ai-loop.html">← Previous: The designer's AI loop</a> &nbsp;·&nbsp; <a href="b3-research-and-moodboards.html">Next: Research and moodboards →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/design-live.js?v=1"></script>
+<script src="../assets/app.js?v=2"></script>
+</body>
+</html>

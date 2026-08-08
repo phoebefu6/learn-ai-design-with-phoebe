@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Designer session 6 · Design systems and tokens - learn ai design with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-design-with-phoebe</a> / Designer session 6 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Design with Phoebe · Designer track · Session 6 of 10</div>
+    <h1>Design systems and <span class="accent">tokens</span></h1>
+    <p class="sub">In b5 you built a review script: five checks anyone can run on any screen. It works, and it has one weakness - it only fires when a human remembers to run it. Tonight you remove that dependency. Each of the five checks becomes a token, each token becomes a component variant, and conformance stops being a question of whether anyone was paying attention. Then the part nobody tells you: the routes an AI tool actually has into your system are narrower than the marketing suggests, and two of them are gated behind an Enterprise seat or a deadline. We will be specific about which.</p>
+    <div class="chip-row">
+      <span class="chip level">🟠 Designer track</span>
+      <span class="chip audience">Product · brand · design-adjacent builders</span>
+      <span class="chip audience">Consistency, not vibes</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-18 · From check to token</span>
+      <span class="a3" style="flex:5">18-40 · The routes + build-along</span>
+      <span class="a4" style="flex:1">40-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ PART 1: CHECK TO TOKEN ============ -->
+  <section class="section" id="check-to-token">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · turning a review into a rule</span>
+      <h2>From check to token <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">A written standard says what good looks like. A token <strong>makes good the path of least resistance</strong>. That is the whole difference, and it is why systems work where documents do not. Take the five checks from b5 one at a time. The type scale becomes a set of size tokens generated from one ratio, so there is no size available that is not on the scale. The spacing unit becomes a spacing scale, so there is no gap available that is off the grid. Contrast becomes something subtler and more powerful: not a palette of approved colours but a set of <strong>pre-checked pairs</strong>. The accent becomes exactly one accent family plus semantic status colours. And hierarchy becomes component variants rather than free-form styling.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">▶ Live critique lab - toggle levers, watch the real score</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      Cadence's token set written down in a form a machine can read, an honest map of how an AI tool gets access to it and what each route costs you, and the habit that makes all of this stick: ship colour as pre-checked pairs, never as loose swatches.
+    </div>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Each of the five measurable checks becomes a token group, and each token group prevents a specific recurring failure.">
+        <style>
+          .tkT { font: 700 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .tkI { font: 600 12px Inter, sans-serif; fill: #2A1A28; }
+          .tkX { font: 400 11.5px Inter, sans-serif; fill: #7A6A78; }
+          .tkN { font: 600 13px Inter, sans-serif; fill: #1E2A00; }
+          .tkW { stroke: #9B4B87; stroke-width: 2; fill: none; marker-end: url(#tkHd); }
+        </style>
+        <defs>
+          <marker id="tkHd" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L9,4.5 L0,9 z" fill="#9B4B87"/>
+          </marker>
+        </defs>
+
+        <rect x="30" y="28" width="180" height="28" rx="6" fill="#4A1F44"/>
+        <text class="tkT" x="44" y="47">THE CHECK (b5)</text>
+        <rect x="250" y="28" width="230" height="28" rx="6" fill="#6B2D5C"/>
+        <text class="tkT" x="264" y="47">BECOMES A TOKEN GROUP</text>
+        <rect x="520" y="28" width="330" height="28" rx="6" fill="#4D6B00"/>
+        <text class="tkT" x="534" y="47">WHICH PREVENTS</text>
+
+        <rect x="30" y="70" width="180" height="46" rx="8" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="tkI" x="44" y="90">Contrast</text>
+        <text class="tkX" x="44" y="107">4.5:1 body text</text>
+        <rect x="250" y="70" width="230" height="46" rx="8" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="tkI" x="264" y="90">Ink-on-surface pairs</text>
+        <text class="tkX" x="264" y="107">pre-checked combinations</text>
+        <rect x="520" y="70" width="330" height="46" rx="8" fill="#FFFFFF" stroke="#D6C9D4" stroke-width="1.5"/>
+        <text class="tkI" x="534" y="90">Composing a failing pair</text>
+        <text class="tkX" x="534" y="107">the ink and the surface arrive together</text>
+        <path class="tkW" d="M214,93 L246,93"/>
+        <path class="tkW" d="M484,93 L516,93"/>
+
+        <rect x="30" y="128" width="180" height="46" rx="8" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="tkI" x="44" y="148">Type scale</text>
+        <text class="tkX" x="44" y="165">one ratio, few sizes</text>
+        <rect x="250" y="128" width="230" height="46" rx="8" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="tkI" x="264" y="148">Size tokens</text>
+        <text class="tkX" x="264" y="165">generated from one ratio</text>
+        <rect x="520" y="128" width="330" height="46" rx="8" fill="#FFFFFF" stroke="#D6C9D4" stroke-width="1.5"/>
+        <text class="tkI" x="534" y="148">The one-off 17px heading</text>
+        <text class="tkX" x="534" y="165">no size exists that is not on the scale</text>
+        <path class="tkW" d="M214,151 L246,151"/>
+        <path class="tkW" d="M484,151 L516,151"/>
+
+        <rect x="30" y="186" width="180" height="46" rx="8" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="tkI" x="44" y="206">Spacing</text>
+        <text class="tkX" x="44" y="223">multiples of 8px</text>
+        <rect x="250" y="186" width="230" height="46" rx="8" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="tkI" x="264" y="206">Spacing scale</text>
+        <text class="tkX" x="264" y="223">s1 to s8, nothing else</text>
+        <rect x="520" y="186" width="330" height="46" rx="8" fill="#FFFFFF" stroke="#D6C9D4" stroke-width="1.5"/>
+        <text class="tkI" x="534" y="206">The arbitrary 13px gap</text>
+        <text class="tkX" x="534" y="223">rhythm survives the fifth contributor</text>
+        <path class="tkW" d="M214,209 L246,209"/>
+        <path class="tkW" d="M484,209 L516,209"/>
+
+        <rect x="30" y="244" width="180" height="46" rx="8" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="tkI" x="44" y="264">One accent</text>
+        <text class="tkX" x="44" y="281">one hue family</text>
+        <rect x="250" y="244" width="230" height="46" rx="8" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="tkI" x="264" y="264">Accent + status set</text>
+        <text class="tkX" x="264" y="281">plum, plus semantic states</text>
+        <rect x="520" y="244" width="330" height="46" rx="8" fill="#FFFFFF" stroke="#D6C9D4" stroke-width="1.5"/>
+        <text class="tkI" x="534" y="264">A fourth hue arriving quietly</text>
+        <text class="tkX" x="534" y="281">status colour has a name, not a mood</text>
+        <path class="tkW" d="M214,267 L246,267"/>
+        <path class="tkW" d="M484,267 L516,267"/>
+
+        <rect x="30" y="302" width="180" height="46" rx="8" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="tkI" x="44" y="322">Hierarchy</text>
+        <text class="tkX" x="44" y="339">one loudest thing</text>
+        <rect x="250" y="302" width="230" height="46" rx="8" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="tkI" x="264" y="322">Component variants</text>
+        <text class="tkX" x="264" y="339">primary, secondary, quiet</text>
+        <rect x="520" y="302" width="330" height="46" rx="8" fill="#FFFFFF" stroke="#D6C9D4" stroke-width="1.5"/>
+        <text class="tkI" x="534" y="322">Free-form restyling</text>
+        <text class="tkX" x="534" y="339">loudness is a variant you pick, once</text>
+        <path class="tkW" d="M214,325 L246,325"/>
+        <path class="tkW" d="M484,325 L516,325"/>
+
+        <rect x="30" y="370" width="14" height="14" rx="3" fill="#4D6B00"/>
+        <text class="tkN" x="54" y="382">A token is a decision you make once. Everything downstream inherits it whether anyone was watching.</text>
+        <rect x="30" y="394" width="14" height="14" rx="3" fill="#4D6B00"/>
+        <text class="tkN" x="54" y="406">Ship pairs, not palettes: an ink-on-surface token that already passes cannot be composed into a failure.</text>
+        <text class="tkX" x="54" y="424">Tokens do not make the work good. They stop the measurable half regressing between screens.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the five checks from b5, redrawn as things a machine can enforce</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Why colour must ship as pairs<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Most design systems publish a palette: twelve swatches with names and hex values. Then a designer picks a nice grey for body text, drops it on a nice pale plum surface, and ships something that measures 3.1:1. Nobody broke a rule. The system just handed them enough rope.</p>
+        <p>The fix is to stop treating colour as a list of colours. Publish <strong>combinations</strong> instead:</p>
+        <ul>
+          <li><strong>A pair token names both sides.</strong> <code>text.default / surface.default</code>, <code>text.onAccent / surface.accent</code>, <code>text.muted / surface.subtle</code>. Each pair is measured once, at authoring time, and only exists if it passes 4.5:1.</li>
+          <li><strong>There is no loose ink.</strong> If a token gives you text colour without a surface, it is an invitation to guess. Make the surface part of the token's identity.</li>
+          <li><strong>Muted has a floor.</strong> The most common real-world failure is the "secondary text" grey that passes on white and fails on every tinted surface. Publish <code>text.muted</code> only for surfaces where it was checked.</li>
+          <li><strong>Non-text gets its own pairs.</strong> WCAG SC 1.4.11 wants 3:1 on control boundaries, so borders and focus rings need pre-checked pairs too. This is why a pale outline is a defect, not a style.</li>
+        </ul>
+        <p>The payoff is that an AI tool inherits the discipline for free. Hand a generator a palette and it will compose a failing pair within three screens. Hand it pair tokens and the failure mode is no longer available.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Generating the scale instead of picking it<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The lab uses a 1.25 ratio from a 16px body: <strong>12 / 14 / 16 / 20 / 25 / 31 / 39</strong>. Nothing in any standard requires 1.25. What matters is that one ratio produces the whole set, so the set stays small and related, and so a new size cannot be invented in a hurry.</p>
+        <ul>
+          <li><strong>Write the ratio down as the token, not the sizes.</strong> If the ratio is the source, adding a size means changing a number in one place and regenerating - which is a review, not a whim.</li>
+          <li><strong>Round once, deliberately.</strong> 1.25 from 16 gives 20, 25, 31.25, 39.06. Pick your rounding rule and keep it, because half-pixel type is a rendering lottery.</li>
+          <li><strong>Cap the set.</strong> Four to six sizes in a product UI is plenty. Every extra size is a hierarchy decision you are deferring to whoever is on the file next.</li>
+          <li><strong>Spacing works the same way.</strong> One unit, powers and multiples of it, and a hard rule that nothing off the scale ships. Eight is a convention with good divisibility, not a spec.</li>
+        </ul>
+        <p>Both of these are conventions, and you should say so in a review. What is not a convention is the contrast floor, which is where the pairs come in.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: THE STANDARD ============ -->
+  <section class="section" id="the-standard">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · the format, stated accurately</span>
+      <h2>What "design tokens" formally means <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">There is a shared file format for tokens, and it is worth knowing its exact status because people cite it wrongly in both directions. The <strong>W3C Design Tokens Community Group format</strong> has a stable version, <strong>2025.10</strong>, published as a <strong>Final Community Group Report on 2025-10-28</strong>. "Final Community Group Report" is a real, citable milestone, and it is explicitly <strong>not a W3C Standard</strong>. So: yes, build on it. No, do not tell a stakeholder the W3C standardised your tokens.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Cite the right URL, and know why<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Two URLs, two very different documents:</p>
+        <ul>
+          <li><strong>Cite this one:</strong> <code>https://www.designtokens.org/TR/2025.10/format/</code> - the stable 2025.10 Final Community Group Report. Versioned, dated, safe to implement against.</li>
+          <li><strong>Do not cite this one:</strong> the older <code>tr.designtokens.org/format/</code> address now redirects to an unstable living draft that says outright not to attempt to implement that version. If your team's wiki still links there, your team is reading an editors' draft and thinking it is the spec.</li>
+        </ul>
+        <p>The practical consequence: pin the version in your own docs. "Cadence tokens follow DTCG 2025.10" is a sentence an engineer can act on. "Cadence tokens follow the W3C token spec" is a sentence that will be true of a different document in six months.</p>
+        <p><strong>Tokens Studio</strong> is the usual bridge in a Figma-centred team. It supports both the DTCG format, where token properties are <code>$</code>-prefixed, and its own older legacy format, and it exports to Figma Styles and Variables. Pick one format for your repo and be boring about it - mixed formats are where token pipelines quietly rot.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>What belongs in a token and what does not<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>A token is a named value with a type. That is deliberately small. The temptation is to encode judgement in it, and judgement does not survive being a variable.</p>
+        <ul>
+          <li><strong>Good token:</strong> <code>space.3</code> = 24px. <code>font.size.4</code> = 25px. <code>pair.text.onSurface</code> = ink #2A1A28 on surface #FFFFFF, measured 15.2:1.</li>
+          <li><strong>Bad token:</strong> <code>colour.friendly</code>, <code>space.comfortable</code>, <code>type.hero</code>. These describe a feeling, so two people will read them two ways, and an AI tool will read them a third.</li>
+          <li><strong>Semantic beats literal at the point of use.</strong> Keep a primitive layer (raw values) and a semantic layer that references it. Components consume the semantic layer only, so a rebrand is a change in one place.</li>
+          <li><strong>Status colours are semantic by definition.</strong> <code>status.success</code>, <code>status.warning</code>, <code>status.danger</code>. They are the only sanctioned hues outside the accent family, and each needs its own pre-checked pairs.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: THE ROUTES ============ -->
+  <section class="section" id="the-routes">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · access, and what it costs</span>
+      <h2>How an AI tool actually reaches your system <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">"Just point the AI at our design system" is a sentence with a lot of engineering hiding behind it. There are five real routes, and every one has a gate: a seat tier, a deadline, a scope limit or a feature carve-out. The most important single fact for anyone planning token automation is that the <strong>Figma variables REST API is Enterprise-only</strong> - the docs are blunt about it, you must have a Full seat in an Enterprise org. Below Enterprise, your only token route is the Figma MCP server, and it reads <strong>the current selection</strong>, not the file.</p>
+
+    <table class="clean">
+      <thead>
+        <tr><th>Route</th><th>What it gives an AI tool</th><th>The gate</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Figma variables REST API</strong></td>
+          <td>Programmatic read of variables and modes across a file - the route you would design a pipeline around</td>
+          <td><strong>Enterprise only.</strong> "You must have a Full seat in an Enterprise org". No workaround below that tier.</td>
+        </tr>
+        <tr>
+          <td><strong>Figma MCP server</strong></td>
+          <td><code>get_variable_defs</code> returns the variables and styles in your selection. Also <code>get_design_context</code> (which replaced <code>get_code</code>), <code>get_code_connect_map</code>, <code>get_code_connect_suggestions</code>, and remote-only <code>search_design_system</code></td>
+          <td>Remote endpoint <code>https://mcp.figma.com/mcp</code>, desktop <code>http://127.0.0.1:3845/mcp</code>. Scoped to what is selected, so coverage depends on a human selecting the right frames</td>
+        </tr>
+        <tr>
+          <td><strong>Figma Code Connect</strong></td>
+          <td>Maps your real coded components to Figma nodes, so generated output references components that exist</td>
+          <td>Dev or Full seat on Organization or Enterprise. <strong>Framework-specific parsers lose updates and support from 2026-08-17</strong>; after that, template files are the only maintained path</td>
+        </tr>
+        <tr>
+          <td><strong>v0 Design Systems 2.0</strong></td>
+          <td>Stores your system as a <strong>"skill"</strong> - an adapter naming where the source lives and which components, props and tokens are safe to use</td>
+          <td>Fed from GitHub repos, npm packages, Figma frames, Storybook or docs links, or screenshots, and writes a <code>v0.json</code>. Quality of the adapter is on you</td>
+        </tr>
+        <tr>
+          <td><strong>shadcn registry</strong></td>
+          <td>Components and tokens an agent can install by URL, so "use our button" means fetching our button</td>
+          <td><code>registry.json</code> → <code>shadcn build</code> → serve at <code>/r/[NAME].json</code> → <code>shadcn add &lt;url&gt;</code>, with <code>shadcn mcp init --client ...</code> for multi-registry access. "Open in v0" does not support <code>cssVars</code>, <code>css</code>, <code>envVars</code>, namespaced registries or advanced auth</td>
+        </tr>
+        <tr>
+          <td><strong>Vendor MCP servers</strong></td>
+          <td>Official servers exist for Storybook, MUI, Chakra (<code>get_theme</code>), Ant Design (<code>antd_token</code>) and Adobe React Spectrum</td>
+          <td>Only useful if you actually build on that library. <strong>There is no official Google or Material 3 MCP server</strong> - anything you find is community-maintained</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>What to do if you are not on Enterprise<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Most teams reading this are not on Enterprise, so the honest plan is different from the demo you saw at a conference:</p>
+        <ul>
+          <li><strong>Make the repo the source of truth, not the Figma file.</strong> If your tokens live in a versioned file that both humans and agents can read, the Enterprise API stops mattering. Tokens Studio can push in that direction.</li>
+          <li><strong>Use MCP for the last mile, not the pipeline.</strong> Selection-scoped <code>get_variable_defs</code> is genuinely useful when you are handing one frame to a tool. It is not a sync mechanism.</li>
+          <li><strong>Plan around 2026-08-17 now.</strong> If you have Code Connect set up with framework-specific parsers, that path stops receiving updates and support from that date. Template files are the maintained route after it. Migrating on a calm week beats migrating on a broken one.</li>
+          <li><strong>Prefer routes that name the allowed set.</strong> The reason v0 skills and shadcn registries work well is not magic - it is that both make a tool cite specific components instead of inventing plausible ones.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Ask for token names, not for vibes<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The single highest-leverage change to how you prompt a UI generator is to stop describing your system and start listing it.</p>
+        <div class="prompt-box bad">
+          <span class="label">Vague</span>
+          <p>"Build the Cadence share-summary panel. Match our design system - it's clean and modern, plum accent, plenty of whitespace. Use our components where you can."</p>
+        </div>
+        <div class="prompt-box good">
+          <span class="label">Named and bounded</span>
+          <p>"Build the Cadence share-summary panel using only these tokens: font.size.1-5 (12/14/16/20/25, ratio 1.25 from 16); space.1-6 (8/16/24/32/40/48); pair.text.onSurface (#2A1A28 on #FFFFFF), pair.text.muted.onSurface (#7A6A78 on #FFFFFF), pair.text.onAccent (#FFFFFF on #6B2D5C); accent family is plum only; status.success / status.warning / status.danger for state.<br><br>Allowed components: Button (primary | secondary | quiet), Card, Badge, Avatar, Toggle, Toast.<br><br>Forbidden: raw hex values, gradients, any font size or spacing value not listed above, a second accent hue, more than one primary Button per view, icon-only buttons under 24x24 CSS px.<br><br>If a required value is missing from the token list, stop and tell me rather than inventing one."</p>
+        </div>
+        <p>The last line is the one people skip and the one that saves you the most time. A generator that stops and asks is a generator you can trust with a second screen. A generator that invents <code>#7B2E63</code> because it was close has just introduced a token you will find eight screens later.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO ============ -->
+  <section class="section" id="demo">
+    <div class="section-kicker">
+      <span class="klabel">Build-along</span>
+      <h2>Tokenise Cadence, then verify it <span class="tag demo">★ 14 min · everyone runs it</span></h2>
+    </div>
+    <p class="lede">We are going to write Cadence's token set out loud, then prove it. The lab below starts with <strong>hierarchy, type scale and spacing already on - 66 out of 100</strong> - because those are the three checks you tokenised in Part 1. What is left is the interesting part: contrast and the accent. Bring each one on and notice that you are not making a styling decision. You are making a token decision, and the score is what a token decision looks like from outside.</p>
+
+    <div class="steps">
+      <div class="step"><p><strong>Write the scale as a ratio.</strong> 1.25 from a 16px body gives 12 / 14 / 16 / 20 / 25. Five sizes, one source. Anything the draft used that is not on this list is now a bug with a name.</p></div>
+      <div class="step"><p><strong>Write the spacing scale.</strong> One unit of 8px, so space.1 through space.6 = 8 / 16 / 24 / 32 / 40 / 48. Say the rule out loud: nothing off the scale ships.</p></div>
+      <div class="step"><p><strong>Turn on Contrast and read 86.</strong> Do not think of it as darkening text. You have just replaced loose colours with <strong>pre-checked ink-on-surface pairs</strong>, and the survivors in the failure rows are exactly the places where a pair was never defined.</p></div>
+      <div class="step"><p><strong>Turn on One accent and read 100.</strong> One plum family plus named status colours. The fourth hue that was floating around had no token, no name and no owner - which is why it kept coming back.</p></div>
+      <div class="step"><p><strong>Now press Add colour and watch 100 become 81.</strong> Nineteen points. That is what "let's just brighten it up" costs when the brightening has no token behind it.</p></div>
+    </div>
+
+    <div class="dlbox" data-mode="lab" data-levers="hierarchy,typescale,spacing"></div>
+
+    <div class="callout tip">
+      <strong>What is real here and what is not</strong>
+      Be straight with your team about this when you show it. The starting draft is <strong>scripted</strong> - a composite of what unbriefed generators hand you - but every score you see is <strong>measured live in your browser</strong>: contrast ratios from the WCAG relative-luminance formula, spacing and font sizes read from getComputedStyle, hue families counted by converting each rendered colour to HSL. The weights are contrast 25%, spacing 20%, type scale 20%, hierarchy 20%, colour restraint 15%. Nothing in the number is an opinion, which is exactly why it ends arguments.
+    </div>
+  </section>
+
+  <!-- ============ ENFORCEMENT ============ -->
+  <section class="section" id="enforcement">
+    <div class="section-kicker">
+      <span class="klabel">Part 4 · how much enforcement you actually need</span>
+      <h2>The enforcement ladder <span class="tag concept">5 min live</span></h2>
+    </div>
+    <p class="lede">Teams tend to jump from "we have a Figma library" to "we need lint in CI" and skip the two layers in between, which are the cheap ones. Each layer catches more than the last and each one still leaks. Knowing what each layer <strong>lets through</strong> tells you which layer to build next, and stops you buying automation for a problem a written rule would have solved.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Four layers of design system enforcement - a written standard, tokens, components and an automated check - each with what it still lets through.">
+        <style>
+          .enT { font: 700 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .enS { font: 400 11px Inter, sans-serif; fill: #FFFFFF; opacity: .92; }
+          .enI { font: 600 12px Inter, sans-serif; fill: #2A1A28; }
+          .enX { font: 400 11.5px Inter, sans-serif; fill: #7A6A78; }
+          .enN { font: 600 13px Inter, sans-serif; fill: #1E2A00; }
+        </style>
+        <rect x="30" y="28" width="260" height="28" rx="6" fill="#4A1F44"/>
+        <text class="enT" x="44" y="47">THE LAYER</text>
+        <rect x="320" y="28" width="530" height="28" rx="6" fill="#4D6B00"/>
+        <text class="enT" x="334" y="47">WHAT IT STILL LETS THROUGH</text>
+
+        <rect x="30" y="70" width="260" height="52" rx="8" fill="#4A1F44"/>
+        <text class="enT" x="44" y="92">1 · A WRITTEN STANDARD</text>
+        <text class="enS" x="44" y="110">the five-check review script</text>
+        <rect x="320" y="70" width="530" height="52" rx="8" fill="#F9EFF6" stroke="#D6C9D4" stroke-width="1.5"/>
+        <text class="enI" x="334" y="92">Anything nobody reviewed</text>
+        <text class="enX" x="334" y="110">Cheapest layer, and it fires only when a human remembers to run it</text>
+
+        <rect x="30" y="134" width="260" height="52" rx="8" fill="#6B2D5C"/>
+        <text class="enT" x="44" y="156">2 · TOKENS</text>
+        <text class="enS" x="44" y="174">one source for size, space, pair</text>
+        <rect x="320" y="134" width="530" height="52" rx="8" fill="#F9EFF6" stroke="#D6C9D4" stroke-width="1.5"/>
+        <text class="enI" x="334" y="156">A designer who types a raw hex</text>
+        <text class="enX" x="334" y="174">Good values are now easier to reach than bad ones, but not the only ones</text>
+
+        <rect x="30" y="198" width="260" height="52" rx="8" fill="#9B4B87"/>
+        <text class="enT" x="44" y="220">3 · COMPONENTS</text>
+        <text class="enS" x="44" y="238">variants instead of styling</text>
+        <rect x="320" y="198" width="530" height="52" rx="8" fill="#F9EFF6" stroke="#D6C9D4" stroke-width="1.5"/>
+        <text class="enI" x="334" y="220">A one-off built outside the set</text>
+        <text class="enX" x="334" y="238">Detached instances are how systems die, quietly, over about two quarters</text>
+
+        <rect x="30" y="262" width="260" height="52" rx="8" fill="#2A1A28"/>
+        <text class="enT" x="44" y="284">4 · AN AUTOMATED CHECK</text>
+        <text class="enS" x="44" y="302">contrast and token lint in CI</text>
+        <rect x="320" y="262" width="530" height="52" rx="8" fill="#F4F8DE" stroke="#4D6B00" stroke-width="1.5"/>
+        <text class="enI" x="334" y="284">Work that is clean and has no idea in it</text>
+        <text class="enX" x="334" y="302">It measures the left half of taste and cannot see the right half at all</text>
+
+        <rect x="30" y="340" width="14" height="14" rx="3" fill="#4D6B00"/>
+        <text class="enN" x="54" y="352">Build layers in order. Automation on top of undecided tokens just enforces the wrong thing faster.</text>
+        <rect x="30" y="364" width="14" height="14" rx="3" fill="#4D6B00"/>
+        <text class="enN" x="54" y="376">Every layer you add moves conformance from memory to mechanism. That is the only real goal here.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - four layers of enforcement, and the leak each one leaves behind</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Layer 4 without a platform team<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>You do not need CI to get most of layer 4. You need something that runs the same check every time, on the same evidence:</p>
+        <ul>
+          <li><strong>A token diff in the pull request.</strong> If tokens live in a versioned file, any new value shows up as a line in a review. That is a gate.</li>
+          <li><strong>A contrast check on the pair list, not on screens.</strong> Because pairs are defined once, checking them is a small, fixed job rather than an audit of every view.</li>
+          <li><strong>A standing agenda item.</strong> Five checks, five minutes, same order, every design review. Boring and effective, and it is the layer most teams skip while shopping for tooling.</li>
+        </ul>
+        <p>b9 takes this into handoff: the same tokens, the same allowed component list, expressed in a way an engineer and an agent can both consume.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 30-40 min total</span></h2>
+    </div>
+    <ul>
+      <li>Write your product's real token set on one page: the type ratio and the sizes it generates, the spacing unit and its scale, your accent family, your status colours, and every ink-on-surface pair with its measured ratio. Where a pair fails, do not fix the colour yet - just mark it.</li>
+      <li>Audit for loose ink. Find every place your system publishes a text colour without naming the surfaces it was checked against. That list is your next sprint of token work, and it is usually shorter than people expect.</li>
+      <li>Check which token route you actually have. Are you on Enterprise, so the variables REST API is available? If not, write down the honest plan: repo as source of truth, MCP for the last mile. If you use Code Connect with framework-specific parsers, put 2026-08-17 in a calendar with a migration owner.</li>
+      <li>Take the "named and bounded" prompt from Part 3, swap in your own tokens, allowed components and forbidden patterns, and run it against a screen you already shipped. Compare what comes back to the real thing and note every place the tool went outside the list.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">This session teaches the token format at its real status and the access routes at their real gates, verified from official documentation. Anything about seats, endpoints or deadlines in this space moves, so re-check the vendor page before you build a pipeline on it. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">W3C DTCG format 2025.10 - Final Community Group Report, 2025-10-28, not a W3C Standard</span><span class="note">Part 2 · cite designtokens.org/TR/2025.10/format/ · the older tr. URL redirects to an unstable living draft</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Tokens Studio - DTCG and legacy formats, export to Figma Styles and Variables</span><span class="note">Part 2 · named as the usual bridge · pick one format and keep it</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Figma token access - variables REST API and the Figma MCP server tool set</span><span class="note">Part 3 · Enterprise Full seat for the API · get_variable_defs, get_design_context, get_code_connect_map, search_design_system</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Figma Code Connect - seat requirement and the parser deadline</span><span class="note">Part 3 · Dev or Full seat on Org or Enterprise · parsers unsupported from 2026-08-17, template files after</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">v0 Design Systems 2.0 skills, the shadcn registry flow, and vendor MCP servers</span><span class="note">Part 3 · v0.json · registry.json to shadcn build to /r/[NAME].json · no official Google or Material 3 server</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · What is the formal status of the W3C Design Tokens Community Group format, version 2025.10?</p>
+      <button class="qopt" type="button">A · A ratified W3C Standard, so it is safe to describe as "the W3C token standard"</button>
+      <button class="qopt" type="button">B · A Final Community Group Report published 2025-10-28, and explicitly not a W3C Standard</button>
+      <button class="qopt" type="button">C · An editors' draft that says not to implement it yet</button>
+      <p class="qwhy">Both extremes are wrong. 2025.10 is a real, citable, stable milestone you can build against - cite www.designtokens.org/TR/2025.10/format/ - but it is a Community Group Report, not a W3C Standard. Option C describes the living draft you land on from the older tr.designtokens.org URL, which is exactly why that link should not be in your team wiki.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · Your team is on Figma Professional and wants an agent to read every variable in a file. What is the honest answer?</p>
+      <button class="qopt" type="button">A · Use the variables REST API - any paid plan with a Full seat can read variables</button>
+      <button class="qopt" type="button">B · Use Code Connect, which is available on all paid plans</button>
+      <button class="qopt" type="button">C · You cannot. The variables REST API needs a Full seat in an Enterprise org, so below that your only route is selection-scoped get_variable_defs via the Figma MCP server</button>
+      <p class="qwhy">This is the single biggest constraint on token automation, and it surprises people late in a project. The REST API is Enterprise-only. MCP's get_variable_defs reads what is selected, not the file, so coverage depends on a human selecting the right frames. Code Connect is also gated - Dev or Full seat on Organization or Enterprise - and its framework-specific parsers lose updates and support from 2026-08-17.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · Why publish colour as pre-checked ink-on-surface pairs rather than as a palette of swatches?</p>
+      <button class="qopt" type="button">A · Because a pair encodes a combination that already passes 4.5:1, so a failing pair is not available to compose in the first place</button>
+      <button class="qopt" type="button">B · Because pairs use fewer hex values, which keeps the file smaller</button>
+      <button class="qopt" type="button">C · Because WCAG requires colours to be documented in pairs</button>
+      <p class="qwhy">A palette hands people enough rope: a nice grey on a nice tinted surface measures 3.1:1 and nobody broke a rule. Pairs move the measurement to authoring time, so the token either exists and passes or does not exist. It also means an AI tool inherits the discipline without being told about it. WCAG sets the ratio, not the documentation format.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Designer session 6 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Check → token</b><span>Type scale → size tokens from one ratio · spacing → a scale · contrast → pre-checked pairs · accent → one family + status · hierarchy → component variants.</span></div>
+      <div class="cheat-item"><b>Ship pairs, not palettes</b><span>Name the ink and the surface in one token, measured once at authoring time. A failing pair stops being composable.</span></div>
+      <div class="cheat-item"><b>DTCG status</b><span>Version 2025.10, Final Community Group Report, 2025-10-28, not a W3C Standard. Cite designtokens.org/TR/2025.10/format/.</span></div>
+      <div class="cheat-item"><b>The wrong URL</b><span>tr.designtokens.org/format/ now redirects to an unstable living draft that says not to implement it. Pin your version instead.</span></div>
+      <div class="cheat-item"><b>The Enterprise wall</b><span>Figma variables REST API needs a Full seat in an Enterprise org. Below that: selection-scoped get_variable_defs via the Figma MCP server.</span></div>
+      <div class="cheat-item"><b>2026-08-17</b><span>Code Connect framework-specific parsers lose updates and support. Template files become the only maintained path. Assign an owner now.</span></div>
+      <div class="cheat-item"><b>Name the allowed set</b><span>Give a generator token names, the allowed component list and the forbidden patterns - then tell it to stop and ask rather than invent.</span></div>
+      <div class="cheat-item"><b>Enforcement ladder</b><span>Written standard → tokens → components → automated check. Each leaks; build in order. A green build still cannot see whether the work has an idea.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Designer session 6 of 10 · learn-ai-design-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b5-critique-lab.html">← Previous: The critique lab</a> &nbsp;·&nbsp; <a href="b7-illustration-and-imagery.html">Next: Illustration and imagery →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/design-live.js?v=1"></script>
+<script src="../assets/app.js?v=2"></script>
+</body>
+</html>

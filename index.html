@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>learn ai design with phoebe - a two-track course on designing with AI</title>
+<link rel="stylesheet" href="assets/style.css?v=1">
+<style>
+  .stats-row { display: flex; gap: 2.4rem; margin-top: 1.5rem; flex-wrap: wrap; }
+  .stat b { display: block; font-size: 2.1rem; font-weight: 800; line-height: 1.05; font-variant-numeric: tabular-nums; }
+  .stat span { font-size: .72rem; opacity: .85; text-transform: uppercase; letter-spacing: .09em; font-weight: 600; }
+
+  .course-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+  .course-card {
+    border: 1px solid var(--hairline);
+    border-top: 4px solid var(--diff, var(--indigo));
+    border-radius: var(--radius);
+    padding: 1.2rem 1.3rem 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    text-decoration: none;
+    color: var(--ink);
+    background: #fff;
+    transition: box-shadow .15s ease, border-color .15s ease, transform .15s ease;
+    position: relative;
+  }
+  .course-card:hover { border-color: var(--indigo-soft); border-top-color: var(--diff, var(--indigo)); box-shadow: 0 8px 28px rgba(107,45,92,.12); transform: translateY(-3px); }
+  .course-card .cicon { font-size: 1.7rem; line-height: 1; }
+  .course-card .cnum { font-size: .72rem; font-weight: 700; color: var(--indigo); text-transform: uppercase; letter-spacing: .1em; }
+  .course-card h3 { font-size: 1.05rem; font-weight: 800; line-height: 1.3; }
+  .course-card p { font-size: .85rem; color: var(--muted); flex: 1; }
+  .course-card .meta { display: flex; gap: .4rem; flex-wrap: wrap; }
+
+  .diff-legend { display: flex; gap: 1rem; margin-top: 1.6rem; font-size: .74rem; color: var(--muted); font-weight: 600; flex-wrap: wrap; }
+  .diff-legend i { display: inline-block; width: .85rem; height: .35rem; border-radius: 999px; margin-right: .35rem; vertical-align: middle; }
+
+  .paths { margin-top: 2.6rem; }
+  .paths h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: .3rem; }
+  .paths .plede { color: var(--muted); font-size: .92rem; margin-bottom: .8rem; }
+  .path { display: flex; gap: .55rem; align-items: center; padding: .75rem 0; border-bottom: .5px solid var(--hairline); flex-wrap: wrap; }
+  .path:last-child { border-bottom: none; }
+  .path b { min-width: 15.5rem; font-size: .9rem; }
+  .path .pstep { background: var(--indigo-50); color: var(--indigo); border-radius: 999px; padding: .16rem .68rem; font-weight: 700; font-size: .8rem; text-decoration: none; transition: all .12s ease; }
+  .path .pstep:hover { background: var(--indigo); color: #fff; }
+  .path .parr { color: var(--faint); font-weight: 700; }
+
+  .mm-section { margin-top: 1.6rem; }
+  .mm-section h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: .2rem; }
+  .mm-section .mm-lede { color: var(--muted); font-size: .92rem; margin-bottom: .4rem; }
+  .mm-wrap { border: 1px solid var(--hairline); border-radius: var(--radius); background: linear-gradient(180deg,#fff,#F7EFF5); padding: .6rem; overflow-x: auto; }
+  .mm-svg { width: 100%; height: auto; display: block; max-width: 60rem; margin: 0 auto; min-width: 34rem; }
+  .mm-link { cursor: pointer; text-decoration: none; }
+  .mm-node rect { transition: opacity .15s ease, filter .15s ease; }
+  .mm-node text { pointer-events: none; }
+  .mm-edge { transition: opacity .15s ease; }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Design with Phoebe</div>
+    <h1>Two tracks into design where taste still decides</h1>
+    <p class="sub">Generation got cheap, so judgement got expensive. A generator will hand you forty screens in a minute and not one opinion about which is right - and the average of everything on the internet is, by construction, not a point of view. A leader track gives design and brand heads the tool map, the IP and provenance reality, the craft-and-careers question, and a rollout that raises quality instead of just throughput. A designer track takes working designers through one real feature - the shared summary in Cadence, an AI meeting-notes app - from constraint brief to a spec'd, system-conformant, handed-off screen set. A live critique lab runs on the key pages: it renders a real screen, measures it for real (WCAG contrast ratios, computed spacing, hue families), and climbs 17 → 100 as you turn on the five craft levers - then loses 19 points the moment you reach for the sixth.</p>
+    <div class="stats-row">
+      <div class="stat"><b data-count="2">2</b><span>tracks</span></div>
+      <div class="stat"><b data-count="16">16</b><span>sessions</span></div>
+      <div class="stat"><b data-count="5">5</b><span>craft checks, measured</span></div>
+      <div class="stat"><b data-count="45">45</b><span>min per session</span></div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section">
+    <div class="paths" style="margin-top:0">
+      <h2>The leader track 🤝 <span style="font-size:.85rem;font-weight:600;color:var(--muted)">· for design, brand &amp; creative leads · 6 x 45 min · decisions, not demos</span></h2>
+      <p class="plede">Judgement mode: what actually changed in design work, how to judge output like a director, which tools earn a seat and which are theatre, the IP and provenance exposure your legal team will eventually ask about, what AI does to craft and careers, and a rollout that is measured on quality rather than volume.</p>
+    </div>
+    <div class="course-grid">
+      <a class="course-card" href="courses/a1-what-ai-changes.html" style="--diff:#34D399">
+        <span class="cicon">🌀</span>
+        <span class="cnum">Leader 1 · easy</span>
+        <h3>What AI changes in design work</h3>
+        <p>Where generation genuinely collapses cost, where it quietly does nothing, and why the bottleneck moved from making to deciding.</p>
+        <span class="meta"><span class="pill amber">▶ Leaders start here</span></span>
+      </a>
+      <a class="course-card" href="courses/a2-taste-is-the-moat.html" style="--diff:#34D399">
+        <span class="cicon">👁️</span>
+        <span class="cnum">Leader 2 · easy</span>
+        <h3>Taste is the moat</h3>
+        <p>Judging output like a director: the measurable half you can delegate to a check, the judgement half you cannot, and how homogenisation happens to whole categories.</p>
+        <span class="meta"><span class="pill light">The critique standard</span></span>
+      </a>
+      <a class="course-card" href="courses/a3-tool-workflow-map.html" style="--diff:#FBBF24">
+        <span class="cicon">🗺️</span>
+        <span class="cnum">Leader 3 · medium</span>
+        <h3>The tool and workflow map</h3>
+        <p>Figma, Adobe, Canva, image generators, prompt-to-UI - what each actually outputs, where it lands in a real pipeline, and the buy-versus-ignore call.</p>
+        <span class="meta"><span class="pill light">Buy / adopt / ignore</span></span>
+      </a>
+      <a class="course-card" href="courses/a4-ip-provenance-risk.html" style="--diff:#FBBF24">
+        <span class="cicon">⚖️</span>
+        <span class="cnum">Leader 4 · medium</span>
+        <h3>IP, provenance and brand risk</h3>
+        <p>What you can register, what vendor indemnities actually promise, what Content Credentials prove, and the transparency rules for synthetic imagery.</p>
+        <span class="meta"><span class="pill light">The legal conversation</span></span>
+      </a>
+      <a class="course-card" href="courses/a5-craft-and-careers.html" style="--diff:#FB923C">
+        <span class="cicon">🪜</span>
+        <span class="cnum">Leader 5 · deciding</span>
+        <h3>Craft, juniors and career ladders</h3>
+        <p>If AI does the work juniors used to learn on, where does the next senior come from? Hiring signals, portfolio review, and a ladder that still develops taste.</p>
+        <span class="meta"><span class="pill light">Team design</span></span>
+      </a>
+      <a class="course-card" href="courses/a6-rollout-and-quality.html" style="--diff:#FB923C">
+        <span class="cicon">📈</span>
+        <span class="cnum">Leader 6 · deciding</span>
+        <h3>Rollout and measuring quality</h3>
+        <p>A 12-month adoption plan whose success metric is design quality, not asset count - with the review ritual, the guardrails, and what to stop doing.</p>
+        <span class="meta"><span class="pill light">Strategy session</span></span>
+      </a>
+    </div>
+
+    <div class="paths">
+      <h2>The designer track 🎨 <span style="font-size:.85rem;font-weight:600;color:var(--muted)">· for product, brand &amp; design-adjacent builders · 10 x 45 min · no coding needed</span></h2>
+      <p class="plede">One running feature, taken further every session: Cadence's shared summary. The critique lab climbs 17 → 32 → 46 → 66 → 86 → 100 as the craft levers come on, and b10 does not ship until the capstone screens score 100 with an idea in them. Every session leaves you an artifact - a brief, a moodboard, a screen, a token set, a spec.</p>
+    </div>
+    <div class="course-grid">
+      <a class="course-card" href="courses/b1-designers-ai-loop.html" style="--diff:#34D399">
+        <span class="cicon">🔄</span>
+        <span class="cnum">Designer 1 · easy</span>
+        <h3>The designer's AI loop</h3>
+        <p>Brief, generate, critique, direct, ship - and the five-check lab you will spend ten sessions climbing, starting at a brutal 17 out of 100.</p>
+        <span class="meta"><span class="pill amber">▶ Designers start here</span></span>
+      </a>
+      <a class="course-card" href="courses/b2-art-direction-prompting.html" style="--diff:#34D399">
+        <span class="cicon">🎯</span>
+        <span class="cnum">Designer 2 · easy</span>
+        <h3>Art-direction prompting</h3>
+        <p>The brief that produces usable work: constraints instead of adjectives, references that carry weight, and the iteration loop that fixes the brief rather than the pixels.</p>
+        <span class="meta"><span class="pill light">The core skill</span></span>
+      </a>
+      <a class="course-card" href="courses/b3-research-and-moodboards.html" style="--diff:#FBBF24">
+        <span class="cicon">🧭</span>
+        <span class="cnum">Designer 3 · medium</span>
+        <h3>Research and moodboards</h3>
+        <p>Concept exploration at speed without converging on the average - divergent prompting, reference discipline, and a moodboard that states a position.</p>
+        <span class="meta"><span class="pill light">Exploration</span></span>
+      </a>
+      <a class="course-card" href="courses/b4-ui-drafting.html" style="--diff:#FBBF24">
+        <span class="cicon">📱</span>
+        <span class="cnum">Designer 4 · medium</span>
+        <h3>UI drafting: flow to screens</h3>
+        <p>From a flow to Cadence's shared-summary screens with prompt-to-UI tools - and the states generated work always forgets.</p>
+        <span class="meta"><span class="pill light">Cadence v1 ships</span></span>
+      </a>
+      <a class="course-card" href="courses/b5-critique-lab.html" style="--diff:#FB923C">
+        <span class="cicon">🔬</span>
+        <span class="cnum">Designer 5 · the heart</span>
+        <h3>The critique lab</h3>
+        <p>The signature session: the five-check script, the WCAG criteria to cite by number, the AI-as-reviewer prompt, and the 19-point cost of "can we add a colour".</p>
+        <span class="meta"><span class="pill light">▶ Score it live</span></span>
+      </a>
+      <a class="course-card" href="courses/b6-design-systems-tokens.html" style="--diff:#FB923C">
+        <span class="cicon">🧩</span>
+        <span class="cnum">Designer 6 · hands-on</span>
+        <h3>Design systems and tokens</h3>
+        <p>Turn the five checks into tokens and components a machine can enforce - so consistency stops depending on whether you were paying attention.</p>
+        <span class="meta"><span class="pill light">Consistency, not vibes</span></span>
+      </a>
+      <a class="course-card" href="courses/b7-illustration-and-imagery.html" style="--diff:#FB923C">
+        <span class="cicon">🖼️</span>
+        <span class="cnum">Designer 7 · hands-on</span>
+        <h3>Illustration and imagery</h3>
+        <p>Generated assets that look like your brand rather than like a generator - style references, consistency techniques, and the licensing you must check.</p>
+        <span class="meta"><span class="pill light">Assets that fit</span></span>
+      </a>
+      <a class="course-card" href="courses/b8-content-design-microcopy.html" style="--diff:#FB923C">
+        <span class="cicon">✍️</span>
+        <span class="cnum">Designer 8 · hands-on</span>
+        <h3>Content design and microcopy</h3>
+        <p>Words are interface: labels, empty states, errors, and the AI-disclosure copy that builds trust instead of hedging - paired with the visuals, not bolted on.</p>
+        <span class="meta"><span class="pill light">Words as design</span></span>
+      </a>
+      <a class="course-card" href="courses/b9-handoff-to-code.html" style="--diff:#F87171">
+        <span class="cicon">🤝</span>
+        <span class="cnum">Designer 9 · hardest</span>
+        <h3>Handoff to code</h3>
+        <p>Specs an engineer can build from, AI-assisted front-end drafts, and the review that catches the gap between the design and what shipped.</p>
+        <span class="meta"><span class="pill light">Design to build</span></span>
+      </a>
+      <a class="course-card" href="courses/b10-capstone-cadence.html" style="--diff:#F87171">
+        <span class="cicon">🏆</span>
+        <span class="cnum">Designer 10 · hardest</span>
+        <h3>Capstone: the Cadence feature</h3>
+        <p>Assemble everything - brief, exploration, screens, tokens, imagery, copy, spec - and do not ship until the score is 100 and you can name the idea in one sentence.</p>
+        <span class="meta"><span class="pill light">Ship it at 100</span></span>
+      </a>
+    </div>
+    <div class="diff-legend">
+      <span><i style="background:#34D399"></i>easy - everyone</span>
+      <span><i style="background:#FBBF24"></i>medium</span>
+      <span><i style="background:#FB923C"></i>hands-on / deciding</span>
+      <span><i style="background:#F87171"></i>hardest</span>
+    </div>
+
+    <div class="paths">
+      <h2>Choose your path 🗺️</h2>
+      <p class="plede">Two doors into the same conviction: the tool raises your floor, and only direction and a standard raise your ceiling.</p>
+      <div class="path"><b>🤝 Leader (decide &amp; govern)</b>
+        <a class="pstep" href="courses/a1-what-ai-changes.html">a1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a2-taste-is-the-moat.html">a2</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a3-tool-workflow-map.html">a3</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a4-ip-provenance-risk.html">a4</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a5-craft-and-careers.html">a5</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a6-rollout-and-quality.html">a6</a>
+      </div>
+      <div class="path"><b>🎨 Designer (ship the feature)</b>
+        <a class="pstep" href="courses/b1-designers-ai-loop.html">b1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b2-art-direction-prompting.html">b2</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b3-research-and-moodboards.html">b3</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b4-ui-drafting.html">b4</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b5-critique-lab.html">b5</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b6-design-systems-tokens.html">b6</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b7-illustration-and-imagery.html">b7</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b8-content-design-microcopy.html">b8</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b9-handoff-to-code.html">b9</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b10-capstone-cadence.html">b10</a>
+      </div>
+      <div class="path"><b>⚡ Non-designer who must ship visuals</b>
+        <a class="pstep" href="courses/b1-designers-ai-loop.html">b1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b2-art-direction-prompting.html">b2</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b5-critique-lab.html">b5</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b7-illustration-and-imagery.html">b7</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b8-content-design-microcopy.html">b8</a>
+      </div>
+      <div class="path"><b>🚀 Full journey (lead AND design)</b>
+        <a class="pstep" href="courses/a1-what-ai-changes.html">a1-a6</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b1-designers-ai-loop.html">b1-b10</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section mm-section">
+    <h2>The knowledge map 🧠</h2>
+    <p class="mm-lede">Both tracks at a glance - hover a session to spotlight its concepts, click any node to jump in.</p>
+    <div class="mm-wrap"><div id="mindmap"></div></div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>learn-ai-design-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a> · taught from the W3C WCAG 2.2 criteria, platform design guidance, the design-tokens format work, the vendors' own documentation for Figma, Adobe Firefly, Canva, Midjourney and prompt-to-UI tools, US Copyright Office guidance, C2PA Content Credentials, and the published research on generated-output homogenisation</span>
+  </footer>
+</main>
+
+<script>
+window.MINDMAP_DATA = {
+  title: "Learn\nAI Design",
+  centerColor: "#4A1F44",
+  sessions: [
+    { label: "What AI\nchanges", href: "courses/a1-what-ai-changes.html", color: "#34D399",
+      concepts: [
+        { label: "Generation got cheap", href: "courses/a1-what-ai-changes.html" },
+        { label: "Deciding is the bottleneck", href: "courses/a1-what-ai-changes.html" } ] },
+    { label: "Taste is\nthe moat", href: "courses/a2-taste-is-the-moat.html", color: "#34D399",
+      concepts: [
+        { label: "Measurable vs judgement", href: "courses/a2-taste-is-the-moat.html" },
+        { label: "Homogenisation", href: "courses/a2-taste-is-the-moat.html" } ] },
+    { label: "Tool &\nworkflow map", href: "courses/a3-tool-workflow-map.html", color: "#FBBF24",
+      concepts: [
+        { label: "What each tool outputs", href: "courses/a3-tool-workflow-map.html" },
+        { label: "Buy / adopt / ignore", href: "courses/a3-tool-workflow-map.html" } ] },
+    { label: "IP &\nprovenance", href: "courses/a4-ip-provenance-risk.html", color: "#FBBF24",
+      concepts: [
+        { label: "What you can register", href: "courses/a4-ip-provenance-risk.html" },
+        { label: "Content Credentials", href: "courses/a4-ip-provenance-risk.html" } ] },
+    { label: "Craft &\ncareers", href: "courses/a5-craft-and-careers.html", color: "#FB923C",
+      concepts: [
+        { label: "Where seniors come from", href: "courses/a5-craft-and-careers.html" },
+        { label: "Portfolio review", href: "courses/a5-craft-and-careers.html" } ] },
+    { label: "Rollout &\nquality", href: "courses/a6-rollout-and-quality.html", color: "#FB923C",
+      concepts: [
+        { label: "Quality as the metric", href: "courses/a6-rollout-and-quality.html" },
+        { label: "Review ritual", href: "courses/a6-rollout-and-quality.html" } ] },
+    { label: "Designer's\nAI loop", href: "courses/b1-designers-ai-loop.html", color: "#34D399",
+      concepts: [
+        { label: "Brief → ship", href: "courses/b1-designers-ai-loop.html" },
+        { label: "Four levers", href: "courses/b1-designers-ai-loop.html" },
+        { label: "The 17 → 100 ladder", href: "courses/b1-designers-ai-loop.html" } ] },
+    { label: "Art-direction\nprompting", href: "courses/b2-art-direction-prompting.html", color: "#34D399",
+      concepts: [
+        { label: "Constraint brief", href: "courses/b2-art-direction-prompting.html" },
+        { label: "Fix the brief, not pixels", href: "courses/b2-art-direction-prompting.html" } ] },
+    { label: "Research &\nmoodboards", href: "courses/b3-research-and-moodboards.html", color: "#FBBF24",
+      concepts: [
+        { label: "Divergent prompting", href: "courses/b3-research-and-moodboards.html" },
+        { label: "A board with a position", href: "courses/b3-research-and-moodboards.html" } ] },
+    { label: "UI\ndrafting", href: "courses/b4-ui-drafting.html", color: "#FBBF24",
+      concepts: [
+        { label: "Flow to screens", href: "courses/b4-ui-drafting.html" },
+        { label: "The forgotten states", href: "courses/b4-ui-drafting.html" } ] },
+    { label: "Critique\nlab", href: "courses/b5-critique-lab.html", color: "#FB923C",
+      concepts: [
+        { label: "Five checks in order", href: "courses/b5-critique-lab.html" },
+        { label: "WCAG by number", href: "courses/b5-critique-lab.html" },
+        { label: "The 19-point instinct", href: "courses/b5-critique-lab.html" } ] },
+    { label: "Systems &\ntokens", href: "courses/b6-design-systems-tokens.html", color: "#FB923C",
+      concepts: [
+        { label: "Checks as tokens", href: "courses/b6-design-systems-tokens.html" },
+        { label: "Component discipline", href: "courses/b6-design-systems-tokens.html" } ] },
+    { label: "Illustration\n& imagery", href: "courses/b7-illustration-and-imagery.html", color: "#FB923C",
+      concepts: [
+        { label: "Style references", href: "courses/b7-illustration-and-imagery.html" },
+        { label: "Licensing checks", href: "courses/b7-illustration-and-imagery.html" } ] },
+    { label: "Content\ndesign", href: "courses/b8-content-design-microcopy.html", color: "#FB923C",
+      concepts: [
+        { label: "Words are interface", href: "courses/b8-content-design-microcopy.html" },
+        { label: "Honest AI disclosure", href: "courses/b8-content-design-microcopy.html" } ] },
+    { label: "Handoff\nto code", href: "courses/b9-handoff-to-code.html", color: "#F87171",
+      concepts: [
+        { label: "Specs that build", href: "courses/b9-handoff-to-code.html" },
+        { label: "Design-to-shipped gap", href: "courses/b9-handoff-to-code.html" } ] },
+    { label: "Capstone\n100", href: "courses/b10-capstone-cadence.html", color: "#F87171",
+      concepts: [
+        { label: "Full feature assembly", href: "courses/b10-capstone-cadence.html" },
+        { label: "Score gate + the idea", href: "courses/b10-capstone-cadence.html" } ] }
+  ]
+};
+</script>
+<script src="assets/mindmap.js?v=1"></script>
+<script src="assets/app.js?v=2"></script>
+</body>
+</html>

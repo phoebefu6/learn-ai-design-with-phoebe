@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Designer session 7 · Illustration and imagery - learn ai design with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-design-with-phoebe</a> / Designer session 7 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Design with Phoebe · Designer track · Session 7 of 10</div>
+    <h1>Illustration and <span class="accent">imagery</span></h1>
+    <p class="sub">You can recognise generated imagery across a room, and so can your users. Not because the rendering is bad - it is usually excellent - but because nothing in it was decided. Tonight we name the tells precisely enough to fix them, then get exact about the consistency machinery: which reference parameter does what, which version it needs, and what the documentation itself says it cannot promise. Then the part that decides whether an asset ever ships: rights and provenance, stated honestly, including where the vendors' own framing is a design goal rather than a guarantee.</p>
+    <div class="chip-row">
+      <span class="chip level">🟠 Designer track</span>
+      <span class="chip audience">Product · brand · design-adjacent builders</span>
+      <span class="chip audience">Assets that fit</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-18 · The tells + the reference params</span>
+      <span class="a3" style="flex:5">18-40 · Rights, provenance, build-along</span>
+      <span class="a4" style="flex:1">40-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ PART 1: THE TELLS ============ -->
+  <section class="section" id="the-tells">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · why it reads as generated</span>
+      <h2>The tells, and what they are really telling you <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">Five tells, and they are all the same underlying failure. <strong>Default lighting and lens</strong> - soft, frontal, shallow depth of field, because that is the average of every stock photograph ever made. <strong>Symmetrical hero compositions</strong> - the subject centred, framed, nothing off balance, nothing earning attention. <strong>Decorative detail with no meaning</strong> - glowing particles, floating panels, circuitry that connects nothing. <strong>A palette unrelated to the product</strong> - teal and orange arriving uninvited into a plum interface. And <strong>subjects that are generically "professional"</strong> - people who work at no company, in no city, on nothing in particular.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      A written imagery standard for Cadence you can hand to anyone, the exact reference parameters with their real version gates and documented limits, and four questions to ask about any asset before it ships - the ones that stop a recall rather than explain one.
+    </div>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Each tell, and the decision that was skipped<span class="mini">5 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>A tell is not a rendering flaw. It is the visible shape of a decision nobody made, which means every one of them has a fix that lives in the brief:</p>
+        <ul>
+          <li><strong>Default lighting and lens.</strong> Skipped decision: where is the light coming from, and what is the camera. Fix: state it. "Single hard light from the upper left, long lens, no bloom, no lens flare." Boring, specific, unmistakably yours after four assets.</li>
+          <li><strong>Symmetrical hero composition.</strong> Skipped decision: what is the crop and where is the subject in frame. Fix: state a crop rule. "Subject in the left third, generous negative space on the right for copy." Now the asset has a job in a layout.</li>
+          <li><strong>Meaningless decoration.</strong> Skipped decision: what does this picture claim. Fix: forbid decoration outright. Every element in the frame must correspond to something real in the product.</li>
+          <li><strong>Unrelated palette.</strong> Skipped decision: is this asset in the product's colour world. Fix: name the palette as tokens, not vibes - the plum accent family and neutrals from b6, nothing else.</li>
+          <li><strong>Generic subjects.</strong> Skipped decision: who is this and what are they doing. Fix: write subject rules. For Cadence: real meeting artefacts, laptops with plausible interfaces, hands mid-note, nobody smiling at the camera.</li>
+        </ul>
+        <p>The same move as everywhere else in this track: direction plus a stated standard. Direction gives the tool something the average of the internet does not have. The standard is what you review against, so "it feels off" becomes a specific line someone can fix.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>A vague brief and a directed one, side by side<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Both of these produce a competent image. Only one produces an asset that belongs in Cadence.</p>
+        <div class="prompt-box bad">
+          <span class="label">Vague brief</span>
+          <p>"Illustration for the empty state of our AI meeting-notes app. Clean, modern, friendly. Something about collaboration and productivity. Make it feel human."</p>
+        </div>
+        <div class="prompt-box good">
+          <span class="label">Directed brief with exclusions</span>
+          <p>"Empty-state illustration for Cadence, an AI meeting-notes app. <br><br><strong>Subject:</strong> one closed notebook and a cold cup of coffee on a plain desk, no people, no screens. The point is "nothing here yet", not "look how busy we are".<br><br><strong>Palette:</strong> plum accent #6B2D5C with warm neutrals only. No teal, no orange, no gradient.<br><br><strong>Lighting:</strong> single soft light from the upper left, visible shadow direction, no glow, no bloom.<br><br><strong>Crop:</strong> objects in the lower left third, wide negative space upper right for the headline. 3:2, no border.<br><br><strong>Never appears:</strong> glowing particles, circuitry, floating UI panels, brain or lightbulb metaphors, legible text of any kind, any recognisable logo or trademark, stock-smiling people."</p>
+        </div>
+        <p>The exclusion list is the half people leave out, and it is the half that removes the tells. Write it once for your product and reuse it in every image brief you send for the next year.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: CONSISTENCY MECHANICS ============ -->
+  <section class="section" id="consistency">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · the machinery, exactly</span>
+      <h2>Reference parameters and what they cannot promise <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">One asset is a prompt. A set of assets is a system, and the system runs on reference parameters. Get these exact, because the version gates and the cost multipliers are real and people plan around the wrong ones. Midjourney's <strong>current default version is V8.2</strong>. Style reference is <code>--sref &lt;url|code|random&gt;</code> with <strong><code>--sw</code> 0-1000, default 100</strong>, and <code>--sv</code> to choose the style-reference model. Character reference <code>--cref</code> with <code>--cw</code> 0-100 is <strong>V6 only</strong>. Omni Reference <code>--oref</code> is <strong>V7 and later</strong>, takes <strong>exactly one image</strong>, uses <code>--ow</code> 1-1000 with a documented recommendation to stay below 400, and <strong>costs 2x GPU time</strong>. Personalization profiles (<code>--p</code>) must be unlocked by rating images, and moodboards (<code>--p mID</code>) <strong>cannot be combined with <code>--sv</code> or <code>--sw</code></strong>. Stylisation is <code>--stylize</code> 0-1000.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 396" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three reference mechanisms - style reference, character and omni reference, and personalization - with what each controls and what the documentation says it cannot promise.">
+        <style>
+          .rfT { font: 700 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .rfI { font: 600 12px Inter, sans-serif; fill: #2A1A28; }
+          .rfM { font: 400 11.5px Inter, sans-serif; fill: #4A1F44; }
+          .rfX { font: 400 11.5px Inter, sans-serif; fill: #7A6A78; }
+          .rfN { font: 600 13px Inter, sans-serif; fill: #1E2A00; }
+        </style>
+        <rect x="30" y="26" width="256" height="30" rx="6" fill="#4A1F44"/>
+        <text class="rfT" x="44" y="46">STYLE REFERENCE</text>
+        <rect x="312" y="26" width="256" height="30" rx="6" fill="#6B2D5C"/>
+        <text class="rfT" x="326" y="46">CHARACTER / OMNI</text>
+        <rect x="594" y="26" width="256" height="30" rx="6" fill="#9B4B87"/>
+        <text class="rfT" x="608" y="46">PERSONALIZATION</text>
+
+        <rect x="30" y="68" width="256" height="92" rx="8" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="rfM" x="44" y="88">--sref &lt;url|code|random&gt;</text>
+        <text class="rfM" x="44" y="105">--sw 0-1000 (default 100)</text>
+        <text class="rfM" x="44" y="122">--sv picks the sref model</text>
+        <text class="rfX" x="44" y="141">works on the current V8.2</text>
+
+        <rect x="312" y="68" width="256" height="92" rx="8" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="rfM" x="326" y="88">--cref + --cw 0-100: V6 only</text>
+        <text class="rfM" x="326" y="105">--oref: V7+, ONE image only</text>
+        <text class="rfM" x="326" y="122">--ow 1-1000, stay under 400</text>
+        <text class="rfX" x="326" y="141">--oref costs 2x GPU time</text>
+
+        <rect x="594" y="68" width="256" height="92" rx="8" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="rfM" x="608" y="88">--p profile, or --p mID</text>
+        <text class="rfM" x="608" y="105">unlock by rating images</text>
+        <text class="rfM" x="608" y="122">moodboards: no --sv, no --sw</text>
+        <text class="rfX" x="608" y="141">--stylize 0-1000 alongside</text>
+
+        <rect x="30" y="172" width="256" height="54" rx="8" fill="#F4F8DE" stroke="#4D6B00" stroke-width="1.5"/>
+        <text class="rfI" x="44" y="192">Controls the overall style</text>
+        <text class="rfX" x="44" y="209">palette, rendering, mood</text>
+        <rect x="312" y="172" width="256" height="54" rx="8" fill="#F4F8DE" stroke="#4D6B00" stroke-width="1.5"/>
+        <text class="rfI" x="326" y="192">Controls subject carry-over</text>
+        <text class="rfX" x="326" y="209">one face or object, repeated</text>
+        <rect x="594" y="172" width="256" height="54" rx="8" fill="#F4F8DE" stroke="#4D6B00" stroke-width="1.5"/>
+        <text class="rfI" x="608" y="192">Controls your taste bias</text>
+        <text class="rfX" x="608" y="209">learned from your ratings</text>
+
+        <rect x="30" y="238" width="256" height="72" rx="8" fill="#FFFFFF" stroke="#D6C9D4" stroke-width="1.5"/>
+        <text class="rfI" x="44" y="258">Cannot copy objects or people</text>
+        <text class="rfX" x="44" y="275">no style code from an upload</text>
+        <text class="rfX" x="44" y="292">inspiration, not duplication</text>
+        <rect x="312" y="238" width="256" height="72" rx="8" fill="#FFFFFF" stroke="#D6C9D4" stroke-width="1.5"/>
+        <text class="rfI" x="326" y="258">Cannot promise an exact match</text>
+        <text class="rfX" x="326" y="275">docs: used as inspiration,</text>
+        <text class="rfX" x="326" y="292">not to copy them exactly</text>
+        <rect x="594" y="238" width="256" height="72" rx="8" fill="#FFFFFF" stroke="#D6C9D4" stroke-width="1.5"/>
+        <text class="rfI" x="608" y="258">Cannot replace a brief</text>
+        <text class="rfX" x="608" y="275">it biases, it does not</text>
+        <text class="rfX" x="608" y="292">specify subject or crop</text>
+
+        <rect x="30" y="326" width="14" height="14" rx="3" fill="#4D6B00"/>
+        <text class="rfN" x="54" y="338">Default version is V8.2. Check the compatibility chart before trusting any parameter combination.</text>
+        <rect x="30" y="350" width="14" height="14" rx="3" fill="#4D6B00"/>
+        <text class="rfN" x="54" y="362">--exp appears in that chart with no documented spec, so learn no number for it and test instead.</text>
+        <text class="rfX" x="54" y="382">References give you family resemblance, not reproduction. That gap is where direction has to live.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - three reference mechanisms, what each controls, and what the docs refuse to promise</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The honest answer to "make it look exactly like our brand"<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Someone will ask, usually a stakeholder holding a printed brand book. The documentation answers for you, and it is worth quoting rather than paraphrasing:</p>
+        <ul>
+          <li><strong><code>--sref</code> transfers style, not content.</strong> The docs are explicit that it "doesn't copy objects or people, just the overall style". So it can make an asset feel like your world. It cannot reproduce your mascot.</li>
+          <li><strong>You cannot create a style code from an uploaded image.</strong> Style codes come from Midjourney's own library. If your plan was "upload our brand assets and get a permanent brand code", that plan does not exist.</li>
+          <li><strong>References are inspiration.</strong> The documentation says references are used "as inspiration ... not to copy them exactly". Family resemblance across a set, yes. Pixel fidelity to an existing asset, no.</li>
+          <li><strong>Omni Reference is the strongest carry-over and the most expensive.</strong> One image, <code>--ow</code> 1-1000 with a recommendation to stay below 400, V7 and later only, and 2x GPU time. Budget for it deliberately rather than discovering it in your usage graph.</li>
+          <li><strong>Do not mix moodboards with style weights.</strong> A moodboard (<code>--p mID</code>) cannot be combined with <code>--sv</code> or <code>--sw</code>. If your prompt has both, something is being ignored.</li>
+        </ul>
+        <p>None of this makes the tool less useful. It makes it a different tool than the one people imagine: a consistency engine for a set you are art-directing, not a brand-asset reproducer.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Building a set instead of a picture<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Product imagery is almost never one image. It is an empty state, an error state, an onboarding sequence, a marketing hero and three blog thumbnails, and they have to look related without looking repeated.</p>
+        <ul>
+          <li><strong>Fix the style first, once.</strong> One <code>--sref</code> value and one <code>--sw</code> for the whole set. Write both into your standard. Changing either mid-set is why sets drift.</li>
+          <li><strong>Vary only the subject.</strong> Same lighting, same crop family, same palette, different object. Variation belongs in what the asset is about, not in how it is rendered.</li>
+          <li><strong>Use <code>--stylize</code> as a dial, not a rescue.</strong> Range 0-1000. Higher means more of the tool's aesthetic and less of your prompt, which is the opposite of what you want when direction is the point.</li>
+          <li><strong>Keep a record.</strong> Prompt, parameters, version, and the reference you used, stored with the asset. When someone asks for "one more like that" in four months, this file is the difference between five minutes and an afternoon.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: RIGHTS AND PROVENANCE ============ -->
+  <section class="section" id="rights">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · what a working designer needs to know</span>
+      <h2>Rights and provenance, honestly <span class="tag concept">8 min live</span></h2>
+    </div>
+    <p class="lede">This is where assets die, usually late. The vendors' framing is more careful than the marketing summary of it, and reading the careful version is the whole skill. Adobe's own words about the first Firefly model are that it was trained on licensed Adobe Stock, openly licensed and public-domain content, and is <strong>"designed to be safe for commercial use"</strong>. That is a design goal, not a warranty - and Adobe explicitly does <strong>not</strong> extend the framing to the <strong>30+ partner models</strong> it hosts, stating it cannot verify their commercial safety and pointing you to each partner's terms. So the model picker in your Photoshop dialog is also a legal picker, and most people do not know that.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The three things people get wrong<span class="mini">5 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p><strong>1. "Commercially safe" is a design goal, and it is model-specific.</strong> The framing covers Adobe's own Firefly model. For the partner models hosted alongside it - and there are more than thirty - Adobe states it cannot verify commercial safety and directs you to the partner's terms. If your team uses the model picker casually, your asset library now has two legal regimes in it and no label distinguishing them.</p>
+        <p><strong>2. Indemnification is something you buy, not something you get.</strong> It is a purchased entitlement, scoped to published lists of eligible features, surfaces and export events. Partner-model output is excluded, and so is anything labelled beta or trial. The practical question is never "are we indemnified" - it is "is <em>this asset</em>, made with <em>that model</em>, on <em>that surface</em>, inside the scope we bought". If you cannot answer that, you do not have coverage, you have a hope.</p>
+        <p><strong>3. Provenance is a receipt, not a verdict.</strong> Content Credentials are applied automatically where 100% of the pixels are Firefly-generated, and on the Firefly web app and APIs; elsewhere they are opt-in, which means someone has to turn them on. C2PA's current spec version is <strong>2.4</strong>, its Conformance Program launched mid-2025, and its <strong>Interim Trust List froze on 2026-01-01</strong> - no new entries. What a credential proves is a signed history of how an asset was made and edited. What it does not prove: that an unsigned asset is fake, or that a signed asset is truthful. Both mistakes are common and both are expensive in a public argument.</p>
+        <p>One more, specific to Midjourney: commercial terms are the same across tiers, <strong>except</strong> that companies grossing over $1M USD per year must be on Pro or Mega. That is a procurement fact more than a design fact, and it is the kind of thing that surfaces the week before a campaign.</p>
+        <p>Deeper legal treatment - registrability of AI-assisted work, vendor indemnity scope, synthetic-content transparency duties, and where the primary sources were unreachable - lives in <a href="a4-ip-provenance-risk.html">leader session a4</a>. This session covers what you need to make an asset decision at your desk.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>What to write down per asset<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>A three-line record next to every generated asset removes almost all of the risk that comes from not knowing:</p>
+        <ul>
+          <li><strong>Tool, model and version.</strong> Not "Firefly" - which Firefly model, or which partner model. Not "Midjourney" - which version, since parameter behaviour and terms differ.</li>
+          <li><strong>Prompt and parameters, verbatim.</strong> Including reference URLs or codes, weights, and the version flag. This is also how you regenerate a match later.</li>
+          <li><strong>Rights status as a sentence you would say to counsel.</strong> "Adobe Firefly Image model, standard export surface, covered by our purchased entitlement" is a sentence. "Should be fine" is not.</li>
+        </ul>
+        <p>Keep it with the asset, not in someone's notebook. The moment this matters is the moment the person who made it is on leave.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO ============ -->
+  <section class="section" id="demo">
+    <div class="section-kicker">
+      <span class="klabel">Build-along</span>
+      <h2>One Cadence empty state, under a standard <span class="tag demo">★ 12 min · everyone runs it</span></h2>
+    </div>
+    <p class="lede">We are going to make one asset properly, in whatever tool you have open, and then check it the way b5 taught you to check a screen. The point of the exercise is not the illustration. It is that <strong>the standard exists before the generation does</strong>, so the review is a comparison rather than a debate.</p>
+
+    <div class="steps">
+      <div class="step"><p><strong>Write the standard first, in five lines.</strong> Subject rules, palette (plum accent plus warm neutrals, from b6's tokens), lighting, crop, and the never-appears list. Do not open the generator until these five lines exist.</p></div>
+      <div class="step"><p><strong>Generate a set of four, not one.</strong> Same style reference and weight for all four, subject varied. If your tool supports it, fix the style with <code>--sref</code> plus one <code>--sw</code> value and change nothing else between runs.</p></div>
+      <div class="step"><p><strong>Review against your own five lines.</strong> Go line by line and mark pass or fail. Anything you cannot mark is a line that was too vague to be a standard - rewrite it now, while you remember why.</p></div>
+      <div class="step"><p><strong>Run the imagery half of the review script.</strong> Does the palette stay inside the accent family and neutrals? Does the asset leave the negative space the layout needs? Does any element in the frame claim something the product does not do?</p></div>
+      <div class="step"><p><strong>Place it in the real empty state and check contrast.</strong> Headline and body text sit on this asset. Those pairs owe you 4.5:1 against whatever pixels end up behind them, and a busy illustration is the most common place that quietly fails.</p></div>
+    </div>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>Four questions before an asset ships, in this order.</strong> <em>Who owns it?</em> - the tool's terms for the specific model you used, not the vendor's headline claim. <em>Is it indemnified?</em> - is this asset, this model, this surface, this export path inside a scope you actually purchased, with partner-model and beta output excluded. <em>Is it provenance-signed?</em> - automatic where 100% of pixels are Firefly-generated and on the Firefly web app and APIs, opt-in elsewhere, so check rather than assume. <em>Does it reproduce anyone's mark?</em> - a logo, a trade dress, a recognisable character or a real person's likeness that wandered in from the training distribution. Any "I think so" in that list is a no, and finding out at this desk costs an hour. Finding out after launch costs a campaign.</p>
+    </div>
+  </section>
+
+  <!-- ============ THE ASSET GATE ============ -->
+  <section class="section" id="asset-gate">
+    <div class="section-kicker">
+      <span class="klabel">Part 4 · the gate</span>
+      <h2>Four checks an asset must pass <span class="tag concept">4 min live</span></h2>
+    </div>
+    <p class="lede">Put the whole session into one gate you can run in about two minutes. Direction, brand fit, rights, provenance. They are ordered by how early they can be fixed, not by importance - a direction failure is a regenerate, a rights failure is a recall.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 352" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The asset gate: direction, brand fit, rights and provenance as four checks every generated asset must pass before it ships.">
+        <style>
+          .agH { font: 700 12.5px Inter, sans-serif; fill: #2A1A28; }
+          .agT { font: 700 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .agS { font: 400 11px Inter, sans-serif; fill: #FFFFFF; opacity: .92; }
+          .agI { font: 600 12px Inter, sans-serif; fill: #2A1A28; }
+          .agX { font: 400 11.5px Inter, sans-serif; fill: #7A6A78; }
+          .agN { font: 600 13px Inter, sans-serif; fill: #1E2A00; }
+          .agW { stroke: #6B2D5C; stroke-width: 2.5; fill: none; marker-end: url(#agHd); }
+        </style>
+        <defs>
+          <marker id="agHd" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L9,4.5 L0,9 z" fill="#6B2D5C"/>
+          </marker>
+        </defs>
+        <text class="agH" x="30" y="24">FOUR CHECKS BEFORE ANY GENERATED ASSET SHIPS</text>
+
+        <rect x="30" y="44" width="180" height="70" rx="8" fill="#4A1F44"/>
+        <text class="agT" x="44" y="64">1 · DIRECTION</text>
+        <text class="agS" x="44" y="81">a written standard,</text>
+        <text class="agS" x="44" y="98">not adjectives</text>
+
+        <rect x="244" y="44" width="180" height="70" rx="8" fill="#6B2D5C"/>
+        <text class="agT" x="258" y="64">2 · BRAND FIT</text>
+        <text class="agS" x="258" y="81">same palette and</text>
+        <text class="agS" x="258" y="98">light as the product</text>
+
+        <rect x="458" y="44" width="180" height="70" rx="8" fill="#9B4B87"/>
+        <text class="agT" x="472" y="64">3 · RIGHTS</text>
+        <text class="agS" x="472" y="81">who owns it, is it</text>
+        <text class="agS" x="472" y="98">indemnified</text>
+
+        <rect x="672" y="44" width="180" height="70" rx="8" fill="#2A1A28"/>
+        <text class="agT" x="686" y="64">4 · PROVENANCE</text>
+        <text class="agS" x="686" y="81">signed, and signed</text>
+        <text class="agS" x="686" y="98">by whom</text>
+
+        <path class="agW" d="M214,79 L240,79"/>
+        <path class="agW" d="M428,79 L454,79"/>
+        <path class="agW" d="M642,79 L668,79"/>
+
+        <rect x="30" y="130" width="180" height="56" rx="8" fill="#F9EFF6" stroke="#D6C9D4" stroke-width="1.5"/>
+        <text class="agI" x="44" y="150">Fails when</text>
+        <text class="agX" x="44" y="167">the brief was a mood</text>
+        <rect x="244" y="130" width="180" height="56" rx="8" fill="#F9EFF6" stroke="#D6C9D4" stroke-width="1.5"/>
+        <text class="agI" x="258" y="150">Fails when</text>
+        <text class="agX" x="258" y="167">palette is unrelated</text>
+        <rect x="458" y="130" width="180" height="56" rx="8" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1.5"/>
+        <text class="agI" x="472" y="150">Fails when</text>
+        <text class="agX" x="472" y="167">partner model output</text>
+        <rect x="672" y="130" width="180" height="56" rx="8" fill="#F9EFF6" stroke="#D6C9D4" stroke-width="1.5"/>
+        <text class="agI" x="686" y="150">Fails when</text>
+        <text class="agX" x="686" y="167">credentials stripped</text>
+
+        <rect x="30" y="208" width="822" height="48" rx="10" fill="#F4F8DE" stroke="#4D6B00" stroke-width="2"/>
+        <text class="agI" x="48" y="228">ALL FOUR PASS - THE ASSET SHIPS</text>
+        <text class="agX" x="48" y="245">Any one fails and it does not. The gate is cheap; the recall after launch is not.</text>
+
+        <rect x="30" y="280" width="14" height="14" rx="3" fill="#4D6B00"/>
+        <text class="agN" x="54" y="292">Provenance proves how an asset was made. It does not prove an unsigned asset is fake.</text>
+        <rect x="30" y="304" width="14" height="14" rx="3" fill="#4D6B00"/>
+        <text class="agN" x="54" y="316">Rights is the check people run last and the only one that can force a recall. Run it first.</text>
+        <text class="agX" x="54" y="336">C2PA spec 2.4. Conformance Program launched mid-2025; the Interim Trust List froze 2026-01-01.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the asset gate, and the failure that costs the most if you leave it for last</figcaption>
+    </figure>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 30-40 min total</span></h2>
+    </div>
+    <ul>
+      <li>Write your product's imagery standard on one page: subject rules, palette as token names, lighting, crop, and the never-appears list. Then test it by handing it to a colleague and asking them to brief an asset without asking you a question.</li>
+      <li>Generate a set of four assets with the style fixed and only the subject varied, then lay them out side by side. If one of the four looks like it came from a different set, find the parameter you changed and write it into the standard.</li>
+      <li>Audit five generated assets already in your product. For each, record the tool, the exact model, the prompt and parameters, and one sentence on rights status. Count how many you could not fully answer - that number is the real finding.</li>
+      <li>Run the four-question gate on the asset you are least sure about. If any answer is "I think so", either resolve it or replace the asset, and note which of the four questions was hardest for your team to answer.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">Every parameter, version gate and rights statement on this page comes from the vendors' own documentation, and where a primary source was unreachable this page says so rather than filling the gap. Model names, credit systems and terms in this space change monthly, so re-check before you commit a campaign to any of it. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Midjourney reference parameters and their documented limits</span><span class="note">Part 2 · V8.2 default · sref/sw/sv · cref+cw is V6 only · oref is V7+, one image, ow 1-1000, 2x GPU · stylize 0-1000</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Adobe's commercial-safety framing and the partner-model carve-out</span><span class="note">Part 3 · a design goal, not a warranty · Adobe cannot verify the 30+ partner models and points to their terms</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Firefly indemnification as a purchased entitlement</span><span class="note">Part 3 · scoped to eligible features, surfaces and export events · exact conditions unverified and stated as such</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Content Credentials and C2PA spec 2.4</span><span class="note">Part 3 + Part 4 · automatic where 100% of pixels are Firefly-generated and on the Firefly web app and APIs, opt-in elsewhere · Interim Trust List froze 2026-01-01</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Midjourney commercial terms across plan tiers</span><span class="note">Part 3 · same across tiers except companies over $1M USD/yr must be on Pro or Mega · deeper IP treatment in leader session a4</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · What is true of Omni Reference (<code>--oref</code>)?</p>
+      <button class="qopt" type="button">A · It works from V6 onward, accepts several images, and costs the same as any other generation</button>
+      <button class="qopt" type="button">B · It is the same feature as --cref, renamed, with a weight range of 0-100</button>
+      <button class="qopt" type="button">C · It is V7 and later, takes exactly one image, uses --ow 1-1000 with a recommendation to stay below 400, and costs 2x GPU time</button>
+      <p class="qwhy">Three separate details people get wrong, and all three cost money or time. <code>--cref</code> with <code>--cw</code> 0-100 is the older, V6-only character reference and is a different mechanism. Omni Reference is V7+, one image only, weighted with <code>--ow</code> 1-1000 with the docs recommending you stay below 400, and it runs at 2x GPU time - budget for that deliberately rather than discovering it in your usage graph.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">2 · You generate an image in Firefly using one of the hosted partner models. What does Adobe's commercial-safety framing tell you?</p>
+      <button class="qopt" type="button">A · Nothing helpful - the framing covers Adobe's own Firefly model, and Adobe states it cannot verify commercial safety for partner models and points to each partner's terms</button>
+      <button class="qopt" type="button">B · The same framing applies, because the output came out of Firefly</button>
+      <button class="qopt" type="button">C · Partner-model output carries stronger protection, since the partner has its own licence</button>
+      <p class="qwhy">The model picker is also a legal picker. Adobe's framing - trained on licensed Adobe Stock, openly licensed and public-domain content, and designed to be safe for commercial use - is a design goal about Adobe's own model, not a warranty, and Adobe explicitly does not extend it to the 30+ partner models it hosts. Purchased indemnification also excludes partner-model output and anything labelled beta or trial.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">3 · What do Content Credentials actually prove?</p>
+      <button class="qopt" type="button">A · That the asset is truthful and was not manipulated in a misleading way</button>
+      <button class="qopt" type="button">B · A signed history of how the asset was made and edited - nothing about whether an unsigned asset is fake, and nothing about whether a signed asset is truthful</button>
+      <button class="qopt" type="button">C · That any asset without credentials was generated by AI</button>
+      <p class="qwhy">Provenance is a receipt, not a verdict. It records and signs a history. It cannot certify truth, and the absence of a credential means nothing at all - credentials are automatic only where 100% of pixels are Firefly-generated and on the Firefly web app and APIs, and opt-in everywhere else. Worth knowing the ecosystem state too: C2PA spec 2.4, Conformance Program launched mid-2025, Interim Trust List frozen since 2026-01-01.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Designer session 7 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>The five tells</b><span>Default lighting and lens · symmetrical hero · meaningless decoration · unrelated palette · generically professional subjects. Each is a skipped decision.</span></div>
+      <div class="cheat-item"><b>The standard, in five lines</b><span>Subject rules · palette as tokens · lighting · crop · never-appears list. Write it before you open the generator.</span></div>
+      <div class="cheat-item"><b>Style reference</b><span>--sref &lt;url|code|random&gt; with --sw 0-1000 (default 100) and --sv for the sref model. --stylize 0-1000 as a separate dial.</span></div>
+      <div class="cheat-item"><b>Character vs omni</b><span>--cref + --cw 0-100 is V6 only. --oref is V7+, exactly one image, --ow 1-1000 (stay under 400), and costs 2x GPU time. Default version is V8.2.</span></div>
+      <div class="cheat-item"><b>Documented limits</b><span>--sref does not copy objects or people, only overall style. You cannot make a style code from an uploaded image. References are inspiration, not exact copies. --exp has no published spec.</span></div>
+      <div class="cheat-item"><b>Moodboard rule</b><span>--p profiles unlock by rating images. Moodboards (--p mID) cannot be combined with --sv or --sw. If your prompt has both, something is ignored.</span></div>
+      <div class="cheat-item"><b>Commercial safety</b><span>Adobe's framing is a design goal for its own Firefly model, not a warranty, and does not extend to the 30+ partner models. Indemnification is purchased and scoped; partner, beta and trial output excluded.</span></div>
+      <div class="cheat-item"><b>Provenance</b><span>Content Credentials: automatic at 100% Firefly pixels and on the Firefly web app and APIs, opt-in elsewhere. C2PA 2.4; Interim Trust List frozen 2026-01-01. Proves history, not truth.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Designer session 7 of 10 · learn-ai-design-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b6-design-systems-tokens.html">← Previous: Design systems and tokens</a> &nbsp;·&nbsp; <a href="b8-content-design-microcopy.html">Next: Content design and microcopy →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=2"></script>
+</body>
+</html>

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leader session 2 · Taste is the moat - learn ai design with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-design-with-phoebe</a> / Leader session 2 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Design with Phoebe · Leader track · Session 2 of 6</div>
+    <h1>Taste is the <span class="accent">moat</span></h1>
+    <p class="sub">"Taste" is the word leaders reach for when they cannot say what is wrong. That is a problem, because a word nobody can define cannot be a standard, and without a standard your review is just your mood with a job title attached. Tonight we cut taste in half. One half is arithmetic - contrast ratios, one type ratio, one spacing unit, one loudest thing, how many hues are fighting. Delegate that to a stated standard and it stops eating your review. The other half is concept, tension, emphasis and fit, and that half is the only thing your competitors cannot generate.</p>
+    <div class="chip-row">
+      <span class="chip level">🟢 Leader track</span>
+      <span class="chip audience">Design · brand · creative leads</span>
+      <span class="chip audience">The critique standard</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Recap of a1</span>
+      <span class="a2" style="flex:4">3-20 · The two halves of taste</span>
+      <span class="a3" style="flex:3">20-34 · Homogenisation as a risk</span>
+      <span class="a4" style="flex:3">34-45 · The review ritual</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ PART 1: TWO HALVES ============ -->
+  <section class="section" id="two-halves">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · the split that makes taste manageable</span>
+      <h2>Half of taste is arithmetic. Delegate that half <span class="tag concept">14 min live</span></h2>
+    </div>
+    <p class="lede">Watch what happens in a normal design review. Someone says the work feels cheap. Someone else says it feels busy. Forty minutes later there is a list of pixel nudges and no decision, and the actual problem - that the screen has no idea in it - was never named. The fix is not a better vocabulary. The fix is noticing that the two things being discussed are not the same kind of thing at all.</p>
+    <p>The <strong>measurable half</strong> can be checked by anyone in about ninety seconds, and a machine can check most of it without a human at all. <strong>Contrast</strong> is a formal standard: WCAG 2.2 success criterion 1.4.3 requires at least <strong>4.5:1 for normal text</strong> and <strong>3:1 for large text</strong>, where large means <strong>18pt (24px), or 14pt (18.66px) when bold</strong> - size and weight decide the threshold, not whether you called it a heading. <strong>One type ratio</strong> generating every size. <strong>One spacing unit</strong> that every gap is a multiple of. <strong>One loudest element</strong>, because two means neither wins. And a <strong>count of hue families</strong> on screen, of which ideally exactly one carries meaning.</p>
+    <p>The <strong>judgement half</strong> is not softer, it is just not arithmetic. Is there a <strong>concept</strong>, or only an arrangement? Is there <strong>tension</strong> - one deliberate break that earns attention rather than decorating? Does the <strong>emphasis</strong> sit on the user's actual task, or on whatever the designer enjoyed making? And does it <strong>fit</strong> this brand, at this moment, for this audience - not any brand, generically? That is the half a generator has nothing to offer on, and therefore the half your hour belongs to.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 362" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Taste split into a delegatable measurable half - contrast, type scale, spacing, hierarchy, hue count - and a judgement half you keep: concept, tension, emphasis, fit.">
+        <style>
+          .tsT { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .tsH { font: 700 12.5px Inter, sans-serif; fill: #2A1A28; }
+          .tsX { font: 400 11.5px Inter, sans-serif; fill: #7A6A78; }
+          .tsN { font: 600 13px Inter, sans-serif; fill: #1E2A00; }
+          .tsF { font: 400 11.5px Inter, sans-serif; fill: #7A6A78; }
+        </style>
+
+        <rect x="30" y="24" width="380" height="30" rx="7" fill="#4D6B00"/>
+        <text class="tsT" x="46" y="44">DELEGATE · a stated standard, 90 seconds</text>
+        <rect x="470" y="24" width="380" height="30" rx="7" fill="#4A1F44"/>
+        <text class="tsT" x="486" y="44">KEEP · the hour nothing can automate</text>
+
+        <rect x="30" y="70" width="380" height="40" rx="7" fill="#F4F8DE" stroke="#4D6B00" stroke-width="1.5"/>
+        <text class="tsH" x="44" y="88">Contrast</text>
+        <text class="tsX" x="44" y="103">WCAG 2.2 SC 1.4.3 · 4.5:1 normal, 3:1 large</text>
+        <rect x="30" y="116" width="380" height="40" rx="7" fill="#F4F8DE" stroke="#4D6B00" stroke-width="1.5"/>
+        <text class="tsH" x="44" y="134">Type scale</text>
+        <text class="tsX" x="44" y="149">one ratio generates every size on the page</text>
+        <rect x="30" y="162" width="380" height="40" rx="7" fill="#F4F8DE" stroke="#4D6B00" stroke-width="1.5"/>
+        <text class="tsH" x="44" y="180">Spacing</text>
+        <text class="tsX" x="44" y="195">every gap a multiple of one unit</text>
+        <rect x="30" y="208" width="380" height="40" rx="7" fill="#F4F8DE" stroke="#4D6B00" stroke-width="1.5"/>
+        <text class="tsH" x="44" y="226">Hierarchy</text>
+        <text class="tsX" x="44" y="241">exactly one loudest element, on purpose</text>
+        <rect x="30" y="254" width="380" height="40" rx="7" fill="#F4F8DE" stroke="#4D6B00" stroke-width="1.5"/>
+        <text class="tsH" x="44" y="272">Hue families</text>
+        <text class="tsX" x="44" y="287">count them · one should carry meaning</text>
+
+        <rect x="470" y="70" width="380" height="52" rx="7" fill="#FFFFFF" stroke="#D6C9D4" stroke-width="1.5"/>
+        <text class="tsH" x="484" y="92">Concept</text>
+        <text class="tsX" x="484" y="110">is there an idea, or only an arrangement?</text>
+        <rect x="470" y="128" width="380" height="52" rx="7" fill="#FFFFFF" stroke="#D6C9D4" stroke-width="1.5"/>
+        <text class="tsH" x="484" y="150">Tension</text>
+        <text class="tsX" x="484" y="168">one deliberate break that earns a look</text>
+        <rect x="470" y="186" width="380" height="52" rx="7" fill="#FFFFFF" stroke="#D6C9D4" stroke-width="1.5"/>
+        <text class="tsH" x="484" y="208">Emphasis</text>
+        <text class="tsX" x="484" y="226">is it on the user's task or the designer's?</text>
+        <rect x="470" y="244" width="380" height="52" rx="7" fill="#FFFFFF" stroke="#D6C9D4" stroke-width="1.5"/>
+        <text class="tsH" x="484" y="266">Fit</text>
+        <text class="tsX" x="484" y="284">this brand, this moment, not any brand</text>
+
+        <rect x="30" y="312" width="14" height="14" rx="3" fill="#4D6B00"/>
+        <text class="tsN" x="54" y="324">A standard makes the left column somebody else's ninety seconds instead of your hour.</text>
+        <rect x="30" y="336" width="14" height="14" rx="3" fill="#4D6B00"/>
+        <text class="tsN" x="54" y="348">The designer lab scores the left half live, 17 to 100. A 100 says nothing about the right half.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - which half of taste you delegate, and which half is the moat</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The leader move: publish the standard, reclaim the hour<span class="mini">5 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>You are not trying to make taste objective. You are trying to stop spending your scarcest resource - senior review attention - on the part of taste that never needed a senior person.</p>
+        <ul>
+          <li><strong>Write the five checks down once.</strong> Contrast floor, the type ratio, the spacing unit, one loudest element, the hue-family count. Half a page, not a manifesto.</li>
+          <li><strong>Make it a pre-condition, not a review item.</strong> Work arrives having passed it. A review that spends its first twenty minutes on contrast ratios is a review that will never reach the concept.</li>
+          <li><strong>Say which are standards and which are conventions.</strong> The contrast thresholds are WCAG 2.2. One type ratio, one spacing unit and "one loudest thing" are conventions - widely shared, genuinely useful, not law. Pretending a convention is a spec is how a standard loses its authority the first time somebody checks.</li>
+          <li><strong>Then defend the hour.</strong> The time you free up goes to concept, emphasis, states and fit. If it quietly refills with pixel nudges, you have automated nothing.</li>
+        </ul>
+        <p>The designer track builds exactly this instrument in b5, and its lab measures the left column live on a real Cadence screen. The climb runs <strong>17 to 32 to 46 to 66 to 86 to 100</strong> as hierarchy, type scale, spacing, contrast and one accent come on. You do not need to run it to use it. What you need is the last sentence of it, which is the point of this whole session.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>What a clean score does not prove<span class="mini">4 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>This is the caveat that keeps the standard honest, and the sentence to repeat every time somebody waves a green checklist at you.</p>
+        <p><strong>A 100 means nothing is measurably broken. It does not mean the work is any good.</strong> A perfectly scored screen can still have no idea in it, put its emphasis on the wrong thing, feel like four competitors' screens, and be completely wrong for the moment your brand is in. Measurably clean and forgettable is a very real category, and AI-assisted work lands in it more often than not, because a generator optimises for plausible.</p>
+        <ul>
+          <li><strong>Treat the score as a floor, never a ceiling.</strong> It is the price of entry to the conversation you actually care about.</li>
+          <li><strong>Watch for score gaming.</strong> Once people know the five checks, some will hit them by removing everything interesting. Flat, safe and compliant is a failure mode with a green tick on it.</li>
+          <li><strong>Never let the score end a debate about concept.</strong> "It scores 100" is not an answer to "what is the idea".</li>
+          <li><strong>Do keep the accessibility half non-negotiable.</strong> Contrast is not a matter of taste at all - it is a criterion you can be held to, and the one item on the list where "the designer preferred it" is not a defence.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: HOMOGENISATION ============ -->
+  <section class="section" id="homogenisation">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · the category risk</span>
+      <h2>Everyone briefing the same tool ships the same screen <span class="tag concept">12 min live</span></h2>
+    </div>
+    <p class="lede">Here is the mechanism, and it is worth stating plainly because it is structural rather than a matter of tool quality. A generative model returns what is <strong>likely</strong> given the prompt. Likely means close to the centre of everything it has seen. A brand exists to be <strong>recognisably not the centre</strong>. So the default output of any generator, briefed lazily, is pulling in the exact opposite direction from the thing you were hired to protect. Better models make this prettier. They do not make it less true.</p>
+    <p>Then add the part that makes it a category risk rather than a personal one: you are not the only person with the tool. If you and three competitors brief the same tool, in the same lazy way, for the same kind of screen, you will get the same kind of screen. Nobody did anything wrong. Nobody copied anyone. You all just asked for the average of your category and received it.</p>
+    <p>What this looks like in the wild, described as a pattern you can go and observe rather than a statistic I am going to invent for you:</p>
+    <ul>
+      <li><strong>Recognisable generated signatures.</strong> Once you have seen a few hundred, you start clocking them - the centred everything, the one enormous gradient, decorative iconography that carries no meaning, the palette with three accents because nobody decided which one mattered.</li>
+      <li><strong>Brand-adjacent but never brand-specific.</strong> Output that is plausibly in the neighbourhood of your brand and never actually of it. Right colour family, wrong voice. Close enough to approve when you are tired, which is how it ships.</li>
+      <li><strong>A slow drift to the mean across a whole market.</strong> Not a dramatic event. A quarter-by-quarter loss of distinctiveness as everyone's defaults converge, visible mostly when you line up screenshots of five competitors and struggle to sort them.</li>
+    </ul>
+    <p>Two things I will not do here: quote a study I have not verified, or give you a percentage. The mechanism is honest and the pattern is observable in your own category this afternoon. That is a stronger argument than a borrowed number, and it survives being challenged.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The defence is direction, not abstinence<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Banning the tool is not a strategy - your team will use it anyway, and worse, without a standard. The defence is to arrive with what the model does not have.</p>
+        <ul>
+          <li><strong>A brief made of constraints, not adjectives.</strong> "Clean, modern, premium" cannot be wrong, which is why it cannot help. One primary action, one type scale, one spacing unit, one accent, a contrast floor - all checkable.</li>
+          <li><strong>A position in the reference material.</strong> A moodboard that says what you are <em>not</em> doing is worth ten that say "inspiration". This is b3's whole subject in the designer track.</li>
+          <li><strong>A brand that is specified, not described.</strong> Vague brand documents produce generic output at machine speed. Specificity is now an operational asset, not a nice-to-have.</li>
+          <li><strong>One deliberate break.</strong> The thing a model will never volunteer, because it is by construction unlikely. Your team has to choose it, and you have to protect it in review when someone calls it risky.</li>
+        </ul>
+        <p>Note what all four have in common: they are upstream of generation. By the time you are looking at output, the distinctiveness decision has already been made or already been skipped.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>A ten-minute test you can run on your own category<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Do not take my word for the drift. Measure it in your own market, and bring the result to your next brand conversation.</p>
+        <div class="steps">
+          <div class="step"><p>Screenshot the same screen from five competitors - onboarding, pricing, or your equivalent of Cadence's shared summary.</p></div>
+          <div class="step"><p>Crop out every logo and wordmark. Nothing else.</p></div>
+          <div class="step"><p>Show them to five colleagues and ask them to attribute each one. Write down the hit rate.</p></div>
+          <div class="step"><p>Include your own screen in the set, unlabelled. This is the part that stings and the part that funds the work.</p></div>
+        </div>
+        <p>If nobody can pick you out of your own category, you do not have a design-quality problem. You have a distinctiveness problem, and no amount of polish on the measurable five will fix it. That is the argument for investing in the judgement half, and it lands with executives in a way that a contrast ratio never will.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: THE RITUAL ============ -->
+  <section class="section" id="ritual">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · what you install on Monday</span>
+      <h2>The review ritual a leader installs <span class="tag concept">cards · 10 min live</span></h2>
+    </div>
+    <p class="lede">A standard that lives in a document changes nothing. A standard that changes the shape of your review changes everything. Four habits, in order, and the order is the point.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Habit 1 · Score the measurable five first, in about 90 seconds<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Open the review by reading the five checks out loud against the work. Worst contrast ratio and whether it clears 4.5:1, or 3:1 if the text is genuinely large. Number of distinct font sizes and whether they come from one ratio. Whether every gap is a multiple of the unit. How many elements are competing for first read. How many hue families are on screen and which one means something.</p>
+        <p>It takes a minute and a half and it does two things. It removes the entire category of argument that was never an argument, and it demonstrates - to the designer and to every stakeholder in the room - that "I don't like it" is not how this review works. Then you close that part and do not reopen it.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Habit 2 · Spend the rest of the hour on concept, emphasis, states and fit<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Four questions, asked in this order, every time:</p>
+        <ul>
+          <li><strong>What is the idea?</strong> Not what is on the screen. What is the one thought a user should leave with. If the answer takes three sentences, there is no idea yet.</li>
+          <li><strong>Is the emphasis on the user's task?</strong> On Cadence's shared summary, the task is deciding whether this summary is safe to send. If the loudest thing on screen is a decorative header, the emphasis is wrong regardless of how well it scores.</li>
+          <li><strong>Where are the states?</strong> Empty, loading, error, one item, four hundred items, the summary that failed to generate, the meeting the viewer was not in. Generated work almost never brings these, and they are where credibility lives.</li>
+          <li><strong>Is this ours?</strong> Cover the logo. Would anyone know? If not, say so early, because it is a brief problem and briefs are cheap to change.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Habits 3 and 4 · Ask for the brief, and praise the judgement<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p><strong>Ask for the brief before critiquing the person.</strong> When AI output is bad, it is usually a vague constraint wearing a craft costume. Reading the actual prompt or brief first turns "this isn't working" into "this brief never said which action was primary" - a fixable, unembarrassing, five-minute problem. It also stops you critiquing a designer for faithfully executing a bad instruction, quite possibly yours.</p>
+        <p><strong>Require the states before approving another visual option.</strong> This single rule fixes more AI-era design debt than any other. Options are cheap now, states are not, and a team that is rewarded for options will bring you options forever.</p>
+        <p><strong>Praise the judgement, not the render.</strong> This is the one that quietly decides your culture. If you say "wow, that looks great, and so fast", you have taught the room that volume and finish are what earns approval - and a generator will always beat a human on both. Say instead: "good call cutting the second heading", "you noticed the error state nobody asked for", "this is the only version that could only be ours". You get more of what you name.</p>
+      </div>
+    </details>
+
+    <p class="lede">The difference between the two kinds of review, in the words people actually use:</p>
+
+    <div class="prompt-box bad">
+      <span class="label">Preference review - unfalsifiable, generates rework</span>
+      <p>"Hmm. It feels cluttered and a bit cheap. Make the header stronger, and can we try it with a bit more energy? Also not sure about the blue. Let's see a few more options."</p>
+    </div>
+    <div class="prompt-box good">
+      <span class="label">Evidence review - checkable, generates decisions</span>
+      <p>"Two elements are competing for first read: the page header and the Share button. Pick one. The AI-generated label is 3.1:1 against its background and it is 14px regular, so it needs 4.5:1. There are four hue families on screen and only one of them carries meaning - the other three are decoration, so cut them. Then, the real question: what is the idea here, and where are the empty and error states?"</p>
+    </div>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Translating each preference note into a checkable one<span class="mini">4 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>You will not stop having instincts, and you should not want to. The skill is converting the instinct into something a designer can act on without guessing. Keep this table next to you for a fortnight and it becomes automatic.</p>
+        <table class="clean">
+          <thead><tr><th>What you nearly said</th><th>What is usually underneath it</th></tr></thead>
+          <tbody>
+            <tr><td>"It feels cluttered"</td><td>Too many hue families, or gaps that are not multiples of one unit, so nothing groups. Count both before you speak.</td></tr>
+            <tr><td>"It feels cheap"</td><td>Usually spacing and type: many arbitrary sizes, uneven rhythm, text crowding its container. Occasionally a genuine contrast defect.</td></tr>
+            <tr><td>"Make the header stronger"</td><td>Two elements are competing for first read. Strengthening one of them is a fix; strengthening both is the disease.</td></tr>
+            <tr><td>"It needs more energy"</td><td>There is no concept and no tension. This is the judgement half, so say the real thing: what is the idea?</td></tr>
+            <tr><td>"Not sure about the blue"</td><td>Either the hue carries no meaning, or it fails contrast where it is used as text. Both are checkable in seconds.</td></tr>
+            <tr><td>"Let's see a few more options"</td><td>Very often: you cannot articulate the decision criteria yet. Options are now cheap, so this reflex is expensive. Write the criteria instead.</td></tr>
+          </tbody>
+        </table>
+        <p>The last row is the one to watch in yourself. In a world where forty options cost nothing, asking for more options is the easiest way to look engaged while postponing the only thing that was ever hard.</p>
+      </div>
+    </details>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The review budget: 90 seconds on the five measurable checks, the rest of the hour on judgement, with four common failures of generated work.">
+        <style>
+          .rbT { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .rbS { font: 400 11px Inter, sans-serif; fill: #FFFFFF; opacity: .92; }
+          .rbH { font: 700 12.5px Inter, sans-serif; fill: #4A1F44; }
+          .rbF { font: 700 12.5px Inter, sans-serif; fill: #991B1B; }
+          .rbX { font: 400 11.5px Inter, sans-serif; fill: #7A6A78; }
+          .rbN { font: 600 13px Inter, sans-serif; fill: #1E2A00; }
+        </style>
+
+        <text class="rbH" x="30" y="34">THE REVIEW BUDGET · get the order right and the hour survives</text>
+        <rect x="30" y="46" width="110" height="54" rx="8" fill="#4D6B00"/>
+        <text class="rbT" x="42" y="68">90 SEC</text>
+        <text class="rbS" x="42" y="86">the five</text>
+        <rect x="140" y="46" width="710" height="54" rx="8" fill="#4A1F44"/>
+        <text class="rbT" x="156" y="68">THE REST OF THE HOUR</text>
+        <text class="rbS" x="156" y="86">concept · emphasis · states · fit to this brand and this moment</text>
+
+        <text class="rbH" x="30" y="132">WHAT GENERATED WORK MOST OFTEN FAILS ON · none of it is a colour problem</text>
+
+        <rect x="30" y="144" width="190" height="96" rx="9" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1.5"/>
+        <text class="rbF" x="44" y="168">No concept</text>
+        <text class="rbX" x="44" y="190">an arrangement,</text>
+        <text class="rbX" x="44" y="208">not an idea</text>
+
+        <rect x="240" y="144" width="190" height="96" rx="9" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1.5"/>
+        <text class="rbF" x="254" y="168">Two first reads</text>
+        <text class="rbX" x="254" y="190">header and button</text>
+        <text class="rbX" x="254" y="208">both shouting</text>
+
+        <rect x="450" y="144" width="190" height="96" rx="9" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1.5"/>
+        <text class="rbF" x="464" y="168">No states</text>
+        <text class="rbX" x="464" y="190">one happy path,</text>
+        <text class="rbX" x="464" y="208">no empty or error</text>
+
+        <rect x="660" y="144" width="190" height="96" rx="9" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1.5"/>
+        <text class="rbF" x="674" y="168">Brand-adjacent</text>
+        <text class="rbX" x="674" y="190">near the brand,</text>
+        <text class="rbX" x="674" y="208">never specific to it</text>
+
+        <rect x="30" y="264" width="14" height="14" rx="3" fill="#4D6B00"/>
+        <text class="rbN" x="54" y="276">The 90 seconds buys you the hour. Skip it and the hour goes on the wrong layer.</text>
+        <rect x="30" y="288" width="14" height="14" rx="3" fill="#4D6B00"/>
+        <text class="rbN" x="54" y="300">Every failure above passes a contrast check. That is exactly why you review both halves.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - how the review hour splits, and what generated work reliably gets wrong</figcaption>
+    </figure>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The ninety seconds is also your best tool against "just make it pop".</strong> When an executive gives you a preference note, do not argue about taste - score the five checks in front of them and read the rows out. Either something is genuinely broken, in which case you now have a specific fix and a grateful stakeholder, or nothing is, in which case the conversation moves to concept and emphasis where it always belonged. Keep the honest caveat in your pocket though: passing all five means the work is not broken. It does not mean it is good, and if you ever let a clean score end a conversation about the idea, you have handed your moat to the tool.</p>
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Before session a3 <span class="tag exercise">◐ 45-60 min total</span></h2>
+    </div>
+    <ul>
+      <li><strong>Write your five checks on half a page</strong> and circulate it. Contrast floor with the WCAG numbers and the large-text definition, your type ratio, your spacing unit, one loudest element, your hue-family ceiling. Mark which are standards and which are conventions.</li>
+      <li><strong>Run the logo-cover test</strong> on five competitor screens plus one of your own, and record the attribution hit rate. Bring the number, especially if it is embarrassing.</li>
+      <li><strong>Re-run your last written review note</strong> and mark each line as preference or evidence. Rewrite every preference line as evidence, or delete it.</li>
+      <li><strong>Pick one recent approval you would now reverse</strong> because it was measurably fine and had no idea in it. One paragraph on what you would have asked for instead. This is the honest half of installing a standard.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">This session leans on the one part of design quality that has a formal, citable standard, and is deliberately careful about the part that does not. Where a claim is a convention it is labelled a convention; where a pattern is observable but unquantified, we describe the mechanism and hand you a test rather than a borrowed statistic. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">WCAG 2.2 SC 1.4.3 Contrast (Minimum) - 4.5:1 normal, 3:1 large, with the 18pt/24px and 14pt/18.66px bold definition</span><span class="note">Part 1 and Part 3 · full criteria set by number in b5</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">The measurable / judgement split as a review standard a leader can publish</span><span class="note">Part 1 · turned into a working instrument in b5</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">The homogenisation mechanism - generators return the likely, brands exist to be unlikely</span><span class="note">Part 2 · mechanism and observable pattern only, no invented figures</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Type scale and spacing conventions, and "one loudest thing"</span><span class="note">Named as conventions, not specs · tokenised in b6</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">The critique lab's canon climb - 17 to 32 to 46 to 66 to 86 to 100, and the 19-point colour penalty</span><span class="note">Referenced as a leadership talking point · the lab itself lives in b1 and b5</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · WCAG 2.2 SC 1.4.3 allows 3:1 instead of 4.5:1 for large text. What counts as large?</p>
+      <button class="qopt" type="button">A · Anything marked up as a heading, whatever its rendered size</button>
+      <button class="qopt" type="button">B · Anything above the body size used elsewhere on the page</button>
+      <button class="qopt" type="button">C · 18pt (24px), or 14pt (18.66px) when bold</button>
+      <p class="qwhy">Rendered size and weight decide the threshold, not the role or the tag. A 16px bold heading is still normal text and still owes you 4.5:1 - which is why "but it's a heading" is not a defence in a review.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">2 · A screen passes all five measurable checks and scores 100. What has that proved?</p>
+      <button class="qopt" type="button">A · The work is good and can be approved without further review</button>
+      <button class="qopt" type="button">B · Nothing is measurably broken - the concept, emphasis, states and fit are all still unexamined</button>
+      <button class="qopt" type="button">C · The work is distinctive, since a generic screen could not score that highly</button>
+      <p class="qwhy">A clean score is a floor, not a ceiling. Measurably clean and completely forgettable is a real and common category, and it is where AI-assisted work lands by default because a generator optimises for plausible. Never let a score end a conversation about the idea.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · Why does heavy reliance on generators tend to make a whole category look alike?</p>
+      <button class="qopt" type="button">A · A generator returns what is likely, and every competitor briefing it the same lazy way gets the same likely answer</button>
+      <button class="qopt" type="button">B · The tools share a fixed set of built-in templates that all customers must use</button>
+      <button class="qopt" type="button">C · Copyright filters force every output toward the same neutral house style</button>
+      <p class="qwhy">It is structural, not a bug and not plagiarism. Likely means near the centre of everything the model has seen, and a brand exists to be recognisably away from that centre. Better models make the output prettier without changing the direction it pulls.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Leader session 2 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>The split</b><span>Half of taste is arithmetic and delegatable. Half is concept, tension, emphasis and fit, and that half is the moat.</span></div>
+      <div class="cheat-item"><b>The measurable five</b><span>Contrast · one type ratio · one spacing unit · one loudest element · hue-family count with one carrying meaning.</span></div>
+      <div class="cheat-item"><b>The contrast numbers</b><span>WCAG 2.2 SC 1.4.3: 4.5:1 normal text, 3:1 large. Large = 18pt/24px, or 14pt/18.66px bold. Size and weight decide, not role.</span></div>
+      <div class="cheat-item"><b>Standards vs conventions</b><span>Contrast is a standard you can be held to. One ratio, one unit and one loudest thing are conventions. Say which is which or lose the room.</span></div>
+      <div class="cheat-item"><b>What 100 does not mean</b><span>Nothing measurably broken. Not an idea, not distinctive, not right for this moment. Floor, never ceiling.</span></div>
+      <div class="cheat-item"><b>Homogenisation</b><span>Generators return the likely; brands exist to be unlikely. Same tool, same lazy brief, same screen as your competitors. Mechanism, not conspiracy.</span></div>
+      <div class="cheat-item"><b>The ritual</b><span>90 seconds on the five, then the hour on concept, emphasis, states and fit. Ask for the brief before critiquing the person.</span></div>
+      <div class="cheat-item"><b>The culture lever</b><span>Praise the judgement, not the render. Require states before more options. Reward volume and a generator will always outbid your team.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Leader session 2 of 6 · learn-ai-design-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="a1-what-ai-changes.html">← Previous: What AI changes</a> &nbsp;·&nbsp; <a href="a3-tool-workflow-map.html">Next: The tool and workflow map →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=2"></script>
+</body>
+</html>

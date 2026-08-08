@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Designer session 5 · The critique lab - learn ai design with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-design-with-phoebe</a> / Designer session 5 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Design with Phoebe · Designer track · Session 5 of 10</div>
+    <h1>The critique lab: <span class="accent">a review that ends arguments</span></h1>
+    <p class="sub">"I don't like it" costs a week. This session replaces it with a five-check script you can run in ninety seconds on any screen, generated or hand-made, and defend to a stakeholder with numbers instead of adjectives. You will score Cadence's shared-summary screen from 17 to 100, watch a perfect score lose 19 points to the most popular instinct in design reviews, and then do the harder half: critique the part no measurement reaches. You leave with the review script, the AI-as-reviewer prompt that actually works, and a clear-eyed sense of where that reviewer lies to you.</p>
+    <div class="chip-row">
+      <span class="chip level">🟡 Designer track</span>
+      <span class="chip audience">Product · brand · design-adjacent builders</span>
+      <span class="chip audience">Signature session</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Where we are</span>
+      <span class="a2" style="flex:4">3-17 · The five-check script</span>
+      <span class="a3" style="flex:5">17-41 · Build-along: diagnose, climb, break it</span>
+      <span class="a4" style="flex:1">41-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Where this sits in the track</h2>
+    </div>
+    <p class="lede">b2 gave you the brief, b3 the exploration, b4 the drafted screens. You now have output - probably a lot of it - and the bottleneck has moved to judgement. This is the session that industrialises it. The five checks here are the same five the lab has been scoring since b1, but tonight you learn to run them by eye, in order, and to say the sentence that unblocks a review: <em>"three specific things are broken, here they are, and here is the number."</em></p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">▶ Live critique lab - toggle levers, watch the real score</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      The five-check review script in running order, the exact WCAG criteria to cite when someone calls accessibility a preference, a working AI-as-reviewer prompt, and the discipline to stop reviewing once the measurable half is clean so your attention goes where it is actually needed.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: THE SCRIPT ============ -->
+  <section class="section" id="the-script">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · the standard</span>
+      <h2>Five checks, in this order <span class="tag concept">8 min live</span></h2>
+    </div>
+    <p class="lede">Order matters, because each check makes the next one easier to see. <strong>Hierarchy</strong> first - if two things are shouting, everything else you notice is a symptom. Then <strong>type scale</strong>, then <strong>spacing rhythm</strong>: both are arithmetic, both are fast, and fixing them removes most of what people vaguely call "unpolished". Then <strong>contrast</strong>, which is the only check that is a legal standard in many markets. Then <strong>colour restraint</strong>, last, because counting hue families is meaningless until the other four are settled.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The five-check review script in order: hierarchy, type scale, spacing, contrast, colour restraint - each with the question to ask and what it rejects.">
+        <style>
+          .csT { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .csQ { font: 600 12px Inter, sans-serif; fill: #2A1A28; }
+          .csX { font: 400 11.5px Inter, sans-serif; fill: #7A6A78; }
+          .csN { font: 600 13px Inter, sans-serif; fill: #1E2A00; }
+          .csK { font: 700 11px Inter, sans-serif; fill: #FFFFFF; }
+        </style>
+        <rect x="30" y="30" width="112" height="44" rx="8" fill="#4A1F44"/>
+        <text class="csT" x="44" y="49">1 HIERARCHY</text>
+        <text class="csK" x="44" y="66">convention</text>
+        <rect x="160" y="30" width="230" height="44" rx="8" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="csQ" x="174" y="49">One loudest thing?</text>
+        <text class="csX" x="174" y="66">count elements ≥90% of max size + bold</text>
+        <rect x="408" y="30" width="442" height="44" rx="8" fill="#FFFFFF" stroke="#D6C9D4" stroke-width="1.5"/>
+        <text class="csX" x="422" y="49">Rejects: competing banners, shouty buttons, a title that does not</text>
+        <text class="csX" x="422" y="66">step clearly above body text (want 1.6x or more)</text>
+
+        <rect x="30" y="88" width="112" height="44" rx="8" fill="#6B2D5C"/>
+        <text class="csT" x="44" y="107">2 SCALE</text>
+        <text class="csK" x="44" y="124">convention</text>
+        <rect x="160" y="88" width="230" height="44" rx="8" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="csQ" x="174" y="107">One ratio, few sizes?</text>
+        <text class="csX" x="174" y="124">list every distinct size on screen</text>
+        <rect x="408" y="88" width="442" height="44" rx="8" fill="#FFFFFF" stroke="#D6C9D4" stroke-width="1.5"/>
+        <text class="csX" x="422" y="107">Rejects: six arbitrary sizes, 15px next to 15.5px, sizes that</text>
+        <text class="csX" x="422" y="124">came from dragging a handle rather than from a scale</text>
+
+        <rect x="30" y="146" width="112" height="44" rx="8" fill="#9B4B87"/>
+        <text class="csT" x="44" y="165">3 SPACING</text>
+        <text class="csK" x="44" y="182">convention</text>
+        <rect x="160" y="146" width="230" height="44" rx="8" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="csQ" x="174" y="165">One rhythm unit?</text>
+        <text class="csX" x="174" y="182">every pad, margin and gap divisible by it</text>
+        <rect x="408" y="146" width="442" height="44" rx="8" fill="#FFFFFF" stroke="#D6C9D4" stroke-width="1.5"/>
+        <text class="csX" x="422" y="165">Rejects: 21 / 13 / 11 / 7 px values, uneven optical gaps,</text>
+        <text class="csX" x="422" y="182">groups that read as one block because the gap is wrong</text>
+
+        <rect x="30" y="204" width="112" height="44" rx="8" fill="#4D6B00"/>
+        <text class="csT" x="44" y="223">4 CONTRAST</text>
+        <text class="csK" x="44" y="240">WCAG standard</text>
+        <rect x="160" y="204" width="230" height="44" rx="8" fill="#F4F8DE" stroke="#4D6B00" stroke-width="1.5"/>
+        <text class="csQ" x="174" y="223">4.5:1, or 3:1 if large?</text>
+        <text class="csX" x="174" y="240">plus 3:1 on control boundaries</text>
+        <rect x="408" y="204" width="442" height="44" rx="8" fill="#FFFFFF" stroke="#D6C9D4" stroke-width="1.5"/>
+        <text class="csX" x="422" y="223">Rejects: grey-on-white metadata, pale placeholder text, tinted</text>
+        <text class="csX" x="422" y="240">text on tinted chips, invisible button borders</text>
+
+        <rect x="30" y="262" width="112" height="44" rx="8" fill="#2A1A28"/>
+        <text class="csT" x="44" y="281">5 COLOUR</text>
+        <text class="csK" x="44" y="298">convention</text>
+        <rect x="160" y="262" width="230" height="44" rx="8" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="csQ" x="174" y="281">How many hue families?</text>
+        <text class="csX" x="174" y="298">one accent, neutrals, plus status only</text>
+        <rect x="408" y="262" width="442" height="44" rx="8" fill="#FFFFFF" stroke="#D6C9D4" stroke-width="1.5"/>
+        <text class="csX" x="422" y="281">Rejects: three accents because nobody decided, decorative</text>
+        <text class="csX" x="422" y="298">colour with no meaning, a rainbow of unrelated chips</text>
+
+        <rect x="30" y="330" width="14" height="14" rx="3" fill="#4D6B00"/>
+        <text class="csN" x="54" y="342">Run top to bottom. Stop at the first failure, fix it, start again - later checks often resolve themselves.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the review script, in running order, with what each check rejects</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The sentence that ends the argument<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Reviews stall because both sides are stating preferences. The script gives you a form of words that is hard to argue with, because every clause is checkable:</p>
+        <div class="prompt-box bad">
+          <span class="label">Preference review</span>
+          <p>"Hmm. It feels a bit cluttered and cheap. Can we make the header stronger and clean it up generally? Maybe a different blue."</p>
+        </div>
+        <div class="prompt-box good">
+          <span class="label">Evidence review</span>
+          <p>"Three specific things. One: two elements are competing for first read - the AI banner is bolder than the title, so nothing wins. Two: the timestamp is 1.5:1 against white, which fails WCAG AA at 4.5:1 - that is a defect, not a taste call. Three: four hue families are on screen, and only one carries meaning. Fix those and I expect the 'cheap' feeling to disappear on its own."</p>
+        </div>
+        <p>The last clause matters. It offers a hypothesis rather than a verdict, which keeps the review collaborative - and in practice the vague complaint usually does disappear once the measurable failures are gone.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>What to cite when accessibility is called a preference<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Know the criteria by number. It changes the temperature of the conversation:</p>
+        <ul>
+          <li><strong>SC 1.4.3 Contrast (Minimum), Level AA</strong> - text and images of text need at least 4.5:1, with 3:1 allowed for large text. Large means 18pt or 14pt bold, which W3C's own conversion (1pt = 1.333px) puts at roughly 24px and 18.5px; most tools, including this lab, implement the bold threshold as 18.66px. Either way, size and weight decide it, not the tag.</li>
+          <li><strong>SC 1.4.11 Non-text Contrast, Level AA</strong> - 3:1 for the visual information needed to identify UI components and states, and for meaningful graphics. This is the one that makes a pale button outline a bug.</li>
+          <li><strong>SC 1.4.6 Contrast (Enhanced), Level AAA</strong> - 7:1, and 4.5:1 for large text. Worth knowing when a client has an AAA commitment.</li>
+          <li><strong>SC 1.4.12 Text Spacing, Level AA</strong> - the layout must survive a user overriding line height to 1.5x the font size, and paragraph spacing to 2x. Generated layouts with hard-coded heights routinely break this.</li>
+          <li><strong>SC 2.5.8 Target Size (Minimum), Level AA</strong> - a 24x24 CSS px minimum for pointer targets, with exceptions. Denser than most people assume, so check before you argue for smaller.</li>
+        </ul>
+        <p>One honest note on the newer thinking: <strong>APCA</strong>, a perceptually-based contrast algorithm, appears in WCAG 3 work and in some tools. WCAG 3 is a draft, not a standard - so design to WCAG 2.2 for anything you must defend, and treat APCA as extra insight rather than the requirement.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The AI-as-reviewer prompt - and where it lies<span class="mini">4 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Models are genuinely useful reviewers if you constrain them to what they can see and force a structure. They are unreliable exactly where numbers are involved.</p>
+        <div class="prompt-box good">
+          <span class="label">Reviewer prompt that works</span>
+          <p>"Here is a screenshot of one screen. Review it against these five checks, in this order: (1) hierarchy - is there exactly one loudest element, and does the title step clearly above body text; (2) type scale - list every distinct text size you can see and say whether they look like one scale; (3) spacing - identify any group whose gaps look inconsistent; (4) contrast - flag every text element you suspect is below 4.5:1, and say you are estimating; (5) colour - count the hue families and say which carry meaning. For each check give a verdict, the specific element, and the smallest fix. Do not comment on anything else. Do not tell me it looks good."</p>
+        </div>
+        <ul>
+          <li><strong>It hallucinates ratios.</strong> A model reading a screenshot will state "3.8:1" with total confidence. Treat any number it gives as a flag to verify, never as a measurement - use a real contrast checker or your inspector.</li>
+          <li><strong>It cannot read your tokens.</strong> It sees pixels, not variables, so it cannot tell you whether a value came from your system or was typed in by hand. That check lives in b6.</li>
+          <li><strong>It is agreeable by default.</strong> Without "do not tell me it looks good", you get praise. Ask for the strongest case against the design, then decide what survives.</li>
+          <li><strong>It is decent at the unmeasurable half</strong> - naming what a layout emphasises, spotting a missing empty state, catching copy that hedges. Use it there, then own the judgement yourself.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: THE OTHER HALF ============ -->
+  <section class="section" id="unmeasurable">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · the half no lab can score</span>
+      <h2>What to review once nothing is broken <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">A 100 on the lab means nothing is measurably wrong. It says nothing about whether the work is <em>right</em>. Once the script is clean, your review time should go entirely to four questions a generator cannot answer for you - and this is where senior judgement earns its money.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="After the measurable checks pass, review concept, emphasis, states and fit - the four questions a generator cannot answer.">
+        <style>
+          .umT { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .umH { font: 700 13px Inter, sans-serif; fill: #2A1A28; }
+          .umX { font: 400 11.5px Inter, sans-serif; fill: #7A6A78; }
+          .umN { font: 600 13px Inter, sans-serif; fill: #1E2A00; }
+          .umW { stroke: #6B2D5C; stroke-width: 2.5; fill: none; marker-end: url(#umHd); }
+        </style>
+        <defs>
+          <marker id="umHd" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L9,4.5 L0,9 z" fill="#6B2D5C"/>
+          </marker>
+        </defs>
+        <rect x="30" y="40" width="180" height="52" rx="8" fill="#4D6B00"/>
+        <text class="umT" x="44" y="62">SCRIPT CLEAN</text>
+        <text class="umT" x="44" y="80" style="font-weight:400;opacity:.92">5 of 5 checks pass</text>
+        <path class="umW" d="M210,66 L255,66"/>
+
+        <rect x="270" y="24" width="270" height="42" rx="8" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="umH" x="284" y="42">Concept</text>
+        <text class="umX" x="284" y="58">is there an idea, or only an arrangement?</text>
+        <rect x="270" y="76" width="270" height="42" rx="8" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="umH" x="284" y="94">Emphasis</text>
+        <text class="umX" x="284" y="110">is the loudest thing the thing that matters?</text>
+        <rect x="270" y="128" width="270" height="42" rx="8" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="umH" x="284" y="146">States</text>
+        <text class="umX" x="284" y="162">empty, loading, error, too-long, offline</text>
+        <rect x="270" y="180" width="270" height="42" rx="8" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="umH" x="284" y="198">Fit</text>
+        <text class="umX" x="284" y="214">this brand, this user, this moment</text>
+
+        <rect x="580" y="24" width="270" height="198" rx="10" fill="#FFFFFF" stroke="#D6C9D4" stroke-width="1.5"/>
+        <text class="umH" x="596" y="48">Where generated work fails most</text>
+        <text class="umX" x="596" y="72">- one happy path, no states</text>
+        <text class="umX" x="596" y="94">- emphasis on the AI, not the user's task</text>
+        <text class="umX" x="596" y="116">- a concept borrowed from the average</text>
+        <text class="umX" x="596" y="138">- copy that describes the feature</text>
+        <text class="umX" x="596" y="160">- decoration where meaning should be</text>
+        <text class="umX" x="596" y="182">- brand-adjacent, never brand-specific</text>
+        <text class="umX" x="596" y="204">- perfect at 1440px, broken at 375px</text>
+
+        <rect x="30" y="252" width="14" height="14" rx="3" fill="#4D6B00"/>
+        <text class="umN" x="54" y="264">Budget the review: about 90 seconds on the measurable five, the rest of the hour on these four.</text>
+        <rect x="30" y="276" width="14" height="14" rx="3" fill="#4D6B00"/>
+        <text class="umN" x="54" y="288">Ask for the states before you ask for another visual option. Missing states cost far more than a weak gradient.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - what a clean score frees you to review</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Reviewing someone else's AI work without blame<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>When a colleague brings generated work, the failure is almost never their taste - it is the brief they gave. Reviewing the brief instead of the person is faster and lands better:</p>
+        <ul>
+          <li><strong>Ask for the brief first.</strong> "What constraints did you give it?" Nine times out of ten the missing check was never asked for.</li>
+          <li><strong>Score, do not editorialise.</strong> Run the five checks in front of them. It teaches the standard while you review.</li>
+          <li><strong>Fix the constraint, regenerate.</strong> One rewritten brief usually beats twenty rounds of nudging - and it teaches the loop from b1.</li>
+          <li><strong>Praise the judgement, not the render.</strong> The valuable thing they did was choose; say that explicitly, or you train the team to value volume.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO 1 ============ -->
+  <section class="section" id="demo-1">
+    <div class="section-kicker">
+      <span class="klabel">Demo 1 of 2</span>
+      <h2>Diagnose before you touch anything <span class="tag demo">★ 12 min · everyone runs it</span></h2>
+    </div>
+    <p class="lede">Same Cadence screen, same lab, new discipline. Do not touch a lever yet. Look at the screen for thirty seconds and write down your five verdicts by eye. Then open the scorecard and compare. This is the drill that turns the script into instinct - and the gap between your guess and the measurement is the most useful thing you will learn tonight.</p>
+
+    <div class="steps">
+      <div class="step"><p>Levers off. Write your five verdicts by eye first: how many things are shouting, how many sizes, what fails contrast, how many hue families.</p></div>
+      <div class="step"><p>Now read the rows. Most people underestimate the contrast failures badly - 1 of 19 elements passes here - and overestimate their spacing eye.</p></div>
+      <div class="step"><p>Turn on <strong>Contrast</strong> alone. Note the one row that stubbornly stays red, and say why in the language of Part 1.</p></div>
+      <div class="step"><p>Now use the checks as a fix order: hierarchy, scale, spacing, contrast, colour. Watch the score move without any taste decision being made.</p></div>
+      <div class="step"><p>Press <strong>Art-directed</strong>. Then look at the screen and ask the Part 2 questions. Notice how little the lab told you about whether this is good.</p></div>
+    </div>
+
+    <div class="dlbox" data-mode="lab" data-levers=""></div>
+
+    <div class="callout tip">
+      <strong>What is real here and what is scripted</strong>
+      The starting draft is scripted - it is a composite of what an unbriefed generator hands you. Every number in the scorecard is measured live in your browser: contrast ratios computed with the WCAG relative-luminance formula, spacing and font sizes read from getComputedStyle, hue families counted by converting every rendered colour to HSL. If you edited this page's DOM in your inspector, the score would change accordingly.
+    </div>
+  </section>
+
+  <!-- ============ DEMO 2 ============ -->
+  <section class="section" id="demo-2">
+    <div class="section-kicker">
+      <span class="klabel">Demo 2 of 2</span>
+      <h2>The 19-point instinct <span class="tag demo">★ 10 min · explore</span></h2>
+    </div>
+    <p class="lede">The ladder again - <strong>17 → 32 → 46 → 66 → 86 → 100</strong> - and then the row that matters most in this session. From a perfect 100, turning on <strong>Add colour</strong> drops the score to <strong>81</strong>. Three separate things break at once: a fourth hue family appears, two paddings leave the grid, and a yellow highlight puts yellow text on a yellow background at 1.5:1. Nobody set out to do harm. They set out to make it feel more alive.</p>
+
+    <div class="steps">
+      <div class="step"><p>Read the ladder rows as sessions: hierarchy (b1), scale and spacing (b4, b6), contrast (this one), one accent (b6, b7).</p></div>
+      <div class="step"><p>In the lab above, get to 100, then press <strong>Add colour</strong> and read all five rows. Name each of the three separate defects.</p></div>
+      <div class="step"><p>Notice what did NOT break: hierarchy and type scale held. Structural decisions survive decoration; colour decisions do not.</p></div>
+      <div class="step"><p>Write the one-sentence version for a stakeholder: "the badges cost us a hue family, two grid values, and one accessibility failure."</p></div>
+    </div>
+
+    <div class="dlbox" data-mode="ladder"></div>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The five checks are not an academic exercise - they are the exact failures researchers find in AI prototypes.</strong> Nielsen Norman Group ran a heuristic evaluation of AI-generated prototypes against a real redesign brief in October 2025 and named the problems in almost the same words this session uses: a lack of visual hierarchy, poor colour contrast, and inconsistent margin spacing. Their earlier assessments were blunter still - in 2024 they found no design-specific AI tool in serious use and called the output "generic, seemingly templatized", and their 2025 follow-up concluded we are "still nowhere near the AI-powered design tools we've been promised". The tools have improved since; the failure modes have not changed, which is precisely why a scored review beats an opinion.</p>
+    </div>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>"Can we add a colour for it?" is the most expensive four seconds in a design review.</strong> Every new hue family needs a meaning, a token, a dark-mode value, a contrast-checked text pair, and a rule for when it does not apply. That is the real cost - the score drop is just the visible part. The counter-move is not refusal: it is "yes, if it means something. What state or category is it encoding?" Half the time the answer is nothing, and the request quietly dissolves.</p>
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 30-40 min total</span></h2>
+    </div>
+    <ul>
+      <li>Run the by-eye-then-measure drill on three real screens: two of yours, one from a product you admire. Record your guess and the measurement side by side for all five checks.</li>
+      <li>Take the b4 Cadence draft you generated and review it with the AI-as-reviewer prompt from Part 1. Then verify every ratio it claimed with a real contrast checker and count how many it got wrong.</li>
+      <li>Write your five-check script as a one-page review template you can paste into a comment. You will use it in b9's handoff and b10's capstone scoring.</li>
+      <li>Find one screen in your product with three or more hue families. For each, write what it encodes. Delete the ones that encode nothing and see whether anyone notices.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">This session teaches the working core of the WCAG 2.2 criteria a designer applies daily, plus the review practice around them. The normative text lives with W3C and is linked below; conformance testing and certification stay with the official bodies. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">WCAG 2.2 - SC 1.4.3 Contrast (Minimum) and the large-text definition</span><span class="note">Part 1 · computed live in the lab</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">WCAG 2.2 - SC 1.4.11 Non-text Contrast, SC 1.4.6 Enhanced, SC 1.4.12 Text Spacing, SC 2.5.8 Target Size</span><span class="note">Part 1 · cited by number so you can quote them in review</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">The five-check review script and the evidence-review script</span><span class="note">Parts 1-2 · reused in b9 handoff and b10 scoring</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">APCA and WCAG 3 status</span><span class="note">Named honestly as draft work · design to 2.2 for anything you must defend</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">AI-as-reviewer practice and its failure modes</span><span class="note">Prompt provided · token-awareness lands in b6, code checks in b9</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · Why does the script check hierarchy before contrast?</p>
+      <button class="qopt" type="button">A · Contrast matters less than hierarchy in practice</button>
+      <button class="qopt" type="button">B · Competing emphasis distorts everything else you notice, so fixing it first makes the remaining failures visible</button>
+      <button class="qopt" type="button">C · Contrast can only be measured after colours are final</button>
+      <p class="qwhy">Order is about diagnosis, not importance. With two elements shouting, every other complaint is a symptom - and several of them disappear once one element wins. Contrast is still the only check on the list that is a formal standard.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · An AI reviewer says a label is "3.8:1 against its background". What is the right response?</p>
+      <button class="qopt" type="button">A · Accept it - vision models read colour values accurately</button>
+      <button class="qopt" type="button">B · Ignore it - contrast is a matter of preference</button>
+      <button class="qopt" type="button">C · Treat it as a flag and verify with a real checker or the inspector before quoting the number</button>
+      <p class="qwhy">Models are useful at spotting suspects and unreliable at stating measurements. The flag is worth having; the number is not evidence until you measure it yourself. Quoting a hallucinated ratio in a review costs you credibility you need later.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · The anti-lever costs 19 points. Which three defects does it introduce at once?</p>
+      <button class="qopt" type="button">A · A fourth hue family, two off-grid spacing values, and a low-contrast yellow-on-yellow highlight</button>
+      <button class="qopt" type="button">B · Broken hierarchy, a new font size, and a smaller tap target</button>
+      <button class="qopt" type="button">C · Only a colour-restraint failure - the other rows are unaffected</button>
+      <p class="qwhy">Decoration rarely breaks one thing. The badges bring their own padding values and their own hues, and the highlight fails AA. Hierarchy and type scale hold, which is the useful lesson: structure survives decoration, colour decisions do not.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Designer session 5 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>The script, in order</b><span>Hierarchy → type scale → spacing → contrast → colour restraint. Stop at the first failure, fix, restart.</span></div>
+      <div class="cheat-item"><b>Cite by number</b><span>1.4.3 (4.5:1 / 3:1 large) · 1.4.11 (3:1 non-text) · 1.4.6 (7:1 AAA) · 1.4.12 (text spacing) · 2.5.8 (24x24 targets).</span></div>
+      <div class="cheat-item"><b>Large text means</b><span>18pt/24px, or 14pt/18.66px bold. Role does not matter - a 16px bold heading still owes 4.5:1.</span></div>
+      <div class="cheat-item"><b>Evidence review</b><span>"Three specific things, here they are, here is the number, and I expect the vague feeling to go with them."</span></div>
+      <div class="cheat-item"><b>AI reviewer</b><span>Give it the five checks and forbid praise. Trust its flags, never its ratios. It cannot see your tokens.</span></div>
+      <div class="cheat-item"><b>90 seconds / the rest</b><span>Measurable half fast, then spend the review on concept, emphasis, states and fit.</span></div>
+      <div class="cheat-item"><b>The 19-point instinct</b><span>New colour = new hue family + grid breakage + a contrast risk. Answer: "yes, if it encodes something."</span></div>
+      <div class="cheat-item"><b>100 is not good</b><span>A clean score means nothing is broken. Ask for states before another visual option.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Designer session 5 of 10 · learn-ai-design-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b4-ui-drafting.html">← Previous: UI drafting</a> &nbsp;·&nbsp; <a href="b6-design-systems-tokens.html">Next: Design systems and tokens →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/design-live.js?v=1"></script>
+<script src="../assets/app.js?v=2"></script>
+</body>
+</html>

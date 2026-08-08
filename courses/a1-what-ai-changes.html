@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leader session 1 · What AI changes in design work - learn ai design with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-design-with-phoebe</a> / Leader session 1 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Design with Phoebe · Leader track · Session 1 of 6</div>
+    <h1>What AI changes in <span class="accent">design work</span></h1>
+    <p class="sub">Your team can now produce forty options before lunch. That is genuinely new, and it is not the interesting part. The interesting part is that the expensive step moved: making got cheap, deciding did not, and nobody rewrote the process to match. Tonight we separate what actually changed from what only feels like it changed, then look at the constraint almost no design budget accounted for this year - not seats, not licences, but generation credits, metered per person, on exactly the exploration you just asked for more of.</p>
+    <div class="chip-row">
+      <span class="chip level">🟢 Leader track</span>
+      <span class="chip audience">Design · brand · creative leads</span>
+      <span class="chip audience">No tools required</span>
+      <span class="chip time">Start here</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-20 · What moved, what did not</span>
+      <span class="a3" style="flex:4">20-38 · The credit constraint</span>
+      <span class="a4" style="flex:2">38-45 · Three decisions + Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>How the leader track works</h2>
+    </div>
+    <p class="lede">Six sessions, and they are about <strong>decisions, not demos</strong>. You will not be asked to open a tool. You will be asked to decide things that only you can decide, and to decide them with numbers rather than vibes. Tonight: what genuinely changed in the work, and where the money now leaks. <strong>a2</strong> gives you a critique standard you can install in a review, so that half of taste stops being a debate. <strong>a3</strong> is the honest tool and workflow map - what each vendor actually outputs, and which seat or plan gates it. <strong>a4</strong> is IP and provenance: what you can register, what a vendor will and will not indemnify, and what C2PA does and does not prove. <strong>a5</strong> is craft and careers - where juniors used to learn, and what replaces the rung AI just removed. <strong>a6</strong> is rollout: the metrics, the guardrails and a twelve-month plan you could take to a board.</p>
+    <p>Running product across both tracks is <strong>Cadence, an AI meeting-notes app</strong>, and the running artifact is its <strong>shared-summary feature</strong>. The designer track (b1-b10) takes that feature from brief to a shipped, spec'd screen set, and it does so against a live critique lab that scores a real screen on real measurements. You will hear its numbers quoted in a2 - the climb from 17 to 100 - because a stated standard is a leadership tool, not a designer's toy. You do not need to run the lab to lead the conversation.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      A clean line between the work AI made cheap and the work it did not touch, a defensible number for what your team's monthly generation actually costs against its plan allowance, and three decisions you can make this week: who gets metered generation, what you stop paying humans to do, and whether your tenant is training on your files right now.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: WHAT MOVED ============ -->
+  <section class="section" id="what-moved">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · the honest inventory</span>
+      <h2>Where the cost actually collapsed <span class="tag concept">8 min live</span></h2>
+    </div>
+    <p class="lede">Start with the parts that are real, because they are large. <strong>Exploration volume</strong> collapsed: twenty directions costs roughly what one used to. <strong>First drafts</strong> collapsed: the blank artboard, the placeholder layout, the "something to react to" is close to free. <strong>Asset variants</strong> collapsed: background out, object removed, image extended, resolution up. <strong>Resizing and adaptation</strong> collapsed: one layout into nine placements is a queue, not a week. <strong>Boilerplate copy</strong> collapsed: the shorter version, the softer tone, the eleventh translation. If your team is still spending human hours on that list, that is a process problem now, not a staffing one.</p>
+    <p>Now the parts that did not move, and notice they are all the same kind of work. <strong>Deciding which option is right</strong> did not move; forty options is a harder decision than four, not an easier one. <strong>Brand-specific judgement</strong> did not move, because a generator returns what is likely and your brand is by definition not the likely thing. <strong>States and edge cases</strong> did not move - empty, loading, error, one item, four hundred items, the summary that failed to generate. And <strong>accountability</strong> did not move at all. Nobody has ever escalated to a model.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Before and after comparison of where hours go in a design cycle, showing the bottleneck moving from making options to deciding between them.">
+        <style>
+          .wcT { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .wcS { font: 400 11px Inter, sans-serif; fill: #FFFFFF; opacity: .92; }
+          .wcTi { font: 700 13px Inter, sans-serif; fill: #2A1A28; }
+          .wcSi { font: 400 11px Inter, sans-serif; fill: #2A1A28; opacity: .82; }
+          .wcH { font: 700 13px Inter, sans-serif; fill: #4A1F44; }
+          .wcX { font: 400 11.5px Inter, sans-serif; fill: #7A6A78; }
+          .wcN { font: 600 13px Inter, sans-serif; fill: #1E2A00; }
+        </style>
+
+        <text class="wcH" x="30" y="34">BEFORE · the cost sat in making</text>
+        <rect x="30" y="48" width="230" height="54" rx="8" fill="#4A1F44"/>
+        <text class="wcT" x="44" y="70">Explore options</text>
+        <text class="wcS" x="44" y="88">slow, so we made few</text>
+        <rect x="260" y="48" width="190" height="54" rx="8" fill="#6B2D5C"/>
+        <text class="wcT" x="274" y="70">First drafts</text>
+        <text class="wcS" x="274" y="88">hand-built</text>
+        <rect x="450" y="48" width="150" height="54" rx="8" fill="#9B4B87"/>
+        <text class="wcT" x="464" y="70">Variants</text>
+        <text class="wcS" x="464" y="88">resize, adapt</text>
+        <rect x="600" y="48" width="130" height="54" rx="8" fill="#D8A8C8"/>
+        <text class="wcTi" x="614" y="70">Decide</text>
+        <text class="wcSi" x="614" y="88">few options</text>
+        <rect x="730" y="48" width="120" height="54" rx="8" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="wcTi" x="742" y="70">States</text>
+        <text class="wcSi" x="742" y="88">last, rushed</text>
+        <text class="wcX" x="30" y="122">Producing the options was the job. Choosing between three of them took an afternoon.</text>
+
+        <text class="wcH" x="30" y="158">NOW · the cost sits in deciding</text>
+        <rect x="30" y="172" width="110" height="54" rx="8" fill="#4A1F44"/>
+        <text class="wcT" x="42" y="194">Explore</text>
+        <text class="wcS" x="42" y="212">near free</text>
+        <rect x="140" y="172" width="95" height="54" rx="8" fill="#6B2D5C"/>
+        <text class="wcT" x="152" y="194">Drafts</text>
+        <text class="wcS" x="152" y="212">minutes</text>
+        <rect x="235" y="172" width="85" height="54" rx="8" fill="#9B4B87"/>
+        <text class="wcT" x="246" y="194">Variants</text>
+        <text class="wcS" x="246" y="212">queued</text>
+        <rect x="320" y="172" width="300" height="54" rx="8" fill="#D8A8C8"/>
+        <text class="wcTi" x="336" y="194">Decide which one is right</text>
+        <text class="wcSi" x="336" y="212">brand judgement, no shortcut exists</text>
+        <rect x="620" y="172" width="230" height="54" rx="8" fill="#F4F8DE" stroke="#4D6B00" stroke-width="2"/>
+        <text class="wcTi" x="634" y="194">States + accountability</text>
+        <text class="wcSi" x="634" y="212">still yours, still slow</text>
+
+        <rect x="320" y="240" width="300" height="26" rx="6" fill="#F4F8DE" stroke="#4D6B00" stroke-width="2"/>
+        <text class="wcN" x="336" y="258">◆ THE BOTTLENECK MOVED HERE</text>
+
+        <rect x="30" y="282" width="14" height="14" rx="3" fill="#4D6B00"/>
+        <text class="wcN" x="54" y="294">Forty options is a harder decision than four. Cheap making raises the price of deciding.</text>
+        <rect x="30" y="306" width="14" height="14" rx="3" fill="#4D6B00"/>
+        <text class="wcN" x="54" y="318">If your review process was built for three options a week, it is now the constraint.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the same design cycle, before and after, with the new bottleneck marked</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The bottleneck moved from making to deciding<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>This is the single sentence to take into your next planning meeting. When making was expensive, the org optimised for making: headcount, tool licences, production pipelines, "can we get this out by Thursday". Everything downstream of production was under-resourced because production ate the calendar.</p>
+        <p>Now production is cheap and the queue has moved one step to the right. Watch for the symptoms in your own team:</p>
+        <ul>
+          <li><strong>Option pile-ups.</strong> Reviews arrive with fifteen directions and no recommendation. The designer did more work and made your job harder.</li>
+          <li><strong>Decision latency.</strong> The slowest thing in the cycle is now a person with authority finding an hour.</li>
+          <li><strong>States debt.</strong> Beautiful happy paths, no empty state, no error, no long-content case. Generators do not volunteer the unglamorous screens.</li>
+          <li><strong>Reopened decisions.</strong> Because regenerating is free, "let's just try another version" replaces "we decided".</li>
+        </ul>
+        <p>The leadership response is not more generation and it is not less. It is a decision standard, a review ritual, and a rule that options arrive with a recommendation attached. a2 builds the standard; a6 installs the ritual.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The four things you cannot delegate to a generator<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Keep this list somewhere you can point at it, because it is what your team is actually paid for now.</p>
+        <table class="clean">
+          <thead><tr><th>The work</th><th>Why AI cannot take it</th></tr></thead>
+          <tbody>
+            <tr><td>Choosing the right option</td><td>A model can rank against a generic notion of quality. It cannot know that this quarter you are defending trust, not chasing delight.</td></tr>
+            <tr><td>Brand-specific judgement</td><td>Generators return the likely. A brand's whole job is to be recognisably not the average. The gap is structural, not a prompt problem.</td></tr>
+            <tr><td>States and edge cases</td><td>The failure screens are where product credibility lives, and they are exactly the screens that were never in the training data in any volume.</td></tr>
+            <tr><td>Accountability</td><td>When the summary leaks the wrong meeting, a named human answers for it. That is not a technical limitation you will engineer away.</td></tr>
+          </tbody>
+        </table>
+        <p>Notice that three of the four are judgement and one is governance. That is the shape of a modern design lead's job description.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: CREDITS ============ -->
+  <section class="section" id="credits">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · the constraint nobody budgeted for</span>
+      <h2>You bought seats. You are spending credits <span class="tag concept">10 min live</span></h2>
+    </div>
+    <p class="lede">Here is the trap. You approved seats, because seats are what design tools have always cost: a predictable number per person per year, negotiated once. But the AI features are not priced like seats. They are <strong>metered</strong>, in credits, per person, per month, with no rollover and no sharing across the team. Then you stood up in an all-hands and told everyone to explore more. Exploration is generation. Generation is the metered thing. You just increased consumption of the one line item that was not in the plan.</p>
+    <p>The numbers below were fetched from official vendor documentation on 8 August 2026, and every one of them is the kind of number that changes monthly. Treat them as a worked example of the <em>shape</em> of the problem, then re-check your own tenant and contract before you commit a budget.</p>
+    <ul>
+      <li><strong>Figma AI credits</strong> are allocated per Full seat per month: <strong>Starter 500</strong> with a <strong>150 per day cap</strong>, <strong>Professional 3,000</strong>, <strong>Organization 3,500</strong>, <strong>Enterprise 4,250</strong>. No rollover, not shareable. Some actions are free (AI search, rename layers), a background removal is a few credits, and <strong>Figma Make runs 30 to 100 or more credits per task</strong> - one afternoon of prototyping can be a meaningful slice of a month. Pay-as-you-go exists at <strong>$0.03 per credit</strong> with a spend cap.</li>
+      <li><strong>Adobe generative credits</strong> renew monthly. Most standard features cost <strong>1 credit per generation</strong>; premium features cost far more. Reported plan tiers include <strong>Creative Cloud Pro at 4,000 per month</strong> while <strong>new single-app plans get 25 per month</strong> - a range wide enough that "we have Creative Cloud" tells you almost nothing about capacity.</li>
+      <li><strong>Canva</strong> moved to a <strong>shared credit pool across three quality tiers</strong> - Standard, Premium and Ultra. Free gets <strong>200 Standard or 20 Premium, and no Ultra at all</strong>. Credits are per member and never pooled across the team.</li>
+      <li><strong>Midjourney Basic at $10</strong> buys <strong>3.3 fast GPU hours</strong> and <strong>no Relax mode</strong>, so when the fast time is gone, it is gone until the next cycle. Fast time does not roll over.</li>
+    </ul>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Credit economics: more exploring leads to more generation, more credits and a monthly cap, with per-vendor credit allowances shown beneath.">
+        <style>
+          .ceT { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .ceS { font: 400 11px Inter, sans-serif; fill: #FFFFFF; opacity: .92; }
+          .ceH { font: 700 12.5px Inter, sans-serif; fill: #4A1F44; }
+          .ceL { font: 400 11.5px Inter, sans-serif; fill: #2A1A28; }
+          .ceX { font: 400 11.5px Inter, sans-serif; fill: #7A6A78; }
+          .ceN { font: 600 13px Inter, sans-serif; fill: #1E2A00; }
+          .ceW { stroke: #6B2D5C; stroke-width: 2.5; fill: none; marker-end: url(#ceHd); }
+        </style>
+        <defs>
+          <marker id="ceHd" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L9,4.5 L0,9 z" fill="#6B2D5C"/>
+          </marker>
+        </defs>
+
+        <rect x="30" y="30" width="190" height="54" rx="8" fill="#4A1F44"/>
+        <text class="ceT" x="44" y="52">1 · MORE EXPLORING</text>
+        <text class="ceS" x="44" y="70">what you asked for</text>
+        <rect x="240" y="30" width="190" height="54" rx="8" fill="#6B2D5C"/>
+        <text class="ceT" x="254" y="52">2 · MORE GENERATION</text>
+        <text class="ceS" x="254" y="70">every option is a call</text>
+        <rect x="450" y="30" width="190" height="54" rx="8" fill="#9B4B87"/>
+        <text class="ceT" x="464" y="52">3 · MORE CREDITS</text>
+        <text class="ceS" x="464" y="70">metered, per person</text>
+        <rect x="660" y="30" width="190" height="54" rx="8" fill="#2A1A28"/>
+        <text class="ceT" x="674" y="52">4 · THE MONTHLY CAP</text>
+        <text class="ceS" x="674" y="70">no rollover, no sharing</text>
+
+        <path class="ceW" d="M220,57 L236,57"/>
+        <path class="ceW" d="M430,57 L446,57"/>
+        <path class="ceW" d="M640,57 L656,57"/>
+
+        <rect x="30" y="110" width="190" height="132" rx="9" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="ceH" x="44" y="132">Figma AI credits</text>
+        <text class="ceX" x="44" y="152">Full seat, per month</text>
+        <text class="ceL" x="44" y="172">Starter 500 (150/day)</text>
+        <text class="ceL" x="44" y="190">Pro 3,000 · Org 3,500</text>
+        <text class="ceL" x="44" y="208">Enterprise 4,250</text>
+        <text class="ceL" x="44" y="230">Make: 30-100+ a task</text>
+
+        <rect x="240" y="110" width="190" height="132" rx="9" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="ceH" x="254" y="132">Adobe gen credits</text>
+        <text class="ceX" x="254" y="152">Renew monthly</text>
+        <text class="ceL" x="254" y="172">Standard feature: 1</text>
+        <text class="ceL" x="254" y="190">Premium: far more</text>
+        <text class="ceL" x="254" y="208">CC Pro 4,000/mo</text>
+        <text class="ceL" x="254" y="230">New single-app 25/mo</text>
+
+        <rect x="450" y="110" width="190" height="132" rx="9" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="ceH" x="464" y="132">Canva shared pool</text>
+        <text class="ceX" x="464" y="152">Standard/Prem/Ultra</text>
+        <text class="ceL" x="464" y="172">Free 200 standard</text>
+        <text class="ceL" x="464" y="190">or 20 premium</text>
+        <text class="ceL" x="464" y="208">No Ultra on Free</text>
+        <text class="ceL" x="464" y="230">Per member, never pooled</text>
+
+        <rect x="660" y="110" width="190" height="132" rx="9" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="ceH" x="674" y="132">Midjourney</text>
+        <text class="ceX" x="674" y="152">Basic $10 a month</text>
+        <text class="ceL" x="674" y="172">3.3 fast GPU hours</text>
+        <text class="ceL" x="674" y="190">No Relax mode</text>
+        <text class="ceL" x="674" y="208">Fast time: no rollover</text>
+        <text class="ceL" x="674" y="230">Pro/Mega if over $1M</text>
+
+        <rect x="30" y="268" width="14" height="14" rx="3" fill="#4D6B00"/>
+        <text class="ceN" x="54" y="280">Seats are cheap and predictable. Generation is metered, and the meter runs per person.</text>
+        <rect x="30" y="292" width="14" height="14" rx="3" fill="#4D6B00"/>
+        <text class="ceN" x="54" y="304">The metering lands on exploration - the exact behaviour you just told the team to increase.</text>
+        <rect x="30" y="316" width="14" height="14" rx="3" fill="#4D6B00"/>
+        <text class="ceN" x="54" y="328">Verified 8 Aug 2026. These tables move monthly. Re-check yours before you sign a budget.</text>
+        <text class="ceX" x="54" y="350">A plan name is not a capacity. Two people on "the paid plan" can have very different ceilings.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - seats are cheap, generation is metered, and the meter sits on exploration</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>How to price a month of your team's exploration<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>You do not need a model. You need four numbers and one honest hour with the people doing the work.</p>
+        <div class="steps">
+          <div class="step"><p><strong>Count the generating tasks.</strong> Per designer, per week: image generations, background removals, prototype builds, resizes, copy rewrites. Ask them to log a real week, not to estimate.</p></div>
+          <div class="step"><p><strong>Attach a cost band to each.</strong> Cheap actions are a credit or a few. Prototype builds are the expensive tail - Figma Make alone runs 30 to over 100 credits per task.</p></div>
+          <div class="step"><p><strong>Multiply to a month, then compare to the seat's allowance</strong> - not to a plan name. A Professional Full seat has 3,000 Figma AI credits a month, an Enterprise one has 4,250, and a Starter seat has 500 with a daily cap on top.</p></div>
+          <div class="step"><p><strong>Decide what happens at zero.</strong> Pay-as-you-go at $0.03 a credit with a spend cap, an upgrade, or a queue. Deciding now is cheaper than deciding on the day of a pitch.</p></div>
+        </div>
+        <p>The useful output is not a precise forecast. It is knowing whether your team is at 20 percent of its allowance or 200 percent, because those are two entirely different conversations with finance.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Why the vendor pages will not give you a clean answer<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Be prepared for genuine ambiguity, and do not let it stall you.</p>
+        <ul>
+          <li><strong>Official pages contradict each other.</strong> Figma's own documentation disagrees on whether its agent is Enterprise-only or available on Professional and Organization Full seats. That is not a reading-comprehension failure on your part.</li>
+          <li><strong>Promotions distort the math.</strong> A live "unlimited generations" offer makes a credit table temporarily meaningless, and permanently misleading if you plan against it.</li>
+          <li><strong>Beta features are often free, then are not.</strong> Betas can consume zero credits while they are betas. Budget for the day that ends.</li>
+          <li><strong>Exhaustion behaviour is under-documented.</strong> What happens when a credit balance hits zero mid-project is not always clearly stated. Test it deliberately on one seat before you find out during a deadline.</li>
+        </ul>
+        <p>The leader move: write down the numbers you are planning against, date them, and put a calendar reminder to re-check in ninety days. Your contract and your tenant's admin console beat any blog post, including this one.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: DECISIONS ============ -->
+  <section class="section" id="decisions">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · what you decide because of this</span>
+      <h2>Three decisions, this quarter <span class="tag concept">cards · 8 min live</span></h2>
+    </div>
+    <p class="lede">Everything above is analysis. These three are decisions with your name on them, and each one has a default that will happen anyway if you do not choose.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Decision 1 · Who gets metered generation<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Credits are allocated per seat and cannot be pooled, so "give everyone a bit" is a real strategy with a real cost: capacity sits idle on people who generate twice a month while your heaviest explorer runs dry in week three.</p>
+        <ul>
+          <li><strong>Concentrate, do not spread.</strong> Put the high allowance where the exploration happens. A brand lead reviewing work does not need a prototyping budget.</li>
+          <li><strong>Name a spike path.</strong> Pitch weeks and launches are lumpy. Decide in advance whether that is pay-as-you-go with a cap, a temporary upgrade, or a scheduled queue.</li>
+          <li><strong>Make consumption visible.</strong> If nobody can see the meter, nobody manages it. Ask for a monthly view by seat, the same way you would for any other consumption line.</li>
+          <li><strong>Do not fund exploration you will not review.</strong> Generating forty options nobody has time to judge is spend, not progress. Capacity to explore should be sized against capacity to decide.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Decision 2 · What you stop paying humans to do, and what you must not<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The stop list is the easy half and it is genuinely worth money: mechanical resizing, background removal, upscaling, the ninth placement variant, first-pass translation, the shorter version of copy that already exists. If a task has a correct answer and no judgement in it, stop buying human hours for it.</p>
+        <p>The must-not list is where leaders get this wrong, usually by accident:</p>
+        <ul>
+          <li><strong>Do not stop paying for the decision.</strong> Option selection is the new bottleneck. Under-resourcing it is how you end up with a fast team that ships slowly.</li>
+          <li><strong>Do not stop paying for states.</strong> Empty, error, loading, long-content and permission cases carry your product's credibility, and generated work reliably omits them.</li>
+          <li><strong>Do not stop paying for the junior rung entirely.</strong> The production tasks juniors used to learn on are the tasks you just automated. a5 is entirely about what replaces that rung, and doing nothing is a choice with a three-year bill attached.</li>
+          <li><strong>Do not stop paying for accountability.</strong> Someone senior signs off. That role got more important, not less.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Decision 3 · The training-data default in your own tenant<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>This one has a default that is already in effect, whether or not you have looked at it.</p>
+        <ul>
+          <li><strong>Figma content training defaults to ON for Starter and Professional teams.</strong> On Organization and Enterprise it is <strong>off and not toggleable</strong>. There are two separate switches - content training and AI features - and they are not the same decision. The policy has been in effect since 15 August 2024, with education and government accounts excluded.</li>
+          <li><strong>Canva's training use is governed by your Privacy Settings</strong> rather than by your plan tier, so it is an account-level thing somebody has to actually go and look at.</li>
+          <li><strong>Rights language is narrower than people assume.</strong> Canva's terms say you own your output <em>except</em> output that modifies or incorporates licensed content, and note that outputs may not be unique.</li>
+        </ul>
+        <p>So the decision is not "should we allow AI". It is: for every tool your team touches, who has confirmed the current toggle state, in writing, this quarter? If the answer is nobody, that is tonight's homework and it takes fifteen minutes.</p>
+      </div>
+    </details>
+
+    <div class="callout tip">
+      <strong>Say this out loud in the exec conversation</strong>
+      "Our seat cost did not change much. Our generation cost is metered per person, it renews monthly, it does not roll over, and it is attached to the exact behaviour we are encouraging. I want a number for it before I ask the team to double their exploration." That sentence buys you more credibility than any tool demo.
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Before session a2 <span class="tag exercise">◐ 45-60 min total</span></h2>
+    </div>
+    <ul>
+      <li><strong>Audit which tasks actually moved.</strong> List your team's ten most common tasks. Mark each one collapsed, unchanged, or harder now. Anything in the "collapsed" column that a human still does by hand is your first process fix.</li>
+      <li><strong>Price a month of generation.</strong> Ask two designers to log one real week of generating tasks. Multiply out, then compare against the actual credit allowance on their seats - not against the plan name.</li>
+      <li><strong>Check your own tenant's training-data toggle.</strong> Open the admin settings for every AI tool your team uses, screenshot the current state, and put a date on it. Do this yourself rather than delegating it.</li>
+      <li><strong>Write down two tasks you will explicitly not delegate</strong> to a generator, with one sentence each on why. Bring them to a2 - they are the seed of your critique standard.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">This session works from vendor documentation as it stood on 8 August 2026, and it names its own uncertainty. Pricing, credit tables and beta status in this space change monthly; where the official pages contradict each other, we say so rather than picking the tidier answer. Certificates and tool training stay with the providers. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Where AI cost collapsed vs where it did not - the capability map</span><span class="note">Part 1 · per-tool detail deferred to a3</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Figma AI credits - per-seat allowances, daily cap, no rollover, Figma Make task cost, pay-as-you-go rate</span><span class="note">Part 2 · seat and feature gates in a3</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Figma content-training defaults by plan, and Canva's Privacy Settings governance</span><span class="note">Part 3 · rights and indemnity in a4</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Adobe generative credits and Canva's shared Standard/Premium/Ultra pool</span><span class="note">Shape taught, exact tables flagged as check-today</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Midjourney plan mechanics - fast GPU hours, no Relax on Basic, no rollover</span><span class="note">Named here · reference params and limits in b7</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · AI made exploration and first drafts cheap. Where did the bottleneck move to?</p>
+      <button class="qopt" type="button">A · Nowhere - the whole cycle simply got faster end to end</button>
+      <button class="qopt" type="button">B · To generation capacity, since teams now need far more compute</button>
+      <button class="qopt" type="button">C · To deciding which option is right, plus states and accountability</button>
+      <p class="qwhy">Making got cheap; judging did not. Forty options is a harder decision than four, and states, edge cases and accountability never moved at all. If your review process was built for three options a week, it is now the constraint.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">2 · Your team is on Figma Professional Full seats. What does that tell you about AI capacity?</p>
+      <button class="qopt" type="button">A · Capacity is effectively unlimited once the seat is paid for</button>
+      <button class="qopt" type="button">B · 3,000 AI credits per seat per month, no rollover, not shareable</button>
+      <button class="qopt" type="button">C · The team shares one pool that any member can draw from</button>
+      <p class="qwhy">Credits are per Full seat per month - Starter 500 with a 150 per day cap, Professional 3,000, Organization 3,500, Enterprise 4,250 - and they do not roll over or pool across people. Seats are the cheap, predictable part. Generation is the metered part.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · Nobody has touched your Figma team's AI settings. What is the content-training default?</p>
+      <button class="qopt" type="button">A · On for Starter and Professional teams; off and not toggleable on Organization and Enterprise</button>
+      <button class="qopt" type="button">B · Off everywhere until an admin explicitly opts the team in</button>
+      <button class="qopt" type="button">C · On everywhere, with no way to change it on any plan</button>
+      <p class="qwhy">The default depends on your plan, which is exactly why it needs checking rather than assuming. Content training and AI features are also two separate toggles. Canva's training use, by contrast, is governed by Privacy Settings rather than plan tier.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Leader session 1 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>The one-line version</b><span>Making got cheap. Deciding did not. The bottleneck moved from production to judgement, and no process was rewritten to match.</span></div>
+      <div class="cheat-item"><b>What collapsed</b><span>Exploration volume · first drafts · asset variants · resizing and adaptation · boilerplate copy. Stop buying human hours here.</span></div>
+      <div class="cheat-item"><b>What did not</b><span>Choosing the right option · brand-specific judgement · states and edge cases · accountability. Fund these harder, not less.</span></div>
+      <div class="cheat-item"><b>Seats vs credits</b><span>You approved seats. You are spending credits: per person, per month, no rollover, not shareable.</span></div>
+      <div class="cheat-item"><b>Figma numbers</b><span>Full seat per month: Starter 500 (150/day cap), Pro 3,000, Org 3,500, Enterprise 4,250. Figma Make 30-100+ per task. PAYG $0.03/credit.</span></div>
+      <div class="cheat-item"><b>Other meters</b><span>Adobe: monthly renew, 1 credit standard, CC Pro 4,000/mo vs new single-app 25/mo. Canva: shared Standard/Premium/Ultra, Free 200 or 20, no Ultra. Midjourney Basic $10 = 3.3 fast hours, no Relax.</span></div>
+      <div class="cheat-item"><b>Training default</b><span>Figma content training ON for Starter and Professional, OFF and locked on Org and Enterprise. Canva governed by Privacy Settings. Go and look.</span></div>
+      <div class="cheat-item"><b>Re-check discipline</b><span>Verified 8 Aug 2026. Vendor pages sometimes contradict each other on seat and plan gates. Date your numbers, trust your contract.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Leader session 1 of 6 · learn-ai-design-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="../index.html">← All sessions</a> &nbsp;·&nbsp; <a href="a2-taste-is-the-moat.html">Next: Taste is the moat →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=2"></script>
+</body>
+</html>

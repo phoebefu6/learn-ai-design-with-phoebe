@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leader session 4 · IP, provenance and brand risk - learn ai design with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-design-with-phoebe</a> / Leader session 4 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Design with Phoebe · Leader track · Session 4 of 6</div>
+    <h1>IP, provenance and <span class="accent">brand risk</span></h1>
+    <p class="sub">This is the session where a design leader stops being able to say "legal will handle it". Three questions decide your exposure: what of this work do we actually own, what happens if someone claims we took theirs, and what must we disclose to whom. The good news is that the answers are more settled than the headlines suggest. The uncomfortable news is that the shape of the protection is nothing like what most teams assume, and every vendor indemnity on the market is voided by the thing designers do all day - modifying and compositing the output.</p>
+    <div class="chip-row">
+      <span class="chip level">🟡 Leader track</span>
+      <span class="chip audience">Design · brand · creative leads</span>
+      <span class="chip audience">The legal conversation</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Where we are</span>
+      <span class="a2" style="flex:4">3-18 · Ownership + the indemnity reality</span>
+      <span class="a3" style="flex:5">18-41 · Provenance, disclosure, brand risk</span>
+      <span class="a4" style="flex:1">41-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>How to use this session</h2>
+    </div>
+    <p class="lede">Everything below is sourced to a primary document - a Federal Register notice, a court opinion, a vendor's operative terms, a regulation, a specification. Where the primary source does not settle a question, this page says so rather than guessing, because a confident wrong answer here is worse than an honest gap. <strong>This is not legal advice.</strong> It is the material your counsel will ask you for, organised so the conversation takes twenty minutes instead of three meetings.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      A correct mental model of what is registrable, the four vendor indemnities side by side with their caps and exclusions, what provenance signals do and do not prove, the EU transparency duty that came into force this month, and the five things to write into your own guidelines this quarter.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: OWNERSHIP ============ -->
+  <section class="section" id="ownership">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · what you own</span>
+      <h2>Prompts are not authorship <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">The US Copyright Office settled its position early and has not moved. Its March 2023 registration guidance (88 Fed. Reg. 16190) says that when a system "receives solely a prompt from a human and produces complex written, visual, or musical works in response, the 'traditional elements of authorship' are determined and executed by the technology - not the human user", and that such prompts "function more like instructions to a commissioned artist". Its Part 2 report on copyrightability, published in final form on 29 January 2025, restates it as a bullet: <strong>"Based on the functioning of current generally available technology, prompts do not alone provide sufficient control."</strong></p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 350" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="What is registrable in AI-assisted design work: human expression in the output, creative selection and arrangement, and creative modifications - but not the AI-generated material itself.">
+        <style>
+          .owT { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .owS { font: 400 11px Inter, sans-serif; fill: #FFFFFF; opacity: .92; }
+          .owH { font: 700 12.5px Inter, sans-serif; fill: #2A1A28; }
+          .owX { font: 400 11.5px Inter, sans-serif; fill: #7A6A78; }
+          .owN { font: 600 13px Inter, sans-serif; fill: #1E2A00; }
+        </style>
+        <rect x="30" y="24" width="390" height="30" rx="7" fill="#4D6B00"/>
+        <text class="owT" x="46" y="44">REGISTRABLE - the human part</text>
+        <rect x="460" y="24" width="390" height="30" rx="7" fill="#991B1B"/>
+        <text class="owT" x="476" y="44">NOT REGISTRABLE</text>
+
+        <rect x="30" y="68" width="390" height="48" rx="8" fill="#F4F8DE" stroke="#4D6B00" stroke-width="1.5"/>
+        <text class="owH" x="46" y="88">Your own work, perceptible in the output</text>
+        <text class="owX" x="46" y="106">scope treated as analogous to a derivative work</text>
+        <rect x="30" y="126" width="390" height="48" rx="8" fill="#F4F8DE" stroke="#4D6B00" stroke-width="1.5"/>
+        <text class="owH" x="46" y="146">Creative selection, coordination, arrangement</text>
+        <text class="owX" x="46" y="164">how you assembled the generated pieces</text>
+        <rect x="30" y="184" width="390" height="48" rx="8" fill="#F4F8DE" stroke="#4D6B00" stroke-width="1.5"/>
+        <text class="owH" x="46" y="204">Creative modifications you made</text>
+        <text class="owX" x="46" y="222">enough to meet the ordinary standard</text>
+        <rect x="30" y="242" width="390" height="48" rx="8" fill="#F4F8DE" stroke="#4D6B00" stroke-width="1.5"/>
+        <text class="owH" x="46" y="262">Work where AI was merely assistive</text>
+        <text class="owX" x="46" y="280">object removal, error detection, brainstorming</text>
+
+        <rect x="460" y="68" width="390" height="48" rx="8" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1.5"/>
+        <text class="owH" x="476" y="88">The AI-generated material itself</text>
+        <text class="owX" x="476" y="106">however many prompts produced it</text>
+        <rect x="460" y="126" width="390" height="48" rx="8" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1.5"/>
+        <text class="owH" x="476" y="146">Output of a copyrightable prompt</text>
+        <text class="owX" x="476" y="164">a protectable prompt does not protect the result</text>
+        <rect x="460" y="184" width="390" height="48" rx="8" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1.5"/>
+        <text class="owH" x="476" y="204">Effort, iteration, hours spent</text>
+        <text class="owX" x="476" y="222">time and effort are irrelevant to authorship</text>
+        <rect x="460" y="242" width="390" height="48" rx="8" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1.5"/>
+        <text class="owH" x="476" y="262">A machine as author or co-author</text>
+        <text class="owX" x="476" y="280">human authorship is a statutory requirement</text>
+
+        <rect x="30" y="310" width="14" height="14" rx="3" fill="#4D6B00"/>
+        <text class="owN" x="54" y="322">Disclose AI content above de minimis on the Standard Application, or the registration can be cancelled.</text>
+        <rect x="30" y="330" width="14" height="14" rx="3" fill="#4D6B00"/>
+        <text class="owN" x="54" y="342">Describe your contribution in "Author Created"; exclude the AI material in "Limitation of the Claim".</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the registrability line, and the filing mechanics that go with it</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The filing mechanics, and the penalty for skipping them<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>If your team registers work at all, the process changes once AI is in the pipeline:</p>
+        <ul>
+          <li><strong>Use the Standard Application</strong>, not the Single application.</li>
+          <li><strong>Describe the human contribution</strong> in the "Author Created" field.</li>
+          <li><strong>Exclude AI-generated material</strong> that is more than de minimis, under "Limitation of the Claim" then "Other" then "Material Excluded", described as "[content] generated by artificial intelligence".</li>
+          <li><strong>Do not list the tool</strong> as an author or co-author.</li>
+          <li><strong>Already registered something?</strong> A supplementary registration corrects it.</li>
+        </ul>
+        <p>The cost of not disclosing is concrete: the Office says it "may take steps to cancel the registration", and separately a court may disregard a registration in an infringement action where inaccurate information was knowingly provided. In other words, the shortcut removes the very protection you were filing for, at exactly the moment you need it.</p>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>Zarya of the Dawn</strong> is the case to show your team. The registration was cancelled and reissued in February 2023 to cover the human-authored text and the human selection, coordination and arrangement - <strong>but not the Midjourney-generated images</strong>. A related Review Board decision refused registration for <em>Théâtre D'Opéra Spatial</em> because the applicant would not disclaim the more-than-de-minimis AI content. And in the pending case <em>Allen v. Perlmutter</em>, the Office's own brief records that the applicant entered prompts "at least 624 times" before post-processing, arguing that "repeatedly revising prompts does not amount to authorship" and that "the time and effort involved in creating a work is irrelevant". That case had not been decided when this session was written - do not present a predicted outcome as settled.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Where the human-authorship rule now stands<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Two data points make this hard to argue with:</p>
+        <ul>
+          <li><strong>Thaler v. Perlmutter</strong> - the DC Circuit held in March 2025 that human authorship is required as a matter of statutory law, affirming the refusal to register a wholly machine-generated work. The Supreme Court declined to review it in March 2026, so the holding stands.</li>
+          <li><strong>The Office's own volume</strong> - it states that it has registered hundreds of works incorporating AI-generated material, with the registration covering the human contribution. This is not a ban on AI in the pipeline. It is a rule about what the resulting certificate covers.</li>
+        </ul>
+        <p>One more piece of the picture is genuinely unfinished: the Office's <strong>Part 3 report on generative AI training</strong> exists only as a pre-publication version from May 2025 and had not been published in final form when this session was written. Its stated conclusion is worth reading in full, because it is more nuanced than either camp quotes: various training uses "are likely to be transformative", but "making commercial use of vast troves of copyrighted works to produce expressive content that competes with them in existing markets, especially where this is accomplished through illegal access, goes beyond established fair use boundaries."</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: INDEMNITY ============ -->
+  <section class="section" id="indemnity">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · what happens if someone claims you took theirs</span>
+      <h2>Read the indemnity, not the announcement <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">Every major vendor announced protection for generated output. The operative terms are narrower than the announcements in the same three ways: they are gated to specific paid plans, they exclude trademark claims almost everywhere, and they are voided by modifying or compositing the output. That last exclusion deserves a moment of silence, because <strong>modifying and compositing is what a design team does with generated material every single day.</strong></p>
+
+    <table class="clean">
+      <thead>
+        <tr><th>Vendor</th><th>Who is covered</th><th>Trademark claims</th><th>Stated cap</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Adobe</strong></td>
+          <td>Creative Cloud for teams or enterprise <em>and</em> a plan purchased with Firefly output indemnification. Requires an eligible feature, on an eligible surface, after an export event - placing an asset on the canvas is explicitly not enough.</td>
+          <td><strong>Included</strong>, plus publicity and privacy rights - the only one of the four that covers marks.</td>
+          <td><strong>US$10,000</strong> per output or per related set of claims, as the sole and exclusive remedy.</td>
+        </tr>
+        <tr>
+          <td><strong>Microsoft</strong></td>
+          <td>Paid Covered Products only, free previews excluded. Redirects existing volume-licensing IP defence onto output, subject to five cumulative conditions including required mitigations you must be able to hand over.</td>
+          <td><strong>Excluded</strong> where the claim alleges the output, as used in commerce, violates a mark.</td>
+          <td>Inherits the volume-licensing cap. Not stated on the page - ask for it in writing.</td>
+        </tr>
+        <tr>
+          <td><strong>Google</strong></td>
+          <td>Paid use of listed indemnified services, and only <strong>unmodified</strong> output from Google's own models. Uniquely, it also carries a separate prong covering Google's use of training data.</td>
+          <td><strong>Excluded</strong> for trademark-related rights in trade or commerce.</td>
+          <td>Not in the clause; it lives in the underlying cloud agreement. Do not assume uncapped.</td>
+        </tr>
+        <tr>
+          <td><strong>OpenAI</strong></td>
+          <td>API customers and the enterprise tier as defined in its terms. Consumer and mid-tier plans are not mentioned; beta services are excluded.</td>
+          <td><strong>Excluded</strong> for trademark rights in trade or commerce.</td>
+          <td><strong>Explicitly not subject to any liability cap</strong> - the most generous of the four on this point.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The exclusions that hit design teams hardest<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Read these as a workflow audit rather than as legalese:</p>
+        <ul>
+          <li><strong>Modification and combination.</strong> Adobe excludes claims arising from modifying the output or combining it with other materials, and even "the context in which the Output is used". Google covers only unmodified output. OpenAI excludes output "modified, transformed, or used in combination with products or services not provided by" it. If your process is generate-then-art-direct, assume you are outside the cover.</li>
+          <li><strong>Turning off the safety plumbing.</strong> All four condition cover on not disabling, evading or circumventing filters, citations or safety systems. One "let me get around this" habit voids the protection for everything downstream.</li>
+          <li><strong>Partner models.</strong> Adobe now hosts dozens of third-party models inside Firefly, and its own terms exclude features "denoted in the user interface as being powered or provided by non-Adobe trained models", plus anything labelled beta or trial. The same surface, the same button, a completely different risk position depending on which model is selected in a dropdown.</li>
+          <li><strong>Provenance metadata.</strong> Adobe's terms require that you "must not remove or alter any watermarks or Content Authenticity Initiative metadata". A pipeline step that strips metadata for file-size reasons can breach the terms you are relying on.</li>
+          <li><strong>One notable inversion.</strong> Midjourney's terms run the other way: the user indemnifies Midjourney, and its own words are blunt - "If You harm someone else or get into a dispute with someone else, we will not be involved." Also note its revenue rule: a company (or an employee of a company) over US$1,000,000 a year in revenue must be on a Pro or Mega plan to own assets.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>What the courts have actually decided about image models<span class="mini">4 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The single most useful sentence you can carry into a risk conversation: <strong>no court has decided whether training an image generator on copyrighted works is fair use.</strong> Every image case is still pre-judgment. What does exist:</p>
+        <ul>
+          <li><strong>Andersen v. Stability AI</strong> (N.D. Cal.) - on the 2024 motions, the copyright claims survived, the DMCA claims were dismissed with prejudice, and false-endorsement and trade-dress claims against one defendant survived. The court expressly deferred fair use: whether the use is "substantial enough" will "be tested on summary judgment". Watch the docket rather than the commentary here: the court's own scheduling order sets a jury trial in <strong>June 2027</strong>, and the widely repeated September 2026 trial date is stale.</li>
+          <li><strong>Getty Images v. Stability AI (UK)</strong> - judgment in November 2025. Getty abandoned its training and output copyright claims before closing submissions, accepting there was no evidence the training happened in the UK, so <em>the court never decided whether training infringes</em>. Secondary infringement was rejected on the reasoning that model weights are not themselves an infringing copy. Getty won limited trade mark findings on watermarks, and was granted permission to appeal the secondary-infringement point.</li>
+          <li><strong>Getty Images (US) v. Stability AI</strong> - refiled in N.D. Cal.; on the 2026 motion to dismiss, only the false copyright-management-information count was dismissed, without prejudice. Everything else, including the unchallenged copyright count and the trademark counts, proceeds.</li>
+          <li><strong>The decided fair-use rulings are all about text</strong> - a database case that found against fair use and is on appeal, and two 2025 book-training decisions with different outcomes on lawfully acquired versus pirated copies, one of which produced a very large class settlement. Useful context, not a rule about your imagery.</li>
+        </ul>
+        <p>The leadership implication is not paralysis. It is that your exposure today is governed by contracts, platform terms and disclosure duties, all of which you control, rather than by case law, which you cannot.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: PROVENANCE ============ -->
+  <section class="section" id="provenance">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · what you can prove</span>
+      <h2>Provenance proves a signature, not the truth <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">Content Credentials are worth adopting, and they are routinely oversold internally. The specification is admirably honest about its own limits, and quoting it is the fastest way to set expectations with a marketing or comms team that thinks this solves authenticity.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="What content provenance proves - a validated, tamper-evident signed history - and what it does not prove, including that unsigned content is fake or that signed content is truthful.">
+        <style>
+          .pvT { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .pvH { font: 700 12.5px Inter, sans-serif; fill: #2A1A28; }
+          .pvX { font: 400 11.5px Inter, sans-serif; fill: #7A6A78; }
+          .pvN { font: 600 13px Inter, sans-serif; fill: #1E2A00; }
+        </style>
+        <rect x="30" y="24" width="390" height="30" rx="7" fill="#6B2D5C"/>
+        <text class="pvT" x="46" y="44">IT PROVES</text>
+        <rect x="460" y="24" width="390" height="30" rx="7" fill="#2A1A28"/>
+        <text class="pvT" x="476" y="44">IT DOES NOT PROVE</text>
+
+        <rect x="30" y="68" width="390" height="44" rx="8" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="pvH" x="46" y="87">Assertions validate against the asset</text>
+        <text class="pvX" x="46" y="104">correctly formed, free from tampering</text>
+        <rect x="30" y="122" width="390" height="44" rx="8" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="pvH" x="46" y="141">Who signed it</text>
+        <text class="pvX" x="46" y="158">trust attaches to the signer, not the content</text>
+        <rect x="30" y="176" width="390" height="44" rx="8" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="pvH" x="46" y="195">A recorded edit history</text>
+        <text class="pvX" x="46" y="212">where the chain is intact and carried forward</text>
+
+        <rect x="460" y="68" width="390" height="44" rx="8" fill="#FFFFFF" stroke="#D6C9D4" stroke-width="1.5"/>
+        <text class="pvH" x="476" y="87">That unsigned content is fake</text>
+        <text class="pvX" x="476" y="104">metadata is stripped by ordinary workflows</text>
+        <rect x="460" y="122" width="390" height="44" rx="8" fill="#FFFFFF" stroke="#D6C9D4" stroke-width="1.5"/>
+        <text class="pvH" x="476" y="141">That signed content is truthful</text>
+        <text class="pvX" x="476" y="158">the spec makes no value judgement</text>
+        <rect x="460" y="176" width="390" height="44" rx="8" fill="#FFFFFF" stroke="#D6C9D4" stroke-width="1.5"/>
+        <text class="pvH" x="476" y="195">Ownership or a licence</text>
+        <text class="pvX" x="476" y="212">it is not a rights-management system</text>
+
+        <rect x="30" y="240" width="14" height="14" rx="3" fill="#4D6B00"/>
+        <text class="pvN" x="54" y="252">The spec's own words: it offers no protection against complete removal of a manifest.</text>
+        <rect x="30" y="264" width="14" height="14" rx="3" fill="#4D6B00"/>
+        <text class="pvN" x="54" y="276">So treat a credential as evidence in your favour, never as a test you apply to other people's files.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the honest scope of a provenance signal</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Where the standard actually stands<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Current specification version is 2.4</strong>, released in April 2026, which added an AI-disclosure assertion.</li>
+          <li><strong>It is not an ISO standard.</strong> A related ISO work item exists but sits at an early committee stage in ISO's own record. If someone in your organisation says "it is ISO ratified", that is not supported by the record - and getting this wrong in a client deck is an avoidable embarrassment.</li>
+          <li><strong>Conformance is real but young.</strong> The published conforming-products list runs to a few hundred records, all certified against an earlier 2.2 version, and includes generators from several large platforms and a stock-imagery provider. Notably, one major creative vendor appears on that list only as a <em>validator</em>, while documenting its generation behaviour in its own product description instead. Membership of the consortium is not the same as an implemented product - do not tell a client that a given social platform displays credentials unless you have checked.</li>
+          <li><strong>Durability is partial by design.</strong> The security considerations explicitly contemplate downloading an asset, stripping the manifest and reposting it. Recovery relies on watermarking and fingerprinting, which degrade with compression, cropping and format conversion. Independent research has documented both the stripping problem and demonstrations of signed but misleading content.</li>
+        </ul>
+        <p>Adopt it anyway. It is cheap, it is the direction of travel, and being able to show your own chain of custody is worth more than being able to test someone else's.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The EU transparency duty is now live<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Article 50 of the EU AI Act applies from <strong>2 August 2026</strong>, which for anyone reading this in the week it was written means it applies now. The Digital Omnibus regulation adopted in July 2026 delayed the high-risk obligations to 2027 and 2028 - it did <strong>not</strong> delay Article 50. The only concession is a provider-side tail: providers of generative systems already on the market before 2 August 2026 have until 2 December 2026 to meet the marking duty. Deployer duties got no extension.</p>
+        <table class="clean">
+          <thead><tr><th>Duty</th><th>Who it binds</th><th>What it requires</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Article 50(2)</strong></td><td>Providers of systems generating synthetic image, audio, video or text</td><td>Outputs "marked in a machine-readable format and detectable as artificially generated or manipulated". Carve-out where the system performs an assistive function for standard editing or does not substantially alter the input.</td></tr>
+            <tr><td><strong>Article 50(4)</strong></td><td><strong>Deployers</strong> - this is you, when you publish</td><td>Where the content constitutes a deep fake, disclose that it "has been artificially generated or manipulated". A deep fake is defined as content resembling existing persons, objects, places, entities or events that would falsely appear authentic.</td></tr>
+            <tr><td><strong>Artistic carve-out</strong></td><td>Deployers</td><td>Where content forms part of an "evidently artistic, creative, satirical, fictional or analogous work", the duty shrinks to disclosing the existence of generated content in a way that "does not hamper the display or enjoyment of the work". It shrinks the duty; it does not remove it.</td></tr>
+            <tr><td><strong>Article 50(5)</strong></td><td>Both</td><td>Clear and distinguishable information, at the latest at the first interaction or exposure, meeting accessibility requirements.</td></tr>
+          </tbody>
+        </table>
+        <p>Practical read for a design or marketing team publishing in the EU: the marking duty in 50(2) binds your tool vendor, not you, unless you place your own generative system on the market. What binds you is 50(4), and only when the imagery is deep-fake-shaped - photoreal work resembling real people, places or events that a viewer would take as authentic. A stylised illustration is a different case from a photoreal "photograph" of an event that never happened. The Commission has published both a voluntary code of practice on transparency of AI-generated content and implementation guidelines, and non-signatories have to demonstrate compliance by equivalently adequate means. Penalties for transparency breaches run to the higher of EUR 15,000,000 or 3% of total worldwide annual turnover, so this is not a footnote.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Brand and character risk, and the honest state of it<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Three findings, and the third is the one leaders find most surprising:</p>
+        <ul>
+          <li><strong>There is no official trademark guidance on generated imagery.</strong> Neither the US nor the EU registry has issued guidance on whether AI-generated content infringes marks, which is structurally expected - infringement is decided by courts, not registries.</li>
+          <li><strong>Every filed case against an image generator is copyright-shaped.</strong> The large studio complaints plead direct and secondary copyright infringement, not trademark. The clearest trademark language appears in a pre-litigation cease-and-desist, where a studio wrote that a platform was "freeriding off the goodwill of Disney's famous marks and brands" - and the characters were removed without a suit being filed.</li>
+          <li><strong>No verified case exists of a brand being penalised for publishing AI imagery that reproduced someone else's mark or character.</strong> Enforcement has targeted tool providers and platforms, not downstream publishers. Treat that as a finding, not as reassurance: your realistic near-term exposure is contractual and reputational rather than litigated, and reputational damage does not need a court date. Several brands have pulled AI campaigns after public backlash; verify any specific example before naming it in a deck.</li>
+        </ul>
+        <p>Platform terms are where your actual obligations live. Adobe's generative AI user guidelines prohibit using its features to create content that violates third-party trademark rights and state that this "may include entering text prompts designed to generate copyrighted, trademarked, or otherwise infringing content", with prompts and outputs reviewable by automated and manual methods. Midjourney prohibits using the service to try to violate others' trademark rights and, as noted, puts the indemnity on you. Neither vendor has published a brand blocklist, so do not tell your team "the tool will stop you".</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 4: WHAT TO WRITE DOWN ============ -->
+  <section class="section" id="write-it-down">
+    <div class="section-kicker">
+      <span class="klabel">Part 4 · the decisions</span>
+      <h2>Five things to write into your guidelines <span class="tag concept">5 min live</span></h2>
+    </div>
+    <p class="lede">Everything above collapses into five sentences your team can actually follow. Write them once, put them where the work happens, and revisit them each quarter, because half the facts on this page carry a date.</p>
+
+    <div class="steps">
+      <div class="step"><p><strong>1 · Which models are approved for client-facing work</strong>, named individually - because indemnity follows the model, not the app. Include the rule that partner models inside an approved app are not automatically approved.</p></div>
+      <div class="step"><p><strong>2 · Never disable or circumvent filters or citations</strong>, and never strip provenance metadata. Both void the protection you are paying for.</p></div>
+      <div class="step"><p><strong>3 · What gets registered and how</strong> - Standard Application, human contribution described, AI material disclaimed above de minimis. And the corollary: assume the generated layer itself is not yours exclusively.</p></div>
+      <div class="step"><p><strong>4 · The disclosure rule for published work</strong>, written to the deep-fake test rather than to a vague "we label AI" promise, with a named owner for EU-facing campaigns.</p></div>
+      <div class="step"><p><strong>5 · No brand-identifiable prompting</strong> - no marks, no protected characters, no living person's likeness without permission. Platform terms already prohibit it and no tool reliably blocks it.</p></div>
+    </div>
+
+    <div class="callout tip">
+      <strong>The question to ask counsel, in one sentence</strong>
+      "Given that our designers modify and composite generated output, which of our vendor indemnities still applies, what is the cap, and what do we have to be able to produce if a claim arrives?" That question gets you a usable answer. "Are we allowed to use AI?" does not.
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Before the next session <span class="tag exercise">◐ 30-40 min total</span></h2>
+    </div>
+    <ul>
+      <li>Pull your actual contracts and fill in the four-row indemnity table for the vendors your team really uses, including the cap. If a cap is not stated, that is the email to send this week.</li>
+      <li>List every model your team generated with last month, then mark which ones are first-party and which are partner models inside a first-party app. Most teams are surprised.</li>
+      <li>Check one pipeline step for metadata stripping - an export preset, an image optimiser, a CMS upload. Find out whether provenance survives your own publishing path.</li>
+      <li>Draft the five guideline sentences above in your own words and take them to counsel as a starting point rather than a question.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">Every fact on this page traces to a primary document read during the build: a Federal Register notice, Copyright Office reports and decisions, court opinions and orders, vendors' operative terms, the EU regulation and its implementing guidance, and the provenance specification. Where a primary source did not settle a question, the page says so. This is not legal advice. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">US Copyright Office - March 2023 registration guidance (88 Fed. Reg. 16190) and the Part 2 copyrightability report</span><span class="note">Part 1 · registrability line plus filing mechanics</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Vendor output indemnities - Adobe, Microsoft, Google, OpenAI, plus Midjourney's inverted terms</span><span class="note">Part 2 · scope, trademark treatment, caps, exclusions</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">EU AI Act Article 50 and the July 2026 Digital Omnibus, with the Commission's code of practice and guidelines</span><span class="note">Part 3 · in force from 2 August 2026; high-risk delay does not apply here</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">C2PA specification 2.4 and its security considerations</span><span class="note">Part 3 · what provenance proves, and the removal problem in the spec's own words</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Litigation status - Andersen, Getty UK and US, and the studio complaints</span><span class="note">Self-study · status only, with the negative finding that no court has decided fair use for image training</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · A designer refines a prompt 600 times and ships the result. What does the US Copyright Office position imply?</p>
+      <button class="qopt" type="button">A · Extensive iteration establishes authorship of the output</button>
+      <button class="qopt" type="button">B · The prompt is copyrightable, so the image is too</button>
+      <button class="qopt" type="button">C · Prompts alone do not provide sufficient control, and effort is irrelevant to authorship</button>
+      <p class="qwhy">The guidance treats prompts as instructions to a commissioned artist, and the Office has argued that repeatedly revising prompts does not amount to authorship. What you can register is your own expression in the output, your creative selection and arrangement, and your creative modifications - with the AI material disclaimed.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">2 · Which everyday design practice most reliably voids a vendor output indemnity?</p>
+      <button class="qopt" type="button">A · Modifying the generated output or compositing it with other material</button>
+      <button class="qopt" type="button">B · Generating more than one variation of an asset</button>
+      <button class="qopt" type="button">C · Exporting the asset at high resolution</button>
+      <p class="qwhy">Google covers only unmodified output, OpenAI excludes output modified or used in combination with other products, and Adobe excludes claims arising from modification, combination, and even the context of use. Art-directing generated material is normal practice and it usually takes you outside the cover - which is why the cap and the conditions matter more than the announcement.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">3 · A photoreal AI image of a real city square during a real event is used in an EU campaign. Which duty is most likely yours?</p>
+      <button class="qopt" type="button">A · Article 50(2) - you must mark the output in a machine-readable format</button>
+      <button class="qopt" type="button">B · Article 50(4) - as deployer, disclose that the content is artificially generated or manipulated</button>
+      <button class="qopt" type="button">C · None, because the artistic carve-out removes the obligation</button>
+      <p class="qwhy">The marking duty in 50(2) binds providers of the generating system. As a publisher you are a deployer, and 50(4) bites where the content is deep-fake-shaped - resembling existing persons, places or events in a way that would falsely appear authentic. The artistic carve-out narrows the duty to disclosing existence; it does not delete it.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Leader session 4 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Prompts are not authorship</b><span>Registrable: your expression in the output, creative selection and arrangement, creative modifications, assistive use. Not: the generated layer.</span></div>
+      <div class="cheat-item"><b>Filing mechanics</b><span>Standard Application · describe the human part · disclaim AI above de minimis. Skipping it risks cancellation and a weakened registration in court.</span></div>
+      <div class="cheat-item"><b>Indemnity is gated</b><span>Adobe needs teams or enterprise plus the right plan, an eligible feature and surface, and an export event. Consumer plans get nothing.</span></div>
+      <div class="cheat-item"><b>Trademark is mostly excluded</b><span>Adobe includes marks (capped at US$10,000 per output or claim). Microsoft, Google and OpenAI exclude them. OpenAI is explicitly uncapped.</span></div>
+      <div class="cheat-item"><b>The killer exclusion</b><span>Modify, composite, or turn off filters and you are outside the cover. That is normal design practice, so plan for it.</span></div>
+      <div class="cheat-item"><b>Partner models are separate</b><span>A third-party model inside an approved app is not covered by that app's indemnity, and beta features are excluded too.</span></div>
+      <div class="cheat-item"><b>Provenance scope</b><span>C2PA 2.4 proves a validated signed history and who signed it. It is not ISO-ratified, and it offers no protection against manifest removal.</span></div>
+      <div class="cheat-item"><b>EU Article 50 is live</b><span>Applies from 2 August 2026 and was not delayed by the July 2026 omnibus. Deployers disclose deep fakes. Penalties up to EUR 15m or 3% of turnover.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Leader session 4 of 6 · learn-ai-design-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="a3-tool-workflow-map.html">← Previous: The tool and workflow map</a> &nbsp;·&nbsp; <a href="a5-craft-and-careers.html">Next: Craft, juniors and career ladders →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=2"></script>
+</body>
+</html>

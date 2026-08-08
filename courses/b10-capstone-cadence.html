@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Designer session 10 · Capstone: the Cadence feature - learn ai design with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-design-with-phoebe</a> / Designer session 10 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Design with Phoebe · Designer track · Session 10 of 10</div>
+    <h1>Capstone: <span class="accent">the Cadence feature</span></h1>
+    <p class="sub">Nine sessions, nine artifacts. Tonight produces nothing new - it assembles what you already have into one shippable feature and puts it through two gates. The first gate is arithmetic: 100 out of 100 on the five checks, run on the built screen rather than the mock. The second gate is the one you cannot automate and cannot fake: you can name the idea in one sentence, and the loudest thing on screen is the thing that matters to the user. Most work that reaches a review passes neither. Work that passes only the first is competent and forgettable. Tonight you learn to pass both, and to tell the difference out loud.</p>
+    <div class="chip-row">
+      <span class="chip level">🔴 Designer track</span>
+      <span class="chip audience">Product · brand · design-adjacent builders</span>
+      <span class="chip audience">Ship it at 100</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · What the track built</span>
+      <span class="a2" style="flex:3">3-14 · The assembly checklist</span>
+      <span class="a3" style="flex:5">14-38 · The ship review, run live</span>
+      <span class="a4" style="flex:2">38-45 · What to do with the work</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ PART 0: WHAT THE TRACK BUILT ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>What the track built</h2>
+    </div>
+    <p class="lede">Every session in this track ended with something you could put in a file, not a feeling. That was deliberate, and tonight is why. The Cadence <strong>shared-summary feature</strong> is not a screen you draw in one sitting - it is nine decisions already made, sitting in nine artifacts, waiting to be assembled and defended. If any of them are missing, tonight will find out. That is also fine: knowing which artifact you skipped is more useful than a pretty capstone.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">▶ Live critique lab - toggle levers, watch the real score</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      One assembled feature, a ship review you can run in front of anyone, the honest sentence that names its idea, and a retrospective you will actually use - which parts of this the tools genuinely accelerated, and where you nearly let a plausible option through.
+    </div>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The nine artifacts you should have on disk<span class="mini">5 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Open your folder and check. This is the whole track, in the order it happened:</p>
+        <ul>
+          <li><strong>b1 - the loop and the lab.</strong> Brief, generate, critique, direct, ship, plus the scoring standard the rest of the track ran on.</li>
+          <li><strong>b2 - the constraint brief.</strong> One primary action, one type scale, one spacing unit, one accent, a contrast floor. Not an adjective in sight.</li>
+          <li><strong>b3 - the annotated board and the rejected-options file.</strong> Direction with reasons attached, and the record of what you turned down.</li>
+          <li><strong>b4 - the flow, the drafted screens and the state list.</strong> Including the states generated work forgets: empty, loading, error, too-long, offline.</li>
+          <li><strong>b5 - the review script.</strong> Five checks in running order, written as something you can paste into a comment.</li>
+          <li><strong>b6 - the token set.</strong> Colour, type, spacing and radius as named values, so no number on the screen is a hand-typed one-off.</li>
+          <li><strong>b7 - the imagery standard.</strong> What is allowed, what is generated, what is licensed, and where the provenance is recorded.</li>
+          <li><strong>b8 - the copy set.</strong> Every string on the feature, including the AI-disclosure line and the error and empty states.</li>
+          <li><strong>b9 - the spec.</strong> The document a front-end engineer can build from without asking you a question they should not have to ask.</li>
+        </ul>
+        <p>The capstone adds one thing to that list: the assembled, reviewed, defensible feature itself. Everything else is already yours.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>If you skipped a session, do this instead<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Gaps are common and mostly recoverable in an hour, but two are not worth improvising. <strong>No token set (b6)?</strong> Stop and write one - every other artifact assumes it, and the ship review checks it. <strong>No copy set (b8)?</strong> Write the strings before the review, never during; copy invented in a review is the copy that ships, and it is always the weakest part of the feature. The other two gaps are cheaper: reconstruct the <strong>rejected-options file (b3)</strong> from memory while you still can, and add the AI-specific <strong>states (b4)</strong> before you present, because the review will surface them loudly either way.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 1: ASSEMBLY CHECKLIST ============ -->
+  <section class="section" id="assembly">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · the checklist</span>
+      <h2>Assemble it, then test each part <span class="tag concept">8 min live</span></h2>
+    </div>
+    <p class="lede">Assembly is not a design activity, and that is the point of doing it deliberately. Each artifact arrives with a test it has to pass, and the tests are small enough to run in a few minutes each. Work down the table, then read the last two rows twice, because those are the ones that decide whether this ships.</p>
+
+    <table class="clean">
+      <thead>
+        <tr><th>Artifact</th><th>Where it came from</th><th>The test it must pass</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Constraint brief</strong></td><td>b2 · art-direction prompting</td><td>A stranger could reject your screen using only this document. No adjective is doing load-bearing work.</td></tr>
+        <tr><td><strong>Annotated board + rejected options</strong></td><td>b3 · research and moodboards</td><td>Every reference has a reason next to it, and at least three serious options were turned down in writing.</td></tr>
+        <tr><td><strong>Flow, screens and state list</strong></td><td>b4 · UI drafting</td><td>Every state in the list has a drawn screen, including empty, error, too-long and the AI-specific ones.</td></tr>
+        <tr><td><strong>Review script</strong></td><td>b5 · the critique lab</td><td>Someone else can run it on your work without you in the room and reach the same five verdicts.</td></tr>
+        <tr><td><strong>Token set</strong></td><td>b6 · design systems and tokens</td><td>Every colour, size, space and radius on the built screen resolves to a named token. Zero hand-typed values.</td></tr>
+        <tr><td><strong>Imagery standard</strong></td><td>b7 · illustration and imagery</td><td>Each asset passes four questions: direction, brand fit, rights, provenance. Any "probably fine" is a fail.</td></tr>
+        <tr><td><strong>Copy set incl. AI disclosure</strong></td><td>b8 · content design and microcopy</td><td>Read aloud without stumbling. The disclosure is visible, plain, and does not compete with the meeting title.</td></tr>
+        <tr><td><strong>The spec</strong></td><td>b9 · handoff to code</td><td>An engineer can build it without asking you anything the spec should already answer.</td></tr>
+        <tr><td><strong>★ Gate 1 - the measurable gate</strong></td><td>the lab, on the built screen</td><td><strong>100 of 100 on the five checks</strong>: hierarchy, type scale, spacing rhythm, contrast, colour restraint. Run on what was built, not on the mock.</td></tr>
+        <tr><td><strong>★ Gate 2 - the judgement gate</strong></td><td>you, out loud, in one sentence</td><td><strong>You can name the idea in one sentence, and the loudest thing on screen is the thing that matters to the user.</strong> No number can stand in for this.</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout tip">
+      <strong>Be blunt about what a 100 is worth</strong>
+      A 100 means nothing is measurably broken. It does not mean the work is good. A screen can pass all five checks, sit perfectly on the grid, clear AA everywhere, use one accent - and still be a competent, forgettable screen with no idea in it. That is the most common outcome of a disciplined AI workflow, and it is the failure this session is actually examining you on. Gate 1 is homework. Gate 2 is the exam.
+    </div>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Naming the idea in one sentence<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The one-sentence test is harder than it sounds because the failure mode is a sentence that describes the feature rather than the idea. Feature descriptions are always available, which is why they are worthless as a test.</p>
+        <div class="prompt-box bad">
+          <span class="label">Describes the feature</span>
+          <p>"It is a summary screen with a share button, an AI-generated label, the meeting title, the attendee list and the key points, in a clean modern layout."</p>
+        </div>
+        <div class="prompt-box good">
+          <span class="label">Names the idea</span>
+          <p>"The whole screen exists to make one nervous decision easy: the summary is a machine's guess, and this screen makes it obvious what the machine claimed and effortless to fix it before you send it to your team."</p>
+        </div>
+        <p>Notice what the second sentence gives you. It tells you what the loudest thing should be - the summary text and the edit affordance, not the AI badge and not the share button. It tells you what the disclosure copy is for. It tells you which state matters most. An idea is useful precisely because it makes later decisions fall out of it.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: THE SHIP REVIEW ============ -->
+  <section class="section" id="ship-review">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · the script</span>
+      <h2>The ship review, in running order <span class="tag concept">9 min live</span></h2>
+    </div>
+    <p class="lede">Run this as a script, top to bottom, on the built thing. It takes about twenty minutes on a real feature and it is the same script every time, which is the whole value - a review that varies by mood is not a standard. The first six steps are checks. The last one is the gate.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 412" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The two shipping gates side by side: the measurable gate scored by the lab, and the judgement gate scored only by you, with what each catches and what it cannot.">
+        <style>
+          .cgT { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .cgH { font: 700 12px Inter, sans-serif; fill: #2A1A28; }
+          .cgX { font: 400 11.5px Inter, sans-serif; fill: #7A6A78; }
+          .cgQ { font: 600 12px Inter, sans-serif; fill: #2A1A28; }
+          .cgN { font: 600 13px Inter, sans-serif; fill: #1E2A00; }
+        </style>
+        <rect x="30" y="24" width="390" height="32" rx="7" fill="#4D6B00"/>
+        <text class="cgT" x="46" y="45">GATE 1 · MEASURABLE</text>
+        <rect x="460" y="24" width="390" height="32" rx="7" fill="#4A1F44"/>
+        <text class="cgT" x="476" y="45">GATE 2 · JUDGEMENT</text>
+
+        <rect x="30" y="68" width="390" height="48" rx="8" fill="#F4F8DE" stroke="#4D6B00" stroke-width="1.5"/>
+        <text class="cgQ" x="44" y="88">The test</text>
+        <text class="cgX" x="44" y="106">100 of 100, on the screen that was built</text>
+        <rect x="460" y="68" width="390" height="48" rx="8" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="cgQ" x="474" y="88">The test</text>
+        <text class="cgX" x="474" y="106">name the idea in one sentence, out loud</text>
+
+        <rect x="30" y="128" width="390" height="130" rx="8" fill="#FFFFFF" stroke="#D6C9D4" stroke-width="1.5"/>
+        <text class="cgH" x="44" y="148">What it catches</text>
+        <text class="cgX" x="44" y="168">- text under 4.5:1, or 3:1 when large</text>
+        <text class="cgX" x="44" y="186">- sizes that came from no scale</text>
+        <text class="cgX" x="44" y="204">- gaps that miss the spacing rhythm</text>
+        <text class="cgX" x="44" y="222">- two elements fighting for first read</text>
+        <text class="cgX" x="44" y="240">- a hue family nobody decided on</text>
+        <rect x="460" y="128" width="390" height="130" rx="8" fill="#FFFFFF" stroke="#D6C9D4" stroke-width="1.5"/>
+        <text class="cgH" x="474" y="148">What it catches</text>
+        <text class="cgX" x="474" y="168">- a screen with no point of view</text>
+        <text class="cgX" x="474" y="186">- emphasis on the AI, not the task</text>
+        <text class="cgX" x="474" y="204">- states hiding behind the happy path</text>
+        <text class="cgX" x="474" y="222">- copy that describes the feature</text>
+        <text class="cgX" x="474" y="240">- brand-adjacent, never brand-specific</text>
+
+        <rect x="30" y="270" width="390" height="70" rx="8" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="cgH" x="44" y="290">What it cannot catch</text>
+        <text class="cgX" x="44" y="310">- whether there is an idea in it</text>
+        <text class="cgX" x="44" y="328">- whether the loud thing is the right thing</text>
+        <rect x="460" y="270" width="390" height="70" rx="8" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="cgH" x="474" y="290">What it cannot catch</text>
+        <text class="cgX" x="474" y="310">- a real contrast ratio, ever</text>
+        <text class="cgX" x="474" y="328">- anything in a state you never opened</text>
+
+        <rect x="30" y="360" width="14" height="14" rx="3" fill="#4D6B00"/>
+        <text class="cgN" x="54" y="372">A 100 with no idea is a competent, forgettable screen. Gate 2 is tonight's real exam.</text>
+        <rect x="30" y="384" width="14" height="14" rx="3" fill="#4D6B00"/>
+        <text class="cgN" x="54" y="396">Run gate 1 first. It is fast and argument-free, and it frees your attention for gate 2.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the two gates, what each catches, and what each is blind to</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Steps 1 to 3 - the built screen, every state, the words<span class="mini">5 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>1 · Run the five checks in order, on the built screen.</strong> Hierarchy, type scale, spacing, contrast, colour restraint - and on what shipped, not on the mock. The gap between a design file and a built component is where most of the score goes missing, because that gap is full of defaults nobody chose.</li>
+          <li><strong>2 · Walk every state, including the AI-specific ones.</strong> Empty, loading, error, too-long, offline - and then the three this product owns: a <strong>low-confidence transcript</strong>, a <strong>wrong speaker attribution</strong>, and <strong>the user has corrected the summary</strong>. That last one matters most. A summary the user has edited is no longer the machine's claim, and the screen should stop presenting it as one.</li>
+          <li><strong>3 · Read the copy out loud, including the disclosure line.</strong> Out loud, not in your head. Stumbling is the signal. Check that the disclosure is honest about what was generated, plain enough to skim, and not so prominent that it outranks the meeting title.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Steps 4 to 7 - tokens, imagery, and the gate<span class="mini">5 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>4 · Confirm every value came from a token.</strong> Open the inspector and pick five values at random - a padding, a font size, a border colour, a radius, a text colour. If any of them is a literal rather than a named value, you have a system that documents itself and a screen that ignores it.</li>
+          <li><strong>5 · Confirm every image passes four questions.</strong> Direction: does it say something this brief asked for. Brand fit: could a competitor use it unchanged. Rights: what licence or terms cover it. Provenance: where is that recorded, and can you find it in six months. Any "probably fine" is a no.</li>
+          <li><strong>6 · Score gate 1 and write the number down.</strong> Not "looks clean". The number, and which check was last to move.</li>
+          <li><strong>7 · Gate 2, out loud, to another human.</strong> Name the idea in one sentence. Then point at the loudest thing on screen and say whether it is the thing that matters to the user. If those two answers disagree, you have a design change to make and the score will not help you find it.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Why the review runs on the built screen<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>A mock is a claim. A built screen is a fact, and the two diverge in predictable ways. <strong>Defaults leak in</strong>: line heights, focus rings, disabled states and placeholder colours arrive from the framework rather than your token set, and none of them were reviewed. <strong>Real content is longer than sample content</strong>: a meeting title that wrapped to two lines in production was one line in the mock, and the hierarchy you designed quietly inverted. <strong>States appear that no one drew</strong>, the moment data is real. And the lab measures rendered pixels, which is the honest reason to point it at the build - contrast from actual computed colours, spacing from actual computed values, hue families from what the browser painted. If you can only review one of the two, review the build.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO: THE CAPSTONE GATE ============ -->
+  <section class="section" id="demo">
+    <div class="section-kicker">
+      <span class="klabel">The capstone gate</span>
+      <h2>Pass gate 1, then answer gate 2 out loud <span class="tag demo">★ 14 min · everyone runs it</span></h2>
+    </div>
+    <p class="lede">The lab below starts where your feature should: all five levers on, <strong>100 out of 100</strong>. So there is only one thing left to do with it, and it is the thing that happens in every real ship review at the last minute. Press the anti-lever once. Feel the <strong>19 points</strong> that "can we add a colour for it?" costs when it arrives after the work is done. Then turn it off, get back to 100, and answer gate 2 with your mouth rather than your mouse.</p>
+
+    <div class="steps">
+      <div class="step"><p>Start at <strong>100</strong>. Read all five rows once so you know what a clean screen looks like in the scorecard, not just on the screen.</p></div>
+      <div class="step"><p>Press <strong>Add colour</strong>. Score drops to <strong>81</strong>. Name the three defects before you read them: a fourth hue family, two off-grid paddings, and a yellow highlight at 1.5:1.</p></div>
+      <div class="step"><p>Say the stakeholder sentence out loud: "that badge cost us a hue family, two grid values and one accessibility failure." Ninety seconds, no argument.</p></div>
+      <div class="step"><p>Turn it off. Back to <strong>100</strong>. Now stop looking at the score and look at the screen. Name the idea in one sentence, out loud, to someone.</p></div>
+      <div class="step"><p>Point at the loudest thing on screen. Is it the thing that matters to the user, or is it the thing that was easiest to make loud? That answer is your capstone grade.</p></div>
+    </div>
+
+    <div class="dlbox" data-mode="lab" data-levers="hierarchy,typescale,spacing,contrast,accent"></div>
+
+    <div class="callout tip">
+      <strong>What is real here and what is scripted</strong>
+      Said plainly one last time: the starting draft is scripted - a composite of what unbriefed generators hand you. Every score is measured live in your browser. Contrast ratios come from the WCAG relative-luminance formula on the actual rendered colours, spacing and font sizes are read from getComputedStyle, and hue families are counted by converting each painted colour to HSL. Edit this page in your inspector and the number moves. That is why it is worth quoting in a review.
+    </div>
+
+    <p class="lede">And the scoreboard for the whole track, one last time: <strong>17 → 32 → 46 → 66 → 86 → 100</strong>. Each rung was a session, each session was one lever, and the last row is the instinct that undoes the lot.</p>
+
+    <div class="dlbox" data-mode="ladder"></div>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The anti-lever almost always arrives at the end, from someone senior, with good intentions.</strong> That is what makes it expensive - the work is finished, the meeting is nearly over, and "can we add a colour for it" sounds like a small ask. The counter-move is not refusal and it is not a lecture about hue families. It is one question: "yes, if it means something. What state or category is it encoding?" Half the time the answer is nothing and the request dissolves. The other half, you have just found a genuine gap in the token set, which is a good outcome and worth the extra week.</p>
+    </div>
+  </section>
+
+  <!-- ============ THE TRACK ON ONE PAGE ============ -->
+  <section class="section" id="track-map">
+    <div class="section-kicker">
+      <span class="klabel">The track on one page</span>
+      <h2>Where every session sits in the loop <span class="tag concept">4 min live</span></h2>
+    </div>
+    <p class="lede">This is the map from b1, filled in. Five steps across the top, and under each one the sessions and artifacts that serve it. Read the column widths as a warning: the tools are fastest in the middle, and the two ends - the brief and the judgement - are where the whole track spent its time, because that is where the value went when generation got cheap.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 348" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Whole-track map: the five-step loop across the top, with the designer sessions and the artifact each one produced listed under the step it serves.">
+        <style>
+          .wtT { font: 700 12px Inter, sans-serif; fill: #FFFFFF; }
+          .wtS { font: 400 10.5px Inter, sans-serif; fill: #FFFFFF; opacity: .92; }
+          .wtH { font: 700 11px Inter, sans-serif; fill: #2A1A28; }
+          .wtX { font: 400 10.5px Inter, sans-serif; fill: #7A6A78; }
+          .wtN { font: 600 13px Inter, sans-serif; fill: #1E2A00; }
+          .wtW { stroke: #6B2D5C; stroke-width: 2.5; fill: none; marker-end: url(#wtHd); }
+        </style>
+        <defs>
+          <marker id="wtHd" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L9,4.5 L0,9 z" fill="#6B2D5C"/>
+          </marker>
+        </defs>
+
+        <rect x="30" y="30" width="146" height="42" rx="8" fill="#4A1F44"/>
+        <text class="wtT" x="42" y="50">1 BRIEF</text>
+        <text class="wtS" x="42" y="66">you own it</text>
+        <rect x="198" y="30" width="146" height="42" rx="8" fill="#6B2D5C"/>
+        <text class="wtT" x="210" y="50">2 GENERATE</text>
+        <text class="wtS" x="210" y="66">AI is fastest</text>
+        <rect x="366" y="30" width="146" height="42" rx="8" fill="#9B4B87"/>
+        <text class="wtT" x="378" y="50">3 CRITIQUE</text>
+        <text class="wtS" x="378" y="66">you own it</text>
+        <rect x="534" y="30" width="146" height="42" rx="8" fill="#6B2D5C"/>
+        <text class="wtT" x="546" y="50">4 DIRECT</text>
+        <text class="wtS" x="546" y="66">fix the brief</text>
+        <rect x="702" y="30" width="146" height="42" rx="8" fill="#2A1A28"/>
+        <text class="wtT" x="714" y="50">5 SHIP</text>
+        <text class="wtS" x="714" y="66">two gates</text>
+
+        <path class="wtW" d="M178,51 L194,51"/>
+        <path class="wtW" d="M346,51 L362,51"/>
+        <path class="wtW" d="M514,51 L530,51"/>
+        <path class="wtW" d="M682,51 L698,51"/>
+
+        <rect x="30" y="100" width="146" height="50" rx="7" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="wtH" x="42" y="121">b1 The AI loop</text>
+        <text class="wtX" x="42" y="139">the five-step loop</text>
+        <rect x="30" y="162" width="146" height="50" rx="7" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="wtH" x="42" y="183">b2 Art direction</text>
+        <text class="wtX" x="42" y="201">constraint brief</text>
+
+        <rect x="198" y="100" width="146" height="50" rx="7" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="wtH" x="210" y="121">b3 Research</text>
+        <text class="wtX" x="210" y="139">annotated board</text>
+        <rect x="198" y="162" width="146" height="50" rx="7" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="wtH" x="210" y="183">b4 UI drafting</text>
+        <text class="wtX" x="210" y="201">flow + screens</text>
+        <rect x="198" y="224" width="146" height="50" rx="7" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="wtH" x="210" y="245">b7 Imagery</text>
+        <text class="wtX" x="210" y="263">image standard</text>
+
+        <rect x="366" y="100" width="146" height="50" rx="7" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="wtH" x="378" y="121">b5 Critique lab</text>
+        <text class="wtX" x="378" y="139">the review script</text>
+        <rect x="366" y="162" width="146" height="50" rx="7" fill="#FFFFFF" stroke="#D6C9D4" stroke-width="1.5"/>
+        <text class="wtH" x="378" y="183">the standard</text>
+        <text class="wtX" x="378" y="201">reused b6 to b10</text>
+
+        <rect x="534" y="100" width="146" height="50" rx="7" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="wtH" x="546" y="121">b6 Tokens</text>
+        <text class="wtX" x="546" y="139">the token set</text>
+        <rect x="534" y="162" width="146" height="50" rx="7" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="wtH" x="546" y="183">b8 Content</text>
+        <text class="wtX" x="546" y="201">copy + disclosure</text>
+
+        <rect x="702" y="100" width="146" height="50" rx="7" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="wtH" x="714" y="121">b9 Handoff</text>
+        <text class="wtX" x="714" y="139">the spec</text>
+        <rect x="702" y="162" width="146" height="50" rx="7" fill="#F4F8DE" stroke="#4D6B00" stroke-width="1.5"/>
+        <text class="wtH" x="714" y="183">b10 Capstone</text>
+        <text class="wtX" x="714" y="201">shipped at 100</text>
+
+        <rect x="30" y="272" width="14" height="14" rx="3" fill="#4D6B00"/>
+        <text class="wtN" x="54" y="284">Nine sessions, nine artifacts. The capstone is the one session that produces nothing new.</text>
+        <rect x="30" y="296" width="14" height="14" rx="3" fill="#4D6B00"/>
+        <text class="wtN" x="54" y="308">The tools are fastest in column two. Both ends of this map are the paid part of the job.</text>
+        <text class="wtX" x="54" y="330">Leader sessions a2 and a6 come next if you now have to set this standard for other people.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the whole designer track, mapped onto the loop it runs on</figcaption>
+    </figure>
+  </section>
+
+  <!-- ============ PART 3: WHAT TO DO WITH THE WORK ============ -->
+  <section class="section" id="after">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · after the review</span>
+      <h2>What to do with the work <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">A feature that passes both gates still has to be presented, kept and learned from. Three habits carry more weight than they look like they should: the order you present in, the file you keep, and the one retrospective question you are tempted to skip.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Present in this order: decision, idea, evidence<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Most designers present in exactly the wrong order - evidence first, because it is the safest, then the idea, then maybe the decision if there is time. Invert it.</p>
+        <ul>
+          <li><strong>First, the decision the design serves.</strong> "People hesitate before sending an AI summary to their team, and that hesitation is where we lose the share." One sentence, in the room's language, about a real thing.</li>
+          <li><strong>Second, the idea.</strong> "So the screen makes the machine's claim obvious and the correction effortless." This is the sentence from gate 2. If you cannot say it here, you did not pass.</li>
+          <li><strong>Third, the evidence that nothing is broken.</strong> The 100, the five rows, the states, the tokens, the rights. This part is short, because it is the part nobody argues with.</li>
+        </ul>
+        <p>The reason for the order is that evidence-first invites a review of your craft, while decision-first invites a review of the product. You want the second conversation. Craft is your job; the product is theirs, and they will engage with it.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Keep the rejected-options file<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>When generation is cheap, the finished screen stops being evidence of anything. Anyone can produce a plausible screen now, which means the artifact that demonstrates your value is no longer the output - it is the record of what you turned down and why.</p>
+        <ul>
+          <li><strong>In reviews</strong> it pre-empts the whole "did you consider" round, because you did, in writing, with a reason.</li>
+          <li><strong>In portfolios and interviews</strong> it is the only part of an AI-assisted case study that is unfakeable. A polished final screen proves you have a subscription.</li>
+          <li><strong>Six months later</strong> it stops the team re-litigating a settled decision from memory, which is the most expensive kind of meeting.</li>
+          <li><strong>Keep it cheap.</strong> A thumbnail, one line on what it did well, one line on why it lost. Anything heavier will not survive a busy week.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The honest retrospective, two questions<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Do this alone, in writing, before the next project starts, and answer both honestly rather than usefully.</p>
+        <ul>
+          <li><strong>Which parts did the tools genuinely accelerate?</strong> Be specific and be willing to find less than you expected. Exploration volume in b3 and first-draft screens in b4 are the usual honest answers. Briefing, critique and specification usually got no faster, and sometimes got slower because there was more output to judge.</li>
+          <li><strong>Where did you nearly let a plausible option through?</strong> This is the question that improves you. Every AI-assisted project has at least one moment where something looked finished, felt fine, and was actually wrong - a missing state, a borrowed concept, a colour that meant nothing, copy that hedged. Find the moment. Name what caught it, or name what nearly did not.</li>
+        </ul>
+        <p>The second answer is the one to carry into the next project, because plausibility is the specific new risk of this way of working. Bad output was always easy to reject. Plausible output is not, and no score will flag it for you.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">After the course</span>
+      <h2>Four things that outlive this track <span class="tag exercise">◐ ongoing</span></h2>
+    </div>
+    <ul>
+      <li>Run the full ship review on one real feature at work - not a Cadence exercise, something with users. All seven steps, on the built screen, including gate 2 out loud to another person. Write down the score and the sentence.</li>
+      <li>Install the five-check script as a team habit. Paste it into your review template, run it in front of people for a month, and stop explaining it. A standard becomes a standard when someone else runs it without you.</li>
+      <li>Redo one old screen and record the before and after scores. Two numbers and a screenshot pair is the most persuasive artifact you will ever have in a design conversation, and it takes an afternoon.</li>
+      <li>Choose the next thing to learn. If you now have to set a standard for other people rather than just meet one, the leader track is where that lives: <strong>a2 - taste is the moat</strong> for the argument, and <strong>a6 - rollout and quality</strong> for the ritual, the guardrails and the twelve-month plan.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">This capstone reuses the standards and practices the track already taught, and adds no new vendor claims. The normative accessibility text lives with W3C and the token format with the Design Tokens Community Group; both are linked from the sessions that introduced them. Certificates and tool training stay with the official providers. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">The two shipping gates - measurable score plus stated idea</span><span class="note">Parts 1-2 · the capstone standard for this track</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">The five-check script, run in order on the built screen</span><span class="note">Part 2 · WCAG 2.2 SC 1.4.3 and 1.4.11 computed live in the lab</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">The full lab ladder and the anti-lever cost</span><span class="note">Demo · 17 → 32 → 46 → 66 → 86 → 100, then 81 with "add colour"</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Artifact assembly - brief, board, states, tokens, imagery, copy, spec</span><span class="note">Part 1 · each artifact's own source material sits in b2 to b9</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Presenting and retrospective practice</span><span class="note">Part 3 · practitioner practice, not a cited standard - said plainly</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · What are the two gates that decide whether the Cadence feature ships?</p>
+      <button class="qopt" type="button">A · Stakeholder sign-off and an engineering estimate</button>
+      <button class="qopt" type="button">B · A 100 on the lab and a complete set of tokens</button>
+      <button class="qopt" type="button">C · A 100 on the five checks, plus naming the idea in one sentence with the loudest thing being what matters to the user</button>
+      <p class="qwhy">Gate 1 is measurable and fast, and the lab scores it. Gate 2 is judgement and only you can score it. Passing gate 1 alone gets you a competent, forgettable screen, which is why this session treats gate 2 as the real exam.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">2 · A finished screen sits at 100. Someone asks for a colour. What does the anti-lever cost, and why?</p>
+      <button class="qopt" type="button">A · 19 points - it adds a fourth hue family, pushes two paddings off the grid, and puts yellow text on a yellow highlight at 1.5:1</button>
+      <button class="qopt" type="button">B · 19 points - it breaks hierarchy and adds a font size</button>
+      <button class="qopt" type="button">C · Nothing measurable, since colour is a taste decision</button>
+      <p class="qwhy">100 drops to 81 because decoration rarely breaks one thing at a time. Hierarchy and type scale hold, which is the useful lesson: structure survives decoration, colour decisions do not. The counter-move is "yes, if it encodes something".</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">3 · Your feature scores 100. What does that number not prove?</p>
+      <button class="qopt" type="button">A · Nothing - a 100 means the work is finished and good</button>
+      <button class="qopt" type="button">B · That there is an idea in it, that the loudest thing is the right thing, or that any state you never opened works</button>
+      <button class="qopt" type="button">C · That the contrast ratios were measured correctly</button>
+      <p class="qwhy">A 100 means nothing is measurably broken on the screen you scored. Concept, emphasis, states and brand fit are all invisible to it - and a disciplined AI workflow produces perfectly clean, entirely forgettable screens by default.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Designer track cheat sheet <span>· the whole thing, pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>The loop</b><span>Brief → Generate → Critique → Direct → Ship. The tools own step 2. You own 1, 3 and 5, and those decide the quality.</span></div>
+      <div class="cheat-item"><b>The nine artifacts</b><span>b2 brief · b3 board + rejects · b4 flow, screens, states · b5 script · b6 tokens · b7 imagery standard · b8 copy + disclosure · b9 spec · b10 the shipped feature.</span></div>
+      <div class="cheat-item"><b>The script, in order</b><span>Hierarchy → type scale → spacing → contrast → colour restraint. Stop at the first failure, fix, restart.</span></div>
+      <div class="cheat-item"><b>Two gates</b><span>Measurable: 100 on the five checks, on the built screen. Judgement: name the idea in one sentence, and the loudest thing is what matters.</span></div>
+      <div class="cheat-item"><b>The ladder</b><span>17 → 32 → 46 → 66 → 86 → 100 as hierarchy, scale, spacing, contrast and one accent come on. Every rung was a session.</span></div>
+      <div class="cheat-item"><b>The 19-point instinct</b><span>"Add colour" on a 100 gives 81: a fourth hue family, two off-grid paddings, yellow on yellow at 1.5:1. Answer with "what does it encode?"</span></div>
+      <div class="cheat-item"><b>Cite by number</b><span>1.4.3 (4.5:1, 3:1 large) · 1.4.11 (3:1 non-text) · 1.4.6 (7:1 AAA) · 1.4.12 (text spacing) · 2.5.8 (24x24 targets). WCAG 2.2 is what you defend against.</span></div>
+      <div class="cheat-item"><b>Present and keep</b><span>Decision, then idea, then evidence. Keep the rejected-options file - when output is cheap, the record of what you turned down is the unfakeable part.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Designer session 10 of 10 · learn-ai-design-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b9-handoff-to-code.html">← Previous: Handoff to code</a> &nbsp;·&nbsp; <a href="../index.html">Back to all sessions →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/design-live.js?v=1"></script>
+<script src="../assets/app.js?v=2"></script>
+</body>
+</html>

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Designer session 1 · The designer's AI loop - learn ai design with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-design-with-phoebe</a> / Designer session 1 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Design with Phoebe · Designer track · Session 1 of 10</div>
+    <h1>The designer's <span class="accent">AI loop</span></h1>
+    <p class="sub">A generator can produce forty screens before you finish your coffee. None of that is design. Design is the decision about which one is right and why - and that decision got more valuable the moment generation got cheap. Tonight you get the loop this whole track runs on: brief, generate, critique, direct, ship - and the uncomfortable fact that AI is fastest exactly in the middle and weakest at both ends. Then you meet the lab: a real Cadence screen you can score, live, on real measurements. By b10 you will have taken one Cadence feature from brief to a shipped, spec'd, system-conformant screen set.</p>
+    <div class="chip-row">
+      <span class="chip level">🟡 Designer track</span>
+      <span class="chip audience">Product · brand · design-adjacent builders</span>
+      <span class="chip audience">No coding needed</span>
+      <span class="chip time">Start here</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-18 · The loop + where taste actually lives</span>
+      <span class="a3" style="flex:5">18-42 · Build-along: score a real screen</span>
+      <span class="a4" style="flex:1">42-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>How this track works</h2>
+    </div>
+    <p class="lede">Ten sessions, one running product: <strong>Cadence, an AI meeting-notes app</strong> - the same product the Branding, Marketing and Content tracks use, so its brand already exists and you are designing inside a real constraint instead of a blank canvas. Your job across the track: <strong>design the "shared summary" feature end to end.</strong> Tonight the loop. b2 is art-direction prompting - the brief that produces usable work. b3 is research and moodboards. b4 drafts the UI. b5 is the critique lab, where the scoring you meet tonight becomes a working standard. b6 puts it into a design system with real tokens. b7 is illustration and imagery. b8 is content design and microcopy. b9 hands off to code. b10 assembles the whole thing and scores it. Every session ships something you can put in a file, not a feeling.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">▶ Live critique lab - toggle levers, watch the real score</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      The five-step loop you can run on any AI design task, the four levers this track turns on one at a time, and a habit that will outlive every tool in the course: when AI output feels wrong, name the measurable failure before you say "it just needs polish".
+    </div>
+  </section>
+
+  <!-- ============ PART 1: THE LOOP ============ -->
+  <section class="section" id="the-loop">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · the spine of the track</span>
+      <h2>Brief, generate, critique, direct, ship <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">Every AI design task runs the same five steps, and they are not equally hard. <strong>Brief</strong>: say what you want, in the language of constraints rather than adjectives. <strong>Generate</strong>: let the machine produce more options than you would have had patience for. <strong>Critique</strong>: judge what came back against a standard you can state out loud. <strong>Direct</strong>: change the brief, not the pixels - a bad output is usually a vague constraint. <strong>Ship</strong>: make it real, in a system, with rights you can defend. AI is extraordinary at step two. It is thin at step one and step three, and those are the two steps that decide whether the work is any good.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The designer's AI loop: brief, generate, critique, direct, ship - with AI strongest at generate and weakest at brief and critique.">
+        <style>
+          .dlT { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .dlS { font: 400 11px Inter, sans-serif; fill: #FFFFFF; opacity: .92; }
+          .dlI { font: 700 13px Inter, sans-serif; fill: #2A1A28; }
+          .dlX { font: 400 11.5px Inter, sans-serif; fill: #7A6A78; }
+          .dlN { font: 600 13px Inter, sans-serif; fill: #1E2A00; }
+          .dlWire { stroke: #6B2D5C; stroke-width: 2.5; fill: none; marker-end: url(#dlHd); }
+        </style>
+        <defs>
+          <marker id="dlHd" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L9,4.5 L0,9 z" fill="#6B2D5C"/>
+          </marker>
+        </defs>
+
+        <rect x="30" y="60" width="150" height="54" rx="8" fill="#4A1F44"/>
+        <text class="dlT" x="44" y="82">1 · BRIEF</text>
+        <text class="dlS" x="44" y="100">constraints, not moods</text>
+
+        <rect x="215" y="60" width="150" height="54" rx="8" fill="#6B2D5C"/>
+        <text class="dlT" x="229" y="82">2 · GENERATE</text>
+        <text class="dlS" x="229" y="100">forty, not four</text>
+
+        <rect x="400" y="60" width="150" height="54" rx="8" fill="#9B4B87"/>
+        <text class="dlT" x="414" y="82">3 · CRITIQUE</text>
+        <text class="dlS" x="414" y="100">against a standard</text>
+
+        <rect x="585" y="60" width="150" height="54" rx="8" fill="#6B2D5C"/>
+        <text class="dlT" x="599" y="82">4 · DIRECT</text>
+        <text class="dlS" x="599" y="100">fix the brief</text>
+
+        <rect x="30" y="200" width="150" height="54" rx="8" fill="#2A1A28"/>
+        <text class="dlT" x="44" y="222">5 · SHIP</text>
+        <text class="dlS" x="44" y="240">system + rights</text>
+
+        <path class="dlWire" d="M180,87 L210,87"/>
+        <path class="dlWire" d="M365,87 L395,87"/>
+        <path class="dlWire" d="M550,87 L580,87"/>
+        <path class="dlWire" d="M660,114 C660,160 260,150 200,200"/>
+        <path class="dlWire" d="M105,200 L105,120"/>
+
+        <rect x="215" y="200" width="240" height="54" rx="10" fill="#F9EFF6" stroke="#9B4B87" stroke-width="2"/>
+        <text class="dlI" x="233" y="222">AI IS STRONGEST HERE</text>
+        <text class="dlX" x="233" y="240">step 2 only - the cheap part</text>
+
+        <rect x="490" y="200" width="245" height="54" rx="10" fill="#F4F8DE" stroke="#4D6B00" stroke-width="2"/>
+        <text class="dlI" x="508" y="222">YOU ARE STRONGEST HERE</text>
+        <text class="dlX" x="508" y="240">steps 1, 3 and 5 - the paid part</text>
+
+        <rect x="30" y="294" width="14" height="14" rx="3" fill="#4D6B00"/>
+        <text class="dlN" x="54" y="306">Most bad AI design is a step-1 failure wearing a step-3 costume: vague brief, then endless polish.</text>
+        <rect x="30" y="318" width="14" height="14" rx="3" fill="#4D6B00"/>
+        <text class="dlN" x="54" y="330">Direct means changing the constraint. Nudging pixels on a wrong idea is the most expensive habit in design.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the loop every session in this track sits inside</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The four levers of this track<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The loop is how you work. The four levers are what a design practice needs so AI output survives contact with a real product - and they are the four ways it fails:</p>
+        <ul>
+          <li><strong>Direction</strong> - without a real brief, the model gives you the statistical average of the internet. Beautifully rendered, completely generic. (b2, b3)</li>
+          <li><strong>Structure</strong> - without a grid, a scale and a component set, every generated screen is a one-off that cannot be shipped or maintained. (b4, b6)</li>
+          <li><strong>Critique</strong> - without a stated standard, "I don't like it" is where the review ends and the rework begins. (b5, and tonight's lab)</li>
+          <li><strong>Rights</strong> - without provenance, licensing and brand discipline, your best asset is the one legal makes you delete. (b7, and leader session a4)</li>
+        </ul>
+        <p>Tonight's lab has a fifth toggle: <strong>Add colour</strong>. It is not a lever. Turn it on last and watch what happens to a perfect score - we will spend part of b5 on why that is the most common instinct and the most expensive one.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Why "make it pop" is not direction<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>A brief made of adjectives - clean, modern, premium, bold - cannot be wrong, which is exactly the problem. A brief made of constraints can be checked:</p>
+        <div class="prompt-box bad">
+          <span class="label">Adjective brief</span>
+          <p>"Design a clean, modern summary screen for our AI notes app. Make it feel premium and trustworthy."</p>
+        </div>
+        <div class="prompt-box good">
+          <span class="label">Constraint brief</span>
+          <p>"Summary screen for Cadence. One primary action: Share summary. Everything else is secondary. Type on a 1.25 scale from a 16px body; spacing in multiples of 8; one accent hue (plum #6B2D5C) and neutrals only; all text must pass WCAG AA against its background; the AI-generated label must be visible but must not compete with the meeting title."</p>
+        </div>
+        <p>The second brief is longer, less poetic, and produces work you can accept or reject on evidence. b2 turns this into a repeatable structure; every constraint in it is something tonight's lab can measure.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: WHERE TASTE LIVES ============ -->
+  <section class="section" id="where-taste-lives">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · the part of taste that is measurable</span>
+      <h2>Half of taste is arithmetic <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">Designers describe their judgement as intuition, and some of it genuinely is - composition, wit, restraint, whether an idea has any tension in it. But a surprising share of what we call taste is <strong>measurable, and therefore teachable to a machine and checkable by anyone</strong>: does text pass contrast, do sizes come from one scale, does spacing sit on a rhythm, is there exactly one loudest thing, how many hue families are fighting on screen. AI output usually fails on this measurable half - which is good news, because you can catch it without arguing about taste at all.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Taste splits into a measurable half - contrast, scale, spacing, hierarchy, colour count - and a judgement half: concept, tension, wit, restraint.">
+        <style>
+          .thT { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .thH { font: 700 14px Inter, sans-serif; fill: #2A1A28; }
+          .thI { font: 600 12px Inter, sans-serif; fill: #2A1A28; }
+          .thX { font: 400 11.5px Inter, sans-serif; fill: #7A6A78; }
+          .thN { font: 600 13px Inter, sans-serif; fill: #1E2A00; }
+        </style>
+        <rect x="30" y="24" width="380" height="30" rx="7" fill="#4D6B00"/>
+        <text class="thT" x="46" y="44">MEASURABLE - the lab scores this</text>
+        <rect x="470" y="24" width="380" height="30" rx="7" fill="#4A1F44"/>
+        <text class="thT" x="486" y="44">JUDGEMENT - you still own this</text>
+
+        <rect x="30" y="70" width="180" height="46" rx="8" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="thI" x="44" y="90">Contrast ratio</text>
+        <text class="thX" x="44" y="107">4.5:1 body, 3:1 large</text>
+        <rect x="230" y="70" width="180" height="46" rx="8" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="thI" x="244" y="90">Type scale</text>
+        <text class="thX" x="244" y="107">one ratio, few sizes</text>
+        <rect x="30" y="128" width="180" height="46" rx="8" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="thI" x="44" y="148">Spacing rhythm</text>
+        <text class="thX" x="44" y="165">multiples of one unit</text>
+        <rect x="230" y="128" width="180" height="46" rx="8" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="thI" x="244" y="148">Hierarchy</text>
+        <text class="thX" x="244" y="165">one loudest thing</text>
+        <rect x="30" y="186" width="380" height="46" rx="8" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="thI" x="44" y="206">Colour restraint</text>
+        <text class="thX" x="44" y="223">count the hue families on screen - most drafts run three or more</text>
+
+        <rect x="470" y="70" width="380" height="46" rx="8" fill="#FFFFFF" stroke="#D6C9D4" stroke-width="1.5"/>
+        <text class="thI" x="484" y="90">Concept</text>
+        <text class="thX" x="484" y="107">is there an idea, or only an arrangement?</text>
+        <rect x="470" y="128" width="380" height="46" rx="8" fill="#FFFFFF" stroke="#D6C9D4" stroke-width="1.5"/>
+        <text class="thI" x="484" y="148">Tension</text>
+        <text class="thX" x="484" y="165">one deliberate break that earns attention</text>
+        <rect x="470" y="186" width="380" height="46" rx="8" fill="#FFFFFF" stroke="#D6C9D4" stroke-width="1.5"/>
+        <text class="thI" x="484" y="206">Fit</text>
+        <text class="thX" x="484" y="223">right for this brand, this user, this moment</text>
+
+        <rect x="30" y="256" width="14" height="14" rx="3" fill="#4D6B00"/>
+        <text class="thN" x="54" y="268">Score the left column first. It is fast, it is arguable-free, and it removes most rework.</text>
+        <rect x="30" y="280" width="14" height="14" rx="3" fill="#4D6B00"/>
+        <text class="thN" x="54" y="292">Then spend your review time on the right column, where a generator has nothing to offer you.</text>
+        <text class="thX" x="54" y="312">A perfect left column with an empty right column is the definition of competent, forgettable work.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the two halves of taste, and which one you can automate</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Why generated design regresses to the average<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>A generator produces the most likely next pixel, the most likely layout, the most likely hero-with-gradient. Likely is the opposite of distinctive. Practically, this shows up as a recognisable signature - centred everything, one giant gradient, default-feeling type, decorative iconography that means nothing, and a colour palette that has three accents because no one decided.</p>
+        <ul>
+          <li><strong>It raises your floor.</strong> A blank page becomes forty starting points. That is real value, especially outside your own style.</li>
+          <li><strong>It lowers your ceiling if you let it.</strong> The average of everything is by construction not a point of view.</li>
+          <li><strong>It converges.</strong> If you and your three competitors brief the same tool the same lazy way, you will all ship the same screen.</li>
+        </ul>
+        <p>The defence is not to refuse the tool. It is to arrive with direction the tool does not have, and a standard it cannot fake. Both are learnable, and both are what the rest of this track drills.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Where the measurable numbers come from<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Two of the five checks in tonight's lab are formal standards, and three are conventions. Knowing which is which keeps you honest in a review:</p>
+        <ul>
+          <li><strong>Contrast is a standard.</strong> WCAG 2.2 success criterion 1.4.3 requires a contrast ratio of at least 4.5:1 for normal text and 3:1 for large text, where large means 18pt (about 24px), or 14pt bold (about 18.5px by W3C's own 1pt = 1.333px conversion; tools commonly implement 18.66px). The lab computes real ratios with the WCAG relative-luminance formula.</li>
+          <li><strong>Non-text contrast is a standard.</strong> SC 1.4.11 asks for 3:1 on the visual boundaries of controls and meaningful graphics - the reason a pale grey button border is a bug, not a style.</li>
+          <li><strong>The type scale is a convention.</strong> Nothing requires a 1.25 ratio. What matters is that ONE ratio generates all your sizes, so the set stays small and related.</li>
+          <li><strong>The 8px grid is a convention.</strong> A widely shared one, not a spec - platform guidance is stated in points and density-independent units. The value is divisibility and consistency, not the number 8 itself.</li>
+          <li><strong>"One loudest thing" is a convention</strong> with strong perceptual grounding: attention goes to the largest, heaviest, highest-contrast element. Two of them means neither wins.</li>
+        </ul>
+        <p>b5 turns these into a review script you can hand a stakeholder. b6 turns them into tokens a machine can enforce.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO 1 ============ -->
+  <section class="section" id="demo-1">
+    <div class="section-kicker">
+      <span class="klabel">Demo 1 of 2</span>
+      <h2>Score a real screen, live <span class="tag demo">★ 12 min · everyone runs it</span></h2>
+    </div>
+    <p class="lede">Below is Cadence's shared-summary screen as an unbriefed generator produced it: pleasant, plausible, and <strong>17 out of 100</strong>. Nothing about that number is decoration - your browser renders the screen, then measures it. Real WCAG contrast ratios. Real computed pixel values for every padding and gap. Real count of hue families. Start with every lever off, read the failure rows, then bring them on one at a time and watch which row moves.</p>
+
+    <div class="steps">
+      <div class="step"><p>Levers all off: <strong>17/100</strong>. Read the five rows out loud. "It needs polish" is now five specific, checkable failures.</p></div>
+      <div class="step"><p>Turn on <strong>Hierarchy</strong> only. The title steps up, the shouty banner and button stand down. Watch the "3 elements shouting" row.</p></div>
+      <div class="step"><p>Add <strong>Type scale</strong>, then <strong>Spacing</strong>. Notice you are changing arithmetic, not taste - and the screen is already better.</p></div>
+      <div class="step"><p>Add <strong>Contrast</strong>. One row stays stubborn: the orange bullet mark. The third hue family was also a contrast bug.</p></div>
+      <div class="step"><p>Add <strong>One accent</strong>. Everything resolves. Then press <strong>Add colour</strong> and watch a finished screen lose points.</p></div>
+    </div>
+
+    <div class="dlbox" data-mode="lab" data-levers=""></div>
+
+    <div class="callout tip">
+      <strong>How to read every lab in this track</strong>
+      The starting draft is scripted - a composite of what unbriefed generators hand you. Everything after that is measured live in your browser: contrast from the WCAG relative-luminance formula, spacing and sizes from getComputedStyle, hue families by converting every rendered colour to HSL. Change the screen and the score changes with it. Hover any lever to see exactly what it does.
+    </div>
+  </section>
+
+  <!-- ============ DEMO 2 ============ -->
+  <section class="section" id="demo-2">
+    <div class="section-kicker">
+      <span class="klabel">Demo 2 of 2</span>
+      <h2>The climb - your benchmark for the whole track <span class="tag demo">★ 10 min · explore</span></h2>
+    </div>
+    <p class="lede">The same screen, scored at every rung of the ladder, computed in front of you: <strong>17 → 32 → 46 → 66 → 86 → 100</strong>. Each rung is one lever, and each lever is a session. Then the last row: with the screen at 100, turning on <strong>Add colour</strong> costs <strong>19 points</strong> - it introduces a fourth hue family, breaks two spacing values, and puts yellow text on a yellow highlight. The most common instinct in a design review, priced.</p>
+
+    <div class="steps">
+      <div class="step"><p><strong>17</strong> - no direction. Every check fails except part of hierarchy, and that only by accident.</p></div>
+      <div class="step"><p><strong>32</strong> - hierarchy (this session's habit). One loudest thing, a 2.07x step from body to title.</p></div>
+      <div class="step"><p><strong>46 → 66</strong> - type scale and spacing (b4, b6). Six arbitrary sizes become four related ones; every gap lands on the grid.</p></div>
+      <div class="step"><p><strong>86</strong> - contrast (b5). 16 of 19 text elements pass AA; the survivors tell you where the extra hues are hiding.</p></div>
+      <div class="step"><p><strong>100</strong> - one accent (b6, b7). Measurably clean. Now go and put an idea in it, because 100 is not the same as good.</p></div>
+    </div>
+
+    <div class="dlbox" data-mode="ladder"></div>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>This is the fastest review you will ever run on a stakeholder's "just make it pop".</strong> Score the screen, show the five rows, and the conversation moves from taste to evidence in about ninety seconds. Keep the honest caveat in your pocket though: a 100 means nothing is measurably broken. It does not mean the work has an idea in it, and that is the half of the job the lab cannot do for you.</p>
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 25-35 min total</span></h2>
+    </div>
+    <ul>
+      <li>Run the full ladder until you can predict which row moves before you click. Then press Add colour on a 100 and write one sentence explaining the loss to a non-designer.</li>
+      <li>Take one screen you shipped recently and score it by hand on the five checks. Be specific: worst contrast ratio, number of distinct font sizes, number of hue families, how many elements are shouting.</li>
+      <li>Rewrite one adjective brief you have actually sent into a constraint brief - one primary action, one type scale, one spacing unit, one accent, and a contrast floor.</li>
+      <li>Generate the same screen twice, once from each brief, in whatever tool you use. Keep both. b2 opens with your pair.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">This track teaches the working core of the current AI design toolchain and the craft standards you judge it against - W3C accessibility criteria, platform design guidance, the vendors' own documented behaviour and limits - with a live critique lab on the key pages. Certificates, videos and tool subscriptions stay with the official providers, linked each session. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">WCAG 2.2 - SC 1.4.3 Contrast (Minimum) and the large-text definition</span><span class="note">Part 2 + the lab · SC 1.4.11 and text spacing land in b5</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">The AI design loop - brief, generate, critique, direct, ship</span><span class="note">Part 1 · each step gets its own session from b2 onward</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Type scale and spacing conventions (modular scale, platform grid guidance)</span><span class="note">Named as conventions here · tokenised properly in b6</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">The generator toolchain - Figma, Adobe Firefly, Canva, Midjourney, prompt-to-UI tools</span><span class="note">Referenced tonight · compared honestly in b2, b3, b4, b7</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Homogenisation of generated output</span><span class="note">Previewed in Part 2 · evidence and defences in b3 and b7</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · In the five-step loop, which steps is AI genuinely strongest at?</p>
+      <button class="qopt" type="button">A · Brief and critique - it knows design principles better than most juniors</button>
+      <button class="qopt" type="button">B · Generate - the middle step, where volume is the whole point</button>
+      <button class="qopt" type="button">C · Ship - it handles systems, tokens and licensing well</button>
+      <p class="qwhy">Generation is the cheap part and the model is excellent at it. Brief, critique and ship are where your judgement, standard and accountability live - which is exactly why they became more valuable when generation got cheap.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · WCAG 2.2 SC 1.4.3 requires 4.5:1 for normal text. When does the 3:1 threshold apply instead?</p>
+      <button class="qopt" type="button">A · For any heading, whatever its size</button>
+      <button class="qopt" type="button">B · For decorative text and disabled controls</button>
+      <button class="qopt" type="button">C · For large text - 18pt (about 24px), or 14pt bold (about 18.5px)</button>
+      <p class="qwhy">Size and weight, not role, decide the threshold. A 16px bold heading is still normal text and still owes you 4.5:1 - which is why the lab checks computed size and weight rather than the tag name.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · A finished screen scores 100. You turn on "Add colour" and it drops to 81. What does that teach?</p>
+      <button class="qopt" type="button">A · Adding hue families breaks colour restraint and usually drags contrast and spacing down with it</button>
+      <button class="qopt" type="button">B · The scoring is subjective, so ignore the drop</button>
+      <button class="qopt" type="button">C · Colour should be avoided in product UI</button>
+      <p class="qwhy">The anti-lever adds a fourth hue family, two off-grid paddings and a low-contrast yellow-on-yellow highlight. Colour is not the enemy - undecided colour is. One accent that means something beats three that mean nothing.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Designer session 1 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>The loop</b><span>Brief → Generate → Critique → Direct → Ship. AI owns step 2. You own 1, 3 and 5, and those decide the quality.</span></div>
+      <div class="cheat-item"><b>The four levers</b><span>Direction (b2, b3) · Structure (b4, b6) · Critique (b5) · Rights (b7, a4). Diagnose bad output by lever.</span></div>
+      <div class="cheat-item"><b>The ladder</b><span>17 → 32 → 46 → 66 → 86 → 100 as hierarchy, scale, spacing, contrast and one accent come on. b10 must ship a 100.</span></div>
+      <div class="cheat-item"><b>The anti-lever</b><span>"Add colour" costs 19 points from a perfect score: fourth hue family, off-grid padding, yellow on yellow.</span></div>
+      <div class="cheat-item"><b>Standards vs conventions</b><span>Contrast 4.5:1 / 3:1 large and 3:1 non-text are WCAG. One type ratio, an 8px rhythm and one loudest thing are conventions - useful, not law.</span></div>
+      <div class="cheat-item"><b>Constraint brief</b><span>One primary action · one type scale · one spacing unit · one accent · a contrast floor. Adjectives cannot be wrong, so they cannot help.</span></div>
+      <div class="cheat-item"><b>Direct, do not polish</b><span>Bad output is usually a vague constraint. Change the brief, regenerate. Nudging pixels on a wrong idea is the expensive habit.</span></div>
+      <div class="cheat-item"><b>Running product</b><span>Cadence · the shared-summary feature · brief to spec'd screen set by b10, inside the brand the Branding track built.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Designer session 1 of 10 · learn-ai-design-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="../index.html">← All sessions</a> &nbsp;·&nbsp; <a href="b2-art-direction-prompting.html">Next: Art-direction prompting →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/design-live.js?v=1"></script>
+<script src="../assets/app.js?v=2"></script>
+</body>
+</html>

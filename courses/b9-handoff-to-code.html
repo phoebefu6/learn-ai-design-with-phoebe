@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Designer session 9 · Handoff to code - learn ai design with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-design-with-phoebe</a> / Designer session 9 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Design with Phoebe · Designer track · Session 9 of 10</div>
+    <h1>Handoff <span class="accent">to code</span></h1>
+    <p class="sub">This is the hardest session in the designer track, and the one that decides whether any of the previous eight mattered. Everything you have built - the direction, the tokens, the imagery rights, the words - leaks in exactly one place: the gap between the mock you approved and the screen a user loads. Tonight you write a spec an engineer can build from without asking you a single question, you learn precisely how AI reaches your design system at handoff time and where each route is gated, and then you review the built result the only way that counts: by measuring the thing in a browser.</p>
+    <div class="chip-row">
+      <span class="chip level">🔴 Designer track</span>
+      <span class="chip audience">Product · brand · design-adjacent builders</span>
+      <span class="chip audience">Design to build</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-2 · Where the design leaks</span>
+      <span class="a2" style="flex:4">2-18 · The spec + the AI routes</span>
+      <span class="a3" style="flex:5">18-42 · Build-along: spec, then verify</span>
+      <span class="a4" style="flex:1">42-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ PART 1: THE SPEC ============ -->
+  <section class="section" id="the-spec">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · the artifact that survives you</span>
+      <h2>A spec an engineer can build from <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">The test of a handoff is not whether it looks thorough. It is whether an engineer who has never spoken to you can build the screen correctly and know when they are done. That means the spec names <strong>token names rather than hex values</strong>, so a colour change later does not silently detach; <strong>component and variant names</strong> from the real system, not descriptions of appearance; <strong>spacing in scale steps</strong>, not measured pixels; <strong>every state enumerated</strong> - empty, loading, partial, error, offline and both string extremes; <strong>interaction and focus behaviour</strong>, including keyboard order; <strong>responsive rules stated as breakpoint intent</strong> rather than pixel-perfect mocks at three widths; and <strong>accessibility written as acceptance criteria</strong> - contrast pairs, target sizes, reading order, focus visibility. The first four are usually there. The last four are what go missing, and they are the ones that come back as bugs.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The anatomy of a buildable spec in eight sections, with the four most often missing sections marked as defects: states, interaction and focus, accessibility criteria, and string extremes.">
+        <style>
+          .saT { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .saI { font: 700 12.5px Inter, sans-serif; fill: #2A1A28; }
+          .saM { font: 700 12.5px Inter, sans-serif; fill: #991B1B; }
+          .saX { font: 400 11.5px Inter, sans-serif; fill: #7A6A78; }
+          .saN { font: 600 13px Inter, sans-serif; fill: #1E2A00; }
+        </style>
+        <rect x="30" y="22" width="390" height="30" rx="7" fill="#4A1F44"/>
+        <text class="saT" x="46" y="42">USUALLY IN THE HANDOFF</text>
+        <rect x="460" y="22" width="390" height="30" rx="7" fill="#991B1B"/>
+        <text class="saT" x="476" y="42">USUALLY MISSING - FILE AS DEFECTS</text>
+
+        <rect x="30" y="70" width="390" height="52" rx="8" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="saI" x="44" y="90">Token names, never hex values</text>
+        <text class="saX" x="44" y="108">colour.surface.raised, not the sampled colour</text>
+        <rect x="460" y="70" width="390" height="52" rx="8" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1.5"/>
+        <text class="saM" x="474" y="90">Every state enumerated</text>
+        <text class="saX" x="474" y="108">empty, loading, partial, error, offline</text>
+
+        <rect x="30" y="132" width="390" height="52" rx="8" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="saI" x="44" y="152">Component and variant names</text>
+        <text class="saX" x="44" y="170">Button/secondary, Card/summary - the real names</text>
+        <rect x="460" y="132" width="390" height="52" rx="8" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1.5"/>
+        <text class="saM" x="474" y="152">Interaction and focus behaviour</text>
+        <text class="saX" x="474" y="170">keyboard order, focus ring, escape, hover</text>
+
+        <rect x="30" y="194" width="390" height="52" rx="8" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="saI" x="44" y="214">Spacing in scale steps</text>
+        <text class="saX" x="44" y="232">space-3, not "about 24 pixels here"</text>
+        <rect x="460" y="194" width="390" height="52" rx="8" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1.5"/>
+        <text class="saM" x="474" y="214">Accessibility as criteria</text>
+        <text class="saX" x="474" y="232">contrast pairs, target size, reading order</text>
+
+        <rect x="30" y="256" width="390" height="52" rx="8" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="saI" x="44" y="276">Responsive rules by intent</text>
+        <text class="saX" x="44" y="294">what reflows and why, not three exact mocks</text>
+        <rect x="460" y="256" width="390" height="52" rx="8" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1.5"/>
+        <text class="saM" x="474" y="276">String extremes</text>
+        <text class="saX" x="474" y="294">longest and shortest plausible text, drawn</text>
+
+        <rect x="30" y="336" width="14" height="14" rx="3" fill="#4D6B00"/>
+        <text class="saN" x="54" y="348">A spec is done when an engineer can build it and know when they are finished without asking you.</text>
+        <rect x="30" y="358" width="14" height="14" rx="3" fill="#4D6B00"/>
+        <text class="saN" x="54" y="370">The right column is not extra polish. It is the half of the spec that becomes next quarter's bugs.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - spec anatomy, with the four sections most often missing marked</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Why token names beat hex values, every time<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>A hex value in a handoff note is a fact about today. A token name is an instruction about forever. The difference shows up six months later when the surface colour changes: everything referencing <code>colour.surface.raised</code> moves, and everything that was sampled by eye and typed in by hand stays behind. Those hand-typed values are invisible in a screenshot and invisible in a Figma inspection - the only way to find them is to look at the code or ask.</p>
+        <ul>
+          <li><strong>Same for spacing.</strong> "24px" is a measurement. "space-3" is a decision that stays consistent when the scale is retuned.</li>
+          <li><strong>Same for type.</strong> "20px semibold" is a description. "text.title.m" is the third rung of the 1.25 scale from b6 and cannot drift off it.</li>
+          <li><strong>Same for components.</strong> "the grey button" is an appearance. "Button/secondary" is a contract, and if the design needs something the variant cannot do, that is a system conversation rather than a one-off override.</li>
+        </ul>
+        <p>The habit to build: when you cannot name a token for something you drew, you have either found a genuine gap in the system or drawn something off-system. Both are worth knowing before an engineer discovers it for you.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Two handoff notes for the same card<span class="mini">4 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Same Cadence shared-summary card. The first note describes how it looks. The second one can be built and accepted.</p>
+        <div class="prompt-box bad">
+          <span class="label">Describes appearance - every line invites a question</span>
+          <p>"Summary card with a light plum background and rounded corners, roughly 24px of padding. Title in a slightly larger semibold, then the AI note in small grey underneath, then the body. Share button bottom right in the brand colour. Should look good on mobile too."</p>
+        </div>
+        <div class="prompt-box good">
+          <span class="label">Names tokens, components, states and acceptance criteria</span>
+          <p>"Component: Card/summary. Surface colour.surface.raised, radius radius-m, padding space-4 all sides, internal stack gap space-3. Title: text.title.m, colour.text.primary, 2 lines max then ellipsis. Disclosure line: text.body.s, colour.text.secondary, sits ABOVE the body in both DOM and visual order. Body: text.body.m, colour.text.primary. Action: Button/primary, label "Share summary", 44x44 minimum hit target, sits after the body in reading order. States required: empty (no summaries), loading (skeleton, no spinner), partial (transcript still processing - show what exists plus the low-confidence banner), error (send failed - message plus retry), offline (read-only, Share disabled with reason). String extremes: title at 4 and at 90 characters, both drawn. Responsive intent: below the medium breakpoint the action becomes full-width and moves below the body, and the disclosure line stays above the body. Acceptance criteria: every text and background pair passes WCAG 2.2 SC 1.4.3 at its computed size and weight; the button boundary passes SC 1.4.11 at 3:1; every interactive target meets SC 2.5.8 at 24x24 CSS px minimum; focus is visible on every interactive element; tab order is title, disclosure, body links, Share."</p>
+        </div>
+        <p>The second note is four times longer and roughly forty times cheaper, because every line in it is either buildable or checkable. Notice that nothing in it is a picture. A mock shows one state at one width - the spec is what covers the other fifteen.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: HOW AI REACHES THE SYSTEM ============ -->
+  <section class="section" id="ai-routes">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · the routes, and what gates them</span>
+      <h2>How AI actually reaches your design system <span class="tag concept">8 min live</span></h2>
+    </div>
+    <p class="lede">"AI can read our design system" is a sentence that hides five different mechanisms with five different gates. Knowing which one you are on decides whether token automation is realistic for your team or a demo you saw once. The single most important constraint: <strong>the Figma variables REST API is Enterprise-only</strong> - you must have a Full seat in an Enterprise org - so below Enterprise the selection-scoped MCP call is the only route to your tokens. The second most important: <strong>Figma Code Connect's framework-specific parsers lose updates and support from 2026-08-17</strong>, after which template files are the only maintained path. Both are dates and seat tiers, not opinions, so put them in your plan rather than your hopes.</p>
+
+    <table class="clean">
+      <thead>
+        <tr><th>Route</th><th>What it carries</th><th>Gate</th><th>Failure mode</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Figma Code Connect</strong></td>
+          <td>The bridge between your codebase and Dev Mode, so a Figma component maps to the real component in code</td>
+          <td>Dev or Full seat on Organization or Enterprise</td>
+          <td>Framework-specific parsers lose updates and support from <strong>2026-08-17</strong>. After that, template files are the only maintained path - plan the migration, do not discover it</td>
+        </tr>
+        <tr>
+          <td><strong>Figma MCP server</strong></td>
+          <td>Remote <code>https://mcp.figma.com/mcp</code> or desktop <code>http://127.0.0.1:3845/mcp</code>. <code>get_design_context</code> (which replaced <code>get_code</code>), <code>get_variable_defs</code> for the variables and styles in the selection, <code>get_code_connect_map</code>, <code>get_code_connect_suggestions</code>, and remote-only <code>search_design_system</code></td>
+          <td>Figma seat plus an MCP-capable client</td>
+          <td><code>get_variable_defs</code> is <strong>scoped to the selection</strong>. It answers "what tokens are in this frame", never "what is our whole token set", so it is a handoff tool rather than a sync</td>
+        </tr>
+        <tr>
+          <td><strong>Figma variables REST API</strong></td>
+          <td>Programmatic access to variables - the route people assume exists when they plan token automation</td>
+          <td><strong>Enterprise only</strong> - a Full seat in an Enterprise org</td>
+          <td>Below Enterprise it simply is not available, and the selection-scoped MCP call is your only token route. This is the constraint that kills most token-automation plans</td>
+        </tr>
+        <tr>
+          <td><strong>v0</strong> (Vercel)</td>
+          <td>Production Next.js / React / TypeScript / Tailwind / shadcn code. Design Systems 2.0 stores your system as a skill naming where the source lives and which components, props and tokens are safe to use, written to a <code>v0.json</code></td>
+          <td>Paid plan for real use - Free is limited, and Figma import needs a paid plan</td>
+          <td>Once GitHub is connected, in Vercel's own words "it becomes the source of truth for your project". That is a genuine handoff, and it means the design file stops being the source of truth</td>
+        </tr>
+        <tr>
+          <td><strong>Figma Make</strong></td>
+          <td>A working prototype, a downloadable code zip, a one-way GitHub push, and paste-back into Figma Design</td>
+          <td>Code editing needs a Full seat on a paid plan</td>
+          <td>Both bridges are lossy. The GitHub push is one-way and edits made in GitHub get overwritten on the next push, and pasted-back output produces layers that "aren't automatically tied to your design system"</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Choosing a route without lying to yourself<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Three honest questions, in order, and the answer falls out.</p>
+        <ul>
+          <li><strong>Are you on Enterprise?</strong> If yes, the variables REST API is available and real token automation is on the table. If no, stop planning a sync. You are on selection-scoped <code>get_variable_defs</code> through MCP, which is excellent for handing one frame's tokens to an engineer or an assistant and useless as a pipeline.</li>
+          <li><strong>Does a real component library already exist in code?</strong> If yes, Code Connect is the highest-value route because it makes Dev Mode point at the actual component - and you now have the 2026-08-17 parser deadline on your roadmap. If no code library exists, Code Connect has nothing to connect to and v0's Design Systems 2.0 skill is the more realistic way to tell a generator what is safe to use.</li>
+          <li><strong>Is the output going to production or to a conversation?</strong> v0 with GitHub connected is a production handoff and the repo becomes the source of truth. Figma Make is in-Figma prototyping with two lossy bridges, so treat its output as an argument, not an artifact.</li>
+        </ul>
+        <p>The common mistake is picking a route by which demo was most impressive. Pick by seat tier and by whether code already exists, then design your handoff around what that route can actually carry.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>What "AI reads our system" does not mean<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Every one of these routes moves a description of your system, and a description is not enforcement. Three things stay yours:</p>
+        <ul>
+          <li><strong>Nothing here prevents an off-system value.</strong> A generator handed your token list can still emit a hand-typed colour, and the result looks identical in a screenshot. The only way to catch it is to inspect the built code or measure the built screen, which is Part 3.</li>
+          <li><strong>Selection scope is a real limit, not a beta.</strong> <code>get_variable_defs</code> returning the variables and styles in a selection is the design of the tool. Handing it a frame with three tokens and concluding your system has three tokens is a category error people make weekly.</li>
+          <li><strong>Source-of-truth is a decision, and one of these routes makes it for you.</strong> When v0 has GitHub connected and the repo is the source of truth, your Figma file becomes documentation. That can be the right call - it just has to be a call, made out loud, rather than something you notice a month later.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: REVIEWING WHAT SHIPPED ============ -->
+  <section class="section" id="review-shipped">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · where all the earlier work leaks</span>
+      <h2>Reviewing what actually shipped <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">The design-to-shipped gap is the drain every previous session empties into. A mock is a claim; the built screen is the product. So run the five checks from b5 <strong>on the built screen, in a browser</strong>, not on the file you approved - because computed values are what users get. The rounding, the inherited line-height, the token that was almost right, the padding that got typed in by hand: none of those exist in the mock and all of them exist in the browser.</p>
+
+    <div class="legend">
+      <span class="pill solid">Measure the built screen</span>
+      <span class="pill light">Not the mock</span>
+      <span class="pill peach">▶ Computed values are what ships</span>
+      <span class="pill inkpill">File differences as defects</span>
+    </div>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>What to look at in the inspector<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>You do not need to write code for this. Open the built screen, open the browser inspector, and read four things - all of them computed, all of them arguable-free.</p>
+        <ul>
+          <li><strong>Real contrast ratios.</strong> Not the pair you specified, the pair that rendered. Opacity, overlays, inherited colours and a background image behind text all change the answer. Check at the computed font size and weight, because size and weight decide whether you owe 4.5:1 or 3:1.</li>
+          <li><strong>Real spacing values.</strong> Read the computed padding, margin and gap. Anything not on your scale step is a defect even if it looks fine, because it means a value was typed rather than referenced.</li>
+          <li><strong>Real font sizes.</strong> Count the distinct computed sizes on the page. If your scale has four rungs and the built screen has seven values, three of them came from somewhere you did not decide.</li>
+          <li><strong>Focus order.</strong> Put the mouse away and press Tab through the whole screen. Watch where the focus ring goes and whether you can always see it. This is the check that finds reading-order bugs the eye cannot.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Filing a difference as a defect, not a preference<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The reason design feedback gets deprioritised is that most of it arrives as taste. Rewrite it as a failed criterion and it enters the same queue as every other bug. The shape:</p>
+        <ul>
+          <li><strong>Where</strong> - the screen, the component, the state. "Shared summary card, offline state."</li>
+          <li><strong>Expected, in spec language</strong> - "disclosure line at text.body.s in colour.text.secondary, above the body in DOM order."</li>
+          <li><strong>Actual, as a measurement</strong> - "13px, computed #B9A9B6 on #FFFFFF, ratio 2.1:1, and it comes after the body in the DOM."</li>
+          <li><strong>The criterion it fails</strong> - "WCAG 2.2 SC 1.4.3 requires 4.5:1 at this size and weight." Cite the acceptance criterion you wrote in Part 1, which is exactly why you wrote it.</li>
+        </ul>
+        <p>Two habits make this land. Separate the measurable list from the judgement list and send them as two different messages - a defect list gets fixed, a taste list gets discussed, and mixing them turns the whole thing into a discussion. And never file a difference you did not measure, because one wrong number in a list of ten costs you the other nine.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Using an AI reviewer here, honestly<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>An assistant looking at a screenshot or a chunk of code is genuinely useful at this step and genuinely unreliable in specific, predictable ways. Use it as a suspect generator, never as the measurement.</p>
+        <ul>
+          <li><strong>It is good at</strong> spotting missing states, naming what looks off-system, drafting the defect list from your notes, and reminding you which criteria you have not checked yet.</li>
+          <li><strong>It hallucinates ratios.</strong> Asked for a contrast ratio it will produce a confident number that is often wrong. Ratios come from the inspector or a contrast tool, and this is the same failure mode you saw in b5.</li>
+          <li><strong>It cannot see provenance.</strong> Looking at a rendered screen it has no way to know whether a colour came from a token or was typed in by hand. Those look identical, and the difference is the entire point of the handoff.</li>
+          <li><strong>It reads the mock as reality.</strong> Hand it a design file export and it reports on the design, not the build. The whole argument of this session is that those are different documents.</li>
+        </ul>
+        <p>So the working split: the assistant proposes the list of things to check, you measure, and only measured items get filed.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO ============ -->
+  <section class="section" id="demo">
+    <div class="section-kicker">
+      <span class="klabel">Build-along</span>
+      <h2>Spec the Cadence summary, then verify it <span class="tag demo">★ 22 min · everyone runs it</span></h2>
+    </div>
+    <p class="lede">Two halves. First you write the shared-summary spec using the anatomy from Part 1 - tokens, components, spacing steps, states, interaction, responsive intent, acceptance criteria. Then you verify a built result the way Part 3 says to. The lab below runs with all five levers on, which is <strong>100 out of 100</strong>: this is what acceptance looks like - <strong>100 with nothing measurably broken</strong>. Every value in that score is computed from the rendered screen, which is precisely the standard you are asking your engineer to hit.</p>
+
+    <div class="steps">
+      <div class="step"><p><strong>Write the header.</strong> Component name, variant, surface token, radius token, padding and gap in scale steps. If you cannot name a token, mark it as a system gap now rather than shipping an override.</p></div>
+      <div class="step"><p><strong>Enumerate the states.</strong> Empty, loading, partial, error, offline, plus the longest and shortest plausible strings from b8. Six rows minimum. This is the section that is always missing.</p></div>
+      <div class="step"><p><strong>Write the interaction and responsive rules.</strong> Tab order, focus visibility, what happens on escape. Responsive stated as intent - what reflows, what moves, what stays - rather than three exact mocks.</p></div>
+      <div class="step"><p><strong>Write the acceptance criteria.</strong> Contrast pairs by criterion number, minimum target size, reading order matching visual order, focus visible everywhere. These are the lines you will quote when you file defects.</p></div>
+      <div class="step"><p><strong>Now verify.</strong> Run the lab with all five levers on, read the rows at 100, then Tab through the rendered screen and check the focus ring. Anything you cannot see is a defect you can file with a criterion attached.</p></div>
+    </div>
+
+    <div class="dlbox" data-mode="lab" data-levers="hierarchy,typescale,spacing,contrast,accent"></div>
+
+    <div class="callout tip">
+      <strong>What is real here, honestly</strong>
+      The starting draft is scripted - the same composite of unbriefed generator output from b1. Every score is measured live in your browser: contrast ratios from the WCAG relative-luminance formula, spacing and font sizes read from getComputedStyle, hue families counted by converting each rendered colour to HSL. That is the point tonight. The lab is doing to a rendered screen exactly what you should be doing to your built screen, and it is why a mock cannot produce this number.
+    </div>
+
+    <div class="callout win">
+      <strong>★ And now the honest caveat, one session before the capstone</strong>
+      A 100 means nothing is measurably broken. It does not mean the work is good. The concept review still has to happen - is there an idea in this screen, is there one deliberate point of tension, is it right for this brand and this user at this moment. Acceptance criteria protect you from shipping something broken. They cannot protect you from shipping something forgettable, and b10 asks for both: a 100 on the lab plus a stated idea you can defend out loud.
+    </div>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 348" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The acceptance loop: write the spec, build, measure the built screen in a browser, file differences as defects, then re-measure and return to the build.">
+        <style>
+          .alT { font: 700 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .alS { font: 400 11px Inter, sans-serif; fill: #FFFFFF; opacity: .92; }
+          .alI { font: 700 12.5px Inter, sans-serif; fill: #2A1A28; }
+          .alX { font: 400 11.5px Inter, sans-serif; fill: #7A6A78; }
+          .alN { font: 600 13px Inter, sans-serif; fill: #1E2A00; }
+          .alWire { stroke: #6B2D5C; stroke-width: 2.5; fill: none; marker-end: url(#alHd); }
+        </style>
+        <defs>
+          <marker id="alHd" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L9,4.5 L0,9 z" fill="#6B2D5C"/>
+          </marker>
+        </defs>
+
+        <rect x="30" y="52" width="175" height="56" rx="8" fill="#4A1F44"/>
+        <text class="alT" x="44" y="74">1 · SPEC</text>
+        <text class="alS" x="44" y="93">tokens and criteria</text>
+
+        <rect x="245" y="52" width="175" height="56" rx="8" fill="#6B2D5C"/>
+        <text class="alT" x="259" y="74">2 · BUILD</text>
+        <text class="alS" x="259" y="93">engineer or generator</text>
+
+        <rect x="460" y="52" width="175" height="56" rx="8" fill="#9B4B87"/>
+        <text class="alT" x="474" y="74">3 · MEASURE BUILT</text>
+        <text class="alS" x="474" y="93">in a real browser</text>
+
+        <rect x="675" y="52" width="175" height="56" rx="8" fill="#2A1A28"/>
+        <text class="alT" x="689" y="74">4 · FILE DEFECTS</text>
+        <text class="alS" x="689" y="93">criterion, not taste</text>
+
+        <path class="alWire" d="M205,80 L240,80"/>
+        <path class="alWire" d="M420,80 L455,80"/>
+        <path class="alWire" d="M635,80 L670,80"/>
+        <path class="alWire" d="M762,108 C762,158 420,150 332,176"/>
+
+        <rect x="30" y="192" width="175" height="56" rx="8" fill="#4D6B00"/>
+        <text class="alT" x="44" y="214">5 · RE-MEASURE</text>
+        <text class="alS" x="44" y="233">until nothing fails</text>
+        <path class="alWire" d="M205,220 L240,220"/>
+
+        <rect x="245" y="192" width="290" height="56" rx="10" fill="#F9EFF6" stroke="#9B4B87" stroke-width="2"/>
+        <text class="alI" x="263" y="214">THE MOCK IS A CLAIM</text>
+        <text class="alX" x="263" y="233">one state, one width, drawn values</text>
+
+        <rect x="565" y="192" width="285" height="56" rx="10" fill="#F4F8DE" stroke="#4D6B00" stroke-width="2"/>
+        <text class="alI" x="583" y="214">THE BUILD IS THE PRODUCT</text>
+        <text class="alX" x="583" y="233">computed values are what users get</text>
+
+        <rect x="30" y="278" width="14" height="14" rx="3" fill="#4D6B00"/>
+        <text class="alN" x="54" y="290">Acceptance is a measurement on the built screen, not a sign-off on a picture of it.</text>
+        <rect x="30" y="300" width="14" height="14" rx="3" fill="#4D6B00"/>
+        <text class="alN" x="54" y="312">A hand-typed value and a token look identical in a screenshot. Only the browser can tell you.</text>
+        <text class="alX" x="54" y="334">And 100 with nothing broken is still not the same as good - the concept review is a separate pass.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the acceptance loop, which closes on the build rather than the mock</figcaption>
+    </figure>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 35-45 min total</span></h2>
+    </div>
+    <ul>
+      <li>Write the full Cadence shared-summary spec using the Part 1 anatomy. Enumerate all six states and both string extremes, and write the accessibility section as criteria with success-criterion numbers, not as a note asking someone to be careful.</li>
+      <li>Find out which route your team is actually on. Check your Figma plan and seat: is the variables REST API available to you, or are you on selection-scoped <code>get_variable_defs</code> through MCP? Then check whether anything you own depends on Code Connect's framework-specific parsers before 2026-08-17.</li>
+      <li>Open one screen you shipped in a browser inspector and measure four things: worst real contrast ratio, every computed spacing value that is off your scale, the count of distinct font sizes, and the Tab order. Write the numbers down.</li>
+      <li>Turn that measurement list into a defect list in the four-part shape - where, expected in spec language, actual as a measurement, criterion failed - and keep the taste items in a separate note. Bring both to b10.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">This session covers handoff quality and the documented behaviour of the routes AI takes into a design system - not how to build the component, which stays with engineering. Seat tiers, tool names and deadlines were read from official documentation and are the kind of thing that moves, so re-check before you build a plan on them. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Figma Code Connect - seat requirements and the 2026-08-17 parser deadline</span><span class="note">Part 2 · template files become the only maintained path</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Figma MCP server - endpoints and the token-relevant tools</span><span class="note">Part 2 · get_design_context replaced get_code · get_variable_defs is selection-scoped</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Figma variables REST API - Enterprise-only, and what that forces</span><span class="note">Part 2 · the constraint that decides whether token automation is possible</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">v0 Design Systems 2.0 and Figma Make's two lossy bridges</span><span class="note">Part 2 · source-of-truth and overwrite behaviour, in the vendors' own words</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">WCAG 2.2 as acceptance criteria - SC 1.4.3, 1.4.11, 2.5.8, focus and reading order</span><span class="note">Parts 1 and 3 · stated as criteria here · taught by number in b5</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · Your team is on a Figma Professional plan and wants to automate token sync. What is actually available to you?</p>
+      <button class="qopt" type="button">A · The variables REST API, on any paid plan with a Full seat</button>
+      <button class="qopt" type="button">B · Nothing - token access requires Code Connect, whatever your plan</button>
+      <button class="qopt" type="button">C · Selection-scoped get_variable_defs through the MCP server, because the variables REST API is Enterprise-only</button>
+      <p class="qwhy">The variables REST API requires a Full seat in an Enterprise org, so below Enterprise the selection-scoped MCP call is the only token route - excellent for handing one frame's tokens over, useless as a pipeline. Worth pairing with the other date in this session: Code Connect's framework-specific parsers lose updates and support from 2026-08-17, after which template files are the only maintained path.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">2 · Why run the five checks on the built screen rather than on the approved mock?</p>
+      <button class="qopt" type="button">A · Computed values are what users get - rounding, inheritance, opacity and hand-typed values only exist in the build</button>
+      <button class="qopt" type="button">B · Mocks are less accurate because design tools use a different colour space</button>
+      <button class="qopt" type="button">C · It does not matter which you measure, as long as you measure something consistently</button>
+      <p class="qwhy">The mock is a claim about one state at one width using drawn values. The browser reports what rendered: inherited line-heights, overlays and opacity changing a contrast pair, a padding that was typed rather than referenced. A screenshot cannot distinguish a token from a hand-typed value that happens to match, which is the whole reason acceptance happens in the browser.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">3 · You ask an AI reviewer to check the built screen. What must you not take from it?</p>
+      <button class="qopt" type="button">A · A list of states you forgot to spec</button>
+      <button class="qopt" type="button">B · Contrast ratios, and any claim about whether a value came from a token</button>
+      <button class="qopt" type="button">C · A draft of the defect list based on measurements you supplied</button>
+      <p class="qwhy">It flags suspects well and drafts lists well. It hallucinates ratios with total confidence, and it cannot see provenance at all - a token and a hand-typed value are identical on a rendered screen. So the assistant proposes what to check, you measure it, and only measured items get filed. One wrong number costs you the credibility of the whole list.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Designer session 9 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Spec anatomy</b><span>Token names · component and variant names · spacing in scale steps · every state · interaction and focus · responsive intent · accessibility as criteria.</span></div>
+      <div class="cheat-item"><b>Always missing</b><span>States, focus behaviour, accessibility criteria and string extremes. That half of the spec is next quarter's bug list.</span></div>
+      <div class="cheat-item"><b>Names, not values</b><span>colour.surface.raised not a hex, space-3 not 24px, Button/secondary not "the grey button". A value is a fact about today.</span></div>
+      <div class="cheat-item"><b>Code Connect deadline</b><span>Dev or Full seat on Organization or Enterprise. Framework-specific parsers lose updates and support from 2026-08-17 - template files are then the only maintained path.</span></div>
+      <div class="cheat-item"><b>Token routes</b><span>Variables REST API is Enterprise-only. Below that, selection-scoped get_variable_defs via the Figma MCP server is your only route - and get_design_context replaced get_code.</span></div>
+      <div class="cheat-item"><b>Lossy bridges</b><span>v0 with GitHub connected becomes the source of truth. Figma Make's GitHub push is one-way and gets overwritten, and paste-back layers are not tied to your design system.</span></div>
+      <div class="cheat-item"><b>Measure the build</b><span>Real contrast ratios, real computed spacing, count of distinct font sizes, Tab order. The browser, not the mock.</span></div>
+      <div class="cheat-item"><b>File as defects</b><span>Where · expected in spec language · actual as a measurement · criterion failed. Measurable list and taste list go in separate messages.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Designer session 9 of 10 · learn-ai-design-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b8-content-design-microcopy.html">← Previous: Content design and microcopy</a> &nbsp;·&nbsp; <a href="b10-capstone-cadence.html">Next: Capstone - the Cadence feature →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/design-live.js?v=1"></script>
+<script src="../assets/app.js?v=2"></script>
+</body>
+</html>

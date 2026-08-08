@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leader session 5 · Craft, juniors and career ladders - learn ai design with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-design-with-phoebe</a> / Leader session 5 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Design with Phoebe · Leader track · Session 5 of 6</div>
+    <h1>Craft, juniors and <span class="accent">career ladders</span></h1>
+    <p class="sub">Designers learned judgement by doing work that no longer needs doing. Production, resizing, variant sets, first drafts: tedious, badly paid, and the accidental curriculum through which every senior designer you admire learned to see. Generation removed the tedium and the curriculum in the same move. Tonight we look at that honestly, without inventing statistics we do not have, and then rebuild the ladder around the thing that did not get cheap: judgement. You leave with a hiring bar, an interview exercise that actually discriminates, and a plan for manufacturing the reps that used to arrive for free.</p>
+    <div class="chip-row">
+      <span class="chip level">🟠 Leader track</span>
+      <span class="chip audience">Design · brand · creative leads</span>
+      <span class="chip audience">Team design</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-16 · The rung that disappeared</span>
+      <span class="a3" style="flex:5">16-33 · What to hire and test for now</span>
+      <span class="a4" style="flex:3">33-45 · Ladder redesign and the reps problem</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ PART 1: THE MECHANISM ============ -->
+  <section class="section" id="mechanism">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · the structural problem, stated plainly</span>
+      <h2>The rung juniors learned on has disappeared <span class="tag concept">13 min live</span></h2>
+    </div>
+    <p class="lede">Nobody designed the old apprenticeship. It emerged as a side effect of economics: production work was expensive in hours and cheap in judgement, so it went to the newest person. Resize this campaign to eleven formats. Build the variant set. Draft twelve options for the review. Cut the exports. That work was boring, and while doing it a junior absorbed something no course teaches - <strong>what breaks when you scale a layout, why a grid matters, how a senior's red pen reads, what "off" looks like before you can name why</strong>. Generation now does that work in seconds. The tedium is gone, and so is the curriculum that came bundled with it.</p>
+    <p class="lede"><strong>One honesty note before we go further.</strong> This session makes no claim about hiring volumes, junior-role counts or survey percentages, because the source material for this course contains no verified hiring data and inventing a number would be worse than having none. What follows is <strong>an argument from mechanism</strong>: if the tasks through which people learned X are removed, and nothing replaces them, fewer people learn X. That is a claim about structure, and you can test it against your own team this quarter rather than taking it on faith from a slide.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The old apprenticeship ladder built on production tasks beside a redesigned ladder where every rung is a judgement task and the entry rung is manufactured deliberately.">
+        <style>
+          .apH { font: 700 12px Inter, sans-serif; fill: #FFFFFF; }
+          .apT { font: 700 12px Inter, sans-serif; fill: #2A1A28; }
+          .apS { font: 400 11px Inter, sans-serif; fill: #7A6A78; }
+          .apR { font: 700 12px Inter, sans-serif; fill: #991B1B; }
+          .apRS { font: 400 11px Inter, sans-serif; fill: #991B1B; }
+          .apN { font: 600 13px Inter, sans-serif; fill: #1E2A00; }
+        </style>
+
+        <rect x="30" y="24" width="390" height="30" rx="7" fill="#2A1A28"/>
+        <text class="apH" x="44" y="43">THE OLD LADDER · rungs made of production</text>
+        <rect x="460" y="24" width="390" height="30" rx="7" fill="#4D6B00"/>
+        <text class="apH" x="474" y="43">THE REDESIGNED LADDER · rungs made of judgement</text>
+
+        <rect x="30" y="70" width="390" height="44" rx="8" fill="#F9EFF6" stroke="#D6C9D4" stroke-width="1.5"/>
+        <text class="apT" x="44" y="88">Senior · concept and standard-setting</text>
+        <text class="apS" x="44" y="104">sets the bar, decides what does not ship</text>
+        <rect x="30" y="122" width="390" height="44" rx="8" fill="#F9EFF6" stroke="#D6C9D4" stroke-width="1.5"/>
+        <text class="apT" x="44" y="140">Mid · art direction</text>
+        <text class="apS" x="44" y="156">runs the brief, picks the direction</text>
+        <rect x="30" y="174" width="390" height="44" rx="8" fill="#F9EFF6" stroke="#D6C9D4" stroke-width="1.5"/>
+        <text class="apT" x="44" y="192">Junior · first drafts and variant sets</text>
+        <text class="apS" x="44" y="208">learned craft by producing hundreds of them</text>
+        <rect x="30" y="226" width="390" height="44" rx="8" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1.5"/>
+        <text class="apR" x="44" y="244">Entry · production, resizing, exports</text>
+        <text class="apRS" x="44" y="260">gone: the rung generation does in seconds</text>
+
+        <rect x="460" y="70" width="390" height="44" rx="8" fill="#F4F8DE" stroke="#4D6B00" stroke-width="1.5"/>
+        <text class="apT" x="474" y="88">Senior · concept and standard-setting</text>
+        <text class="apS" x="474" y="104">unchanged, and now scarcer than before</text>
+        <rect x="460" y="122" width="390" height="44" rx="8" fill="#F4F8DE" stroke="#4D6B00" stroke-width="1.5"/>
+        <text class="apT" x="474" y="140">Mid · art direction, briefs, exploration</text>
+        <text class="apS" x="474" y="156">chooses the strategy, not the execution</text>
+        <rect x="460" y="174" width="390" height="44" rx="8" fill="#F4F8DE" stroke="#4D6B00" stroke-width="1.5"/>
+        <text class="apT" x="474" y="192">Junior · critique and systems work</text>
+        <text class="apS" x="474" y="208">critique reps, states, edge cases, a11y</text>
+        <rect x="460" y="226" width="390" height="44" rx="8" fill="#F4F8DE" stroke="#4D6B00" stroke-width="1.5"/>
+        <text class="apT" x="474" y="244">Entry · manufactured reps</text>
+        <text class="apS" x="474" y="260">drills, redlines, paired reviews on purpose</text>
+
+        <rect x="30" y="284" width="14" height="14" rx="3" fill="#4D6B00"/>
+        <text class="apN" x="54" y="296">The rung did not move up, it disappeared. If you do not rebuild it, juniors never become seniors.</text>
+        <rect x="30" y="306" width="14" height="14" rx="3" fill="#4D6B00"/>
+        <text class="apN" x="54" y="318">This is an argument from mechanism, not from hiring data. Watch your own team and test it yourself.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the old ladder was built out of production work, the new one has to be built on purpose</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>What the boring work was actually teaching<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Before you decide whether losing production work matters, name what it taught. Every item here is a judgement skill that arrived disguised as a chore:</p>
+        <ul>
+          <li><strong>Resizing taught hierarchy.</strong> Squeeze a layout into eleven formats and you discover which element is genuinely primary, because the other ten drop out and the layout still has to work.</li>
+          <li><strong>Variant sets taught systems.</strong> Build forty variants by hand and you invent components, because doing it manually is unbearable. That is how designers arrive at abstraction honestly rather than by being told.</li>
+          <li><strong>Twelve options for a review taught exploration.</strong> Not because twelve were good, but because you learned what your first idea is worth relative to your ninth.</li>
+          <li><strong>Exports and specs taught states.</strong> Nothing teaches empty, loading, error, long-name and zero-data states like being the person who has to produce every one of them.</li>
+          <li><strong>Being redlined taught the standard.</strong> The single fastest teacher in design is a senior marking up your work with reasons attached.</li>
+        </ul>
+        <p>Notice that the last one never depended on production at all. It depended on <strong>somebody senior spending time saying why</strong>. That is the rep you can still manufacture, and it is the cheapest intervention available to you.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The two failure modes this creates in a team<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>When the entry rung goes and nothing replaces it, teams tend to fail in one of two directions. Both are recognisable and both are your responsibility to catch:</p>
+        <ul>
+          <li><strong>The hollow middle.</strong> Juniors produce a lot of plausible output quickly, get praised for throughput, and never build the ability to judge it. Two years in, they are fast and unable to lead a review. This is the more common failure because it looks like success for the first eighteen months.</li>
+          <li><strong>The frozen senior.</strong> Seniors absorb all the judgement work, become the only bottleneck on quality, and stop having time to teach - which guarantees no replacement is coming. This one is quieter, and it usually surfaces as a senior resignation rather than as a training problem.</li>
+        </ul>
+        <p>Both are structural, so neither is fixed by encouragement. They are fixed by moving judgement tasks down the ladder on purpose and protecting time for the people who have to explain them.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: HIRE AND TEST FOR ============ -->
+  <section class="section" id="hiring">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · what to hire and test for now</span>
+      <h2>Portfolio review when anyone can render anything <span class="tag concept">14 min live</span></h2>
+    </div>
+    <p class="lede">A portfolio used to be evidence of two things at once: <strong>can this person see, and can this person execute</strong>. Generation broke that bundle. Execution is now available to anyone with a subscription and an afternoon, so a beautiful portfolio is much weaker evidence than it was, while the ability to see is unchanged and harder to fake. Your review has to move from the render to <strong>the decisions around the render</strong>, which means changing the questions rather than raising the bar.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The four questions that survive generation<span class="mini">5 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Ask these of every piece, in this order. Each one is hard to answer without having done the thinking:</p>
+        <ol>
+          <li><strong>"What was the brief, and who set the constraints?"</strong> A candidate who cannot state the constraint they were designing against was decorating, not designing. Look for a primary action, an audience, a limit they had to respect.</li>
+          <li><strong>"Show me the options you rejected, and tell me why."</strong> The rejected work is the actual portfolio now. Anyone can produce forty options; the interesting artefact is the reasoning that eliminated thirty-nine.</li>
+          <li><strong>"What did you change after review, and what did you push back on?"</strong> This separates people who take direction from people who have a position. You want both behaviours, in the right places.</li>
+          <li><strong>"What did you refuse to ship, and what happened?"</strong> Refusal is the clearest signal of a standard. It costs something to say no, so it is expensive to fake.</li>
+        </ol>
+        <p>None of these ask whether the work is pretty. You can see that in three seconds without help. Spend the interview on what you cannot see.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The exercise that actually discriminates<span class="mini">5 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Here is the exercise to run instead of a take-home. It takes fifteen minutes and it sorts candidates cleanly.</p>
+        <div class="steps">
+          <div class="step"><p>Hand them <strong>one generated screen</strong> - unbriefed generator output, deliberately flawed - plus <strong>your brand's actual standard</strong>: the type scale, the spacing unit, the accent, the contrast floor.</p></div>
+          <div class="step"><p>Ask a single question: <strong>"What is wrong with this, against that standard?"</strong> Then be quiet and time how long they take to reach a specific, checkable claim.</p></div>
+          <div class="step"><p>Score what they name, not how confident they sound. Specific failures: <strong>hierarchy</strong> (how many elements are competing for first read), <strong>scale</strong> (how many unrelated font sizes), <strong>spacing</strong> (which gaps are off the rhythm), <strong>contrast</strong> (which text fails against its background), <strong>hue count</strong> (how many colour families are on screen).</p></div>
+          <div class="step"><p>Then ask the second question: <strong>"What would you change in the brief so the next generation does not have this problem?"</strong> This is the one that finds art directors.</p></div>
+        </div>
+        <p><strong>The tell you are listening for.</strong> Weak candidates reach immediately for taste words - it feels cluttered, it needs polish, it is not premium, it wants more breathing room. Those sentences are unfalsifiable, which is why they are so popular in reviews. Strong candidates name measurable failures first and only then talk about concept, tension and fit. Both halves matter, but <strong>the order tells you whether they can run a review without you in the room</strong>. Designer session b5 is the practitioner version of this and is worth putting in front of your whole team, not only new hires.</p>
+      </div>
+    </details>
+
+    <p class="lede">Your written prompt to the candidate matters as much as the interview. A vague ask produces a curated highlight reel, which is exactly the artefact that stopped being informative. Compare:</p>
+
+    <div class="prompt-box bad">
+      <span class="label">Weak portfolio ask</span>
+      <p>"Show us your best work."</p>
+    </div>
+    <div class="prompt-box good">
+      <span class="label">Strong portfolio ask</span>
+      <p>"Bring one screen you shipped and one you killed. For each, tell us the constraint you were given, what you changed after review and why, and one failure you caught before it shipped. Bring the rejected options if you still have them. Rendering quality is not what we are assessing."</p>
+    </div>
+
+    <div class="callout tip">
+      <strong>Say the last sentence out loud</strong>
+      "Rendering quality is not what we are assessing" changes what candidates prepare, which changes what you get to see. It also quietly widens your pipeline: people who think in constraints but do not have a polished visual portfolio stop self-selecting out, and some of them are the strongest hires you will make this year.
+    </div>
+  </section>
+
+  <!-- ============ PART 3: LADDER REDESIGN ============ -->
+  <section class="section" id="ladder">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · rebuild the ladder on purpose</span>
+      <h2>Who owns what, and how to manufacture the reps <span class="tag concept">12 min live</span></h2>
+    </div>
+    <p class="lede">If the rungs can no longer be made of production work, they have to be made of judgement work, which means moving responsibilities down the ladder earlier than felt comfortable five years ago. A junior who owns accessibility conformance and edge-case states is doing real, checkable, senior-adjacent work on day thirty. That is not generosity, it is the only remaining way to build the person you will need in three years.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>What each level owns now<span class="mini">5 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p><strong>Junior owns conformance and hygiene.</strong> Critique reps as a scheduled activity, not an accident. Systems hygiene: is this component the real one, are these tokens the real ones, is the layer structure survivable. States and edge cases: empty, loading, error, long names, zero data, worst-case content. Accessibility conformance as a deliverable they sign off. All of it is measurable, which is what makes it teachable and reviewable at speed.</p>
+        <p><strong>Mid owns direction and exploration strategy.</strong> Writing the brief before anything is generated. Deciding how wide to explore and when to stop. Choosing a direction and defending it to someone who did not attend the review. This is where generation is most useful and most dangerous: a mid with a real brief gets forty useful starting points, and a mid without one gets forty versions of the same average.</p>
+        <p><strong>Senior owns concept, the standard and refusal.</strong> Is there an idea here or only an arrangement. What is the bar, written down, so other people can apply it without asking. And the part that cannot be delegated: saying no, in public, with reasons - because a standard nobody has seen enforced is not a standard.</p>
+        <p>Note what is missing from all three: nobody's ladder rung is "produces the most output". If throughput is still in your levelling criteria, generation has already made your ladder measure the wrong thing.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The reps problem, and how to manufacture reps deliberately<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Skill comes from repetition with feedback. Production used to supply the repetition for free and seniors supplied the feedback as a side effect of shipping. Both supplies have shrunk, so you now have to schedule what used to happen by itself. Three mechanisms, in ascending cost:</p>
+        <ul>
+          <li><strong>Critique drills.</strong> Thirty minutes a week. One screen, generated or shipped, and the team scores it against the stated standard before anyone offers an opinion. The measurable checks come first, always. This builds the muscle of naming failures specifically, which is the muscle the interview exercise tests for.</li>
+          <li><strong>Redlines.</strong> A junior marks up someone else's work against the standard, with reasons. Then a senior marks up the redline. Twice the teaching from one artefact, and the junior learns the standard from the enforcing side rather than the receiving side.</li>
+          <li><strong>Paired reviews.</strong> Junior sits in a real stakeholder review, prepares the argument beforehand, delivers one section of it, and gets debriefed after. Expensive in senior time, and the only thing that teaches the political half of the job.</li>
+        </ul>
+        <p>Put all three in a calendar with a named owner. Reps that live in an intention rather than a calendar do not happen, and the failure is invisible for about a year.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Rewriting a job description around judgement<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Most junior design job descriptions are still lists of production verbs: produce, resize, prepare, deliver assets, support the team. Every one of those is now a sentence a tool can satisfy, which makes the description simultaneously unattractive and unhelpful for screening. Rewrite around what you actually need the person to become:</p>
+        <ul>
+          <li>Replace <strong>"produces assets and variants"</strong> with <strong>"owns the state coverage and accessibility conformance of every screen they touch"</strong>.</li>
+          <li>Replace <strong>"supports senior designers"</strong> with <strong>"runs the weekly critique drill and writes the redline"</strong>.</li>
+          <li>Replace <strong>"proficient in [tool list]"</strong> with <strong>"can name a design failure specifically and propose the brief change that prevents it"</strong>.</li>
+          <li>Keep one tool line, honestly, because tools are the entry ticket. Just stop making it the top of the list.</li>
+        </ul>
+        <p>The screening benefit is immediate: candidates who only have renders cannot write a convincing cover letter against this description, and candidates who think in constraints finally have something to answer.</p>
+      </div>
+    </details>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 334" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A three-layer ladder showing what junior, mid and senior designers own, and the deliberate practice each layer must be given.">
+        <style>
+          .lrH { font: 700 12px Inter, sans-serif; fill: #FFFFFF; }
+          .lrL { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .lrLS { font: 400 11px Inter, sans-serif; fill: #FFFFFF; opacity: .9; }
+          .lrT { font: 600 11px Inter, sans-serif; fill: #2A1A28; }
+          .lrX { font: 400 11px Inter, sans-serif; fill: #7A6A78; }
+          .lrN { font: 600 13px Inter, sans-serif; fill: #1E2A00; }
+        </style>
+
+        <rect x="30" y="24" width="170" height="30" rx="7" fill="#2A1A28"/>
+        <text class="lrH" x="44" y="43">LEVEL</text>
+        <rect x="210" y="24" width="310" height="30" rx="7" fill="#6B2D5C"/>
+        <text class="lrH" x="224" y="43">WHAT THEY OWN</text>
+        <rect x="530" y="24" width="320" height="30" rx="7" fill="#4D6B00"/>
+        <text class="lrH" x="544" y="43">DELIBERATE PRACTICE</text>
+
+        <rect x="30" y="66" width="170" height="64" rx="8" fill="#4A1F44"/>
+        <text class="lrL" x="44" y="94">Senior</text>
+        <text class="lrLS" x="44" y="112">the standard</text>
+        <rect x="210" y="66" width="310" height="64" rx="8" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="lrT" x="224" y="92">the concept, the written standard, and</text>
+        <text class="lrX" x="224" y="112">the decision to say no in public</text>
+        <rect x="530" y="66" width="320" height="64" rx="8" fill="#F4F8DE" stroke="#4D6B00" stroke-width="1.5"/>
+        <text class="lrT" x="544" y="92">write the standard down where it can be used</text>
+        <text class="lrX" x="544" y="112">kill one thing a month, with reasons attached</text>
+
+        <rect x="30" y="138" width="170" height="64" rx="8" fill="#6B2D5C"/>
+        <text class="lrL" x="44" y="166">Mid</text>
+        <text class="lrLS" x="44" y="184">the direction</text>
+        <rect x="210" y="138" width="310" height="64" rx="8" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="lrT" x="224" y="164">art direction, the brief, and how wide</text>
+        <text class="lrX" x="224" y="184">the exploration should go</text>
+        <rect x="530" y="138" width="320" height="64" rx="8" fill="#F4F8DE" stroke="#4D6B00" stroke-width="1.5"/>
+        <text class="lrT" x="544" y="164">write the brief before anything is generated</text>
+        <text class="lrX" x="544" y="184">defend one direction to an absent stakeholder</text>
+
+        <rect x="30" y="210" width="170" height="64" rx="8" fill="#9B4B87"/>
+        <text class="lrL" x="44" y="238">Junior</text>
+        <text class="lrLS" x="44" y="256">the conformance</text>
+        <rect x="210" y="210" width="310" height="64" rx="8" fill="#F9EFF6" stroke="#9B4B87" stroke-width="1.5"/>
+        <text class="lrT" x="224" y="236">systems hygiene, states and edge cases,</text>
+        <text class="lrX" x="224" y="256">accessibility conformance they sign off</text>
+        <rect x="530" y="210" width="320" height="64" rx="8" fill="#F4F8DE" stroke="#4D6B00" stroke-width="1.5"/>
+        <text class="lrT" x="544" y="236">one critique drill a week, measurables first</text>
+        <text class="lrX" x="544" y="256">redline a peer's screen, then get marked</text>
+
+        <rect x="30" y="288" width="14" height="14" rx="3" fill="#4D6B00"/>
+        <text class="lrN" x="54" y="300">Production used to hand out these reps for free. Now you schedule them or they do not happen.</text>
+        <rect x="30" y="310" width="14" height="14" rx="3" fill="#4D6B00"/>
+        <text class="lrN" x="54" y="322">Hire for the failures a candidate can name, not for the renders they can produce.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - three layers, and the practice each one has to be given on purpose</figcaption>
+    </figure>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>Run it on Cadence.</strong> The shared-summary feature needs eleven states nobody in a demo ever thinks about: no meetings yet, one meeting, a meeting with no speech detected, a transcript still processing, a summary the user has edited, a summary being shared externally, a revoked share link, a very long meeting title, a participant list of forty, a failed sync, and an AI-disclosure label that has to be visible without competing with the title. That list is a perfect junior deliverable: real, shippable, entirely made of judgement, and completely uninteresting to a generator asked for "a summary screen". Hand it over on week two, review it against the standard, and you have manufactured a rep that used to take a year of resizing to acquire.</p>
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 45-60 min total</span></h2>
+    </div>
+    <ul>
+      <li>Audit the learning tasks your juniors lost. List every task a junior on your team did two years ago that a tool now does, and mark next to each one what it was secretly teaching. Anything with a teaching note and no replacement is a gap you own.</li>
+      <li>Rewrite one job description around judgement. Take your most recent junior or mid posting and replace every production verb with an ownership statement. Keep one tool line and put it last.</li>
+      <li>Design one critique drill and put it in the calendar with a named owner. Thirty minutes, one screen, measurable checks named before anyone offers an opinion, and a written outcome.</li>
+      <li>Name the reps each level needs. One sentence per level for junior, mid and senior: what repetition with feedback does this person need this quarter, and who is supplying the feedback. If a name is missing, the rep is not real.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">This session is deliberately thin on citations, because the honest position is that the course's verified source material contains no hiring or workforce data for design under AI. Where the argument rests on structure rather than evidence, the page says so on the page rather than borrowing authority it does not have. What is covered:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Where juniors used to learn craft, and what production work was teaching</span><span class="note">Part 1 · argued from mechanism, no hiring statistics claimed</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Portfolio review under AI - brief, rejected options, what changed, what was refused</span><span class="note">Part 2 · four questions plus the written portfolio ask</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">The discriminating interview exercise - naming measurable failures before taste words</span><span class="note">Part 2 · the practitioner version is designer session b5</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Ladder redesign - junior, mid and senior ownership under generation</span><span class="note">Part 3 · plus the job-description rewrite</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Accessibility conformance as a junior-owned deliverable (WCAG 2.2 AA)</span><span class="note">Named here as an ownership boundary · criteria by number in b5</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · Why does the loss of production work threaten the supply of senior designers?</p>
+      <button class="qopt" type="button">A · Because juniors are less motivated when the work is easier</button>
+      <button class="qopt" type="button">B · Because judgement was learned as a by-product of production, so removing the tasks removes the curriculum unless something replaces it</button>
+      <button class="qopt" type="button">C · Because generated work is always worse, so standards fall across the whole team</button>
+      <p class="qwhy">The mechanism is structural, not motivational. Resizing taught hierarchy, variant sets taught systems, exports taught states, and being redlined taught the standard. Remove the tasks and the teaching goes with them. Note that this is an argument from mechanism: this course claims no verified hiring data, so test it against your own team.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · Which portfolio question gives you the most information now that anyone can render anything?</p>
+      <button class="qopt" type="button">A · "Which tools did you use, and how quickly did you produce this?"</button>
+      <button class="qopt" type="button">B · "Which piece are you proudest of visually?"</button>
+      <button class="qopt" type="button">C · "Show me the options you rejected and tell me why, and what you refused to ship"</button>
+      <p class="qwhy">Execution is cheap, so the render is weak evidence. The rejected work and the refusals are the actual portfolio: they are made of reasoning, they cost something to produce, and they are expensive to fake. Ask for the brief and the constraint too, because a candidate who cannot state the constraint was decorating.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · In the interview exercise, a candidate looks at flawed generated output and says "it feels cluttered and needs more breathing room". What have you learned?</p>
+      <button class="qopt" type="button">A · They reached for taste words before naming a checkable failure, so they cannot yet run a review without you</button>
+      <button class="qopt" type="button">B · They have strong instincts and should be hired at mid level</button>
+      <button class="qopt" type="button">C · Nothing - the exercise only tests visual sensitivity</button>
+      <p class="qwhy">Taste words are unfalsifiable, which is why reviews are full of them. You are listening for order: specific failures first (how many elements compete for first read, how many unrelated font sizes, which gaps are off the rhythm, which text fails contrast, how many hue families), and concept second. Both halves matter; the order tells you whether they can enforce a standard.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Leader session 5 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>The mechanism</b><span>Juniors learned judgement while doing production. The production went, so the curriculum went. Rebuild it or lose the pipeline.</span></div>
+      <div class="cheat-item"><b>Say what this is</b><span>An argument from structure, not from hiring data. No statistics invented. Test it against your own team this quarter.</span></div>
+      <div class="cheat-item"><b>What chores taught</b><span>Resizing taught hierarchy · variants taught systems · options taught exploration · exports taught states · redlines taught the standard.</span></div>
+      <div class="cheat-item"><b>Two failure modes</b><span>Hollow middle: fast juniors who cannot judge. Frozen senior: the only quality bottleneck, with no time to teach.</span></div>
+      <div class="cheat-item"><b>Portfolio questions</b><span>What was the brief · what did you reject and why · what changed after review · what did you refuse to ship.</span></div>
+      <div class="cheat-item"><b>The exercise</b><span>Flawed generated screen plus your standard. Listen for named failures (hierarchy, scale, spacing, contrast, hue count) before taste words.</span></div>
+      <div class="cheat-item"><b>The new rungs</b><span>Junior owns conformance and hygiene · mid owns direction and exploration · senior owns concept, standard and refusal. Nobody owns throughput.</span></div>
+      <div class="cheat-item"><b>Manufacture the reps</b><span>Critique drills, redlines, paired reviews - in the calendar, with a named owner. Reps that live in an intention do not happen.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Leader session 5 of 6 · learn-ai-design-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="a4-ip-provenance-risk.html">← Previous: IP, provenance and brand risk</a> &nbsp;·&nbsp; <a href="a6-rollout-and-quality.html">Next: Rollout and measuring quality →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=2"></script>
+</body>
+</html>
