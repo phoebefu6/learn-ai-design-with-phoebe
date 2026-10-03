@@ -3,6 +3,7 @@
    (CSS var names still read --indigo/--amber; they hold plum/chartreuse values.) */
 
 :root {
+  --muted-text: #776875;
   --indigo: #6B2D5C;
   --indigo-deep: #4A1F44;
   --indigo-mid: #9B4B87;
@@ -862,7 +863,7 @@ table.sql-table tr:last-child td { border-bottom: none; }
 .dl-preset:hover { background: var(--indigo-50); }
 
 .dl-frame { margin: 16px; border: 1px solid var(--hairline); border-radius: 12px; overflow: hidden; box-shadow: 0 8px 24px rgba(42,26,40,.07); }
-.dl-chrome { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 8px 14px; background: var(--indigo-50); border-bottom: 1px solid var(--hairline); font: 700 .72rem/1 "Inter", sans-serif; color: var(--muted); letter-spacing: .04em; }
+.dl-chrome { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 8px 14px; background: var(--indigo-50); border-bottom: 1px solid var(--hairline); font: 700 .72rem/1 "Inter", sans-serif; color: var(--muted-text); letter-spacing: .04em; }
 .dl-mount { background: #fff; }
 .dl-mount h3 { margin: 0; }
 .dl-mount button { cursor: default; }
